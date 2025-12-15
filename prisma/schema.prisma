@@ -1,0 +1,162 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String   @db.VarChar(100)
+  phone     String?  @db.VarChar(15)
+  password  String  
+  bio       String?  @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("admins")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String?  @unique
+  username  String?  @unique
+  name      String?
+  password  String?
+  classId   Int
+  levelId   Int
+  currentToken  String?
+  rememberToken String?
+  expLevel  Int      @default(0)
+  expPoints Int      @default(0)
+
+  level     Level    @relation(fields: [levelId], references: [id])
+  class     Class    @relation(fields: [classId], references: [classId])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Class {
+  classId   Int      @unique @id
+  name      String   @unique
+
+  users     User[]
+  quizzes   Quiz[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("classes")
+}
+
+model Level {
+  id        Int      @id @default(autoincrement())
+  name      String?  @unique
+  order     Int
+  kkm       Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users     User[]
+  quizzes   Quiz[]
+
+  @@map("levels")
+}
+
+model Quiz {
+  id        Int      @id @default(autoincrement())
+  title     String
+  description String?
+  levelId   Int
+  classId   Int
+  duration  Int
+  status    QuizSatus @default(DRAFT)
+
+  questions QuizQuestion[]
+  level     Level     @relation(fields: [levelId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  class     Class     @relation(fields: [classId], references: [classId], onDelete: Cascade, onUpdate: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("quizzes")
+}
+
+enum QuizSatus {
+  DRAFT
+  PUBLISHED
+
+}
+
+
+model QuizQuestion {
+  id        Int      @id @default(autoincrement())
+  quizId    Int
+  question  String
+
+  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  options   QuizOption[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("quiz_questions")
+}
+
+
+model QuizOption {
+  id         Int      @id @default(autoincrement())
+  questionId Int
+  option     String
+  isCorrect  Boolean  @default(false)
+
+  question   QuizQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("quiz_options")
+}
+
+model UserQuiz {
+  id        Int   @id @default(autoincrement())
+  userId    Int
+  quizId    Int
+  pastScore Float?
+  bestScore Float?
+  currentScore Float?   @default(0) 
+  startAt   DateTime?
+  endAt     DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("user_quizzes")
+}
+
+model UserQuizHistory {
+  id         Int      @id @default(autoincrement())
+  userQuizId Int
+  attempt    Int
+  score      Float
+  startAt    DateTime
+  endAt      DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("user_quiz_histories")
+}

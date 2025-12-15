@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "users" ADD COLUMN     "expLevel" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN     "expPoints" INTEGER NOT NULL DEFAULT 0;
