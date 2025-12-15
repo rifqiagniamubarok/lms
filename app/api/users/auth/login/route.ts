@@ -20,6 +20,10 @@ export async function POST(request: Request) {
       where: {
         username: validatedBody.username,
       },
+      include: {
+        class: true,
+        level: true,
+      },
     });
 
     if (!user) {
@@ -58,6 +62,10 @@ export async function POST(request: Request) {
       email: user.email,
       expLevel: user.expLevel,
       expPoints: user.expPoints,
+      classId: user.class.classId,
+      class: user.class.name,
+      levelId: user.level.id,
+      level: user.level.name,
       token,
     };
 

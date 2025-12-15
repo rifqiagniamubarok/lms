@@ -43,6 +43,8 @@ model User {
   level     Level    @relation(fields: [levelId], references: [id])
   class     Class    @relation(fields: [classId], references: [classId])
 
+  userQuizes  UserQuiz[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -86,6 +88,8 @@ model Quiz {
   status    QuizSatus @default(DRAFT)
 
   questions QuizQuestion[]
+  userQuizes  UserQuiz[]
+
   level     Level     @relation(fields: [levelId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   class     Class     @relation(fields: [classId], references: [classId], onDelete: Cascade, onUpdate: Cascade)
 
@@ -107,8 +111,9 @@ model QuizQuestion {
   quizId    Int
   question  String
 
-  quiz      Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  options   QuizOption[]
+  quiz        Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  options     QuizOption[]
+
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -141,6 +146,11 @@ model UserQuiz {
   startAt   DateTime?
   endAt     DateTime?
 
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz      Quiz   @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  userQuizHistories  UserQuizHistory[]
+  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -154,6 +164,8 @@ model UserQuizHistory {
   score      Float
   startAt    DateTime
   endAt      DateTime
+
+  userQuiz   UserQuiz @relation(fields: [userQuizId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

@@ -1,0 +1,497 @@
+[
+  {
+    "title": "Pembagian dengan 2",
+    "description": "Latihan pembagian dasar dengan angka 2",
+    "level": 1,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "2 ÷ 2 = ?",
+        "options": [
+          { "option": "1", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "4 ÷ 2 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "6 ÷ 2 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "8 ÷ 2 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "10 ÷ 2 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "12 ÷ 2 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "14 ÷ 2 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "16 ÷ 2 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18 ÷ 2 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "11", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "20 ÷ 2 = ?",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pembagian dengan 3",
+    "description": "Latihan pembagian dasar dengan angka 3",
+    "level": 1,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "3 ÷ 3 = ?",
+        "options": [
+          { "option": "1", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "6 ÷ 3 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "9 ÷ 3 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "12 ÷ 3 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "15 ÷ 3 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18 ÷ 3 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "21 ÷ 3 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "24 ÷ 3 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "27 ÷ 3 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "11", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "30 ÷ 3 = ?",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pembagian dengan 4",
+    "description": "Latihan pembagian dasar dengan angka 4",
+    "level": 1,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "4 ÷ 4 = ?",
+        "options": [
+          { "option": "1", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "8 ÷ 4 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "12 ÷ 4 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "16 ÷ 4 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "20 ÷ 4 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "24 ÷ 4 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "28 ÷ 4 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "32 ÷ 4 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "36 ÷ 4 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "11", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "40 ÷ 4 = ?",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pembagian dengan 5",
+    "description": "Latihan pembagian dasar dengan angka 5",
+    "level": 1,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "5 ÷ 5 = ?",
+        "options": [
+          { "option": "1", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "10 ÷ 5 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "15 ÷ 5 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "20 ÷ 5 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "25 ÷ 5 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "30 ÷ 5 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "35 ÷ 5 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "40 ÷ 5 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "45 ÷ 5 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "11", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "50 ÷ 5 = ?",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pembagian Bilangan ≤ 20",
+    "description": "Latihan pembagian dasar bilangan kecil",
+    "level": 1,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "8 ÷ 4 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "6 ÷ 3 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "10 ÷ 2 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "12 ÷ 6 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "9 ÷ 3 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "14 ÷ 2 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "15 ÷ 5 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "16 ÷ 4 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18 ÷ 6 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "20 ÷ 5 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

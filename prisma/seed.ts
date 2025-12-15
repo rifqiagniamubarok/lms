@@ -1,5 +1,6 @@
 import { PrismaClient, QuizSatus } from '@prisma/client';
 import { hashPassword } from '../utils/encryption';
+import dataSoal, { SoalOption } from './soal';
 
 const prisma = new PrismaClient();
 
@@ -91,123 +92,36 @@ async function main() {
     },
   });
 
-  const quizPayload = {
-    title: 'Quiz Matematika Dasar',
-    description: 'Quiz untuk menguji pemahaman dasar matematika siswa.',
-    levelId: 1,
-    classId: 3,
-    duration: 30,
-    status: QuizSatus.PUBLISHED,
-    questions: [
-      {
-        question: '2 + 2 = ?',
-        options: [
-          { option: '3', isCorrect: false },
-          { option: '4', isCorrect: true },
-          { option: '5', isCorrect: false },
-          { option: '6', isCorrect: false },
-        ],
-      },
-      {
-        question: '5 + 3 = ?',
-        options: [
-          { option: '7', isCorrect: false },
-          { option: '8', isCorrect: true },
-          { option: '9', isCorrect: false },
-          { option: '6', isCorrect: false },
-        ],
-      },
-      {
-        question: '10 - 4 = ?',
-        options: [
-          { option: '5', isCorrect: false },
-          { option: '6', isCorrect: true },
-          { option: '7', isCorrect: false },
-          { option: '4', isCorrect: false },
-        ],
-      },
-      {
-        question: '3 + 6 = ?',
-        options: [
-          { option: '8', isCorrect: false },
-          { option: '9', isCorrect: true },
-          { option: '10', isCorrect: false },
-          { option: '7', isCorrect: false },
-        ],
-      },
-      {
-        question: '9 - 3 = ?',
-        options: [
-          { option: '5', isCorrect: false },
-          { option: '6', isCorrect: true },
-          { option: '7', isCorrect: false },
-          { option: '8', isCorrect: false },
-        ],
-      },
-      {
-        question: '4 + 4 = ?',
-        options: [
-          { option: '6', isCorrect: false },
-          { option: '7', isCorrect: false },
-          { option: '8', isCorrect: true },
-          { option: '9', isCorrect: false },
-        ],
-      },
-      {
-        question: '7 - 2 = ?',
-        options: [
-          { option: '4', isCorrect: false },
-          { option: '5', isCorrect: true },
-          { option: '6', isCorrect: false },
-          { option: '3', isCorrect: false },
-        ],
-      },
-      {
-        question: '6 + 1 = ?',
-        options: [
-          { option: '6', isCorrect: false },
-          { option: '7', isCorrect: true },
-          { option: '8', isCorrect: false },
-          { option: '5', isCorrect: false },
-        ],
-      },
-      {
-        question: '8 - 5 = ?',
-        options: [
-          { option: '2', isCorrect: false },
-          { option: '3', isCorrect: true },
-          { option: '4', isCorrect: false },
-          { option: '5', isCorrect: false },
-        ],
-      },
-      {
-        question: '1 + 9 = ?',
-        options: [
-          { option: '9', isCorrect: false },
-          { option: '10', isCorrect: true },
-          { option: '11', isCorrect: false },
-          { option: '8', isCorrect: false },
-        ],
-      },
-    ],
-  };
+  for (const soal of dataSoal) {
+    const level = await prisma.level.findFirst({ where: { order: soal.level } });
+    if (!level) continue;
+    const theClass = await prisma.class.findFirst({ where: { classId: soal.class } });
+    if (!theClass) continue;
 
-  const quizExists = await prisma.quiz.findFirst({ where: { title: quizPayload.title } });
+    const existingQuiz = await prisma.quiz.findFirst({
+      where: {
+        title: soal.title,
+        classId: theClass.classId,
+        levelId: level.id,
+      },
+    });
+    if (existingQuiz) continue;
 
-  if (!quizExists) {
     const quiz = await prisma.quiz.create({
       data: {
-        title: quizPayload.title,
-        description: quizPayload.description,
-        levelId: quizPayload.levelId,
-        classId: quizPayload.classId,
-        duration: quizPayload.duration,
-        status: quizPayload.status,
+        title: soal.title,
+        description: soal.description,
+        levelId: level.id,
+        classId: theClass.classId,
+        duration: soal.duration,
+        status: QuizSatus.PUBLISHED,
       },
     });
 
+    console.log(`Created quiz: ${quiz.title} for Class ${theClass.classId} Level ${level.order}`);
+
     Promise.all(
-      quizPayload.questions.map(async (question) => {
+      soal.questions.map(async (question) => {
         await prisma.quizQuestion.create({
           data: {
             question: question.question,
