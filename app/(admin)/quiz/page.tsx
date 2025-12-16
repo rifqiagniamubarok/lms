@@ -239,162 +239,199 @@ export default function QuizPage() {
     <DashboardLayout title="Bank Soal">
       <div className="space-y-6">
         {/* Header Section */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h2 className="text-xl font-semibold text-gray-900">Daftar Quiz</h2>
-            <p className="text-sm text-gray-500">Kelola semua quiz dan soal</p>
-          </div>
+        <div className="flex justify-end items-center">
           <Button as={Link} href="/quiz/new" color="primary" startContent={<PlusIcon className="w-4 h-4" />}>
             Buat Soal Baru
           </Button>
         </div>
 
         {/* Filters Card */}
-        <Card>
-          <CardBody>
-            <div className="flex flex-col md:flex-row gap-4">
+        <Card className="shadow-sm">
+          <CardBody className="p-4">
+            <div className="flex flex-col md:flex-row gap-4 items-end">
               <div className="flex-1">
                 <Input
                   placeholder="Cari quiz..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   startContent={<MagnifyingGlassIcon className="w-4 h-4 text-gray-400" />}
-                  onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+                  onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                 />
               </div>
-              <Select
-                placeholder="Semua Kelas"
-                selectedKeys={selectedClass ? [selectedClass] : []}
-                onSelectionChange={(keys) => {
-                  const key = Array.from(keys)[0] as string;
-                  setSelectedClass(key || '');
-                  setPagination((prev) => ({ ...prev, page: 1 }));
-                }}
-                className="max-w-48"
-              >
-                {classes.map((cls) => (
-                  <SelectItem key={cls.classId.toString()}>{cls.name}</SelectItem>
-                ))}
-              </Select>
-              <Select
-                placeholder="Semua Level"
-                selectedKeys={selectedLevel ? [selectedLevel] : []}
-                onSelectionChange={(keys) => {
-                  const key = Array.from(keys)[0] as string;
-                  setSelectedLevel(key || '');
-                  setPagination((prev) => ({ ...prev, page: 1 }));
-                }}
-                className="max-w-48"
-              >
-                {levels.map((level) => (
-                  <SelectItem key={level.id.toString()}>{level.name}</SelectItem>
-                ))}
-              </Select>
-              <Button color="primary" onPress={handleSearch}>
-                Cari
-              </Button>
+              <div className="w-full md:w-48">
+                <Select
+                  placeholder="Semua Kelas"
+                  selectedKeys={selectedClass ? [selectedClass] : []}
+                  onSelectionChange={(keys) => {
+                    const key = Array.from(keys)[0] as string;
+                    setSelectedClass(key || '');
+                    setPagination((prev) => ({ ...prev, page: 1 }));
+                  }}
+                >
+                  {classes.map((cls) => (
+                    <SelectItem key={cls.classId.toString()}>{cls.name}</SelectItem>
+                  ))}
+                </Select>
+              </div>
+              <div className="w-full md:w-48">
+                <Select
+                  placeholder="Semua Level"
+                  selectedKeys={selectedLevel ? [selectedLevel] : []}
+                  onSelectionChange={(keys) => {
+                    const key = Array.from(keys)[0] as string;
+                    setSelectedLevel(key || '');
+                    setPagination((prev) => ({ ...prev, page: 1 }));
+                  }}
+                >
+                  {levels.map((level) => (
+                    <SelectItem key={level.id.toString()}>{level.name}</SelectItem>
+                  ))}
+                </Select>
+              </div>
+              <div className="flex gap-2">
+                <Button color="primary" onPress={handleSearch}>
+                  Filter
+                </Button>
+                <Button
+                  variant="bordered"
+                  onPress={() => {
+                    setSearchTerm('');
+                    setSelectedClass('');
+                    setSelectedLevel('');
+                    setPagination((prev) => ({ ...prev, page: 1 }));
+                  }}
+                >
+                  Reset
+                </Button>
+              </div>
             </div>
           </CardBody>
         </Card>
 
         {/* Table Card */}
-        <Card>
-          <CardHeader>
-            <div className="flex justify-between items-center w-full">
-              <div className="flex items-center gap-2">
-                <DocumentTextIcon className="w-5 h-5 text-[#0075e6]" />
-                <span className="font-semibold">Daftar Quiz ({pagination.total})</span>
-              </div>
-            </div>
-          </CardHeader>
-          <Divider />
+        <Card className="shadow-sm">
           <CardBody className="p-0">
-            <Table aria-label="Quiz table" removeWrapper>
-              <TableHeader>
-                <TableColumn className="w-2/5">JUDUL QUIZ</TableColumn>
-                <TableColumn className="w-1/6">KELAS</TableColumn>
-                <TableColumn className="w-1/6">LEVEL</TableColumn>
-                <TableColumn className="w-1/12">DURASI</TableColumn>
-                <TableColumn className="w-1/12">SOAL</TableColumn>
-                <TableColumn className="w-1/8">STATUS</TableColumn>
-                <TableColumn className="w-1/12">AKSI</TableColumn>
-              </TableHeader>
-              <TableBody
-                isLoading={loading}
-                loadingContent={<Spinner label="Memuat data..." />}
-                emptyContent={
-                  <div className="text-center py-8">
-                    <DocumentTextIcon className="w-12 h-12 text-gray-300 mx-auto mb-2" />
-                    <p className="text-gray-500">Belum ada quiz</p>
-                  </div>
-                }
-              >
-                {quizzes.map((quiz) => (
-                  <TableRow key={quiz.id}>
-                    <TableCell>
-                      <div>
-                        <p className="font-medium text-gray-900">{quiz.title}</p>
-                        {quiz.description && <p className="text-sm text-gray-500 truncate max-w-xs">{quiz.description}</p>}
+            {loading ? (
+              <div className="flex justify-center items-center py-20">
+                <Spinner size="lg" />
+              </div>
+            ) : (
+              <>
+                <Table aria-label="Daftar Quiz">
+                  <TableHeader>
+                    <TableColumn>QUIZ</TableColumn>
+                    <TableColumn>KELAS</TableColumn>
+                    <TableColumn>LEVEL</TableColumn>
+                    <TableColumn>DURASI</TableColumn>
+                    <TableColumn>SOAL</TableColumn>
+                    <TableColumn>STATUS</TableColumn>
+                    <TableColumn>AKSI</TableColumn>
+                  </TableHeader>
+                  <TableBody
+                    emptyContent={
+                      <div className="text-center py-20">
+                        <DocumentTextIcon className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                        <p className="text-gray-500 text-lg">Belum ada quiz</p>
+                        <p className="text-gray-400 text-sm">Buat quiz pertama Anda untuk memulai</p>
                       </div>
-                    </TableCell>
-                    <TableCell>
-                      <span className="text-sm">{quiz.class.name}</span>
-                    </TableCell>
-                    <TableCell>
-                      <span className="text-sm">{quiz.level.name}</span>
-                    </TableCell>
-                    <TableCell>
-                      <span className="text-sm">{quiz.duration} mnt</span>
-                    </TableCell>
-                    <TableCell>
-                      <span className="text-sm">{quiz._count.questions} soal</span>
-                    </TableCell>
-                    <TableCell>
-                      <Chip color={getStatusColor(quiz.status)} variant="flat" size="sm">
-                        {getStatusText(quiz.status)}
-                      </Chip>
-                    </TableCell>
-                    <TableCell>
-                      <Dropdown>
-                        <DropdownTrigger>
-                          <Button isIconOnly size="sm" variant="light">
-                            <EllipsisVerticalIcon className="w-4 h-4" />
-                          </Button>
-                        </DropdownTrigger>
-                        <DropdownMenu>
-                          <DropdownItem key="view" startContent={<EyeIcon className="w-4 h-4" />} onPress={() => router.push(`/quiz/${quiz.id}`)}>
-                            Lihat Detail
-                          </DropdownItem>
-                          <DropdownItem key="edit" startContent={<PencilIcon className="w-4 h-4" />} onPress={() => router.push(`/quiz/${quiz.id}/edit`)}>
-                            Edit Quiz
-                          </DropdownItem>
-                          <DropdownItem
-                            key="delete"
-                            color="danger"
-                            startContent={<TrashIcon className="w-4 h-4" />}
-                            onPress={() => {
-                              setDeleteQuizId(quiz.id);
-                              onOpen();
-                            }}
-                          >
-                            Hapus Quiz
-                          </DropdownItem>
-                        </DropdownMenu>
-                      </Dropdown>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+                    }
+                  >
+                    {quizzes.map((quiz) => (
+                      <TableRow key={quiz.id}>
+                        <TableCell>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                              <DocumentTextIcon className="w-6 h-6 text-blue-600" />
+                            </div>
+                            <div>
+                              <div className="font-medium text-gray-900 line-clamp-1">{quiz.title}</div>
+                              {quiz.description && <div className="text-sm text-gray-500 line-clamp-1">{quiz.description}</div>}
+                              <div className="text-xs text-gray-400">ID: {quiz.id}</div>
+                            </div>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <Chip variant="flat" color="default">
+                            {quiz.class.name}
+                          </Chip>
+                        </TableCell>
+                        <TableCell>
+                          <Chip variant="flat" color="secondary">
+                            {quiz.level.name}
+                          </Chip>
+                        </TableCell>
+                        <TableCell>
+                          <div className="flex items-center space-x-1">
+                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span className="text-sm font-medium">{quiz.duration} menit</span>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <div className="flex items-center space-x-1">
+                            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                            <span className="text-sm font-medium text-blue-600">{quiz._count.questions} soal</span>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <Chip variant="flat" color={getStatusColor(quiz.status)} size="sm">
+                            {getStatusText(quiz.status)}
+                          </Chip>
+                        </TableCell>
+                        <TableCell>
+                          <Dropdown>
+                            <DropdownTrigger>
+                              <Button isIconOnly size="sm" variant="light" className="data-[hover=true]:bg-gray-100">
+                                <EllipsisVerticalIcon className="w-4 h-4" />
+                              </Button>
+                            </DropdownTrigger>
+                            <DropdownMenu>
+                              <DropdownItem key="view" startContent={<EyeIcon className="w-4 h-4" />} onPress={() => router.push(`/quiz/${quiz.id}`)}>
+                                Lihat Detail
+                              </DropdownItem>
+                              <DropdownItem key="edit" startContent={<PencilIcon className="w-4 h-4" />} onPress={() => router.push(`/quiz/${quiz.id}/edit`)}>
+                                Edit Quiz
+                              </DropdownItem>
+                              <DropdownItem
+                                key="delete"
+                                color="danger"
+                                startContent={<TrashIcon className="w-4 h-4" />}
+                                onPress={() => {
+                                  setDeleteQuizId(quiz.id);
+                                  onOpen();
+                                }}
+                              >
+                                Hapus Quiz
+                              </DropdownItem>
+                            </DropdownMenu>
+                          </Dropdown>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+
+                {/* Pagination */}
+                {pagination.pages > 1 && (
+                  <div className="flex justify-between items-center p-4 border-t">
+                    <span className="text-sm text-gray-500">
+                      Menampilkan {(pagination.page - 1) * pagination.limit + 1} - {Math.min(pagination.page * pagination.limit, pagination.total)} dari {pagination.total} quiz
+                    </span>
+                    <Pagination total={pagination.pages} page={pagination.page} onChange={handlePageChange} showControls showShadow color="primary" />
+                  </div>
+                )}
+              </>
+            )}
           </CardBody>
         </Card>
-
-        {/* Pagination */}
-        {pagination.pages > 1 && (
-          <div className="flex justify-center">
-            <Pagination total={pagination.pages} page={pagination.page} onChange={handlePageChange} showControls showShadow />
-          </div>
-        )}
 
         {/* Delete Confirmation Modal */}
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>

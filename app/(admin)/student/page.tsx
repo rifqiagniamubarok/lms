@@ -179,23 +179,17 @@ export default function StudentPage() {
           <CardBody className="p-4">
             <div className="flex flex-col md:flex-row gap-4 items-end">
               <div className="flex-1">
-                <Input
-                  label="Cari Siswa"
-                  placeholder="Masukkan nama siswa..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                />
+                <Input placeholder="Masukkan nama siswa..." value={search} onChange={(e) => setSearch(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSearch()} />
               </div>
               <div className="w-full md:w-48">
-                <Select label="Pilih Kelas" placeholder="Semua Kelas" selectedKeys={selectedClass ? [selectedClass] : []} onChange={(e) => setSelectedClass(e.target.value)}>
+                <Select placeholder="Semua Kelas" selectedKeys={selectedClass ? [selectedClass] : []} onChange={(e) => setSelectedClass(e.target.value)}>
                   {classes.map((cls) => (
                     <SelectItem key={cls.classId.toString()}>{cls.name}</SelectItem>
                   ))}
                 </Select>
               </div>
               <div className="w-full md:w-48">
-                <Select label="Pilih Level" placeholder="Semua Level" selectedKeys={selectedLevel ? [selectedLevel] : []} onChange={(e) => setSelectedLevel(e.target.value)}>
+                <Select placeholder="Semua Level" selectedKeys={selectedLevel ? [selectedLevel] : []} onChange={(e) => setSelectedLevel(e.target.value)}>
                   {levels.map((level) => (
                     <SelectItem key={level.id.toString()}>{level.name}</SelectItem>
                   ))}

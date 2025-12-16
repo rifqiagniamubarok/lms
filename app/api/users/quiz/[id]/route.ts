@@ -8,10 +8,21 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   try {
     const decode = await handleAuth(request);
 
+    const user = await prisma.user.findUnique({
+      where: { id: decode.id },
+      include: {
+        level: true,
+      },
+    });
+
+    if (!user) {
+      throw new ResponseError(404, 'User not found');
+    }
+
     const { id } = await params;
 
     const quiz = await prisma.quiz.findFirst({
-      where: { id: parseInt(id), status: 'PUBLISHED' },
+      where: { id: parseInt(id), status: 'PUBLISHED', classId: user.classId },
       include: {
         level: true,
         _count: {
@@ -34,6 +45,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     });
 
     const isInQuiz = (userQuiz && userQuiz.endAt && isBefore(new Date(), userQuiz.endAt)) || false;
+    const availForQuiz = quiz.level.order <= user.level.order;
 
     const formatResponse = {
       id: quiz.id,
@@ -46,6 +58,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       kkm: quiz.level.kkm,
       class: quiz.classId,
       isInQuiz,
+      availForQuiz,
       hasDone: userQuiz ? true : false,
       currentScore: userQuiz ? userQuiz.currentScore : null,
       startTime: userQuiz ? userQuiz.startAt : null,
