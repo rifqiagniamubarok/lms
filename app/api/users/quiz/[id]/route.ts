@@ -10,43 +10,52 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
     const { id } = await params;
 
-    const quizCount = await prisma.quiz.count({
-      where: { id: parseInt(id) },
+    const quiz = await prisma.quiz.findFirst({
+      where: { id: parseInt(id), status: 'PUBLISHED' },
+      include: {
+        level: true,
+        _count: {
+          select: {
+            questions: true,
+          },
+        },
+      },
     });
 
-    if (quizCount === 0) {
+    if (!quiz) {
       throw new ResponseError(404, 'Quiz not found');
     }
 
     const userQuiz = await prisma.userQuiz.findFirst({
       where: {
         userId: decode.id,
-        quizId: parseInt(id),
-        startAt: {
-          not: null,
-        },
-        endAt: {
-          not: null,
-        },
-        quiz: {
-          status: 'PUBLISHED',
-        },
-      },
-      include: {
-        quiz: {
-          include: {
-            level: {
-              select: { id: true, name: true, order: true, kkm: true },
-            },
-          },
-        },
+        quizId: quiz.id,
       },
     });
+
+    const isInQuiz = (userQuiz && userQuiz.endAt && isBefore(new Date(), userQuiz.endAt)) || false;
+
+    const formatResponse = {
+      id: quiz.id,
+      title: quiz.title,
+      description: quiz.description,
+      duration: quiz.duration,
+      totalQuestions: quiz._count.questions,
+      levelId: quiz.levelId,
+      level: quiz.level.name,
+      kkm: quiz.level.kkm,
+      class: quiz.classId,
+      isInQuiz,
+      hasDone: userQuiz ? true : false,
+      currentScore: userQuiz ? userQuiz.currentScore : null,
+      startTime: userQuiz ? userQuiz.startAt : null,
+      endTime: userQuiz ? userQuiz.endAt : null,
+    };
 
     return new Response(
       JSON.stringify({
         success: true,
-        data: userQuiz,
+        data: formatResponse,
       }),
       { status: 200 }
     );
