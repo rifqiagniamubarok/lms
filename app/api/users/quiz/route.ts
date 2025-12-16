@@ -65,6 +65,7 @@ export async function GET(request: Request) {
 
     const formatData = quizes.map((quiz) => {
       return {
+        id: quiz.id,
         title: quiz.title,
         level: quiz.level.name,
         levelId: quiz.level.id,
