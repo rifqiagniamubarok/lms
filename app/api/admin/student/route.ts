@@ -1,0 +1,139 @@
+import { handleAuth, handleAuthAdmin } from '@/utils/handleAuth';
+import handleError from '@/utils/handleError';
+import { prisma } from '@/utils/prisma';
+import z from 'zod';
+
+const queryParamsSchema = z.object({
+  page: z.number().min(1).optional().default(1),
+  limit: z.number().min(1).max(100).optional().default(10),
+  search: z.string().optional(),
+  levelId: z.number().optional(),
+  classId: z.number().optional(),
+});
+
+export async function GET(request: Request) {
+  try {
+    await handleAuthAdmin(request);
+
+    const { searchParams } = new URL(request.url);
+
+    // Parse and validate query parameters
+    const queryParams = queryParamsSchema.parse({
+      page: searchParams.get('page') ? parseInt(searchParams.get('page')!) : undefined,
+      limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : undefined,
+      search: searchParams.get('search') || undefined,
+      levelId: searchParams.get('levelId') ? parseInt(searchParams.get('levelId')!) : undefined,
+      classId: searchParams.get('classId') ? parseInt(searchParams.get('classId')!) : undefined,
+    });
+
+    const { page, limit, search, levelId, classId } = queryParams;
+    const skip = (page - 1) * limit;
+
+    // Build where clause for filtering and searching
+    const whereClause: Record<string, unknown> = {};
+
+    if (search) {
+      whereClause.name = {
+        contains: search,
+        mode: 'insensitive',
+      };
+    }
+
+    if (levelId) {
+      whereClause.levelId = levelId;
+    }
+
+    if (classId) {
+      whereClause.classId = classId;
+    }
+
+    // Execute queries in parallel
+    const [studentRaw, total] = await Promise.all([
+      prisma.user.findMany({
+        where: whereClause,
+        include: {
+          class: {
+            select: {
+              classId: true,
+              name: true,
+            },
+          },
+          level: {
+            select: {
+              id: true,
+              name: true,
+              _count: {
+                select: {
+                  quizzes: true,
+                },
+              },
+            },
+          },
+        },
+        skip,
+        take: limit,
+        orderBy: {
+          name: 'asc',
+        },
+      }),
+      prisma.user.count({
+        where: whereClause,
+      }),
+    ]);
+
+    const students = studentRaw.map((student) => ({
+      id: student.id,
+      name: student.name,
+      expLevel: student.expLevel,
+      expTotalInPoints: student.level._count.quizzes * 100,
+      expPoints: student.expPoints,
+      classId: student.class.classId,
+      className: student.class.name,
+      levelId: student.level.id,
+      levelName: student.level.name,
+    }));
+
+    const totalPages = Math.ceil(total / limit);
+
+    const classCounter = await prisma.class.findMany({
+      include: {
+        _count: {
+          select: {
+            users: true,
+          },
+        },
+      },
+      orderBy: {
+        classId: 'asc',
+      },
+    });
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        data: students,
+        pagination: {
+          page,
+          limit,
+          total,
+          totalPages,
+          hasNextPage: page < totalPages,
+          hasPrevPage: page > 1,
+        },
+        classStats: classCounter.map((cls) => ({
+          classId: cls.classId,
+          className: cls.name,
+          userCount: cls._count.users,
+        })),
+        filters: {
+          search,
+          levelId,
+          classId,
+        },
+      }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
+  } catch (error) {
+    return handleError(error);
+  }
+}
