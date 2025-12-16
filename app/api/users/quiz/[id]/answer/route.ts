@@ -51,9 +51,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           },
         },
         user: {
-          select: {
-            expLevel: true,
-            expPoints: true,
+          include: {
+            level: {
+              select: {
+                id: true,
+                order: true,
+              },
+            },
           },
         },
         _count: {
@@ -105,7 +109,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const expScoreBefore = userQuiz.currentScore || 0;
     const expBefore = userQuiz.user.expLevel;
     const expChanges = score - expScoreBefore;
-    const expAfter = expBefore + expChanges;
+    const expAfter = userQuiz.quiz.level.order == userQuiz.user.level.order ? expBefore + expChanges : expBefore;
 
     const currentBestScore = userQuiz.bestScore || 0;
     const differenceBestScore = score > currentBestScore ? score - currentBestScore : 0;
