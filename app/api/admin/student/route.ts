@@ -61,12 +61,18 @@ export async function GET(request: Request) {
           level: {
             select: {
               id: true,
+              kkm: true,
               name: true,
               _count: {
                 select: {
                   quizzes: true,
                 },
               },
+            },
+          },
+          userQuizes: {
+            select: {
+              currentScore: true,
             },
           },
         },
@@ -87,10 +93,12 @@ export async function GET(request: Request) {
       expLevel: student.expLevel,
       expTotalInPoints: student.level._count.quizzes * 100,
       expPoints: student.expPoints,
+      averageScore: student.userQuizes.length ? Math.round(student.userQuizes.reduce((acc, uq) => acc + (uq.currentScore ?? 0), 0) / student.userQuizes.length) : 0,
       classId: student.class.classId,
       className: student.class.name,
       levelId: student.level.id,
       levelName: student.level.name,
+      levelKkm: student.level.kkm,
     }));
 
     const totalPages = Math.ceil(total / limit);

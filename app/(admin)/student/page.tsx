@@ -10,10 +10,12 @@ interface Student {
   expLevel: number;
   expPoints: number;
   expTotalInPoints: number;
+  averageScore: number;
   classId: number;
   className: string;
   levelId: number;
   levelName: string;
+  levelKkm: number;
 }
 
 interface ClassStat {
@@ -226,7 +228,7 @@ export default function StudentPage() {
                     <TableColumn>KELAS</TableColumn>
                     <TableColumn>LEVEL</TableColumn>
                     <TableColumn>EXP LEVEL</TableColumn>
-                    <TableColumn>EXP POINTS</TableColumn>
+                    <TableColumn>AVG SCORE</TableColumn>
                     <TableColumn>STATUS</TableColumn>
                   </TableHeader>
                   <TableBody>
@@ -269,11 +271,11 @@ export default function StudentPage() {
                           </div>
                         </TableCell>
                         <TableCell>
-                          <span className="font-semibold text-blue-600">{student.expPoints.toLocaleString()}</span>
+                          <span className="font-semibold text-blue-600">{student.averageScore.toLocaleString()}</span>
                         </TableCell>
                         <TableCell>
                           <Chip variant="flat" color={student.expLevel >= 70 ? 'success' : 'warning'}>
-                            {student.expLevel >= 70 ? 'Aktif' : 'Perlu Perhatian'}
+                            {student.averageScore >= student.levelKkm ? 'Aktif' : 'Perlu Perhatian'}
                           </Chip>
                         </TableCell>
                       </TableRow>
