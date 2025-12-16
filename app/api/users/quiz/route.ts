@@ -63,9 +63,21 @@ export async function GET(request: Request) {
 
     const totalPages = Math.ceil(total / validatedLimit);
 
+    const formatData = quizes.map((quiz) => {
+      return {
+        title: quiz.title,
+        level: quiz.level.name,
+        levelId: quiz.level.id,
+        classId: quiz.class.classId,
+        duration: quiz.duration,
+        totalQuestion: quiz._count.questions,
+        pastScore: quiz.userQuizes?.length ? quiz.userQuizes[0].currentScore : null,
+      };
+    });
+
     return NextResponse.json({
       success: true,
-      data: quizes,
+      data: formatData,
       pagination: {
         page: validatedPage,
         limit: validatedLimit,
