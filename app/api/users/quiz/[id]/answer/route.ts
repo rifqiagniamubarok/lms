@@ -102,8 +102,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const score = (totalCorrect / getQuestion.length) * 100;
     const passed = score >= userQuiz.quiz.level.kkm;
 
+    const expScoreBefore = userQuiz.currentScore || 0;
     const expBefore = userQuiz.user.expLevel;
-    const expChanges = score - expBefore;
+    const expChanges = score - expScoreBefore;
     const expAfter = expBefore + expChanges;
 
     const currentBestScore = userQuiz.bestScore || 0;
@@ -210,13 +211,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
             }
             await tx.user.update({
               where: { id: decode.id },
-              data: { classId: nextClass.classId, levelId: lowerLevel?.id },
+              data: { classId: nextClass.classId, levelId: lowerLevel?.id, expLevel: 0 },
             });
           }
         } else {
           await tx.user.update({
             where: { id: decode.id },
-            data: { levelId: nextLevel.id },
+            data: { levelId: nextLevel.id, expLevel: 0 },
           });
         }
       }

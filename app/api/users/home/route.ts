@@ -39,6 +39,17 @@ export async function GET(request: Request) {
       },
     });
 
+    const userQuiz = await prisma.userQuiz.count({
+      where: {
+        userId: user.id,
+        quiz: {
+          level: {
+            order: user.level.order,
+          },
+        },
+      },
+    });
+
     if (!nextLevel) {
       const nextClass = await prisma.class.findFirst({
         where: {
@@ -64,6 +75,9 @@ export async function GET(request: Request) {
       expLevel: user.expLevel,
       maximalPointLevel: user.level._count.quizzes * 100,
       minimumPointLevel: user.level._count.quizzes * user.level.kkm,
+      totalQuizInCurrentLevel: user.level._count.quizzes,
+      totalQuizTakenInCurrentLevel: userQuiz || 0,
+      remainingQuizInCurrentLevel: user.level._count.quizzes - userQuiz || 0,
       next: {
         isTheLastLevelAndClass,
         nextLevelId: nextLevel ? nextLevel.id : isTheLastLevelAndClass ? null : 1,
