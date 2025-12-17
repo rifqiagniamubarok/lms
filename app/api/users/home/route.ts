@@ -57,7 +57,7 @@ export async function GET(request: Request) {
         },
       });
 
-      if (nextClass) {
+      if (!nextClass) {
         isTheLastLevelAndClass = true;
       }
     }
@@ -83,7 +83,7 @@ export async function GET(request: Request) {
         isTheLastLevelAndClass,
         nextLevelId: nextLevel ? nextLevel.id : isTheLastLevelAndClass ? null : 1,
         nextLevel: nextLevel ? nextLevel.name : isTheLastLevelAndClass ? null : 'Level 1',
-        nextClassId: !isTheLastLevelAndClass ? user.classId + 1 : user.classId,
+        nextClassId: !isTheLastLevelAndClass ? user.classId + 1 : null,
       },
     };
 

@@ -157,6 +157,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         where: {
           status: 'PUBLISHED',
           levelId: userQuiz.quiz.level.id,
+          classId: userQuiz.quiz.classId,
           userQuizes: {
             none: {
               userId: decode.id,
@@ -169,6 +170,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         where: {
           status: 'PUBLISHED',
           levelId: userQuiz.quiz.level.id,
+          classId: userQuiz.quiz.classId,
           userQuizes: {
             some: {
               userId: decode.id,
@@ -180,7 +182,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         },
       });
 
+      const levelQuizAll = await tx.quiz.count({
+        where: {
+          status: 'PUBLISHED',
+          levelId: userQuiz.quiz.level.id,
+          classId: userQuiz.quiz.classId,
+        },
+      });
+
       const totalRemainingQuizInThisLevel = levelQuizNotStarted + levelQuizNotPassed;
+      const remainingExpInThisLevel = totalRemainingQuizInThisLevel * userQuiz.quiz.level.kkm - expAfter;
 
       let isFinishedAllLevelAndClass = false;
       let isLevelUp = false;
@@ -235,6 +246,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         nextClass,
         levelQuizNotStarted,
         levelQuizNotPassed,
+        levelQuizAll,
+        remainingExpInThisLevel,
       };
     });
 
@@ -255,8 +268,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
             expLevelNow: expAfter,
             expPointsGained: differenceBestScore,
             expPointsNow: userQuiz.user.expPoints + differenceBestScore,
-            expLevelTotal: result.totalRemainingQuizInThisLevel * userQuiz.quiz.level.kkm,
-            expLevelRemainingToLevelUp: result.totalRemainingQuizInThisLevel * userQuiz.quiz.level.kkm - expAfter,
+            expLevelTotalMinimum: result.levelQuizAll * userQuiz.quiz.level.kkm,
+            expLevelTotal: result.levelQuizAll * 100,
+            expLevelRemainingToLevelUp: result.remainingExpInThisLevel < 0 ? 0 : result.remainingExpInThisLevel,
           },
           quizInThisLevel: {
             notStarted: result.levelQuizNotStarted,

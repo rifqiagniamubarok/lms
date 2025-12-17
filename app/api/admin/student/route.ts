@@ -65,7 +65,11 @@ export async function GET(request: Request) {
               name: true,
               _count: {
                 select: {
-                  quizzes: true,
+                  quizzes: {
+                    where: {
+                      status: 'PUBLISHED',
+                    },
+                  },
                 },
               },
             },
@@ -87,19 +91,45 @@ export async function GET(request: Request) {
       }),
     ]);
 
-    const students = studentRaw.map((student) => ({
-      id: student.id,
-      name: student.name,
-      expLevel: student.expLevel,
-      expTotalInPoints: student.level._count.quizzes * 100,
-      expPoints: student.expPoints,
-      averageScore: student.userQuizes.length ? Math.round(student.userQuizes.reduce((acc, uq) => acc + (uq.currentScore ?? 0), 0) / student.userQuizes.length) : 0,
-      classId: student.class.classId,
-      className: student.class.name,
-      levelId: student.level.id,
-      levelName: student.level.name,
-      levelKkm: student.level.kkm,
-    }));
+    const totalQuizzes = await prisma.quiz.groupBy({
+      by: ['classId', 'levelId'],
+      where: {
+        status: 'PUBLISHED',
+      },
+      _count: {
+        id: true,
+      },
+      orderBy: [
+        {
+          classId: 'asc',
+        },
+        {
+          levelId: 'asc',
+        },
+      ],
+    });
+
+    const students = studentRaw.map((student) => {
+      const getTotalQuizzes = totalQuizzes.find((tq) => tq.classId === student.class.classId && tq.levelId === student.level.id);
+      if (getTotalQuizzes) {
+        student.level._count.quizzes = getTotalQuizzes._count.id;
+      } else {
+        student.level._count.quizzes = 0;
+      }
+      return {
+        id: student.id,
+        name: student.name,
+        expLevel: student.expLevel,
+        expTotalInPoints: student.level._count.quizzes * 100,
+        expPoints: student.expPoints,
+        averageScore: student.userQuizes.length ? Math.round(student.userQuizes.reduce((acc, uq) => acc + (uq.currentScore ?? 0), 0) / student.userQuizes.length) : 0,
+        classId: student.class.classId,
+        className: student.class.name,
+        levelId: student.level.id,
+        levelName: student.level.name,
+        levelKkm: student.level.kkm,
+      };
+    });
 
     const totalPages = Math.ceil(total / limit);
 
