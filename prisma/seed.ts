@@ -6,9 +6,9 @@ const prisma = new PrismaClient();
 
 async function main() {
   const classPayload = [
-    { classId: 3, name: 'Class 3' },
-    { classId: 4, name: 'Class 4' },
-    { classId: 5, name: 'Class 5' },
+    { classId: 3, name: 'Kelas 3' },
+    { classId: 4, name: 'Kelas 4' },
+    { classId: 5, name: 'Kelas 5' },
   ];
 
   await Promise.all(
@@ -92,9 +92,47 @@ async function main() {
     },
   });
 
+  // Count quizzes by class and level before processing
+  const quizCounts: { [key: string]: number } = {};
+  const classLevelCounts: { [classId: number]: { [levelId: number]: number } } = {};
+
   for (const soal of dataSoal) {
-    const level = await prisma.level.findFirst({ where: { order: soal.level } });
-    if (!level) continue;
+    const key = `Class ${soal.class} - Level ${soal.level}`;
+    quizCounts[key] = (quizCounts[key] || 0) + 1;
+
+    if (!classLevelCounts[soal.class]) {
+      classLevelCounts[soal.class] = {};
+    }
+    classLevelCounts[soal.class][soal.level] = (classLevelCounts[soal.class][soal.level] || 0) + 1;
+  }
+
+  console.log('\n=== QUIZ COUNT SUMMARY ===');
+  console.log('Total quizzes in dataset:', dataSoal.length);
+  console.log('\nQuiz count by Class and Level:');
+  Object.keys(quizCounts).forEach((key) => {
+    console.log(`${key}: ${quizCounts[key]} quiz(s)`);
+  });
+
+  console.log('\nDetailed breakdown:');
+  Object.keys(classLevelCounts).forEach((classId) => {
+    const classNum = parseInt(classId);
+    console.log(`\nClass ${classNum}:`);
+    Object.keys(classLevelCounts[classNum]).forEach((levelId) => {
+      const levelNum = parseInt(levelId);
+      console.log(`  Level ${levelNum}: ${classLevelCounts[classNum][levelNum]} quiz(s)`);
+    });
+    const totalForClass = Object.values(classLevelCounts[classNum]).reduce((sum, count) => sum + count, 0);
+    console.log(`  Total for Class ${classNum}: ${totalForClass} quiz(s)`);
+  });
+
+  console.log('\n=== STARTING QUIZ CREATION ===\n');
+
+  let createdCount = 0;
+  let skippedCount = 0;
+
+  for (const soal of dataSoal) {
+    const theLevel = await prisma.level.findFirst({ where: { order: soal.level } });
+    if (!theLevel) continue;
     const theClass = await prisma.class.findFirst({ where: { classId: soal.class } });
     if (!theClass) continue;
 
@@ -102,23 +140,28 @@ async function main() {
       where: {
         title: soal.title,
         classId: theClass.classId,
-        levelId: level.id,
+        levelId: theLevel.id,
       },
     });
-    if (existingQuiz) continue;
+    if (existingQuiz) {
+      console.log(`Skipped existing quiz: "${soal.title}" for Class ${theClass.classId} Level ${theLevel.order}`);
+      skippedCount++;
+      continue;
+    }
 
     const quiz = await prisma.quiz.create({
       data: {
         title: soal.title,
         description: soal.description,
-        levelId: level.id,
+        levelId: theLevel.id,
         classId: theClass.classId,
         duration: soal.duration,
         status: QuizSatus.PUBLISHED,
       },
     });
 
-    console.log(`Created quiz: ${quiz.title} for Class ${theClass.classId} Level ${level.order}`);
+    console.log(`✓ Created quiz: "${soal.title}" for Class ${theClass.classId} Level ${theLevel.order} (${soal.questions.length} questions)`);
+    createdCount++;
 
     Promise.all(
       soal.questions.map(async (question) => {
@@ -136,6 +179,12 @@ async function main() {
       })
     );
   }
+
+  console.log('\n=== SEEDING COMPLETED ===');
+  console.log(`Total quizzes processed: ${dataSoal.length}`);
+  console.log(`Quizzes created: ${createdCount}`);
+  console.log(`Quizzes skipped (already exist): ${skippedCount}`);
+  console.log('=========================\n');
 }
 
 main().then(async () => {

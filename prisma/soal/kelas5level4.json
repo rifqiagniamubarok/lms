@@ -1,0 +1,201 @@
+[
+  {
+    "title": "Mengenal Bilangan Desimal",
+    "description": "Membaca dan memahami desimal sederhana",
+    "level": 4,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Bilangan desimal dari satu per sepuluh adalah ...",
+        "options": [
+          { "option": "0,01", "isCorrect": false },
+          { "option": "0,1", "isCorrect": true },
+          { "option": "1,0", "isCorrect": false },
+          { "option": "0,10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai tempat angka 5 pada bilangan 2,5 adalah ...",
+        "options": [
+          { "option": "Satuan", "isCorrect": false },
+          { "option": "Puluhan", "isCorrect": false },
+          { "option": "Persepuluhan", "isCorrect": true },
+          { "option": "Perseratusan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan yang lebih besar adalah ...",
+        "options": [
+          { "option": "0,4", "isCorrect": false },
+          { "option": "0,6", "isCorrect": true },
+          { "option": "0,3", "isCorrect": false },
+          { "option": "0,2", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 1,25 dibaca ...",
+        "options": [
+          { "option": "Satu dua lima", "isCorrect": false },
+          { "option": "Satu koma dua lima", "isCorrect": true },
+          { "option": "Satu koma dua", "isCorrect": false },
+          { "option": "Satu dua koma lima", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan desimal dari 3/10 adalah ...",
+        "options": [
+          { "option": "0,03", "isCorrect": false },
+          { "option": "0,3", "isCorrect": true },
+          { "option": "3,0", "isCorrect": false },
+          { "option": "0,30", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan yang paling kecil adalah ...",
+        "options": [
+          { "option": "0,9", "isCorrect": false },
+          { "option": "0,5", "isCorrect": false },
+          { "option": "0,2", "isCorrect": true },
+          { "option": "0,7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 4,0 sama dengan ...",
+        "options": [
+          { "option": "0,4", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "40", "isCorrect": false },
+          { "option": "0,04", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan dari terkecil ke terbesar: 0,8; 0,3; 0,5 adalah ...",
+        "options": [
+          { "option": "0,8; 0,5; 0,3", "isCorrect": false },
+          { "option": "0,3; 0,5; 0,8", "isCorrect": true },
+          { "option": "0,5; 0,3; 0,8", "isCorrect": false },
+          { "option": "0,3; 0,8; 0,5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan desimal yang setara dengan 1/2 adalah ...",
+        "options": [
+          { "option": "0,2", "isCorrect": false },
+          { "option": "0,25", "isCorrect": false },
+          { "option": "0,5", "isCorrect": true },
+          { "option": "0,05", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka 7 pada bilangan 3,78 bernilai ...",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "0,7", "isCorrect": true },
+          { "option": "0,07", "isCorrect": false },
+          { "option": "70", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pengukuran Panjang",
+    "description": "Konversi satuan panjang",
+    "level": 4,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "1 meter sama dengan ... cm",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "100", "isCorrect": true },
+          { "option": "1.000", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "250 cm sama dengan ... m",
+        "options": [
+          { "option": "2,5", "isCorrect": true },
+          { "option": "25", "isCorrect": false },
+          { "option": "0,25", "isCorrect": false },
+          { "option": "250", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3 m 50 cm sama dengan ... cm",
+        "options": [
+          { "option": "350", "isCorrect": true },
+          { "option": "305", "isCorrect": false },
+          { "option": "3.050", "isCorrect": false },
+          { "option": "300", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "500 cm sama dengan ... m",
+        "options": [
+          { "option": "50", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "0,5", "isCorrect": false },
+          { "option": "500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1 km sama dengan ... m",
+        "options": [
+          { "option": "100", "isCorrect": false },
+          { "option": "1.000", "isCorrect": true },
+          { "option": "10.000", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "2,5 m sama dengan ... cm",
+        "options": [
+          { "option": "25", "isCorrect": false },
+          { "option": "250", "isCorrect": true },
+          { "option": "2.500", "isCorrect": false },
+          { "option": "205", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "750 cm sama dengan ... m",
+        "options": [
+          { "option": "7,5", "isCorrect": true },
+          { "option": "75", "isCorrect": false },
+          { "option": "0,75", "isCorrect": false },
+          { "option": "750", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "4 m sama dengan ... cm",
+        "options": [
+          { "option": "40", "isCorrect": false },
+          { "option": "400", "isCorrect": true },
+          { "option": "4.000", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1.200 cm sama dengan ... m",
+        "options": [
+          { "option": "12", "isCorrect": true },
+          { "option": "120", "isCorrect": false },
+          { "option": "1,2", "isCorrect": false },
+          { "option": "0,12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "0,5 m sama dengan ... cm",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "50", "isCorrect": true },
+          { "option": "500", "isCorrect": false },
+          { "option": "0,5", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

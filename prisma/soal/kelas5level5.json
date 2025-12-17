@@ -1,0 +1,201 @@
+[
+  {
+    "title": "Keliling dan Luas Bangun Datar",
+    "description": "Persegi dan persegi panjang",
+    "level": 5,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Keliling persegi dengan sisi 8 cm adalah ...",
+        "options": [
+          { "option": "24 cm", "isCorrect": false },
+          { "option": "32 cm", "isCorrect": true },
+          { "option": "64 cm", "isCorrect": false },
+          { "option": "16 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rumus keliling persegi panjang adalah ...",
+        "options": [
+          { "option": "p × l", "isCorrect": false },
+          { "option": "2 × (p + l)", "isCorrect": true },
+          { "option": "4 × s", "isCorrect": false },
+          { "option": "p + l", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas persegi dengan sisi 6 cm adalah ...",
+        "options": [
+          { "option": "12 cm²", "isCorrect": false },
+          { "option": "24 cm²", "isCorrect": false },
+          { "option": "36 cm²", "isCorrect": true },
+          { "option": "18 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang memiliki panjang 10 cm dan lebar 4 cm. Luasnya adalah ...",
+        "options": [
+          { "option": "14 cm²", "isCorrect": false },
+          { "option": "20 cm²", "isCorrect": false },
+          { "option": "40 cm²", "isCorrect": true },
+          { "option": "80 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling persegi panjang dengan p = 7 cm dan l = 5 cm adalah ...",
+        "options": [
+          { "option": "12 cm", "isCorrect": false },
+          { "option": "24 cm", "isCorrect": true },
+          { "option": "35 cm", "isCorrect": false },
+          { "option": "70 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika luas persegi adalah 49 cm², panjang sisinya adalah ...",
+        "options": [
+          { "option": "6 cm", "isCorrect": false },
+          { "option": "7 cm", "isCorrect": true },
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "21 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang semua sisinya sama panjang adalah ...",
+        "options": [
+          { "option": "Persegi panjang", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Trapesium", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan luas yang benar adalah ...",
+        "options": [
+          { "option": "cm", "isCorrect": false },
+          { "option": "m", "isCorrect": false },
+          { "option": "cm²", "isCorrect": true },
+          { "option": "kg", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi dengan sisi 5 cm memiliki keliling ...",
+        "options": [
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": true },
+          { "option": "25 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas persegi panjang 8 cm × 3 cm adalah ...",
+        "options": [
+          { "option": "11 cm²", "isCorrect": false },
+          { "option": "24 cm²", "isCorrect": true },
+          { "option": "48 cm²", "isCorrect": false },
+          { "option": "16 cm²", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Data dan Diagram",
+    "description": "Membaca tabel dan diagram sederhana",
+    "level": 5,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Data yang disajikan dalam bentuk batang disebut ...",
+        "options": [
+          { "option": "Diagram garis", "isCorrect": false },
+          { "option": "Diagram batang", "isCorrect": true },
+          { "option": "Piktogram", "isCorrect": false },
+          { "option": "Tabel", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kegunaan tabel adalah untuk ...",
+        "options": [
+          { "option": "Menghitung luas", "isCorrect": false },
+          { "option": "Menyajikan data", "isCorrect": true },
+          { "option": "Mengukur panjang", "isCorrect": false },
+          { "option": "Menggambar bangun", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Diagram yang menggunakan gambar disebut ...",
+        "options": [
+          { "option": "Diagram batang", "isCorrect": false },
+          { "option": "Diagram garis", "isCorrect": false },
+          { "option": "Piktogram", "isCorrect": true },
+          { "option": "Tabel", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika satu gambar mewakili 2 siswa, maka 3 gambar mewakili ... siswa",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data nilai siswa paling mudah dibaca menggunakan ...",
+        "options": [
+          { "option": "Peta", "isCorrect": false },
+          { "option": "Diagram", "isCorrect": true },
+          { "option": "Bangun datar", "isCorrect": false },
+          { "option": "Rumus", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Diagram batang cocok digunakan untuk ...",
+        "options": [
+          { "option": "Menunjukkan perbandingan", "isCorrect": true },
+          { "option": "Menghitung volume", "isCorrect": false },
+          { "option": "Mengukur berat", "isCorrect": false },
+          { "option": "Menggambar bangun", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data yang disusun ke dalam baris dan kolom disebut ...",
+        "options": [
+          { "option": "Diagram", "isCorrect": false },
+          { "option": "Piktogram", "isCorrect": false },
+          { "option": "Tabel", "isCorrect": true },
+          { "option": "Grafik", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Diagram garis biasanya digunakan untuk menunjukkan ...",
+        "options": [
+          { "option": "Bentuk bangun", "isCorrect": false },
+          { "option": "Perubahan data", "isCorrect": true },
+          { "option": "Jumlah sisi", "isCorrect": false },
+          { "option": "Luas daerah", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika data paling tinggi adalah 20 dan terendah 5, selisihnya adalah ...",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "15", "isCorrect": true },
+          { "option": "20", "isCorrect": false },
+          { "option": "25", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Tujuan penyajian data adalah agar ...",
+        "options": [
+          { "option": "Sulit dibaca", "isCorrect": false },
+          { "option": "Mudah dipahami", "isCorrect": true },
+          { "option": "Lebih rumit", "isCorrect": false },
+          { "option": "Lebih panjang", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

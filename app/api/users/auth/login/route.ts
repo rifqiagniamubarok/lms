@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       username: user.username,
     };
 
-    const token = generateToken(tokenPayload, '1h');
+    const token = generateToken(tokenPayload, '2h');
 
     if (validatedBody.isRemember) {
       const longToken = generateToken(tokenPayload, '30d');

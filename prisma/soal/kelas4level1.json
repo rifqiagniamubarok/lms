@@ -1,0 +1,201 @@
+[
+  {
+    "title": "Bilangan Cacah sampai 10.000",
+    "description": "Membaca dan memahami bilangan sampai 10.000",
+    "level": 1,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Bilangan 4.375 dibaca ...",
+        "options": [
+          { "option": "Empat ribu tiga ratus tujuh puluh lima", "isCorrect": true },
+          { "option": "Empat ribu tiga tujuh lima", "isCorrect": false },
+          { "option": "Empat tiga tujuh lima", "isCorrect": false },
+          { "option": "Empat ribu tujuh puluh lima", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai tempat angka 6 pada bilangan 6.248 adalah ...",
+        "options": [
+          { "option": "Ribuan", "isCorrect": true },
+          { "option": "Ratusan", "isCorrect": false },
+          { "option": "Puluhan", "isCorrect": false },
+          { "option": "Satuan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan terbesar adalah ...",
+        "options": [
+          { "option": "4.320", "isCorrect": false },
+          { "option": "4.302", "isCorrect": false },
+          { "option": "4.230", "isCorrect": false },
+          { "option": "4.321", "isCorrect": true }
+        ]
+      },
+      {
+        "question": "Angka 5 pada bilangan 7.548 bernilai ...",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "50", "isCorrect": false },
+          { "option": "500", "isCorrect": false },
+          { "option": "5.000", "isCorrect": true }
+        ]
+      },
+      {
+        "question": "Bilangan sebelum 2.000 adalah ...",
+        "options": [
+          { "option": "1.998", "isCorrect": false },
+          { "option": "1.999", "isCorrect": true },
+          { "option": "2.001", "isCorrect": false },
+          { "option": "2.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan sesudah 6.499 adalah ...",
+        "options": [
+          { "option": "6.498", "isCorrect": false },
+          { "option": "6.499", "isCorrect": false },
+          { "option": "6.500", "isCorrect": true },
+          { "option": "6.599", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "4.000 + 300 + 20 + 7 = ...",
+        "options": [
+          { "option": "4.327", "isCorrect": true },
+          { "option": "4.237", "isCorrect": false },
+          { "option": "4.320", "isCorrect": false },
+          { "option": "4.300", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan dengan nilai tempat ribuan 8 adalah ...",
+        "options": [
+          { "option": "1.823", "isCorrect": false },
+          { "option": "8.124", "isCorrect": true },
+          { "option": "3.812", "isCorrect": false },
+          { "option": "2.481", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan bilangan dari kecil ke besar yang benar adalah ...",
+        "options": [
+          { "option": "2.345, 2.354, 2.435", "isCorrect": true },
+          { "option": "2.354, 2.345, 2.435", "isCorrect": false },
+          { "option": "2.435, 2.354, 2.345", "isCorrect": false },
+          { "option": "2.345, 2.435, 2.354", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 9.000 terdiri dari ... ribuan",
+        "options": [
+          { "option": "9", "isCorrect": true },
+          { "option": "90", "isCorrect": false },
+          { "option": "900", "isCorrect": false },
+          { "option": "9.000", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Perbandingan Bilangan",
+    "description": "Membandingkan dan mengurutkan bilangan cacah",
+    "level": 1,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "3.456 ... 3.465",
+        "options": [
+          { "option": "<", "isCorrect": true },
+          { "option": ">", "isCorrect": false },
+          { "option": "=", "isCorrect": false },
+          { "option": "≤", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5.120 ... 5.102",
+        "options": [
+          { "option": "=", "isCorrect": false },
+          { "option": "<", "isCorrect": false },
+          { "option": ">", "isCorrect": true },
+          { "option": "≤", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan terkecil adalah ...",
+        "options": [
+          { "option": "6.210", "isCorrect": false },
+          { "option": "6.201", "isCorrect": true },
+          { "option": "6.120", "isCorrect": false },
+          { "option": "6.102", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan yang benar dari terbesar ke terkecil adalah ...",
+        "options": [
+          { "option": "4.321, 4.312, 4.231", "isCorrect": true },
+          { "option": "4.231, 4.312, 4.321", "isCorrect": false },
+          { "option": "4.312, 4.231, 4.321", "isCorrect": false },
+          { "option": "4.321, 4.231, 4.312", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "7.005 ... 7.050",
+        "options": [
+          { "option": "<", "isCorrect": true },
+          { "option": ">", "isCorrect": false },
+          { "option": "=", "isCorrect": false },
+          { "option": "≥", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan terbesar adalah ...",
+        "options": [
+          { "option": "8.901", "isCorrect": true },
+          { "option": "8.910", "isCorrect": false },
+          { "option": "8.190", "isCorrect": false },
+          { "option": "8.109", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3.999 ... 4.000",
+        "options": [
+          { "option": "<", "isCorrect": true },
+          { "option": ">", "isCorrect": false },
+          { "option": "=", "isCorrect": false },
+          { "option": "≤", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan yang tepat di antara 2.499 dan 2.501 adalah ...",
+        "options": [
+          { "option": "2.498", "isCorrect": false },
+          { "option": "2.500", "isCorrect": true },
+          { "option": "2.502", "isCorrect": false },
+          { "option": "2.490", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan naik yang benar adalah ...",
+        "options": [
+          { "option": "1.234, 1.243, 1.324", "isCorrect": true },
+          { "option": "1.324, 1.243, 1.234", "isCorrect": false },
+          { "option": "1.243, 1.234, 1.324", "isCorrect": false },
+          { "option": "1.234, 1.324, 1.243", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "9.100 ... 9.010",
+        "options": [
+          { "option": ">", "isCorrect": true },
+          { "option": "<", "isCorrect": false },
+          { "option": "=", "isCorrect": false },
+          { "option": "≤", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

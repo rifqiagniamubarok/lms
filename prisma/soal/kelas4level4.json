@@ -1,0 +1,301 @@
+[
+  {
+    "title": "Pengukuran Panjang",
+    "description": "Satuan panjang dan konversi sederhana",
+    "level": 4,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "1 meter sama dengan ... cm",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "100", "isCorrect": true },
+          { "option": "1.000", "isCorrect": false },
+          { "option": "50", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "200 cm sama dengan ... m",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "20", "isCorrect": false },
+          { "option": "0,2", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan yang tepat untuk mengukur panjang pensil adalah ...",
+        "options": [
+          { "option": "Meter", "isCorrect": false },
+          { "option": "Kilometer", "isCorrect": false },
+          { "option": "Centimeter", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Panjang meja 150 cm sama dengan ...",
+        "options": [
+          { "option": "1,5 m", "isCorrect": true },
+          { "option": "15 m", "isCorrect": false },
+          { "option": "0,15 m", "isCorrect": false },
+          { "option": "150 m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan panjang terpanjang adalah ...",
+        "options": [
+          { "option": "cm", "isCorrect": false },
+          { "option": "m", "isCorrect": false },
+          { "option": "km", "isCorrect": true },
+          { "option": "mm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "500 cm = ... m",
+        "options": [
+          { "option": "50", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "0,5", "isCorrect": false },
+          { "option": "500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan yang paling tepat untuk mengukur jarak rumah ke sekolah adalah ...",
+        "options": [
+          { "option": "cm", "isCorrect": false },
+          { "option": "m", "isCorrect": false },
+          { "option": "km", "isCorrect": true },
+          { "option": "mm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "2 m = ... cm",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "200", "isCorrect": true },
+          { "option": "2.000", "isCorrect": false },
+          { "option": "100", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "75 cm = ... m",
+        "options": [
+          { "option": "0,75", "isCorrect": true },
+          { "option": "7,5", "isCorrect": false },
+          { "option": "75", "isCorrect": false },
+          { "option": "1,75", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Alat untuk mengukur panjang adalah ...",
+        "options": [
+          { "option": "Timbangan", "isCorrect": false },
+          { "option": "Penggaris", "isCorrect": true },
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Gelas ukur", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pengukuran Berat dan Waktu",
+    "description": "Satuan berat dan waktu sehari-hari",
+    "level": 4,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "1 kg sama dengan ... gram",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "100", "isCorrect": false },
+          { "option": "1.000", "isCorrect": true },
+          { "option": "10.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan berat yang tepat untuk beras adalah ...",
+        "options": [
+          { "option": "Gram", "isCorrect": false },
+          { "option": "Kilogram", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Meter", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1 jam = ... menit",
+        "options": [
+          { "option": "30", "isCorrect": false },
+          { "option": "60", "isCorrect": true },
+          { "option": "90", "isCorrect": false },
+          { "option": "100", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "2 jam = ... menit",
+        "options": [
+          { "option": "60", "isCorrect": false },
+          { "option": "120", "isCorrect": true },
+          { "option": "180", "isCorrect": false },
+          { "option": "240", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan waktu yang paling pendek adalah ...",
+        "options": [
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Menit", "isCorrect": false },
+          { "option": "Detik", "isCorrect": true },
+          { "option": "Hari", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "500 gram = ... kg",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "0,5", "isCorrect": true },
+          { "option": "50", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jam menunjukkan pukul 07.00. Artinya ...",
+        "options": [
+          { "option": "Jam tujuh pagi", "isCorrect": true },
+          { "option": "Jam tujuh malam", "isCorrect": false },
+          { "option": "Jam tujuh lewat", "isCorrect": false },
+          { "option": "Jam setengah tujuh", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Berat gula 2 kg sama dengan ... gram",
+        "options": [
+          { "option": "200", "isCorrect": false },
+          { "option": "2.000", "isCorrect": true },
+          { "option": "20.000", "isCorrect": false },
+          { "option": "1.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan berat terkecil adalah ...",
+        "options": [
+          { "option": "kg", "isCorrect": false },
+          { "option": "ons", "isCorrect": false },
+          { "option": "gram", "isCorrect": true },
+          { "option": "ton", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Alat untuk mengukur berat adalah ...",
+        "options": [
+          { "option": "Penggaris", "isCorrect": false },
+          { "option": "Timbangan", "isCorrect": true },
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Termometer", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Bangun Datar",
+    "description": "Mengenal bangun datar dan sifatnya",
+    "level": 4,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Bangun yang memiliki 4 sisi sama panjang adalah ...",
+        "options": [
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang memiliki 3 sisi adalah ...",
+        "options": [
+          { "option": "Segitiga", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Trapesium", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun datar yang tidak memiliki sudut adalah ...",
+        "options": [
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Jajar genjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang memiliki ... sisi",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang memiliki 4 sisi, tetapi tidak semuanya sama panjang adalah ...",
+        "options": [
+          { "option": "Persegi panjang", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah sudut segitiga adalah ...",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang memiliki dua pasang sisi sejajar adalah ...",
+        "options": [
+          { "option": "Persegi panjang", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Layangan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Segitiga memiliki ... sudut",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang bentuknya bulat adalah ...",
+        "options": [
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun datar yang memiliki 4 sudut siku-siku adalah ...",
+        "options": [
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Trapesium", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

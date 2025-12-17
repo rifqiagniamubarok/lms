@@ -1,0 +1,301 @@
+[
+  {
+    "title": "Pola Bilangan Sederhana",
+    "description": "Mengenal dan melanjutkan pola bilangan",
+    "level": 5,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "2, 4, 6, 8, ... angka selanjutnya adalah",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5, 10, 15, ... angka selanjutnya adalah",
+        "options": [
+          { "option": "18", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "25", "isCorrect": false },
+          { "option": "30", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1, 3, 5, 7, ... pola tersebut bertambah",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "10, 20, 30, ... angka selanjutnya adalah",
+        "options": [
+          { "option": "35", "isCorrect": false },
+          { "option": "40", "isCorrect": true },
+          { "option": "50", "isCorrect": false },
+          { "option": "60", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola 2, 6, 10, ... bertambah sebanyak",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3, 6, 9, ... adalah pola",
+        "options": [
+          { "option": "Bilangan ganjil", "isCorrect": false },
+          { "option": "Kelipatan 3", "isCorrect": true },
+          { "option": "Kelipatan 2", "isCorrect": false },
+          { "option": "Bilangan prima", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "7, 14, 21, ... angka berikutnya adalah",
+        "options": [
+          { "option": "24", "isCorrect": false },
+          { "option": "28", "isCorrect": true },
+          { "option": "30", "isCorrect": false },
+          { "option": "35", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola 1, 4, 7, 10 bertambah",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan selanjutnya dari 100, 90, 80 adalah",
+        "options": [
+          { "option": "75", "isCorrect": false },
+          { "option": "70", "isCorrect": true },
+          { "option": "60", "isCorrect": false },
+          { "option": "85", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5, 15, 25, ... adalah pola bertambah",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "15", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pengolahan Data Sederhana",
+    "description": "Membaca tabel dan diagram sederhana",
+    "level": 5,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Data jumlah siswa: 20, 25, 30. Jumlah terbanyak adalah",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "25", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "15", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai ulangan: 70, 80, 90. Nilai tertinggi adalah",
+        "options": [
+          { "option": "70", "isCorrect": false },
+          { "option": "80", "isCorrect": false },
+          { "option": "90", "isCorrect": true },
+          { "option": "100", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah apel 10, jeruk 15, mangga 5. Buah paling sedikit adalah",
+        "options": [
+          { "option": "Apel", "isCorrect": false },
+          { "option": "Jeruk", "isCorrect": false },
+          { "option": "Mangga", "isCorrect": true },
+          { "option": "Semua sama", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data 5, 10, 15, 20. Selisih terbesar dan terkecil adalah",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "15", "isCorrect": true },
+          { "option": "20", "isCorrect": false },
+          { "option": "25", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah buku Ani 12 dan Budi 8. Jumlah seluruhnya",
+        "options": [
+          { "option": "18", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "22", "isCorrect": false },
+          { "option": "24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data yang paling kecil dari 9, 4, 7 adalah",
+        "options": [
+          { "option": "4", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "9", "isCorrect": false },
+          { "option": "0", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah pensil: Andi 5, Beni 5, Cici 5. Kesimpulan data",
+        "options": [
+          { "option": "Berbeda", "isCorrect": false },
+          { "option": "Sama", "isCorrect": true },
+          { "option": "Tidak lengkap", "isCorrect": false },
+          { "option": "Tidak diketahui", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika data nilai paling tinggi 95, maka nilai terbaik adalah",
+        "options": [
+          { "option": "95", "isCorrect": true },
+          { "option": "90", "isCorrect": false },
+          { "option": "85", "isCorrect": false },
+          { "option": "100", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data: 6, 8, 10. Jumlah seluruh data adalah",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "22", "isCorrect": false },
+          { "option": "24", "isCorrect": true },
+          { "option": "26", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data digunakan untuk mengetahui",
+        "options": [
+          { "option": "Cerita", "isCorrect": false },
+          { "option": "Informasi", "isCorrect": true },
+          { "option": "Dongeng", "isCorrect": false },
+          { "option": "Gambar", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Soal Cerita Campuran",
+    "description": "Penerapan operasi hitung dalam kehidupan sehari-hari",
+    "level": 5,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Ani memiliki 12 permen. Dibagikan kepada 4 teman sama banyak. Setiap teman mendapat",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Budi membeli 5 kantong, setiap kantong berisi 6 kelereng. Jumlah kelereng Budi",
+        "options": [
+          { "option": "25", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "35", "isCorrect": false },
+          { "option": "40", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ibu memiliki 20 telur. Digunakan 8. Sisa telur",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "14", "isCorrect": false },
+          { "option": "16", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satu kotak berisi 10 pensil. Ada 3 kotak. Jumlah pensil",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "40", "isCorrect": false },
+          { "option": "50", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ali berjalan 200 m dan kemudian 300 m. Total jarak",
+        "options": [
+          { "option": "400 m", "isCorrect": false },
+          { "option": "500 m", "isCorrect": true },
+          { "option": "600 m", "isCorrect": false },
+          { "option": "700 m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dari 24 buku dibagi ke 6 rak sama banyak. Setiap rak berisi",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Harga 1 buku Rp5.000. Harga 4 buku",
+        "options": [
+          { "option": "Rp15.000", "isCorrect": false },
+          { "option": "Rp20.000", "isCorrect": true },
+          { "option": "Rp25.000", "isCorrect": false },
+          { "option": "Rp30.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ayah bekerja dari pukul 08.00 sampai 12.00. Lama bekerja",
+        "options": [
+          { "option": "3 jam", "isCorrect": false },
+          { "option": "4 jam", "isCorrect": true },
+          { "option": "5 jam", "isCorrect": false },
+          { "option": "6 jam", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Panjang pita 1 m dipotong menjadi 4 bagian sama panjang. Setiap bagian",
+        "options": [
+          { "option": "25 cm", "isCorrect": true },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "40 cm", "isCorrect": false },
+          { "option": "50 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah kaki 5 ayam adalah",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "15", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

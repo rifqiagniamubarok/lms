@@ -1,0 +1,201 @@
+[
+  {
+    "title": "Mengenal Pecahan",
+    "description": "Membaca dan memahami pecahan",
+    "level": 3,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Pecahan dari gambar yang dibagi 4 sama besar dan diarsir 1 bagian adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "4/1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang menunjukkan tiga bagian dari lima bagian sama adalah ...",
+        "options": [
+          { "option": "5/3", "isCorrect": false },
+          { "option": "3/5", "isCorrect": true },
+          { "option": "1/5", "isCorrect": false },
+          { "option": "5/1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pembilang dari pecahan 4/7 adalah ...",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "11", "isCorrect": false },
+          { "option": "3", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Penyebut dari pecahan 6/9 adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "15", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang nilainya paling kecil adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "1/5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan 2/6 sama dengan ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": true },
+          { "option": "2/3", "isCorrect": false },
+          { "option": "3/6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang senilai dengan 3/9 adalah ...",
+        "options": [
+          { "option": "1/3", "isCorrect": true },
+          { "option": "2/3", "isCorrect": false },
+          { "option": "3/6", "isCorrect": false },
+          { "option": "9/3", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang lebih besar adalah ...",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/5", "isCorrect": false },
+          { "option": "1/3", "isCorrect": true },
+          { "option": "1/6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika sebuah kue dibagi 8 bagian dan dimakan 2 bagian, pecahannya adalah ...",
+        "options": [
+          { "option": "2/8", "isCorrect": true },
+          { "option": "1/8", "isCorrect": false },
+          { "option": "8/2", "isCorrect": false },
+          { "option": "6/8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang senilai dengan 4/8 adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": true },
+          { "option": "2/4", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/2", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Membandingkan Pecahan",
+    "description": "Menentukan pecahan lebih besar atau kecil",
+    "level": 3,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Manakah yang lebih besar?",
+        "options": [
+          { "option": "2/5", "isCorrect": false },
+          { "option": "3/5", "isCorrect": true },
+          { "option": "1/5", "isCorrect": false },
+          { "option": "4/10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah yang lebih kecil?",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": true },
+          { "option": "2/3", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang nilainya sama dengan 5/10 adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": true },
+          { "option": "2/3", "isCorrect": false },
+          { "option": "3/5", "isCorrect": false },
+          { "option": "10/5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan dari terkecil ke terbesar: 1/2, 1/4, 3/4 adalah ...",
+        "options": [
+          { "option": "1/2, 1/4, 3/4", "isCorrect": false },
+          { "option": "1/4, 1/2, 3/4", "isCorrect": true },
+          { "option": "3/4, 1/2, 1/4", "isCorrect": false },
+          { "option": "1/2, 3/4, 1/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah yang paling besar?",
+        "options": [
+          { "option": "2/6", "isCorrect": false },
+          { "option": "3/6", "isCorrect": false },
+          { "option": "4/6", "isCorrect": true },
+          { "option": "1/6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan 6/8 jika disederhanakan menjadi ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "3/4", "isCorrect": true },
+          { "option": "2/4", "isCorrect": false },
+          { "option": "4/6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah yang lebih kecil dari 1/2?",
+        "options": [
+          { "option": "3/4", "isCorrect": false },
+          { "option": "2/4", "isCorrect": false },
+          { "option": "1/3", "isCorrect": true },
+          { "option": "4/6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan senilai dengan 2/4 adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": true },
+          { "option": "2/2", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/2", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah yang lebih besar dari 1/3?",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "2/6", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "1/6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan yang benar adalah ...",
+        "options": [
+          { "option": "1/5 < 1/4 < 1/3", "isCorrect": true },
+          { "option": "1/3 < 1/4 < 1/5", "isCorrect": false },
+          { "option": "1/4 < 1/5 < 1/3", "isCorrect": false },
+          { "option": "1/3 < 1/5 < 1/4", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

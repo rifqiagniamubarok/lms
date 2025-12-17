@@ -1,0 +1,301 @@
+[
+  {
+    "title": "Perkalian Dua Angka",
+    "description": "Perkalian dua digit dengan satu digit",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "24 x 3 = ?",
+        "options": [
+          { "option": "62", "isCorrect": false },
+          { "option": "72", "isCorrect": true },
+          { "option": "84", "isCorrect": false },
+          { "option": "96", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "15 x 4 = ?",
+        "options": [
+          { "option": "40", "isCorrect": false },
+          { "option": "50", "isCorrect": false },
+          { "option": "60", "isCorrect": true },
+          { "option": "70", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "32 x 2 = ?",
+        "options": [
+          { "option": "64", "isCorrect": true },
+          { "option": "62", "isCorrect": false },
+          { "option": "66", "isCorrect": false },
+          { "option": "68", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18 x 5 = ?",
+        "options": [
+          { "option": "80", "isCorrect": false },
+          { "option": "85", "isCorrect": false },
+          { "option": "90", "isCorrect": true },
+          { "option": "95", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "21 x 4 = ?",
+        "options": [
+          { "option": "80", "isCorrect": false },
+          { "option": "84", "isCorrect": true },
+          { "option": "88", "isCorrect": false },
+          { "option": "96", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "35 x 2 = ?",
+        "options": [
+          { "option": "60", "isCorrect": false },
+          { "option": "70", "isCorrect": true },
+          { "option": "80", "isCorrect": false },
+          { "option": "90", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "14 x 6 = ?",
+        "options": [
+          { "option": "72", "isCorrect": false },
+          { "option": "84", "isCorrect": true },
+          { "option": "96", "isCorrect": false },
+          { "option": "108", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "27 x 3 = ?",
+        "options": [
+          { "option": "72", "isCorrect": false },
+          { "option": "81", "isCorrect": true },
+          { "option": "84", "isCorrect": false },
+          { "option": "90", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "40 x 2 = ?",
+        "options": [
+          { "option": "60", "isCorrect": false },
+          { "option": "70", "isCorrect": false },
+          { "option": "80", "isCorrect": true },
+          { "option": "90", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "12 x 8 = ?",
+        "options": [
+          { "option": "84", "isCorrect": false },
+          { "option": "92", "isCorrect": false },
+          { "option": "96", "isCorrect": true },
+          { "option": "108", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pembagian dengan Sisa",
+    "description": "Pembagian bilangan dengan hasil bersisa",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "17 ÷ 5 = ?",
+        "options": [
+          { "option": "3 sisa 2", "isCorrect": true },
+          { "option": "4 sisa 1", "isCorrect": false },
+          { "option": "3 sisa 1", "isCorrect": false },
+          { "option": "2 sisa 3", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "29 ÷ 4 = ?",
+        "options": [
+          { "option": "6 sisa 5", "isCorrect": false },
+          { "option": "7 sisa 1", "isCorrect": true },
+          { "option": "6 sisa 1", "isCorrect": false },
+          { "option": "8 sisa 1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "23 ÷ 3 = ?",
+        "options": [
+          { "option": "7 sisa 2", "isCorrect": true },
+          { "option": "6 sisa 5", "isCorrect": false },
+          { "option": "8 sisa 1", "isCorrect": false },
+          { "option": "7 sisa 1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18 ÷ 4 = ?",
+        "options": [
+          { "option": "4 sisa 2", "isCorrect": true },
+          { "option": "5 sisa 1", "isCorrect": false },
+          { "option": "3 sisa 6", "isCorrect": false },
+          { "option": "4 sisa 1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "35 ÷ 6 = ?",
+        "options": [
+          { "option": "5 sisa 5", "isCorrect": true },
+          { "option": "6 sisa 1", "isCorrect": false },
+          { "option": "5 sisa 1", "isCorrect": false },
+          { "option": "4 sisa 3", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "22 ÷ 5 = ?",
+        "options": [
+          { "option": "4 sisa 2", "isCorrect": true },
+          { "option": "5 sisa 2", "isCorrect": false },
+          { "option": "4 sisa 1", "isCorrect": false },
+          { "option": "3 sisa 5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "19 ÷ 4 = ?",
+        "options": [
+          { "option": "4 sisa 3", "isCorrect": true },
+          { "option": "5 sisa 1", "isCorrect": false },
+          { "option": "3 sisa 7", "isCorrect": false },
+          { "option": "4 sisa 1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "28 ÷ 5 = ?",
+        "options": [
+          { "option": "5 sisa 3", "isCorrect": true },
+          { "option": "6 sisa 2", "isCorrect": false },
+          { "option": "4 sisa 4", "isCorrect": false },
+          { "option": "5 sisa 2", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "31 ÷ 7 = ?",
+        "options": [
+          { "option": "4 sisa 3", "isCorrect": true },
+          { "option": "5 sisa 1", "isCorrect": false },
+          { "option": "3 sisa 10", "isCorrect": false },
+          { "option": "4 sisa 2", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "26 ÷ 4 = ?",
+        "options": [
+          { "option": "6 sisa 2", "isCorrect": true },
+          { "option": "5 sisa 6", "isCorrect": false },
+          { "option": "7 sisa 1", "isCorrect": false },
+          { "option": "6 sisa 1", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Faktor Suatu Bilangan",
+    "description": "Menentukan faktor dari bilangan kecil",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Faktor dari 12 adalah ...",
+        "options": [
+          { "option": "3", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah faktor dari 20?",
+        "options": [
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor dari 18 adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah yang merupakan faktor dari 15?",
+        "options": [
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor dari 16 adalah ...",
+        "options": [
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah faktor dari 21?",
+        "options": [
+          { "option": "7", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor dari 10 adalah ...",
+        "options": [
+          { "option": "5", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah faktor dari 14?",
+        "options": [
+          { "option": "7", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor dari 9 adalah ...",
+        "options": [
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah faktor dari 24?",
+        "options": [
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "9", "isCorrect": false },
+          { "option": "11", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

@@ -71,6 +71,7 @@ export async function GET(request: Request) {
       level: user.level.name,
       levelId: user.level.id,
       levelKkm: user.level.kkm,
+      levelOrder: user.level.order,
       expPoints: user.expPoints,
       expLevel: user.expLevel,
       maximalPointLevel: user.level._count.quizzes * 100,
@@ -82,7 +83,7 @@ export async function GET(request: Request) {
         isTheLastLevelAndClass,
         nextLevelId: nextLevel ? nextLevel.id : isTheLastLevelAndClass ? null : 1,
         nextLevel: nextLevel ? nextLevel.name : isTheLastLevelAndClass ? null : 'Level 1',
-        nextClassId: !nextLevel ? user.classId + 1 : user.classId,
+        nextClassId: !isTheLastLevelAndClass ? user.classId + 1 : user.classId,
       },
     };
 

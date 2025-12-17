@@ -1,0 +1,501 @@
+[
+  {
+    "title": "Faktor Suatu Bilangan",
+    "description": "Menentukan faktor dari bilangan",
+    "level": 2,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Faktor dari 12 adalah ...",
+        "options": [
+          { "option": "1, 2, 3, 4, 6, 12", "isCorrect": true },
+          { "option": "1, 2, 3, 6", "isCorrect": false },
+          { "option": "2, 4, 6", "isCorrect": false },
+          { "option": "1, 3, 5, 12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan yang merupakan faktor dari 15 adalah ...",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor terkecil dari suatu bilangan adalah ...",
+        "options": [
+          { "option": "0", "isCorrect": false },
+          { "option": "1", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "Bilangan itu sendiri", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor terbesar dari 20 adalah ...",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan yang memiliki faktor 1 dan dirinya sendiri disebut ...",
+        "options": [
+          { "option": "Bilangan genap", "isCorrect": false },
+          { "option": "Bilangan prima", "isCorrect": true },
+          { "option": "Bilangan ganjil", "isCorrect": false },
+          { "option": "Bilangan cacah", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor dari 18 adalah ...",
+        "options": [
+          { "option": "1, 2, 3, 6, 9, 18", "isCorrect": true },
+          { "option": "1, 2, 6, 18", "isCorrect": false },
+          { "option": "2, 3, 9", "isCorrect": false },
+          { "option": "1, 3, 6, 9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Yang bukan faktor dari 24 adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false },
+          { "option": "12", "isCorrect": false },
+          { "option": "7", "isCorrect": true }
+        ]
+      },
+      {
+        "question": "Jumlah faktor dari bilangan 6 adalah ...",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 1 adalah faktor dari ...",
+        "options": [
+          { "option": "Bilangan genap saja", "isCorrect": false },
+          { "option": "Bilangan ganjil saja", "isCorrect": false },
+          { "option": "Semua bilangan", "isCorrect": true },
+          { "option": "Tidak ada", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor dari 10 yang paling besar adalah ...",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Kelipatan Suatu Bilangan",
+    "description": "Menentukan kelipatan bilangan",
+    "level": 2,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Kelipatan 3 yang pertama adalah ...",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan 5 berikutnya setelah 20 adalah ...",
+        "options": [
+          { "option": "25", "isCorrect": true },
+          { "option": "30", "isCorrect": false },
+          { "option": "15", "isCorrect": false },
+          { "option": "35", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan 4 adalah ...",
+        "options": [
+          { "option": "4, 8, 12, 16", "isCorrect": true },
+          { "option": "4, 6, 8, 10", "isCorrect": false },
+          { "option": "2, 4, 6, 8", "isCorrect": false },
+          { "option": "1, 4, 8, 12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 18 adalah kelipatan dari ...",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan 10 selalu berakhiran ...",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "5", "isCorrect": false },
+          { "option": "0", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan 2 disebut juga bilangan ...",
+        "options": [
+          { "option": "Ganjil", "isCorrect": false },
+          { "option": "Prima", "isCorrect": false },
+          { "option": "Genap", "isCorrect": true },
+          { "option": "Cacah", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan 7 yang kurang dari 30 adalah ...",
+        "options": [
+          { "option": "7, 14, 21, 28", "isCorrect": true },
+          { "option": "7, 14, 21, 27", "isCorrect": false },
+          { "option": "7, 15, 21, 28", "isCorrect": false },
+          { "option": "7, 14, 20, 28", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan terkecil dari suatu bilangan adalah ...",
+        "options": [
+          { "option": "0", "isCorrect": false },
+          { "option": "1", "isCorrect": false },
+          { "option": "Bilangan itu sendiri", "isCorrect": true },
+          { "option": "2", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "12 adalah kelipatan dari ...",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan 9 yang kedua adalah ...",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "18", "isCorrect": true },
+          { "option": "27", "isCorrect": false },
+          { "option": "36", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Faktor Persekutuan",
+    "description": "Menentukan faktor persekutuan dua bilangan",
+    "level": 2,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Faktor persekutuan dari 12 dan 18 adalah ...",
+        "options": [
+          { "option": "1, 2, 3, 6", "isCorrect": true },
+          { "option": "1, 2, 6, 12", "isCorrect": false },
+          { "option": "2, 3, 6, 9", "isCorrect": false },
+          { "option": "1, 3, 9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor persekutuan terbesar dari 8 dan 12 adalah ...",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "FPB dari 6 dan 9 adalah ...",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor persekutuan dari 10 dan 15 adalah ...",
+        "options": [
+          { "option": "1 dan 5", "isCorrect": true },
+          { "option": "1 dan 3", "isCorrect": false },
+          { "option": "3 dan 5", "isCorrect": false },
+          { "option": "5 dan 10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "FPB dari 20 dan 30 adalah ...",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "15", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "FPB dari 12 dan 16 adalah ...",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Faktor persekutuan selalu merupakan ...",
+        "options": [
+          { "option": "Kelipatan", "isCorrect": false },
+          { "option": "Faktor dari kedua bilangan", "isCorrect": true },
+          { "option": "Bilangan prima", "isCorrect": false },
+          { "option": "Bilangan ganjil", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "FPB dari 9 dan 27 adalah ...",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "18", "isCorrect": false },
+          { "option": "27", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "FPB dari 14 dan 21 adalah ...",
+        "options": [
+          { "option": "7", "isCorrect": true },
+          { "option": "14", "isCorrect": false },
+          { "option": "21", "isCorrect": false },
+          { "option": "42", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "FPB dari dua bilangan prima berbeda adalah ...",
+        "options": [
+          { "option": "0", "isCorrect": false },
+          { "option": "1", "isCorrect": true },
+          { "option": "Bilangan itu", "isCorrect": false },
+          { "option": "Kelipatannya", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Kelipatan Persekutuan",
+    "description": "Menentukan kelipatan persekutuan dua bilangan",
+    "level": 2,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Kelipatan persekutuan dari 4 dan 6 adalah ...",
+        "options": [
+          { "option": "12, 24, 36", "isCorrect": true },
+          { "option": "4, 6, 12", "isCorrect": false },
+          { "option": "6, 12, 18", "isCorrect": false },
+          { "option": "8, 16, 24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan persekutuan terkecil (KPK) dari 4 dan 6 adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "18", "isCorrect": false },
+          { "option": "24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "KPK dari 5 dan 10 adalah ...",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "15", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan persekutuan dari 3 dan 6 adalah ...",
+        "options": [
+          { "option": "3, 6, 9", "isCorrect": false },
+          { "option": "6, 12, 18", "isCorrect": true },
+          { "option": "6, 9, 12", "isCorrect": false },
+          { "option": "9, 12, 15", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "KPK dari 8 dan 12 adalah ...",
+        "options": [
+          { "option": "12", "isCorrect": false },
+          { "option": "24", "isCorrect": true },
+          { "option": "36", "isCorrect": false },
+          { "option": "48", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "KPK dari dua bilangan yang sama adalah ...",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "Bilangan itu sendiri", "isCorrect": true },
+          { "option": "0", "isCorrect": false },
+          { "option": "Dua kali bilangan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "KPK dari 6 dan 9 adalah ...",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "18", "isCorrect": true },
+          { "option": "27", "isCorrect": false },
+          { "option": "36", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "KPK dari 10 dan 15 adalah ...",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "45", "isCorrect": false },
+          { "option": "60", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kelipatan persekutuan terkecil disebut juga ...",
+        "options": [
+          { "option": "FPB", "isCorrect": false },
+          { "option": "KPK", "isCorrect": true },
+          { "option": "Faktor", "isCorrect": false },
+          { "option": "Prima", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "KPK dari 4 dan 5 adalah ...",
+        "options": [
+          { "option": "10", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "40", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Aplikasi KPK dan FPB",
+    "description": "Soal cerita sederhana KPK dan FPB",
+    "level": 2,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Ani berolahraga setiap 4 hari sekali dan Budi setiap 6 hari sekali. Mereka berolahraga bersama setiap ... hari",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "10", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Lampu A menyala setiap 3 menit dan lampu B setiap 5 menit. Kedua lampu menyala bersama setiap ... menit",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "10", "isCorrect": false },
+          { "option": "15", "isCorrect": true },
+          { "option": "30", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "24 kelereng dan 36 kelereng dibagi ke dalam kantong dengan jumlah sama. Banyak kelereng tiap kantong paling banyak adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "18", "isCorrect": false },
+          { "option": "24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Panjang pita 20 cm dan 30 cm dipotong sama panjang. Panjang potongan terpanjang adalah ...",
+        "options": [
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dua bus berangkat setiap 6 menit dan 8 menit. Mereka berangkat bersama setiap ... menit",
+        "options": [
+          { "option": "12", "isCorrect": false },
+          { "option": "24", "isCorrect": true },
+          { "option": "48", "isCorrect": false },
+          { "option": "14", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "48 permen dan 60 permen akan dibagikan sama banyak. Jumlah terbanyak tiap anak adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "24", "isCorrect": false },
+          { "option": "30", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kegiatan A dilakukan setiap 7 hari dan kegiatan B setiap 14 hari. Mereka akan bersamaan setiap ... hari",
+        "options": [
+          { "option": "14", "isCorrect": true },
+          { "option": "21", "isCorrect": false },
+          { "option": "28", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "36 dan 54 dibagi menjadi kelompok sama besar. Banyak anggota tiap kelompok terbanyak adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "18", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jam dinding berdentang setiap 15 menit dan bel sekolah setiap 20 menit. Bersamaan setiap ... menit",
+        "options": [
+          { "option": "30", "isCorrect": false },
+          { "option": "60", "isCorrect": true },
+          { "option": "45", "isCorrect": false },
+          { "option": "120", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Masalah berbagi sama banyak biasanya menggunakan konsep ...",
+        "options": [
+          { "option": "KPK", "isCorrect": false },
+          { "option": "FPB", "isCorrect": true },
+          { "option": "Kelipatan", "isCorrect": false },
+          { "option": "Prima", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

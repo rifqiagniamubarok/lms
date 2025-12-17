@@ -1,0 +1,301 @@
+[
+  {
+    "title": "Pembagian Bilangan ≤ 50",
+    "description": "Latihan pembagian angka sampai 50 tanpa sisa",
+    "level": 3,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "24 ÷ 6 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "36 ÷ 9 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "40 ÷ 5 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "48 ÷ 6 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "45 ÷ 5 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "30 ÷ 3 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "42 ÷ 7 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "50 ÷ 10 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "32 ÷ 4 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "27 ÷ 3 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pembagian sebagai Kebalikan Perkalian",
+    "description": "Memahami hubungan perkalian dan pembagian",
+    "level": 3,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Jika 6 x 7 = 42, maka 42 ÷ 7 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 5 x 8 = 40, maka 40 ÷ 5 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 9 x 4 = 36, maka 36 ÷ 4 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 3 x 10 = 30, maka 30 ÷ 10 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 8 x 6 = 48, maka 48 ÷ 6 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 4 x 9 = 36, maka 36 ÷ 9 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 7 x 5 = 35, maka 35 ÷ 5 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 2 x 12 = 24, maka 24 ÷ 12 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 10 x 4 = 40, maka 40 ÷ 4 = ?",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika 6 x 6 = 36, maka 36 ÷ 6 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pembagian dalam Soal Cerita Sederhana",
+    "description": "Menyelesaikan soal cerita pembagian",
+    "level": 3,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Ani memiliki 24 permen dan membaginya sama rata kepada 6 teman. Setiap teman mendapat ... permen.",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Budi memiliki 30 kelereng dan memasukkannya ke dalam 5 kotak sama banyak. Setiap kotak berisi ... kelereng.",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ibu membeli 40 apel dan membaginya ke 8 kantong. Tiap kantong berisi ... apel.",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ada 35 pensil dibagikan ke 5 anak sama banyak. Setiap anak mendapat ... pensil.",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pak Tani memanen 48 jeruk dan memasukkannya ke dalam 6 keranjang. Setiap keranjang berisi ... jeruk.",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ada 50 buku dibagi rata ke 10 rak. Setiap rak berisi ... buku.",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Tono memiliki 36 kue dan membagikannya kepada 9 temannya. Setiap teman mendapat ... kue.",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ada 42 bola dibagi sama rata ke 7 anak. Setiap anak mendapat ... bola.",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ibu membuat 24 kue dan menaruhnya ke 4 piring sama banyak. Tiap piring berisi ... kue.",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Ada 32 permen dibagi ke 8 anak sama rata. Setiap anak mendapat ... permen.",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

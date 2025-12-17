@@ -1,0 +1,201 @@
+[
+  {
+    "title": "Membaca dan Menulis Bilangan Besar",
+    "description": "Bilangan hingga ratusan ribu",
+    "level": 1,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Bilangan 125.430 dibaca ...",
+        "options": [
+          { "option": "Seratus dua puluh lima ribu empat puluh tiga", "isCorrect": false },
+          { "option": "Seratus dua puluh lima ribu empat ratus tiga puluh", "isCorrect": true },
+          { "option": "Seratus dua puluh lima ribu empat ribu tiga puluh", "isCorrect": false },
+          { "option": "Seratus dua puluh lima ratus empat puluh tiga", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka 7 pada bilangan 78.945 menempati nilai tempat ...",
+        "options": [
+          { "option": "Ribuan", "isCorrect": false },
+          { "option": "Puluhan ribu", "isCorrect": true },
+          { "option": "Ratusan", "isCorrect": false },
+          { "option": "Puluhan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai angka 6 pada bilangan 46.210 adalah ...",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "60", "isCorrect": false },
+          { "option": "600", "isCorrect": false },
+          { "option": "6.000", "isCorrect": true }
+        ]
+      },
+      {
+        "question": "Bilangan terbesar adalah ...",
+        "options": [
+          { "option": "45.210", "isCorrect": false },
+          { "option": "45.120", "isCorrect": false },
+          { "option": "45.201", "isCorrect": false },
+          { "option": "45.210", "isCorrect": true }
+        ]
+      },
+      {
+        "question": "Urutan bilangan dari terkecil ke terbesar: 12.340, 12.304, 12.430 adalah ...",
+        "options": [
+          { "option": "12.430, 12.340, 12.304", "isCorrect": false },
+          { "option": "12.304, 12.340, 12.430", "isCorrect": true },
+          { "option": "12.340, 12.430, 12.304", "isCorrect": false },
+          { "option": "12.304, 12.430, 12.340", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 90.000 + 5.000 sama dengan ...",
+        "options": [
+          { "option": "95.000", "isCorrect": true },
+          { "option": "9.500", "isCorrect": false },
+          { "option": "905.000", "isCorrect": false },
+          { "option": "85.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan setelah 99.999 adalah ...",
+        "options": [
+          { "option": "100.000", "isCorrect": true },
+          { "option": "99.990", "isCorrect": false },
+          { "option": "100.001", "isCorrect": false },
+          { "option": "90.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan sebelum 50.000 adalah ...",
+        "options": [
+          { "option": "49.999", "isCorrect": true },
+          { "option": "49.990", "isCorrect": false },
+          { "option": "50.001", "isCorrect": false },
+          { "option": "48.999", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan yang memiliki 6 angka adalah ...",
+        "options": [
+          { "option": "9.999", "isCorrect": false },
+          { "option": "99.999", "isCorrect": false },
+          { "option": "100.000", "isCorrect": true },
+          { "option": "9.999.999", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka nol pada bilangan 40.506 bernilai ...",
+        "options": [
+          { "option": "Tidak bernilai", "isCorrect": true },
+          { "option": "Puluhan", "isCorrect": false },
+          { "option": "Ribuan", "isCorrect": false },
+          { "option": "Ratusan", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Penjumlahan Bilangan Besar",
+    "description": "Penjumlahan tanpa dan dengan menyimpan",
+    "level": 1,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "23.450 + 12.350 = ...",
+        "options": [
+          { "option": "35.700", "isCorrect": false },
+          { "option": "35.800", "isCorrect": true },
+          { "option": "34.800", "isCorrect": false },
+          { "option": "36.800", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "45.000 + 15.000 = ...",
+        "options": [
+          { "option": "50.000", "isCorrect": false },
+          { "option": "55.000", "isCorrect": false },
+          { "option": "60.000", "isCorrect": true },
+          { "option": "65.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18.765 + 1.235 = ...",
+        "options": [
+          { "option": "19.900", "isCorrect": false },
+          { "option": "20.000", "isCorrect": true },
+          { "option": "21.000", "isCorrect": false },
+          { "option": "19.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah dari 32.400 dan 7.600 adalah ...",
+        "options": [
+          { "option": "40.000", "isCorrect": true },
+          { "option": "39.000", "isCorrect": false },
+          { "option": "41.000", "isCorrect": false },
+          { "option": "42.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "25.500 + 4.500 = ...",
+        "options": [
+          { "option": "29.000", "isCorrect": false },
+          { "option": "30.000", "isCorrect": true },
+          { "option": "31.000", "isCorrect": false },
+          { "option": "32.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "67.200 + 2.800 = ...",
+        "options": [
+          { "option": "69.000", "isCorrect": false },
+          { "option": "70.000", "isCorrect": true },
+          { "option": "71.000", "isCorrect": false },
+          { "option": "72.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "19.999 + 1 = ...",
+        "options": [
+          { "option": "19.000", "isCorrect": false },
+          { "option": "20.000", "isCorrect": true },
+          { "option": "21.000", "isCorrect": false },
+          { "option": "19.998", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah 40.250 dan 9.750 adalah ...",
+        "options": [
+          { "option": "49.000", "isCorrect": false },
+          { "option": "50.000", "isCorrect": true },
+          { "option": "51.000", "isCorrect": false },
+          { "option": "52.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "54.600 + 5.400 = ...",
+        "options": [
+          { "option": "59.000", "isCorrect": false },
+          { "option": "60.000", "isCorrect": true },
+          { "option": "61.000", "isCorrect": false },
+          { "option": "62.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "27.350 + 2.650 = ...",
+        "options": [
+          { "option": "29.000", "isCorrect": false },
+          { "option": "30.000", "isCorrect": true },
+          { "option": "31.000", "isCorrect": false },
+          { "option": "32.000", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]
