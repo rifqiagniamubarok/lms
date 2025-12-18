@@ -258,7 +258,7 @@ export default function StudentPage() {
                                 className={`h-2 rounded-full ${
                                   student.expLevel >= 80 ? 'bg-green-500' : student.expLevel >= 60 ? 'bg-yellow-500' : student.expLevel >= 40 ? 'bg-blue-500' : 'bg-red-500'
                                 }`}
-                                style={{ width: `${(student.expLevel / student.expTotalInPoints) * 100}%` }}
+                                style={{ width: `${Math.round((student.expLevel / student.expTotalInPoints) * 100)}%` }}
                               />
                             </div>
                           </div>
