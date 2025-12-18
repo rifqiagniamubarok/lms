@@ -345,8 +345,6 @@ export default function QuizPage() {
                             </div>
                             <div>
                               <div className="font-medium text-gray-900 line-clamp-1">{quiz.title}</div>
-                              {quiz.description && <div className="text-sm text-gray-500 line-clamp-1">{quiz.description}</div>}
-                              <div className="text-xs text-gray-400">ID: {quiz.id}</div>
                             </div>
                           </div>
                         </TableCell>

@@ -235,7 +235,6 @@ export default function StudentPage() {
                             </div>
                             <div>
                               <div className="font-medium text-gray-900">{student.name}</div>
-                              <div className="text-sm text-gray-500">ID: {student.id}</div>
                             </div>
                           </div>
                         </TableCell>
@@ -268,7 +267,7 @@ export default function StudentPage() {
                           <span className="font-semibold text-blue-600">{student.averageScore.toLocaleString()}</span>
                         </TableCell>
                         <TableCell>
-                          <Chip variant="flat" color={student.expLevel >= 70 ? 'success' : 'warning'}>
+                          <Chip variant="flat" color={student.averageScore >= student.levelKkm ? 'success' : 'warning'}>
                             {student.averageScore >= student.levelKkm ? 'Aktif' : 'Perlu Perhatian'}
                           </Chip>
                         </TableCell>
