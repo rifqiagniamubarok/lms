@@ -58,7 +58,8 @@ model Class {
 
   users     User[]
   quizzes   Quiz[]
-
+  quizHistories UserQuizHistory[]
+  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -75,6 +76,7 @@ model Level {
 
   users     User[]
   quizzes   Quiz[]
+  quizHistories UserQuizHistory[]
 
   @@map("levels")
 }
@@ -90,6 +92,7 @@ model Quiz {
 
   questions QuizQuestion[]
   userQuizes  UserQuiz[]
+  quizHistory UserQuizHistory[]
 
   level     Level     @relation(fields: [levelId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   class     Class     @relation(fields: [classId], references: [classId], onDelete: Cascade, onUpdate: Cascade)
@@ -103,7 +106,6 @@ model Quiz {
 enum QuizSatus {
   DRAFT
   PUBLISHED
-
 }
 
 
@@ -161,12 +163,18 @@ model UserQuiz {
 model UserQuizHistory {
   id         Int      @id @default(autoincrement())
   userQuizId Int
+  quizId     Int
+  classId    Int
+  levelId    Int
   attempt    Int
   score      Float
   startAt    DateTime
   endAt      DateTime
 
-  userQuiz   UserQuiz @relation(fields: [userQuizId], references: [id], onDelete: Cascade)
+  userQuiz    UserQuiz @relation(fields: [userQuizId], references: [id], onDelete: Cascade)
+  quiz        Quiz @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  class       Class @relation(fields: [classId], references: [classId], onDelete: Cascade)
+  level       Level @relation(fields: [levelId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

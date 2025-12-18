@@ -251,14 +251,14 @@ export default function StudentPage() {
                         <TableCell>
                           <div className="flex items-center space-x-2">
                             <Chip variant="flat" color={getExpLevelColor(student.expLevel)} size="sm">
-                              {(student.expLevel / student.expTotalInPoints) * 100}%
+                              {parseFloat(((student.expLevel / student.expTotalInPoints) * 100).toFixed(1))}%
                             </Chip>
                             <div className="w-16 bg-gray-200 rounded-full h-2">
                               <div
                                 className={`h-2 rounded-full ${
                                   student.expLevel >= 80 ? 'bg-green-500' : student.expLevel >= 60 ? 'bg-yellow-500' : student.expLevel >= 40 ? 'bg-blue-500' : 'bg-red-500'
                                 }`}
-                                style={{ width: `${Math.round((student.expLevel / student.expTotalInPoints) * 100)}%` }}
+                                style={{ width: `${parseFloat(((student.expLevel / student.expTotalInPoints) * 100).toFixed(1))}%` }}
                               />
                             </div>
                           </div>

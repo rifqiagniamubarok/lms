@@ -160,7 +160,6 @@ async function main() {
       },
     });
 
-    console.log(`✓ Created quiz: "${soal.title}" for Class ${theClass.classId} Level ${theLevel.order} (${soal.questions.length} questions)`);
     createdCount++;
 
     Promise.all(
