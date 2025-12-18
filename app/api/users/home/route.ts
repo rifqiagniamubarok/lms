@@ -62,6 +62,14 @@ export async function GET(request: Request) {
       }
     }
 
+    const quizCount = await prisma.quiz.count({
+      where: {
+        status: 'PUBLISHED',
+        levelId: user.level.id,
+        classId: user.classId,
+      },
+    });
+
     const formatResponse = {
       id: user.id,
       name: user.name,
@@ -74,11 +82,11 @@ export async function GET(request: Request) {
       levelOrder: user.level.order,
       expPoints: user.expPoints,
       expLevel: user.expLevel,
-      maximalPointLevel: user.level._count.quizzes * 100,
-      minimumPointLevel: user.level._count.quizzes * user.level.kkm,
-      totalQuizInCurrentLevel: user.level._count.quizzes,
+      maximalPointLevel: quizCount * 100,
+      minimumPointLevel: quizCount * user.level.kkm,
+      totalQuizInCurrentLevel: quizCount,
       totalQuizTakenInCurrentLevel: userQuiz || 0,
-      remainingQuizInCurrentLevel: user.level._count.quizzes - userQuiz || 0,
+      remainingQuizInCurrentLevel: quizCount - userQuiz || 0,
       next: {
         isTheLastLevelAndClass,
         nextLevelId: nextLevel ? nextLevel.id : isTheLastLevelAndClass ? null : 1,

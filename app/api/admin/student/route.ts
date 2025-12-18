@@ -99,28 +99,19 @@ export async function GET(request: Request) {
       _count: {
         id: true,
       },
-      orderBy: [
-        {
-          classId: 'asc',
-        },
-        {
-          levelId: 'asc',
-        },
-      ],
     });
 
     const students = studentRaw.map((student) => {
       const getTotalQuizzes = totalQuizzes.find((tq) => tq.classId === student.class.classId && tq.levelId === student.level.id);
+      let countQuizzes = 0;
       if (getTotalQuizzes) {
-        student.level._count.quizzes = getTotalQuizzes._count.id;
-      } else {
-        student.level._count.quizzes = 0;
+        countQuizzes = getTotalQuizzes._count.id;
       }
       return {
         id: student.id,
         name: student.name,
         expLevel: student.expLevel,
-        expTotalInPoints: student.level._count.quizzes * 100,
+        expTotalInPoints: countQuizzes * 100,
         expPoints: student.expPoints,
         averageScore: student.userQuizes.length ? Math.round(student.userQuizes.reduce((acc, uq) => acc + (uq.currentScore ?? 0), 0) / student.userQuizes.length) : 0,
         classId: student.class.classId,

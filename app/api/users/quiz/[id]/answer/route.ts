@@ -20,11 +20,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
     const { id } = await params;
 
-    const quizCount = await prisma.quiz.count({
+    const getQuiz = await prisma.quiz.findFirst({
       where: { id: parseInt(id) },
+      include: {
+        level: true,
+      },
     });
 
-    if (quizCount === 0) {
+    if (!getQuiz) {
       throw new ResponseError(404, 'Quiz not found');
     }
 
@@ -72,6 +75,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       throw new ResponseError(400, 'User has not started this quiz');
     }
 
+    console.log({ currentScore: userQuiz.currentScore });
+
     const endTime = addSeconds(userQuiz.endAt, 5);
 
     if (isAfter(new Date(), endTime)) {
@@ -106,10 +111,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const score = (totalCorrect / getQuestion.length) * 100;
     const passed = score >= userQuiz.quiz.level.kkm;
 
+    console.log({ scoreBefore: userQuiz.currentScore });
     const expScoreBefore = userQuiz.currentScore || 0;
     const expBefore = userQuiz.user.expLevel;
     const expChanges = score - expScoreBefore;
-    const expAfter = userQuiz.quiz.level.order == userQuiz.user.level.order ? expBefore + expChanges : expBefore;
+    const expFinals = expBefore + expChanges;
+    const expAfter = expFinals;
+    console.log({ expScoreBefore, expChanges, score });
 
     const currentBestScore = userQuiz.bestScore || 0;
     const differenceBestScore = score > currentBestScore ? score - currentBestScore : 0;
@@ -142,9 +150,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       await tx.userQuiz.update({
         where: { id: userQuiz.id },
         data: {
-          pastScore: userQuiz.currentScore,
+          pastScore: expScoreBefore,
           currentScore: score,
-          bestScore,
+          bestScore: bestScore,
           startAt: null,
           endAt: null,
         },
@@ -188,10 +196,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const levelQuizAll = await tx.quiz.count({
         where: {
           status: 'PUBLISHED',
-          levelId: userQuiz.quiz.level.id,
-          classId: userQuiz.quiz.classId,
+          levelId: getQuiz.levelId,
+          classId: getQuiz.classId,
         },
       });
+
+      const minimumExpLevel = userQuiz.quiz.level.kkm * levelQuizAll;
+      const maximalExpLevel = 100 * levelQuizAll;
 
       const totalRemainingQuizInThisLevel = levelQuizNotStarted + levelQuizNotPassed;
       const remainingExpInThisLevel = totalRemainingQuizInThisLevel * userQuiz.quiz.level.kkm - expAfter;
@@ -202,7 +213,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       let nextLevel;
       let nextClass;
 
-      if (totalRemainingQuizInThisLevel === 0) {
+      if (totalRemainingQuizInThisLevel === 0 && expAfter >= minimumExpLevel) {
         nextLevel = await tx.level.findFirst({
           where: { order: userQuiz.quiz.level.order + 1 },
         });
@@ -251,8 +262,23 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         levelQuizNotPassed,
         levelQuizAll,
         remainingExpInThisLevel,
+        minimumExpLevel,
+        maximalExpLevel,
+        quizScore: score,
+        beforeScore: expScoreBefore,
+        expChanges,
+        expScoreBefore,
       };
     });
+
+    const curren = await prisma.userQuiz.findFirst({
+      where: {
+        userId: decode.id,
+        quizId: parseInt(id),
+      },
+    });
+
+    console.log({ curren });
 
     return new Response(
       JSON.stringify({
@@ -266,13 +292,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
             passed,
           },
           exp: {
-            expLevelBefore: expBefore,
-            expLevelChanges: expChanges,
+            quizScore: result.quizScore,
+            beforeScore: result.beforeScore,
+            expLevelBefore: result.expScoreBefore,
+            expLevelChanges: result.expChanges,
             expLevelNow: expAfter,
             expPointsGained: differenceBestScore,
             expPointsNow: userQuiz.user.expPoints + differenceBestScore,
-            expLevelTotalMinimum: result.levelQuizAll * userQuiz.quiz.level.kkm,
-            expLevelTotal: result.levelQuizAll * 100,
+            expLevelTotalMinimum: result.minimumExpLevel,
+            expLevelTotal: result.maximalExpLevel,
             expLevelRemainingToLevelUp: result.remainingExpInThisLevel < 0 ? 0 : result.remainingExpInThisLevel,
           },
           quizInThisLevel: {

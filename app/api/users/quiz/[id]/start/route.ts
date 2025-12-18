@@ -56,8 +56,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         data: {
           startAt: startTime,
           endAt: endTime,
-          currentScore: 0,
-          pastScore: existingUserQuiz.currentScore,
         },
       });
     } else if (existingUserQuiz && (!existingUserQuiz.startAt || !existingUserQuiz.endAt)) {
@@ -66,8 +64,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         data: {
           startAt: startTime,
           endAt: endTime,
-          currentScore: 0,
-          pastScore: existingUserQuiz.currentScore,
         },
       });
     } else if (existingUserQuiz && existingUserQuiz.startAt && existingUserQuiz.endAt && isBefore(startTime, existingUserQuiz.endAt)) {
