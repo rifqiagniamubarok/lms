@@ -53,10 +53,10 @@ const MatrixLineChart: React.FC<MatrixLineChartProps> = ({ matrix }) => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'bottom',
+        position: 'bottom' as const,
         labels: {
           color: '#334155', // slate-700
-          font: { size: 13, family: 'inherit', weight: 'bold' },
+          font: { size: 13, family: 'inherit', weight: 'bold' as const },
           boxWidth: 18,
         },
       },
