@@ -83,7 +83,7 @@ export async function GET(request: Request) {
         skip,
         take: limit,
         orderBy: {
-          name: 'asc',
+          createdAt: 'desc',
         },
       }),
       prisma.user.count({

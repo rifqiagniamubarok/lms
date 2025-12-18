@@ -194,6 +194,41 @@ export async function GET(request: Request) {
       };
     });
 
+    // Build matrix: x = level, y = class, value = count of completions
+    // Get all unique levels and classes from Level and Class tables
+    const allLevels = await prisma.level.findMany({ orderBy: { order: 'asc' } });
+    const allClasses = await prisma.class.findMany({ orderBy: { classId: 'asc' } });
+
+    // Initialize matrix
+    const completionMatrix: { [levelId: number]: { [classId: number]: number } } = {};
+    allLevels.forEach((level) => {
+      completionMatrix[level.id] = {};
+      allClasses.forEach((cls) => {
+        completionMatrix[level.id][cls.classId] = 0;
+      });
+    });
+
+    // Count completions from UserQuizHistory
+    const matrixRaw = await prisma.userQuizHistory.findMany({
+      select: { levelId: true, classId: true },
+    });
+    matrixRaw.forEach((row) => {
+      if (completionMatrix[row.levelId] && completionMatrix[row.levelId][row.classId] !== undefined) {
+        completionMatrix[row.levelId][row.classId] += 1;
+      }
+    });
+
+    // Convert matrix to array for charting
+    const matrixChart = allLevels.map((level) => ({
+      levelId: level.id,
+      levelName: level.name,
+      data: allClasses.map((cls) => ({
+        classId: cls.classId,
+        className: cls.name,
+        count: completionMatrix[level.id][cls.classId],
+      })),
+    }));
+
     return new Response(
       JSON.stringify({
         success: true,
@@ -240,7 +275,7 @@ export async function GET(request: Request) {
           weeklyActivity: activityByDay,
           quizCompletionChart: {
             topQuizzes: topQuizzes,
-            classSummary: quizCompletionByClass,
+            matrix: matrixChart,
             totalCompletions: quizCompletionHistory.length,
           },
         },

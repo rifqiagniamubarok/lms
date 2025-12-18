@@ -2,7 +2,10 @@
 
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, Spinner, Chip, Avatar, Progress } from '@heroui/react';
+import { Card, CardBody, Spinner, Chip } from '@heroui/react';
+import { InfoPopover } from '@/components/InfoPopover';
+import dynamic from 'next/dynamic';
+const MatrixLineChart = dynamic(() => import('@/components/MatrixLineChart'), { ssr: false });
 
 interface DashboardData {
   overview: {
@@ -55,12 +58,21 @@ interface DashboardData {
       classId: number;
       levelId: number;
     }>;
-    classSummary: Array<{
+    classSummary?: Array<{
       classId: number;
       className: string;
       completions: number;
     }>;
     totalCompletions: number;
+    matrix: Array<{
+      levelId: number;
+      levelName: string;
+      data: Array<{
+        classId: number;
+        className: string;
+        count: number;
+      }>;
+    }>;
   };
 }
 
@@ -109,9 +121,9 @@ export default function DashboardPage() {
 
   return (
     <DashboardLayout title="Dashboard Guru" description="Ringkasan sistem pembelajaran">
-      <div className="space-y-6">
-        {/* Overview Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="">
+        {/* Overview Cards (Summary) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-2">
           <Card className="shadow-sm">
             <CardBody className="p-6">
               <div className="flex items-center justify-between">
@@ -177,162 +189,42 @@ export default function DashboardPage() {
               </div>
             </CardBody>
           </Card>
-
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-500">Tingkat Penyelesaian</p>
-                  <p className="text-3xl font-bold text-orange-600">{data.overview.completionRate}%</p>
-                  <p className="text-xs text-gray-500">Rata-rata kuis</p>
-                </div>
-                <div className="p-3 bg-orange-100 rounded-full">
-                  <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Class Distribution */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Distribusi Siswa per Kelas</h3>
-              <div className="space-y-3">
-                {data.classStats.map((classItem) => (
-                  <div key={classItem.classId} className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">{classItem.className}</span>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-sm text-gray-500">{classItem.studentCount} siswa</span>
-                      <div className="w-16 bg-gray-200 rounded-full h-2">
-                        <div
-                          className="h-2 bg-blue-500 rounded-full"
-                          style={{
-                            width: `${Math.round((classItem.studentCount / data.overview.totalStudents) * 100)}%`,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
+        {/* Main Chart Feature and Secondary Cards */}
+        <div className="flex flex-col lg:flex-row gap-6 mt-6">
+          {/* Chart Main View (2/3 width) */}
+          <Card className="shadow-lg border-2 border-blue-100 flex-1 lg:basis-2/3">
+            <CardBody className="p-6 md:p-8">
+              <div className="flex items-center mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-blue-900">Matriks Penyelesaian Kuis (Level x Kelas)</h3>
+                <InfoPopover
+                  description={
+                    'Grafik ini menunjukkan jumlah penyelesaian kuis oleh siswa untuk setiap kombinasi level dan kelas. Setiap garis mewakili satu kelas, dan titik-titik pada garis menunjukkan berapa kali kuis pada level tertentu telah diselesaikan oleh siswa di kelas tersebut. Gunakan grafik ini untuk memantau aktivitas siswa lintas kelas dan level, serta mengidentifikasi tren atau ketimpangan dalam penyelesaian kuis.'
+                  }
+                />
+              </div>
+              <div className="bg-white rounded-lg p-2 md:p-6 shadow-none border border-gray-100">
+                <MatrixLineChart matrix={data.quizCompletionChart.matrix} />
               </div>
             </CardBody>
           </Card>
 
-          {/* Level Distribution */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Distribusi Siswa per Level</h3>
-              <div className="space-y-3">
-                {data.levelStats.map((level) => (
-                  <div key={level.levelId} className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">{level.levelName}</span>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-sm text-gray-500">{level.studentCount} siswa</span>
-                      <div className="w-16 bg-gray-200 rounded-full h-2">
-                        <div
-                          className="h-2 bg-green-500 rounded-full"
-                          style={{
-                            width: `${Math.round((level.studentCount / data.overview.totalStudents) * 100)}%`,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardBody>
-          </Card>
-
-          {/* Weekly Activity */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Aktivitas 7 Hari Terakhir</h3>
-              <div className="space-y-3">
-                {data.weeklyActivity.map((day, index) => (
-                  <div key={index} className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">{day.date}</span>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-sm text-gray-500">{day.count} aktivitas</span>
-                      <div className="w-16 bg-gray-200 rounded-full h-2">
-                        <div
-                          className="h-2 bg-purple-500 rounded-full"
-                          style={{
-                            width: `${Math.min((day.count / Math.max(...data.weeklyActivity.map((d) => d.count), 1)) * 100, 100)}%`,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardBody>
-          </Card>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Recent Students */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Terbaru</h3>
-              <div className="space-y-4">
-                {data.recentStudents.map((student) => (
-                  <div key={student.id} className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate">{student.name}</p>
-                      <div className="flex space-x-2">
-                        <Chip variant="flat" color="default" size="sm">
-                          {student.className}
-                        </Chip>
-                        <Chip variant="flat" color="secondary" size="sm">
-                          {student.levelName}
-                        </Chip>
-                      </div>
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {new Date(student.registeredAt).toLocaleDateString('id-ID', {
-                        day: 'numeric',
-                        month: 'short',
-                      })}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardBody>
-          </Card>
-
-          {/* Students Need Attention */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Perlu Diperhatikan</h3>
-              <div className="space-y-4">
-                {data.needsAttention.length === 0 ? (
-                  <div className="text-center py-8 text-gray-500">
-                    <svg className="w-12 h-12 mx-auto mb-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <p className="text-sm">Semua siswa dalam kondisi baik!</p>
-                  </div>
-                ) : (
-                  data.needsAttention.map((student) => (
+          {/* Secondary Cards: Recent Students & Needs Attention (1/3 width) */}
+          <div className="flex flex-col gap-6 lg:basis-1/3 min-w-0">
+            {/* Recent Students */}
+            <Card className="shadow-sm">
+              <CardBody className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Terbaru</h3>
+                <div className="space-y-4">
+                  {data.recentStudents.map((student) => (
                     <div key={student.id} className="flex items-center space-x-4">
-                      <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                        <span className="text-red-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span className="text-blue-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-gray-900 truncate">{student.name}</p>
-                        <div className="flex space-x-2 mb-1">
+                        <div className="flex space-x-2">
                           <Chip variant="flat" color="default" size="sm">
                             {student.className}
                           </Chip>
@@ -340,149 +232,132 @@ export default function DashboardPage() {
                             {student.levelName}
                           </Chip>
                         </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-xs text-gray-500">Rata-rata: {student.averageScore}</span>
-                          <Chip variant="flat" color={student.averageScore >= student.kkm ? 'success' : 'danger'} size="sm">
-                            KKM: {student.kkm}
-                          </Chip>
-                        </div>
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        {new Date(student.registeredAt).toLocaleDateString('id-ID', {
+                          day: 'numeric',
+                          month: 'short',
+                        })}
                       </div>
                     </div>
-                  ))
-                )}
-              </div>
-            </CardBody>
-          </Card>
-        </div>
-
-        {/* Quiz Completion Tracking Chart */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Top 5 Most Completed Quizzes Chart */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">5 Kuis Paling Sering Dikerjakan</h3>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-600">Total: {data.quizCompletionChart.totalCompletions} kuis diselesaikan</span>
+                  ))}
                 </div>
+              </CardBody>
+            </Card>
 
-                {/* Horizontal Bar Chart */}
+            {/* Students Need Attention */}
+            <Card className="shadow-sm">
+              <CardBody className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Perlu Diperhatikan</h3>
                 <div className="space-y-4">
-                  {data.quizCompletionChart.topQuizzes.map((quiz, index) => {
-                    const percentage = data.quizCompletionChart.totalCompletions > 0 ? (quiz.count / data.quizCompletionChart.totalCompletions) * 100 : 0;
-                    const maxCount = Math.max(...data.quizCompletionChart.topQuizzes.map((q) => q.count));
-                    const barWidth = maxCount > 0 ? (quiz.count / maxCount) * 100 : 0;
-
-                    return (
-                      <div key={index} className="space-y-2">
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center space-x-2">
-                              <span className="text-sm font-medium text-gray-800 truncate">
-                                {index + 1}. {quiz.title}
-                              </span>
-                              <Chip variant="flat" color="secondary" size="sm">
-                                Kelas {quiz.classId}
-                              </Chip>
-                            </div>
+                  {data.needsAttention.length === 0 ? (
+                    <div className="text-center py-8 text-gray-500">
+                      <svg className="w-12 h-12 mx-auto mb-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="text-sm">Semua siswa dalam kondisi baik!</p>
+                    </div>
+                  ) : (
+                    data.needsAttention.map((student) => (
+                      <div key={student.id} className="flex items-center space-x-4">
+                        <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                          <span className="text-red-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-gray-900 truncate">{student.name}</p>
+                          <div className="flex space-x-2 mb-1">
+                            <Chip variant="flat" color="default" size="sm">
+                              {student.className}
+                            </Chip>
+                            <Chip variant="flat" color="secondary" size="sm">
+                              {student.levelName}
+                            </Chip>
                           </div>
-                          <div className="flex items-center space-x-2 ml-4">
-                            <span className="text-sm font-bold text-blue-600">{quiz.count}x</span>
-                            <Chip variant="flat" color="primary" size="sm">
-                              {percentage.toFixed(1)}%
+                          <div className="flex items-center space-x-2">
+                            <span className="text-xs text-gray-500">Rata-rata: {student.averageScore}</span>
+                            <Chip variant="flat" color={student.averageScore >= student.kkm ? 'success' : 'danger'} size="sm">
+                              KKM: {student.kkm}
                             </Chip>
                           </div>
                         </div>
-                        <div className="relative">
-                          <div className="w-full bg-gray-200 rounded-full h-3">
-                            <div
-                              className={`h-3 rounded-full transition-all duration-500 ${
-                                index === 0
-                                  ? 'bg-gradient-to-r from-yellow-400 to-yellow-600'
-                                  : index === 1
-                                  ? 'bg-gradient-to-r from-gray-400 to-gray-600'
-                                  : index === 2
-                                  ? 'bg-gradient-to-r from-orange-400 to-orange-600'
-                                  : 'bg-gradient-to-r from-blue-400 to-blue-600'
-                              }`}
-                              style={{ width: `${barWidth}%` }}
-                            />
-                          </div>
-                          <div className="absolute right-2 top-0 text-xs font-semibold text-gray-700 leading-3">
-                            {index === 0 && '🥇'}
-                            {index === 1 && '🥈'}
-                            {index === 2 && '🥉'}
+                      </div>
+                    ))
+                  )}
+                </div>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Top 5 Most Completed Quizzes Chart */}
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 mt-6">
+        <Card className="shadow-sm">
+          <CardBody className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">5 Kuis Paling Sering Dikerjakan</h3>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm text-gray-600">Total: {data.quizCompletionChart.totalCompletions} kuis diselesaikan</span>
+              </div>
+              {/* Horizontal Bar Chart */}
+              <div className="space-y-4">
+                {(data.quizCompletionChart.topQuizzes ?? []).map((quiz, index) => {
+                  const percentage = data.quizCompletionChart.totalCompletions > 0 ? (quiz.count / data.quizCompletionChart.totalCompletions) * 100 : 0;
+                  const maxCount = Math.max(...data.quizCompletionChart.topQuizzes.map((q) => q.count));
+                  const barWidth = maxCount > 0 ? (quiz.count / maxCount) * 100 : 0;
+                  return (
+                    <div key={index} className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium text-gray-800 truncate">
+                              {index + 1}. {quiz.title}
+                            </span>
+                            <Chip variant="flat" color="secondary" size="sm">
+                              Kelas {quiz.classId}
+                            </Chip>
                           </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {data.quizCompletionChart.topQuizzes.length === 0 && (
-                  <div className="text-center py-8 text-gray-500">
-                    <p className="text-sm">Belum ada data penyelesaian kuis</p>
-                  </div>
-                )}
-              </div>
-            </CardBody>
-          </Card>
-
-          {/* Quiz Completion by Class */}
-          <Card className="shadow-sm">
-            <CardBody className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Penyelesaian Kuis per Kelas</h3>
-              <div className="space-y-4">
-                {data.quizCompletionChart.classSummary.map((classItem) => {
-                  const percentage = data.quizCompletionChart.totalCompletions > 0 ? (classItem.completions / data.quizCompletionChart.totalCompletions) * 100 : 0;
-                  return (
-                    <div key={classItem.classId} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-gray-700">{classItem.className}</span>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-sm text-gray-600">{classItem.completions} kuis</span>
+                        <div className="flex items-center space-x-2 ml-4">
+                          <span className="text-sm font-bold text-blue-600">{quiz.count}x</span>
                           <Chip variant="flat" color="primary" size="sm">
                             {percentage.toFixed(1)}%
                           </Chip>
                         </div>
                       </div>
-                      <Progress
-                        value={percentage}
-                        color="primary"
-                        size="sm"
-                        classNames={{
-                          track: 'bg-gray-200',
-                          indicator: 'bg-gradient-to-r from-blue-400 to-blue-600',
-                        }}
-                      />
-                      <div className="text-xs text-gray-500">
-                        {classItem.completions} dari {data.quizCompletionChart.totalCompletions} total penyelesaian
+                      <div className="relative">
+                        <div className="w-full bg-gray-200 rounded-full h-3">
+                          <div
+                            className={`h-3 rounded-full transition-all duration-500 ${
+                              index === 0
+                                ? 'bg-linear-to-r from-yellow-400 to-yellow-600'
+                                : index === 1
+                                ? 'bg-linear-to-r from-gray-400 to-gray-600'
+                                : index === 2
+                                ? 'bg-linear-to-r from-orange-400 to-orange-600'
+                                : 'bg-linear-to-r from-blue-400 to-blue-600'
+                            }`}
+                            style={{ width: `${barWidth}%` }}
+                          />
+                        </div>
+                        <div className="absolute right-2 top-0 text-xs font-semibold text-gray-700 leading-3">
+                          {index === 0 && '🥇'}
+                          {index === 1 && '🥈'}
+                          {index === 2 && '🥉'}
+                        </div>
                       </div>
                     </div>
                   );
                 })}
               </div>
-
-              {/* Summary Stats */}
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">
-                      {data.quizCompletionChart.topQuizzes.length > 0 ? Math.round(data.quizCompletionChart.totalCompletions / data.quizCompletionChart.topQuizzes.length) : 0}
-                    </div>
-                    <div className="text-xs text-gray-500">Rata-rata per kuis</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">
-                      {data.quizCompletionChart.topQuizzes.length > 0 ? Math.max(...data.quizCompletionChart.topQuizzes.map((q) => q.count)) : 0}
-                    </div>
-                    <div className="text-xs text-gray-500">Kuis terpopuler</div>
-                  </div>
+              {(data.quizCompletionChart.topQuizzes ?? []).length === 0 && (
+                <div className="text-center py-8 text-gray-500">
+                  <p className="text-sm">Belum ada data penyelesaian kuis</p>
                 </div>
-              </div>
-            </CardBody>
-          </Card>
-        </div>
+              )}
+            </div>
+          </CardBody>
+        </Card>
       </div>
     </DashboardLayout>
   );
