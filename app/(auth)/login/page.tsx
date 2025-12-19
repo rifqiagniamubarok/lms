@@ -119,27 +119,17 @@ export default function LoginPage() {
               </div>
 
               {/* Remember Me & Forgot Password */}
-              <div className="flex items-center justify-between py-1">
+              {/* <div className="flex items-center justify-between py-1">
                 <Link href="/forgot-password" className="text-[#0075e6] text-xs font-medium hover:underline">
                   Lupa password?
                 </Link>
-              </div>
+              </div> */}
 
               {/* Sign In Button */}
               <Button type="submit" className="w-full bg-[#0075e6] text-white font-normal text-sm rounded-xl h-10 shadow-sm" isLoading={isLoading} disabled={!email || !password}>
                 {isLoading ? 'Masuk...' : 'Masuk'}
               </Button>
             </form>
-
-            {/* Divider */}
-            <div className="border-t border-[#f3f4f6] pt-5 mb-6">
-              <p className="text-center text-[#6b7280] text-xs">
-                Belum punya akun?{' '}
-                <Link href="/register" className="text-[#0075e6] font-semibold hover:underline">
-                  Daftar
-                </Link>
-              </p>
-            </div>
           </CardBody>
         </Card>
 
