@@ -28,8 +28,8 @@ export async function GET(request: Request) {
     // Calculate pagination
     const skip = (page - 1) * limit;
 
-    // Get quizzes with related data
-    const [quizzes, totalCount] = await Promise.all([
+    // Get quizzes with related data and summary data
+    const [quizzes, totalCount, summaryData] = await Promise.all([
       prisma.quiz.findMany({
         where,
         include: {
@@ -52,7 +52,63 @@ export async function GET(request: Request) {
         take: limit,
       }),
       prisma.quiz.count({ where }),
+      // Get summary data - count of quizzes by class and level with complete details
+      prisma.$queryRaw`
+        SELECT 
+          c."classId",
+          c.name as "className",
+          l.id as "levelId", 
+          l.name as "levelName",
+          l."order" as "levelOrder",
+          l.kkm,
+          COUNT(q.id)::int as "quizCount"
+        FROM classes c
+        CROSS JOIN levels l
+        LEFT JOIN quizzes q ON q."classId" = c."classId" AND q."levelId" = l.id AND q.status = 'PUBLISHED'
+        GROUP BY c."classId", c.name, l.id, l.name, l."order", l.kkm
+        ORDER BY c."classId" ASC, l."order" ASC
+      ` as Promise<
+        Array<{
+          classId: number;
+          className: string;
+          levelId: number;
+          levelName: string;
+          levelOrder: number;
+          kkm: number;
+          quizCount: number;
+        }>
+      >,
     ]);
+
+    // Transform summary data to simple array format
+    const classMap = new Map<
+      number,
+      {
+        classId: number;
+        className: string;
+        levels: Array<{
+          level: string;
+          qtyQuiz: number;
+        }>;
+      }
+    >();
+
+    for (const item of summaryData) {
+      if (!classMap.has(item.classId)) {
+        classMap.set(item.classId, {
+          classId: item.classId,
+          className: item.className,
+          levels: [],
+        });
+      }
+
+      classMap.get(item.classId)!.levels.push({
+        level: item.levelName,
+        qtyQuiz: item.quizCount,
+      });
+    }
+
+    const summary = Array.from(classMap.values());
 
     return NextResponse.json({
       success: true,
@@ -62,6 +118,7 @@ export async function GET(request: Request) {
         total: totalCount,
         pages: Math.ceil(totalCount / limit),
       },
+      summary,
       data: {
         data: quizzes,
       },

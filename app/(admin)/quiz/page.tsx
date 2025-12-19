@@ -81,6 +81,15 @@ interface Level {
   kkm: number;
 }
 
+interface SummaryData {
+  classId: number;
+  className: string;
+  levels: Array<{
+    level: string;
+    qtyQuiz: number;
+  }>;
+}
+
 export default function QuizPage() {
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -97,6 +106,7 @@ export default function QuizPage() {
   const [levels, setLevels] = useState<Level[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleteLoading, setDeleteLoading] = useState(false);
+  const [summaryData, setSummaryData] = useState<SummaryData[]>([]);
 
   // Filter states
   const [searchTerm, setSearchTerm] = useState('');
@@ -151,6 +161,7 @@ export default function QuizPage() {
       if (result.success) {
         setQuizzes(result.data.data || []);
         setPagination(result.pagination);
+        setSummaryData(result.summary || []);
       } else {
         console.error('Failed to fetch quizzes:', result.message);
       }
@@ -238,13 +249,45 @@ export default function QuizPage() {
   return (
     <DashboardLayout title="Bank Soal">
       <div className="space-y-6">
-        {/* Header Section */}
-        <div className="flex justify-end items-center">
+        {/* Summary Cards */}
+        {summaryData.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {summaryData.map((classData) => {
+              const totalQuizzes = classData.levels.reduce((acc, level) => acc + level.qtyQuiz, 0);
+              return (
+                <Card key={classData.classId} className="shadow-sm">
+                  <CardBody className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">{classData.className}</p>
+                        <p className="text-3xl font-bold text-blue-600">{totalQuizzes}</p>
+                        <p className="text-xs text-gray-500">Total kuis tersedia</p>
+                      </div>
+                      <div className="p-3 bg-blue-100 rounded-full">
+                        <DocumentTextIcon className="w-8 h-8 text-blue-600" />
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <div className="flex gap-2">
+                        {classData.levels.map((levelData, index) => (
+                          <Chip radius="sm" key={index} size="sm" variant="flat" color={levelData.qtyQuiz > 0 ? 'primary' : 'default'} className="w-max">
+                            L {levelData.level.split(' ')[1]}: {levelData.qtyQuiz}
+                          </Chip>
+                        ))}
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+              );
+            })}
+          </div>
+        )}
+        {/* Header Section */}{' '}
+        <div className="flex justify-between items-center">
           <Button as={Link} href="/quiz/new" color="primary" startContent={<PlusIcon className="w-4 h-4" />}>
             Buat Soal Baru
           </Button>
         </div>
-
         {/* Filters Card */}
         <Card className="shadow-sm">
           <CardBody className="p-4">
@@ -307,7 +350,6 @@ export default function QuizPage() {
             </div>
           </CardBody>
         </Card>
-
         {/* Table Card */}
         <Card className="shadow-sm">
           <CardBody className="p-0">
@@ -430,7 +472,6 @@ export default function QuizPage() {
             )}
           </CardBody>
         </Card>
-
         {/* Delete Confirmation Modal */}
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
           <ModalContent>

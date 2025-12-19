@@ -38,11 +38,11 @@ export default function Navbar({ title, description = '' }: { title: string; des
 
         {/* Notifications */}
         <NavbarItem>
-          <Button isIconOnly variant="light" className="text-gray-600 hover:bg-gray-100">
+          {/* <Button isIconOnly variant="light" className="text-gray-600 hover:bg-gray-100">
             <Badge content="3" size="sm" color="danger" placement="top-right">
               <BellIcon className="w-5 h-5" />
             </Badge>
-          </Button>
+          </Button> */}
         </NavbarItem>
       </NavbarContent>
     </HeroNavbar>
