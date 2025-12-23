@@ -77,8 +77,6 @@ const OptionInput = React.memo(
     isCorrect,
     error,
     onUpdate,
-    onRemove,
-    canRemove,
   }: {
     option: string;
     optionIndex: number;
@@ -86,8 +84,6 @@ const OptionInput = React.memo(
     isCorrect: boolean;
     error?: string;
     onUpdate: (questionIndex: number, optionIndex: number, value: string) => void;
-    onRemove: (questionIndex: number, optionIndex: number) => void;
-    canRemove: boolean;
   }) => {
     const handleChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,10 +91,6 @@ const OptionInput = React.memo(
       },
       [questionIndex, optionIndex, onUpdate]
     );
-
-    const handleRemove = useCallback(() => {
-      onRemove(questionIndex, optionIndex);
-    }, [questionIndex, optionIndex, onRemove]);
 
     return (
       <div className="flex items-center gap-2">
@@ -112,11 +104,6 @@ const OptionInput = React.memo(
           className="flex-1"
           size="sm"
         />
-        {canRemove && (
-          <Button color="danger" variant="light" size="sm" isIconOnly onPress={handleRemove}>
-            <XMarkIcon className="w-4 h-4" />
-          </Button>
-        )}
       </div>
     );
   }
@@ -131,23 +118,23 @@ const QuestionComponent = React.memo(
     questionIndex,
     errors,
     onUpdateQuestion,
-    onAddOption,
-    onRemoveOption,
     onSetCorrectOption,
     onRemoveQuestion,
     updateOption,
     canRemoveQuestion,
+    isExpanded,
+    onToggleExpansion,
   }: {
     question: QuizQuestion;
     questionIndex: number;
     errors: Record<string, string>;
     onUpdateQuestion: (questionIndex: number, value: string) => void;
-    onAddOption: (questionIndex: number) => void;
-    onRemoveOption: (questionIndex: number, optionIndex: number) => void;
     onSetCorrectOption: (questionIndex: number, optionIndex: number) => void;
     onRemoveQuestion: (questionIndex: number) => void;
     updateOption: (questionIndex: number, optionIndex: number, value: string) => void;
     canRemoveQuestion: boolean;
+    isExpanded: boolean;
+    onToggleExpansion: (questionIndex: number) => void;
   }) => {
     const handleQuestionChange = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -155,10 +142,6 @@ const QuestionComponent = React.memo(
       },
       [questionIndex, onUpdateQuestion]
     );
-
-    const handleAddOption = useCallback(() => {
-      onAddOption(questionIndex);
-    }, [questionIndex, onAddOption]);
 
     const handleRemoveQuestion = useCallback(() => {
       onRemoveQuestion(questionIndex);
@@ -171,57 +154,85 @@ const QuestionComponent = React.memo(
       [questionIndex, onSetCorrectOption]
     );
 
+    const handleToggle = useCallback(() => {
+      onToggleExpansion(questionIndex);
+    }, [questionIndex, onToggleExpansion]);
+
     return (
-      <div className="border border-gray-200 rounded-lg p-4 space-y-4">
-        <div className="flex justify-between items-start">
-          <Chip color="primary" variant="flat" size="sm">
-            Soal {questionIndex + 1}
-          </Chip>
-          {canRemoveQuestion && (
-            <Button color="danger" variant="light" size="sm" isIconOnly onPress={handleRemoveQuestion}>
-              <TrashIcon className="w-4 h-4" />
-            </Button>
-          )}
-        </div>
-
-        <Textarea
-          label={`Pertanyaan ${questionIndex + 1}`}
-          placeholder="Masukkan pertanyaan"
-          value={question.question}
-          onChange={handleQuestionChange}
-          isInvalid={!!errors[`question_${questionIndex}`]}
-          errorMessage={errors[`question_${questionIndex}`]}
-          maxRows={3}
-          isRequired
-        />
-
-        {errors[`question_${questionIndex}_correct`] && <p className="text-sm text-red-500">{errors[`question_${questionIndex}_correct`]}</p>}
-
-        <div className="space-y-2">
+      <div className="border border-gray-200 rounded-lg overflow-hidden">
+        {/* Question Header - Always Visible */}
+        <div className="p-4 bg-gray-50 border-b border-gray-200">
           <div className="flex justify-between items-center">
-            <p className="text-sm font-medium">Pilihan Jawaban</p>
-            <Button color="primary" variant="light" size="sm" startContent={<PlusIcon className="w-4 h-4" />} onPress={handleAddOption} isDisabled={question.options.length >= 6}>
-              Tambah Pilihan
-            </Button>
+            <div className="flex items-center gap-3">
+              <Chip color="primary" variant="flat" size="sm">
+                Soal {questionIndex + 1}
+              </Chip>
+              <div className="flex-1">
+                {question.question ? (
+                  <p className="text-sm font-medium text-gray-900 truncate max-w-md">{question.question}</p>
+                ) : (
+                  <p className="text-sm text-gray-500">Pertanyaan belum diisi</p>
+                )}
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              {canRemoveQuestion && (
+                <Button color="danger" variant="light" size="sm" isIconOnly onPress={handleRemoveQuestion}>
+                  <TrashIcon className="w-4 h-4" />
+                </Button>
+              )}
+              <Button
+                variant="light"
+                size="sm"
+                isIconOnly
+                onPress={handleToggle}
+                className="transition-transform duration-200"
+                style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Button>
+            </div>
           </div>
-
-          <RadioGroup value={question.options.findIndex((option) => option.isCorrect).toString()} onValueChange={handleCorrectOptionChange}>
-            {question.options.map((option, optionIndex) => (
-              <OptionInput
-                key={optionIndex}
-                option={option.option}
-                optionIndex={optionIndex}
-                questionIndex={questionIndex}
-                isCorrect={option.isCorrect}
-                error={errors[`option_${questionIndex}_${optionIndex}`]}
-                onUpdate={updateOption}
-                onRemove={onRemoveOption}
-                canRemove={question.options.length > 2}
-              />
-            ))}
-          </RadioGroup>
-          <p className="text-xs text-gray-500">Pilih radio button untuk menandai jawaban yang benar</p>
         </div>
+
+        {/* Question Content - Collapsible */}
+        {isExpanded && (
+          <div className="p-4 space-y-4">
+            <Textarea
+              label={`Pertanyaan ${questionIndex + 1}`}
+              placeholder="Masukkan pertanyaan"
+              value={question.question}
+              onChange={handleQuestionChange}
+              isInvalid={!!errors[`question_${questionIndex}`]}
+              errorMessage={errors[`question_${questionIndex}`]}
+              maxRows={3}
+              isRequired
+            />
+
+            {errors[`question_${questionIndex}_correct`] && <p className="text-sm text-red-500">{errors[`question_${questionIndex}_correct`]}</p>}
+
+            <div className="space-y-2">
+              <p className="text-sm font-medium">Pilihan Jawaban</p>
+
+              <RadioGroup value={question.options.findIndex((option) => option.isCorrect).toString()} onValueChange={handleCorrectOptionChange}>
+                {question.options.map((option, optionIndex) => (
+                  <OptionInput
+                    key={optionIndex}
+                    option={option.option}
+                    optionIndex={optionIndex}
+                    questionIndex={questionIndex}
+                    isCorrect={option.isCorrect}
+                    error={errors[`option_${questionIndex}_${optionIndex}`]}
+                    onUpdate={updateOption}
+                  />
+                ))}
+              </RadioGroup>
+              <p className="text-xs text-gray-500">Pilih radio button untuk menandai jawaban yang benar</p>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -239,6 +250,7 @@ export default function EditQuizPage() {
   const [loading, setLoading] = useState(false);
   const [loadingData, setLoadingData] = useState(true);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [expandedQuestions, setExpandedQuestions] = useState<Set<number>>(new Set([0])); // First question expanded by default
 
   const quizId = params?.id as string;
 
@@ -268,6 +280,19 @@ export default function EditQuizPage() {
       router.push('/login');
     }
   }, [status, router]);
+
+  // Toggle question expansion
+  const toggleQuestionExpansion = useCallback((questionIndex: number) => {
+    setExpandedQuestions((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(questionIndex)) {
+        newSet.delete(questionIndex);
+      } else {
+        newSet.add(questionIndex);
+      }
+      return newSet;
+    });
+  }, []);
 
   // Fetch initial data
   useEffect(() => {
@@ -300,6 +325,11 @@ export default function EditQuizPage() {
                 })),
               })),
             });
+
+            // Initialize expanded state for loaded questions
+            if (quiz.questions.length > 0) {
+              setExpandedQuestions(new Set([0])); // Expand first question by default
+            }
           } else {
             setErrors({ submit: 'Quiz tidak ditemukan' });
           }
@@ -319,21 +349,31 @@ export default function EditQuizPage() {
 
   // Add new question
   const addQuestion = useCallback(() => {
-    setFormData((prev) => ({
-      ...prev,
-      questions: [
-        ...prev.questions,
-        {
-          question: '',
-          options: [
-            { option: '', isCorrect: true },
-            { option: '', isCorrect: false },
-            { option: '', isCorrect: false },
-            { option: '', isCorrect: false },
-          ],
-        },
-      ],
-    }));
+    setFormData((prev) => {
+      const newQuestionIndex = prev.questions.length;
+      // Expand the new question
+      setExpandedQuestions((prevExpanded) => {
+        const newSet = new Set(prevExpanded);
+        newSet.add(newQuestionIndex);
+        return newSet;
+      });
+
+      return {
+        ...prev,
+        questions: [
+          ...prev.questions,
+          {
+            question: '',
+            options: [
+              { option: '', isCorrect: true },
+              { option: '', isCorrect: false },
+              { option: '', isCorrect: false },
+              { option: '', isCorrect: false },
+            ],
+          },
+        ],
+      };
+    });
   }, []);
 
   // Remove question
@@ -344,44 +384,23 @@ export default function EditQuizPage() {
           ...prev,
           questions: prev.questions.filter((_, i) => i !== index),
         }));
+
+        // Update expanded questions set
+        setExpandedQuestions((prevExpanded) => {
+          const newSet = new Set<number>();
+          prevExpanded.forEach((qIndex) => {
+            if (qIndex < index) {
+              newSet.add(qIndex);
+            } else if (qIndex > index) {
+              newSet.add(qIndex - 1);
+            }
+          });
+          return newSet;
+        });
       }
     },
     [formData.questions.length]
   );
-
-  // Add option to question
-  const addOption = useCallback((questionIndex: number) => {
-    setFormData((prev) => {
-      const newQuestions = [...prev.questions];
-      if (newQuestions[questionIndex].options.length < 6) {
-        newQuestions[questionIndex] = {
-          ...newQuestions[questionIndex],
-          options: [...newQuestions[questionIndex].options, { option: '', isCorrect: false }],
-        };
-      }
-      return {
-        ...prev,
-        questions: newQuestions,
-      };
-    });
-  }, []);
-
-  // Remove option from question
-  const removeOption = useCallback((questionIndex: number, optionIndex: number) => {
-    setFormData((prev) => {
-      const newQuestions = [...prev.questions];
-      if (newQuestions[questionIndex].options.length > 2) {
-        newQuestions[questionIndex] = {
-          ...newQuestions[questionIndex],
-          options: newQuestions[questionIndex].options.filter((_, oi) => oi !== optionIndex),
-        };
-      }
-      return {
-        ...prev,
-        questions: newQuestions,
-      };
-    });
-  }, []);
 
   // Update question text
   const updateQuestion = useCallback((questionIndex: number, value: string) => {
@@ -640,12 +659,12 @@ export default function EditQuizPage() {
                 questionIndex={questionIndex}
                 errors={errors}
                 onUpdateQuestion={updateQuestion}
-                onAddOption={addOption}
-                onRemoveOption={removeOption}
                 onSetCorrectOption={setCorrectOption}
                 onRemoveQuestion={removeQuestion}
                 updateOption={updateOption}
                 canRemoveQuestion={formData.questions.length > 1}
+                isExpanded={expandedQuestions.has(questionIndex)}
+                onToggleExpansion={toggleQuestionExpansion}
               />
             ))}
           </CardBody>
