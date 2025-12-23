@@ -164,6 +164,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         data: { expLevel: expAfter, expPoints: { increment: differenceBestScore } },
       });
 
+      await tx.notification.create({
+        data: {
+          userId: decode.id,
+          title: 'Selamat!',
+          message: `Kamu baru saja menyelesaikan soal "${userQuiz.quiz.title}" dengan score ${score.toFixed(2)}%.`,
+        },
+      });
+
       const levelQuizNotStarted = await tx.quiz.count({
         where: {
           status: 'PUBLISHED',
@@ -228,6 +236,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
           if (!nextClass) {
             isFinishedAllLevelAndClass = true;
+
+            await tx.notification.create({
+              data: {
+                userId: decode.id,
+                title: 'Selamat!',
+                message: `Kamu baru saja menyelesaikan semua level dan kelas yang tersedia.`,
+              },
+            });
           } else {
             const lowerLevel = await tx.level.findFirst({
               orderBy: {
@@ -242,11 +258,27 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
               where: { id: decode.id },
               data: { classId: nextClass.classId, levelId: lowerLevel?.id, expLevel: 0 },
             });
+
+            await tx.notification.create({
+              data: {
+                userId: decode.id,
+                title: 'Selamat!',
+                message: `Kamu baru saja naik kelas ke ${nextClass.name}.`,
+              },
+            });
           }
         } else {
           await tx.user.update({
             where: { id: decode.id },
             data: { levelId: nextLevel.id, expLevel: 0 },
+          });
+
+          await tx.notification.create({
+            data: {
+              userId: decode.id,
+              title: 'Selamat!',
+              message: `Kamu baru saja naik level ke ${nextLevel.name}.`,
+            },
           });
         }
       }

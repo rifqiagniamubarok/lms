@@ -190,11 +190,10 @@ export default function DashboardPage() {
             </CardBody>
           </Card>
         </div>
-
-        {/* Main Chart Feature and Secondary Cards */}
-        <div className="flex flex-col lg:flex-row gap-6 mt-6">
+        {/* Top 5 Most Completed Quizzes Chart */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
           {/* Chart Main View (2/3 width) */}
-          <Card className="shadow-lg border-2 border-blue-100 flex-1 lg:basis-2/3">
+          <Card className="col-span-1 lg:col-span-2 shadow-lg border-2 border-blue-100 flex-1 lg:basis-2/3">
             <CardBody className="p-6 md:p-8">
               <div className="flex items-center mb-2">
                 <h3 className="text-xl md:text-2xl font-bold text-blue-900">Matriks Penyelesaian Kuis (Level x Kelas)</h3>
@@ -209,22 +208,129 @@ export default function DashboardPage() {
               </div>
             </CardBody>
           </Card>
-
-          {/* Secondary Cards: Recent Students & Needs Attention (1/3 width) */}
-          <div className="flex flex-col gap-6 lg:basis-1/3 min-w-0">
-            {/* Recent Students */}
-            <Card className="shadow-sm">
-              <CardBody className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Terbaru</h3>
+          <Card className="shadow-sm">
+            <CardBody className="p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">5 Kuis Paling Sering Dikerjakan</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-gray-600">Total: {data.quizCompletionChart.totalCompletions} kuis diselesaikan</span>
+                </div>
+                {/* Horizontal Bar Chart */}
                 <div className="space-y-4">
-                  {data.recentStudents.map((student) => (
+                  {(data.quizCompletionChart.topQuizzes ?? []).map((quiz, index) => {
+                    const percentage = data.quizCompletionChart.totalCompletions > 0 ? (quiz.count / data.quizCompletionChart.totalCompletions) * 100 : 0;
+                    const maxCount = Math.max(...data.quizCompletionChart.topQuizzes.map((q) => q.count));
+                    const barWidth = maxCount > 0 ? (quiz.count / maxCount) * 100 : 0;
+                    return (
+                      <div key={index} className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-sm font-medium text-gray-800 truncate">
+                                {index + 1}. {quiz.title}
+                              </span>
+                              <Chip variant="flat" color="secondary" size="sm">
+                                Kelas {quiz.classId}
+                              </Chip>
+                            </div>
+                          </div>
+                          <div className="flex items-center space-x-2 ml-4">
+                            <span className="text-sm font-bold text-blue-600">{quiz.count}x</span>
+                            <Chip variant="flat" color="primary" size="sm">
+                              {percentage.toFixed(1)}%
+                            </Chip>
+                          </div>
+                        </div>
+                        <div className="relative">
+                          <div className="w-full bg-gray-200 rounded-full h-3">
+                            <div
+                              className={`h-3 rounded-full transition-all duration-500 ${
+                                index === 0
+                                  ? 'bg-linear-to-r from-yellow-400 to-yellow-600'
+                                  : index === 1
+                                  ? 'bg-linear-to-r from-gray-400 to-gray-600'
+                                  : index === 2
+                                  ? 'bg-linear-to-r from-orange-400 to-orange-600'
+                                  : 'bg-linear-to-r from-blue-400 to-blue-600'
+                              }`}
+                              style={{ width: `${barWidth}%` }}
+                            />
+                          </div>
+                          <div className="absolute right-2 top-0 text-xs font-semibold text-gray-700 leading-3">
+                            {index === 0 && '🥇'}
+                            {index === 1 && '🥈'}
+                            {index === 2 && '🥉'}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {(data.quizCompletionChart.topQuizzes ?? []).length === 0 && (
+                  <div className="text-center py-8 text-gray-500">
+                    <p className="text-sm">Belum ada data penyelesaian kuis</p>
+                  </div>
+                )}
+              </div>
+            </CardBody>
+          </Card>
+        </div>
+        {/* Main Chart Feature and Secondary Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+          {/* Recent Students */}
+          <Card className="shadow-sm">
+            <CardBody className="p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Terbaru</h3>
+              <div className="space-y-4">
+                {data.recentStudents.map((student) => (
+                  <div key={student.id} className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-blue-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">{student.name}</p>
+                      <div className="flex space-x-2">
+                        <Chip variant="flat" color="default" size="sm">
+                          {student.className}
+                        </Chip>
+                        <Chip variant="flat" color="secondary" size="sm">
+                          {student.levelName}
+                        </Chip>
+                      </div>
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {new Date(student.registeredAt).toLocaleDateString('id-ID', {
+                        day: 'numeric',
+                        month: 'short',
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardBody>
+          </Card>
+
+          {/* Students Need Attention */}
+          <Card className="shadow-sm">
+            <CardBody className="p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Perlu Diperhatikan</h3>
+              <div className="space-y-4">
+                {data.needsAttention.length === 0 ? (
+                  <div className="text-center py-8 text-gray-500">
+                    <svg className="w-12 h-12 mx-auto mb-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-sm">Semua siswa dalam kondisi baik!</p>
+                  </div>
+                ) : (
+                  data.needsAttention.map((student) => (
                     <div key={student.id} className="flex items-center space-x-4">
-                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span className="text-blue-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
+                      <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                        <span className="text-red-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-gray-900 truncate">{student.name}</p>
-                        <div className="flex space-x-2">
+                        <div className="flex space-x-2 mb-1">
                           <Chip variant="flat" color="default" size="sm">
                             {student.className}
                           </Chip>
@@ -232,132 +338,20 @@ export default function DashboardPage() {
                             {student.levelName}
                           </Chip>
                         </div>
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        {new Date(student.registeredAt).toLocaleDateString('id-ID', {
-                          day: 'numeric',
-                          month: 'short',
-                        })}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardBody>
-            </Card>
-
-            {/* Students Need Attention */}
-            <Card className="shadow-sm">
-              <CardBody className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Siswa Perlu Diperhatikan</h3>
-                <div className="space-y-4">
-                  {data.needsAttention.length === 0 ? (
-                    <div className="text-center py-8 text-gray-500">
-                      <svg className="w-12 h-12 mx-auto mb-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <p className="text-sm">Semua siswa dalam kondisi baik!</p>
-                    </div>
-                  ) : (
-                    data.needsAttention.map((student) => (
-                      <div key={student.id} className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                          <span className="text-red-600 font-semibold text-sm">{student.name?.charAt(0).toUpperCase()}</span>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate">{student.name}</p>
-                          <div className="flex space-x-2 mb-1">
-                            <Chip variant="flat" color="default" size="sm">
-                              {student.className}
-                            </Chip>
-                            <Chip variant="flat" color="secondary" size="sm">
-                              {student.levelName}
-                            </Chip>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <span className="text-xs text-gray-500">Rata-rata: {student.averageScore}</span>
-                            <Chip variant="flat" color={student.averageScore >= student.kkm ? 'success' : 'danger'} size="sm">
-                              KKM: {student.kkm}
-                            </Chip>
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  )}
-                </div>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
-      </div>
-
-      {/* Top 5 Most Completed Quizzes Chart */}
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 mt-6">
-        <Card className="shadow-sm">
-          <CardBody className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">5 Kuis Paling Sering Dikerjakan</h3>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-gray-600">Total: {data.quizCompletionChart.totalCompletions} kuis diselesaikan</span>
-              </div>
-              {/* Horizontal Bar Chart */}
-              <div className="space-y-4">
-                {(data.quizCompletionChart.topQuizzes ?? []).map((quiz, index) => {
-                  const percentage = data.quizCompletionChart.totalCompletions > 0 ? (quiz.count / data.quizCompletionChart.totalCompletions) * 100 : 0;
-                  const maxCount = Math.max(...data.quizCompletionChart.topQuizzes.map((q) => q.count));
-                  const barWidth = maxCount > 0 ? (quiz.count / maxCount) * 100 : 0;
-                  return (
-                    <div key={index} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center space-x-2">
-                            <span className="text-sm font-medium text-gray-800 truncate">
-                              {index + 1}. {quiz.title}
-                            </span>
-                            <Chip variant="flat" color="secondary" size="sm">
-                              Kelas {quiz.classId}
-                            </Chip>
-                          </div>
-                        </div>
-                        <div className="flex items-center space-x-2 ml-4">
-                          <span className="text-sm font-bold text-blue-600">{quiz.count}x</span>
-                          <Chip variant="flat" color="primary" size="sm">
-                            {percentage.toFixed(1)}%
+                        <div className="flex items-center space-x-2">
+                          <span className="text-xs text-gray-500">Rata-rata: {student.averageScore}</span>
+                          <Chip variant="flat" color={student.averageScore >= student.kkm ? 'success' : 'danger'} size="sm">
+                            KKM: {student.kkm}
                           </Chip>
                         </div>
                       </div>
-                      <div className="relative">
-                        <div className="w-full bg-gray-200 rounded-full h-3">
-                          <div
-                            className={`h-3 rounded-full transition-all duration-500 ${
-                              index === 0
-                                ? 'bg-linear-to-r from-yellow-400 to-yellow-600'
-                                : index === 1
-                                ? 'bg-linear-to-r from-gray-400 to-gray-600'
-                                : index === 2
-                                ? 'bg-linear-to-r from-orange-400 to-orange-600'
-                                : 'bg-linear-to-r from-blue-400 to-blue-600'
-                            }`}
-                            style={{ width: `${barWidth}%` }}
-                          />
-                        </div>
-                        <div className="absolute right-2 top-0 text-xs font-semibold text-gray-700 leading-3">
-                          {index === 0 && '🥇'}
-                          {index === 1 && '🥈'}
-                          {index === 2 && '🥉'}
-                        </div>
-                      </div>
                     </div>
-                  );
-                })}
+                  ))
+                )}
               </div>
-              {(data.quizCompletionChart.topQuizzes ?? []).length === 0 && (
-                <div className="text-center py-8 text-gray-500">
-                  <p className="text-sm">Belum ada data penyelesaian kuis</p>
-                </div>
-              )}
-            </div>
-          </CardBody>
-        </Card>
+            </CardBody>
+          </Card>
+        </div>
       </div>
     </DashboardLayout>
   );
