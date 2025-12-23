@@ -35,12 +35,23 @@ export async function GET(request: Request) {
 
     const [notifications, total] = await Promise.all([
       prisma.notification.findMany({
-        where: { userId: user.id },
+        where: {
+          userId: {
+            in: [user.id, null],
+          },
+        },
         skip,
         take: validatedLimit,
+        orderBy: {
+          createdAt: 'desc',
+        },
       }),
       prisma.notification.count({
-        where: { userId: user.id },
+        where: {
+          userId: {
+            in: [user.id, null],
+          },
+        },
       }),
     ]);
 
