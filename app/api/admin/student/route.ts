@@ -111,7 +111,7 @@ export async function GET(request: Request) {
         id: student.id,
         name: student.name,
         expLevel: student.expLevel,
-        expTotalInPoints: countQuizzes * 100,
+        expTotalInPoints: countQuizzes * student.level.kkm,
         expPoints: student.expPoints,
         averageScore: student.userQuizes.length ? Math.round(student.userQuizes.reduce((acc, uq) => acc + (uq.currentScore ?? 0), 0) / student.userQuizes.length) : 0,
         classId: student.class.classId,

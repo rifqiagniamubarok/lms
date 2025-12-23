@@ -2,6 +2,7 @@
 
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Input, Button, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Card, CardBody, Select, SelectItem, Pagination, Spinner, Chip } from '@heroui/react';
 
 interface Student {
@@ -44,6 +45,7 @@ interface ApiResponse {
 }
 
 export default function StudentPage() {
+  const router = useRouter();
   const [students, setStudents] = useState<Student[]>([]);
   const [classStats, setClassStats] = useState<ClassStat[]>([]);
   const [loading, setLoading] = useState(true);
@@ -224,55 +226,68 @@ export default function StudentPage() {
                     <TableColumn>EXP LEVEL</TableColumn>
                     <TableColumn>AVG SCORE</TableColumn>
                     <TableColumn>STATUS</TableColumn>
+                    <TableColumn>AKSI</TableColumn>
                   </TableHeader>
                   <TableBody>
-                    {students.map((student) => (
-                      <TableRow key={student.id}>
-                        <TableCell>
-                          <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                              <span className="text-blue-600 font-semibold">{student.name.charAt(0).toUpperCase()}</span>
+                    {students.map((student) => {
+                      const excessExpLevel = student.expLevel > student.expTotalInPoints ? student.expTotalInPoints : student.expLevel;
+                      let percetage = parseFloat(((student.expLevel / student.expTotalInPoints) * 100).toFixed(1));
+                      if (percetage > 100) {
+                        percetage = 100;
+                      }
+                      return (
+                        <TableRow key={student.id}>
+                          <TableCell>
+                            <div className="flex items-center space-x-3">
+                              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                <span className="text-blue-600 font-semibold">{student.name.charAt(0).toUpperCase()}</span>
+                              </div>
+                              <div>
+                                <div className="font-medium text-gray-900">{student.name}</div>
+                              </div>
                             </div>
-                            <div>
-                              <div className="font-medium text-gray-900">{student.name}</div>
-                            </div>
-                          </div>
-                        </TableCell>
-                        <TableCell>
-                          <Chip variant="flat" color="default">
-                            {student.className}
-                          </Chip>
-                        </TableCell>
-                        <TableCell>
-                          <Chip variant="flat" color="secondary">
-                            {student.levelName}
-                          </Chip>
-                        </TableCell>
-                        <TableCell>
-                          <div className="flex items-center space-x-2">
-                            <Chip variant="flat" color={getExpLevelColor(student.expLevel)} size="sm">
-                              {parseFloat(((student.expLevel / student.expTotalInPoints) * 100).toFixed(1))}%
+                          </TableCell>
+                          <TableCell>
+                            <Chip variant="flat" color="default">
+                              {student.className}
                             </Chip>
-                            <div className="w-16 bg-gray-200 rounded-full h-2">
-                              <div
-                                className={`h-2 rounded-full ${
-                                  student.expLevel >= 80 ? 'bg-green-500' : student.expLevel >= 60 ? 'bg-yellow-500' : student.expLevel >= 40 ? 'bg-blue-500' : 'bg-red-500'
-                                }`}
-                                style={{ width: `${parseFloat(((student.expLevel / student.expTotalInPoints) * 100).toFixed(1))}%` }}
-                              />
+                          </TableCell>
+                          <TableCell>
+                            <Chip variant="flat" color="secondary">
+                              {student.levelName}
+                            </Chip>
+                          </TableCell>
+                          <TableCell>
+                            <div className="flex items-center space-x-2">
+                              <Chip variant="flat" color={getExpLevelColor(student.expLevel)} size="sm">
+                                {percetage}%
+                              </Chip>
+                              <div className="w-16 bg-gray-200 rounded-full h-2">
+                                <div
+                                  className={`h-2 rounded-full ${
+                                    student.expLevel >= 80 ? 'bg-green-500' : student.expLevel >= 60 ? 'bg-yellow-500' : student.expLevel >= 40 ? 'bg-blue-500' : 'bg-red-500'
+                                  }`}
+                                  style={{ width: `${percetage}%` }}
+                                />
+                              </div>
                             </div>
-                          </div>
-                        </TableCell>
-                        <TableCell>
-                          <span className="font-semibold text-blue-600">{student.averageScore.toLocaleString()}</span>
-                        </TableCell>
-                        <TableCell>
-                          <Chip variant="flat" color={student.averageScore >= student.levelKkm ? 'success' : 'warning'}>
-                            {student.averageScore >= student.levelKkm ? 'Aktif' : 'Perlu Perhatian'}
-                          </Chip>
-                        </TableCell>
-                      </TableRow>
-                    ))}
+                          </TableCell>
+                          <TableCell>
+                            <span className="font-semibold text-blue-600">{student.averageScore.toLocaleString()}</span>
+                          </TableCell>
+                          <TableCell>
+                            <Chip variant="flat" color={student.averageScore >= student.levelKkm ? 'success' : 'warning'}>
+                              {student.averageScore >= student.levelKkm ? 'Aktif' : 'Perlu Perhatian'}
+                            </Chip>
+                          </TableCell>
+                          <TableCell>
+                            <Button size="sm" color="primary" variant="flat" onPress={() => router.push(`/student/${student.id}`)}>
+                              Detail
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      );
+                    })}
                   </TableBody>
                 </Table>
 
