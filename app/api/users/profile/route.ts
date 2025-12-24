@@ -67,4 +67,61 @@ export async function GET(request: Request) {
 const schemaValidation = z.object({
   name: z.string().optional(),
   username: z.string().optional(),
+  email: z.string().email().optional(),
 });
+
+export async function PUT(request: Request) {
+  try {
+    const decode = await handleAuth(request);
+
+    const body = await request.json();
+    const validatedData = schemaValidation.parse(body);
+
+    // Check if user exists
+    const existingUser = await prisma.user.findUnique({
+      where: { id: decode.id },
+    });
+
+    if (!existingUser) {
+      throw new ResponseError(404, 'User not found');
+    }
+
+    // If email or username is being updated, check for uniqueness
+    if (validatedData.email && validatedData.email !== existingUser.email) {
+      const emailExists = await prisma.user.findUnique({
+        where: { email: validatedData.email },
+      });
+      if (emailExists) {
+        throw new ResponseError(400, 'Email already in use');
+      }
+    }
+
+    if (validatedData.username && validatedData.username !== existingUser.username) {
+      const usernameExists = await prisma.user.findUnique({
+        where: { username: validatedData.username },
+      });
+      if (usernameExists) {
+        throw new ResponseError(400, 'Username already in use');
+      }
+    }
+
+    // Update user profile
+    const updatedUser = await prisma.user.update({
+      where: { id: decode.id },
+      data: validatedData,
+      select: {
+        id: true,
+        name: true,
+        username: true,
+        email: true,
+      },
+    });
+
+    return NextResponse.json({
+      success: true,
+      data: updatedUser,
+    });
+  } catch (error) {
+    return handleError(error);
+  }
+}
