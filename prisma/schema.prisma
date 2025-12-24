@@ -185,13 +185,13 @@ model UserQuizHistory {
 
 model Notification {
   id        Int      @id @default(autoincrement())
-  userId    Int?
+  userId    Int
   title     String
   message   String
   type      NotificationType @default(INFO)
   isRead    Boolean  @default(false)
 
-  user      User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
