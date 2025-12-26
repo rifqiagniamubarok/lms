@@ -3,7 +3,6 @@ import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';
 import ResponseError from '@/utils/ResponseError';
 import { NextResponse } from 'next/server';
-import { includes } from 'zod';
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -12,44 +11,69 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     const studentId = parseInt(id);
 
     if (!studentId || isNaN(studentId)) {
-      return new Response(JSON.stringify({ message: 'Invalid student ID' }), { status: 400 });
+      return NextResponse.json({ success: false, message: 'Invalid student ID' }, { status: 400 });
     }
 
+    // Check if student exists
     const user = await prisma.user.findUnique({
       where: { id: studentId },
-      include: {
-        class: true,
-        level: true,
-      },
     });
 
     if (!user) {
-      throw new ResponseError(404, 'Student not found');
+      return NextResponse.json({ success: false, message: 'Student not found' }, { status: 404 });
     }
 
+    // Get all published quizzes first
     const quizzes = await prisma.quiz.findMany({
       where: {
         status: 'PUBLISHED',
       },
       include: {
-        userQuizes: {
-          where: {
-            userId: studentId,
+        class: {
+          select: {
+            classId: true,
+            name: true,
           },
         },
-        class: true,
-        level: true,
-      },
-      orderBy: {
-        classId: 'asc',
         level: {
-          order: 'asc',
+          select: {
+            id: true,
+            name: true,
+            order: true,
+          },
         },
+      },
+      orderBy: [
+        {
+          classId: 'asc',
+        },
+        {
+          levelId: 'asc',
+        },
+      ],
+    });
+
+    // Get user quiz data separately
+    const userQuizzes = await prisma.userQuiz.findMany({
+      where: {
+        userId: studentId,
+      },
+      select: {
+        quizId: true,
+        bestScore: true,
+        currentScore: true,
+        pastScore: true,
       },
     });
 
+    // Create a map for quick lookup
+    const userQuizMap = new Map();
+    userQuizzes.forEach((uq) => {
+      userQuizMap.set(uq.quizId, uq);
+    });
+
     const cleanQuizzes = quizzes.map((quiz) => {
-      const userQuiz = quiz.userQuizes[0];
+      const userQuiz = userQuizMap.get(quiz.id);
       return {
         id: quiz.id,
         title: quiz.title,

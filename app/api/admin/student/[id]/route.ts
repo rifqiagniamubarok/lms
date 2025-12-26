@@ -52,7 +52,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       return {
         id: quiz.id,
         title: quiz.title,
-
         classId: quiz.classId,
         levelId: quiz.levelId,
         status: quiz.status,

@@ -35,6 +35,31 @@ interface StudentDetail {
   }>;
 }
 
+interface DetailedQuiz {
+  id: number;
+  title: string;
+  classId: number;
+  class: {
+    classId: number;
+    name: string;
+  };
+  levelId: number;
+  level: {
+    id: number;
+    name: string;
+    order: number;
+  };
+  status: string;
+  bestScore: number | null;
+  currentScore: number | null;
+  pastScore: number | null;
+}
+
+interface DetailedQuizResponse {
+  success: boolean;
+  data: DetailedQuiz[];
+}
+
 interface ApiResponse {
   success: boolean;
   data: StudentDetail;
@@ -45,6 +70,9 @@ export default function StudentDetailPage() {
   const router = useRouter();
   const [student, setStudent] = useState<StudentDetail | null>(null);
   const [loading, setLoading] = useState(true);
+  const [detailedQuizzes, setDetailedQuizzes] = useState<DetailedQuiz[]>([]);
+  const [showDetailedQuizzes, setShowDetailedQuizzes] = useState(false);
+  const [loadingDetailedQuizzes, setLoadingDetailedQuizzes] = useState(false);
 
   const studentId = params?.id as string;
 
@@ -61,6 +89,23 @@ export default function StudentDetailPage() {
       console.error('Error fetching student detail:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchDetailedQuizzes = async () => {
+    setLoadingDetailedQuizzes(true);
+    try {
+      const response = await fetch(`/api/admin/student/${studentId}/journey`);
+      const data: DetailedQuizResponse = await response.json();
+
+      if (data.success) {
+        setDetailedQuizzes(data.data);
+        setShowDetailedQuizzes(true);
+      }
+    } catch (error) {
+      console.error('Error fetching detailed quizzes:', error);
+    } finally {
+      setLoadingDetailedQuizzes(false);
     }
   };
 
@@ -96,7 +141,22 @@ export default function StudentDetailPage() {
     return { completed, passed, averageScore };
   };
 
+  const calculateDetailedQuizStats = () => {
+    if (!detailedQuizzes.length) {
+      return { completed: 0, passed: 0, averageScore: 0 };
+    }
+
+    const completed = detailedQuizzes.filter((quiz) => quiz.bestScore !== null).length;
+    const passed = detailedQuizzes.filter((quiz) => quiz.bestScore !== null && quiz.bestScore >= (student?.level?.kkm || 0)).length;
+
+    const totalScore = detailedQuizzes.reduce((sum, quiz) => sum + (quiz.bestScore || 0), 0);
+    const averageScore = completed > 0 ? totalScore / completed : 0;
+
+    return { completed, passed, averageScore };
+  };
+
   const quizStats = calculateQuizStats();
+  const detailedQuizStats = calculateDetailedQuizStats();
 
   if (loading) {
     return (
@@ -185,14 +245,14 @@ export default function StudentDetailPage() {
         </div>
 
         {/* Statistics Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className={showDetailedQuizzes ? 'grid grid-cols-1 md:grid-cols-4 gap-4' : 'grid grid-cols-1 md:grid-cols-3 gap-4'}>
           <Card className="shadow-sm">
             <CardBody className="p-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-medium text-gray-500">Quiz Diselesaikan</h3>
-                  <p className="text-2xl font-bold text-gray-900">{quizStats.completed}</p>
-                  <p className="text-xs text-gray-500">dari {student.quizzes.length} quiz</p>
+                  <p className="text-2xl font-bold text-gray-900">{!showDetailedQuizzes ? quizStats.completed : detailedQuizStats.completed}</p>
+                  <p className="text-xs text-gray-500">dari {!showDetailedQuizzes ? student.quizzes.length : detailedQuizzes.length} quiz</p>
                 </div>
                 <div className="p-3 bg-green-100 rounded-full">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -208,7 +268,7 @@ export default function StudentDetailPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-medium text-gray-500">Quiz Lulus</h3>
-                  <p className="text-2xl font-bold text-gray-900">{quizStats.passed}</p>
+                  <p className="text-2xl font-bold text-gray-900">{!showDetailedQuizzes ? quizStats.passed : detailedQuizStats.passed}</p>
                   <p className="text-xs text-gray-500">≥ {student.level?.kkm || 0} poin</p>
                 </div>
                 <div className="p-3 bg-blue-100 rounded-full">
@@ -229,7 +289,7 @@ export default function StudentDetailPage() {
             <CardBody className="p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">Rata-rata Skor</h3>
+                  <h3 className="text-sm font-medium text-gray-500">{!showDetailedQuizzes ? `Rata-rata Skor (${student.level.name})` : 'Rata-rata Skor (Level Ini)'}</h3>
                   <p className="text-2xl font-bold text-gray-900">{quizStats.averageScore.toFixed(0)}</p>
                   <p className="text-xs text-gray-500">dari quiz selesai</p>
                 </div>
@@ -246,38 +306,146 @@ export default function StudentDetailPage() {
               </div>
             </CardBody>
           </Card>
+
+          {showDetailedQuizzes && (
+            <Card className="shadow-sm">
+              <CardBody className="p-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-500">Rata-rata Skor (Semua Level)</h3>
+                    <p className="text-2xl font-bold text-gray-900">{detailedQuizStats.averageScore.toFixed(0)}</p>
+                    <p className="text-xs text-gray-500">dari semua quiz selesai</p>
+                  </div>
+                  <div className="p-3 bg-purple-100 rounded-full">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+          )}
         </div>
 
         {/* Quiz Progress Table */}
         <Card className="shadow-sm">
           <CardBody className="p-0">
             <div className="p-6 border-b">
-              <h3 className="text-lg font-semibold text-gray-900">Progress Quiz</h3>
-              <p className="text-sm text-gray-600">Detail progress untuk setiap quiz</p>
+              <div className="flex justify-between items-center">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Progress Quiz</h3>
+                  <p className="text-sm text-gray-600">{showDetailedQuizzes ? 'Detail semua quiz di setiap kelas dan level' : 'Detail progress untuk setiap quiz'}</p>
+                </div>
+                <div className="flex gap-2">
+                  {showDetailedQuizzes && (
+                    <Button variant="bordered" size="sm" onPress={() => setShowDetailedQuizzes(false)}>
+                      Tampilkan Quiz Student
+                    </Button>
+                  )}
+                  <Button color="primary" variant="flat" size="sm" onPress={fetchDetailedQuizzes} isLoading={loadingDetailedQuizzes} isDisabled={showDetailedQuizzes}>
+                    {showDetailedQuizzes ? 'Quiz Semua Level Ditampilkan' : 'Lihat Quiz Semua Level'}
+                  </Button>
+                </div>
+              </div>
             </div>
 
-            {student.quizzes.length === 0 ? (
+            {!showDetailedQuizzes ? (
+              // Show student's level quizzes
+              student.quizzes.length === 0 ? (
+                <div className="text-center py-12">
+                  <p className="text-gray-500">Tidak ada quiz tersedia untuk level ini</p>
+                </div>
+              ) : (
+                <Table aria-label="Quiz Progress">
+                  <TableHeader>
+                    <TableColumn>QUIZ</TableColumn>
+                    <TableColumn>STATUS</TableColumn>
+                    <TableColumn>SKOR TERBAIK</TableColumn>
+                    <TableColumn>SKOR SAAT INI</TableColumn>
+                    <TableColumn>SKOR SEBELUMNYA</TableColumn>
+                    <TableColumn>HASIL</TableColumn>
+                  </TableHeader>
+                  <TableBody>
+                    {student.quizzes.map((quiz) => (
+                      <TableRow key={quiz.id}>
+                        <TableCell>
+                          <div>
+                            <div className="font-medium text-gray-900">{quiz.title}</div>
+                            <div className="text-sm text-gray-500">{quiz.description}</div>
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <Chip variant="flat" color={quiz.bestScore !== null ? 'success' : 'default'} size="sm">
+                            {quiz.bestScore !== null ? 'Selesai' : 'Belum Dimulai'}
+                          </Chip>
+                        </TableCell>
+                        <TableCell>
+                          {quiz.bestScore !== null ? (
+                            <Chip variant="flat" color={getScoreColor(quiz.bestScore, student.level?.kkm || 0)} size="sm">
+                              {quiz.bestScore}
+                            </Chip>
+                          ) : (
+                            <span className="text-gray-400">-</span>
+                          )}
+                        </TableCell>
+                        <TableCell>
+                          {quiz.currentScore !== null ? <span className="font-medium text-gray-900">{quiz.currentScore}</span> : <span className="text-gray-400">-</span>}
+                        </TableCell>
+                        <TableCell>
+                          {quiz.pastScore !== null ? <span className="font-medium text-gray-900">{quiz.pastScore}</span> : <span className="text-gray-400">-</span>}
+                        </TableCell>
+                        <TableCell>
+                          {quiz.bestScore !== null ? (
+                            <Chip variant="flat" color={quiz.bestScore >= (student.level?.kkm || 0) ? 'success' : 'danger'} size="sm">
+                              {quiz.bestScore >= (student.level?.kkm || 0) ? 'LULUS' : 'TIDAK LULUS'}
+                            </Chip>
+                          ) : (
+                            <Chip variant="flat" color="default" size="sm">
+                              BELUM DIMULAI
+                            </Chip>
+                          )}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              )
+            ) : // Show detailed quizzes from all levels
+            detailedQuizzes.length === 0 ? (
               <div className="text-center py-12">
-                <p className="text-gray-500">Tidak ada quiz tersedia untuk level ini</p>
+                <p className="text-gray-500">Tidak ada quiz tersedia</p>
               </div>
             ) : (
-              <Table aria-label="Quiz Progress">
+              <Table aria-label="Detailed Quiz Journey">
                 <TableHeader>
                   <TableColumn>QUIZ</TableColumn>
+                  <TableColumn>KELAS</TableColumn>
+                  <TableColumn>LEVEL</TableColumn>
                   <TableColumn>STATUS</TableColumn>
                   <TableColumn>SKOR TERBAIK</TableColumn>
                   <TableColumn>SKOR SAAT INI</TableColumn>
-                  <TableColumn>SKOR SEBELUMNYA</TableColumn>
                   <TableColumn>HASIL</TableColumn>
                 </TableHeader>
                 <TableBody>
-                  {student.quizzes.map((quiz) => (
+                  {detailedQuizzes.map((quiz) => (
                     <TableRow key={quiz.id}>
                       <TableCell>
-                        <div>
-                          <div className="font-medium text-gray-900">{quiz.title}</div>
-                          <div className="text-sm text-gray-500">{quiz.description}</div>
-                        </div>
+                        <div className="font-medium text-gray-900">{quiz.title}</div>
+                      </TableCell>
+                      <TableCell>
+                        <Chip variant="flat" color="default" size="sm">
+                          {quiz.class.name}
+                        </Chip>
+                      </TableCell>
+                      <TableCell>
+                        <Chip variant="flat" color="secondary" size="sm">
+                          {quiz.level.name}
+                        </Chip>
                       </TableCell>
                       <TableCell>
                         <Chip variant="flat" color={quiz.bestScore !== null ? 'success' : 'default'} size="sm">
@@ -286,7 +454,7 @@ export default function StudentDetailPage() {
                       </TableCell>
                       <TableCell>
                         {quiz.bestScore !== null ? (
-                          <Chip variant="flat" color={getScoreColor(quiz.bestScore, student.level?.kkm || 0)} size="sm">
+                          <Chip variant="flat" color={getScoreColor(quiz.bestScore, student?.level?.kkm || 0)} size="sm">
                             {quiz.bestScore}
                           </Chip>
                         ) : (
@@ -297,12 +465,9 @@ export default function StudentDetailPage() {
                         {quiz.currentScore !== null ? <span className="font-medium text-gray-900">{quiz.currentScore}</span> : <span className="text-gray-400">-</span>}
                       </TableCell>
                       <TableCell>
-                        {quiz.pastScore !== null ? <span className="font-medium text-gray-900">{quiz.pastScore}</span> : <span className="text-gray-400">-</span>}
-                      </TableCell>
-                      <TableCell>
                         {quiz.bestScore !== null ? (
-                          <Chip variant="flat" color={quiz.bestScore >= (student.level?.kkm || 0) ? 'success' : 'danger'} size="sm">
-                            {quiz.bestScore >= (student.level?.kkm || 0) ? 'LULUS' : 'TIDAK LULUS'}
+                          <Chip variant="flat" color={quiz.bestScore >= (student?.level?.kkm || 0) ? 'success' : 'danger'} size="sm">
+                            {quiz.bestScore >= (student?.level?.kkm || 0) ? 'LULUS' : 'TIDAK LULUS'}
                           </Chip>
                         ) : (
                           <Chip variant="flat" color="default" size="sm">
