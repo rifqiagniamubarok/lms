@@ -84,7 +84,7 @@ const MatrixLineChart: React.FC<MatrixLineChartProps> = ({ matrix }) => {
         grid: { color: '#f1f5f9' },
       },
     },
-    layout: { padding: 16 },
+    layout: { padding: 2 },
   };
 
   return <Line data={data} options={options} />;

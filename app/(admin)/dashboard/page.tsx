@@ -2,8 +2,7 @@
 
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, Spinner, Chip } from '@heroui/react';
-import { InfoPopover } from '@/components/InfoPopover';
+import { Card, CardBody, Spinner, Chip, Popover, PopoverTrigger, PopoverContent, Button } from '@heroui/react';
 import dynamic from 'next/dynamic';
 const MatrixLineChart = dynamic(() => import('@/components/MatrixLineChart'), { ssr: false });
 
@@ -193,19 +192,31 @@ export default function DashboardPage() {
         {/* Top 5 Most Completed Quizzes Chart */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
           {/* Chart Main View (2/3 width) */}
-          <Card className="col-span-1 lg:col-span-2 shadow-lg border-2 border-blue-100 flex-1 lg:basis-2/3">
-            <CardBody className="p-6 md:p-8">
-              <div className="flex items-center mb-2">
+          <Card className="col-span-1 lg:col-span-2 shadow-lg flex-1 lg:basis-2/3">
+            <CardBody className="p-4 md:p-6">
+              <div className="flex items-center mb-4">
                 <h3 className="text-xl md:text-2xl font-bold text-blue-900">Matriks Penyelesaian Kuis (Level x Kelas)</h3>
-                <InfoPopover
-                  description={
-                    'Grafik ini menunjukkan jumlah penyelesaian kuis oleh siswa untuk setiap kombinasi level dan kelas. Setiap garis mewakili satu kelas, dan titik-titik pada garis menunjukkan berapa kali kuis pada level tertentu telah diselesaikan oleh siswa di kelas tersebut. Gunakan grafik ini untuk memantau aktivitas siswa lintas kelas dan level, serta mengidentifikasi tren atau ketimpangan dalam penyelesaian kuis.'
-                  }
-                />
+                <Popover placement="right">
+                  <PopoverTrigger>
+                    <Button isIconOnly variant="light" size="sm" className="ml-2 text-gray-500 hover:text-gray-700">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="max-w-xs">
+                    <div className="px-1 py-2">
+                      <div className="text-small font-bold">Informasi Grafik</div>
+                      <div className="text-tiny">
+                        Grafik ini menunjukkan jumlah penyelesaian kuis oleh siswa untuk setiap kombinasi level dan kelas. Setiap garis mewakili satu kelas, dan titik-titik pada
+                        garis menunjukkan berapa kali kuis pada level tertentu telah diselesaikan oleh siswa di kelas tersebut. Gunakan grafik ini untuk memantau aktivitas siswa
+                        lintas kelas dan level, serta mengidentifikasi tren atau ketimpangan dalam penyelesaian kuis.
+                      </div>
+                    </div>
+                  </PopoverContent>
+                </Popover>
               </div>
-              <div className="bg-white rounded-lg p-2 md:p-6 shadow-none border border-gray-100">
-                <MatrixLineChart matrix={data.quizCompletionChart.matrix} />
-              </div>
+              <MatrixLineChart matrix={data.quizCompletionChart.matrix} />
             </CardBody>
           </Card>
           <Card className="shadow-sm">
