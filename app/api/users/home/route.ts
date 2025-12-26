@@ -70,6 +70,30 @@ export async function GET(request: Request) {
       },
     });
 
+    const badges = await prisma.badge.findMany({
+      include: {
+        userBadges: {
+          where: {
+            userId: decode.id,
+          },
+        },
+      },
+      orderBy: {
+        expPoints: 'asc',
+      },
+    });
+
+    const cleanBadges = badges.map((badge) => {
+      const userQuiz = badge.userBadges[0];
+      return {
+        id: badge.id,
+        name: badge.name,
+        expPoints: badge.expPoints,
+        isAwarded: userQuiz ? true : false,
+        awardedAt: userQuiz ? userQuiz.createdAt : null,
+      };
+    });
+
     const formatResponse = {
       id: user.id,
       name: user.name,
@@ -87,6 +111,7 @@ export async function GET(request: Request) {
       totalQuizInCurrentLevel: quizCount,
       totalQuizTakenInCurrentLevel: userQuiz || 0,
       remainingQuizInCurrentLevel: quizCount - userQuiz || 0,
+      badges: cleanBadges,
       next: {
         isTheLastLevelAndClass,
         nextLevelId: nextLevel ? nextLevel.id : isTheLastLevelAndClass ? null : 1,

@@ -61,12 +61,37 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       };
     });
 
+    const badges = await prisma.badge.findMany({
+      include: {
+        userBadges: {
+          where: {
+            userId: studentId,
+          },
+        },
+      },
+      orderBy: {
+        expPoints: 'asc',
+      },
+    });
+
+    const cleanBadges = badges.map((badge) => {
+      const userQuiz = badge.userBadges[0];
+      return {
+        id: badge.id,
+        name: badge.name,
+        expPoints: badge.expPoints,
+        isAwarded: userQuiz ? true : false,
+        awardedAt: userQuiz ? userQuiz.createdAt : null,
+      };
+    });
+
     const response = {
       name: user.name,
       email: user.email,
       username: user.username,
       class: user.class,
       level: { ...user.level, expTotalInPoints: user.level ? user.level.kkm * cleanQuizzes.length : 0 },
+      badges: cleanBadges,
       expLevel: user.expLevel,
       expPoints: user.expPoints,
       quizzes: cleanQuizzes,

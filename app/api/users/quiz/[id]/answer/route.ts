@@ -3,6 +3,7 @@ import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';
 import ResponseError from '@/utils/ResponseError';
 import { addSeconds, isAfter, isBefore } from 'date-fns';
+import { NextResponse } from 'next/server';
 import z from 'zod';
 
 const schemaBodyRequest = z.object({
@@ -111,13 +112,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const score = (totalCorrect / getQuestion.length) * 100;
     const passed = score >= userQuiz.quiz.level.kkm;
 
-    console.log({ scoreBefore: userQuiz.currentScore });
     const expScoreBefore = userQuiz.currentScore || 0;
     const expBefore = userQuiz.user.expLevel;
     const expChanges = score - expScoreBefore;
     const expFinals = expBefore + expChanges;
     const expAfter = expFinals;
-    console.log({ expScoreBefore, expChanges, score });
 
     const currentBestScore = userQuiz.bestScore || 0;
     const differenceBestScore = score > currentBestScore ? score - currentBestScore : 0;
@@ -163,6 +162,48 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         where: { id: decode.id },
         data: { expLevel: expAfter, expPoints: { increment: differenceBestScore } },
       });
+
+      const finalExpPoints = userQuiz.user.expPoints + differenceBestScore;
+
+      // Badge
+      const badges = await tx.badge.findMany({
+        where: {
+          expPoints: {
+            lte: finalExpPoints,
+          },
+          userBadges: {
+            none: {
+              userId: decode.id,
+            },
+          },
+        },
+        select: {
+          name: true,
+          id: true,
+        },
+        orderBy: {
+          expPoints: 'asc',
+        },
+      });
+
+      const newBadge = badges[badges.length - 1];
+
+      if (badges.length > 0) {
+        await tx.userBadge.createMany({
+          data: badges.map((badge) => ({
+            userId: decode.id,
+            badgeId: badge.id,
+          })),
+        });
+
+        await tx.notification.create({
+          data: {
+            userId: decode.id,
+            title: 'Selamat!',
+            message: `Kamu baru saja mendapatkan badge "${newBadge?.name}" karena telah mencapai ${finalExpPoints} poin pengalaman.`,
+          },
+        });
+      }
 
       await tx.notification.create({
         data: {
@@ -300,20 +341,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         beforeScore: expScoreBefore,
         expChanges,
         expScoreBefore,
+        newBadge,
       };
     });
 
-    const curren = await prisma.userQuiz.findFirst({
-      where: {
-        userId: decode.id,
-        quizId: parseInt(id),
-      },
-    });
-
-    console.log({ curren });
-
-    return new Response(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         success: true,
         data: {
           result: {
@@ -323,6 +356,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
             kkm: userQuiz.quiz.level.kkm,
             passed,
           },
+          newBadge: result.newBadge || null,
           exp: {
             quizScore: result.quizScore,
             beforeScore: result.beforeScore,
@@ -350,7 +384,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
             nextClass: result.nextClass?.classId || null,
           },
         },
-      }),
+      },
       { status: 200 }
     );
   } catch (error) {

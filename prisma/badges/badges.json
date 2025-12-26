@@ -1,0 +1,15 @@
+[
+  { "name": "Pemula", "expPoints": 250 },
+  { "name": "Mulai Bisa", "expPoints": 500 },
+  { "name": "Penghitung Cilik", "expPoints": 900 },
+  { "name": "Suka Berhitung", "expPoints": 1300 },
+  { "name": "Cepat Menghitung", "expPoints": 1800 },
+  { "name": "Jago Hitung", "expPoints": 2400 },
+  { "name": "Ahli Angka", "expPoints": 3100 },
+  { "name": "Master Matematika", "expPoints": 3900 },
+  { "name": "Pintar Berhitung", "expPoints": 4700 },
+  { "name": "Otak Matematika", "expPoints": 5600 },
+  { "name": "Jenius Angka", "expPoints": 6500 },
+  { "name": "Legenda Hitung", "expPoints": 7200 },
+  { "name": "Juara Matematika", "expPoints": 7500 }
+]

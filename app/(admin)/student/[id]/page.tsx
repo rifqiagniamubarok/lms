@@ -22,6 +22,13 @@ interface StudentDetail {
   };
   expLevel: number;
   expPoints: number;
+  badges: Array<{
+    id: number;
+    name: string;
+    expPoints: number;
+    isAwarded: boolean;
+    awardedAt: string | null;
+  }>;
   quizzes: Array<{
     id: number;
     title: string;
@@ -73,6 +80,7 @@ export default function StudentDetailPage() {
   const [detailedQuizzes, setDetailedQuizzes] = useState<DetailedQuiz[]>([]);
   const [showDetailedQuizzes, setShowDetailedQuizzes] = useState(false);
   const [loadingDetailedQuizzes, setLoadingDetailedQuizzes] = useState(false);
+  const [showAllBadges, setShowAllBadges] = useState(false);
 
   const studentId = params?.id as string;
 
@@ -331,6 +339,114 @@ export default function StudentDetailPage() {
             </Card>
           )}
         </div>
+
+        {/* Badges Section */}
+        <Card className="shadow-sm">
+          <CardBody className="p-6">
+            <div className="flex justify-between items-center mb-4">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Badge Pencapaian</h3>
+                {student.badges && student.badges.length > 0 ? (
+                  <p className="text-sm text-gray-600">
+                    {student.badges.filter((badge) => badge.isAwarded).length} dari {student.badges.length} badge telah diraih
+                  </p>
+                ) : (
+                  <p className="text-sm text-gray-600">Belum ada badge yang tersedia</p>
+                )}
+              </div>
+              {student.badges && student.badges.length > 0 && (
+                <Button
+                  variant="flat"
+                  color="primary"
+                  size="sm"
+                  onPress={() => setShowAllBadges(!showAllBadges)}
+                  startContent={
+                    showAllBadges ? (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )
+                  }
+                >
+                  {showAllBadges ? 'Sembunyikan' : 'Lihat Semua'}
+                </Button>
+              )}
+            </div>
+
+            {student.badges && student.badges.length > 0 ? (
+              !showAllBadges ? (
+                // Compact view - show only earned badges in a single row
+                <div className="flex flex-wrap gap-2">
+                  {student.badges
+                    .filter((badge) => badge.isAwarded)
+                    .map((badge) => (
+                      <div key={badge.id} className="flex items-center gap-2 px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <div className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7V9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9V7H3V9C3 11.76 5.24 14 8 14V16H7C6.45 16 6 16.45 6 17V18H18V17C18 16.45 17.55 16 17 16H16V14C18.76 14 21 11.76 21 9ZM12 8C12.55 8 13 8.45 13 9S12.55 10 12 10 11 9.55 11 9 11.45 8 12 8Z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-yellow-800">{badge.name}</p>
+                          <p className="text-xs text-yellow-600">{badge.expPoints} XP</p>
+                        </div>
+                      </div>
+                    ))}
+                  {student.badges.filter((badge) => badge.isAwarded).length === 0 && (
+                    <div className="text-center py-4 w-full">
+                      <p className="text-gray-500 text-sm">Belum ada badge yang diraih</p>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                // Full view - show all badges in grid
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                  {student.badges.map((badge) => (
+                    <div
+                      key={badge.id}
+                      className={`flex flex-col items-center p-4 rounded-lg border-2 transition-all ${
+                        badge.isAwarded ? 'border-yellow-200 bg-yellow-50 shadow-md' : 'border-gray-200 bg-gray-50'
+                      }`}
+                    >
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 ${badge.isAwarded ? 'bg-yellow-100' : 'bg-gray-200'}`}>
+                        {badge.isAwarded ? (
+                          <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7V9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9V7H3V9C3 11.76 5.24 14 8 14V16H7C6.45 16 6 16.45 6 17V18H18V17C18 16.45 17.55 16 17 16H16V14C18.76 14 21 11.76 21 9ZM12 8C12.55 8 13 8.45 13 9S12.55 10 12 10 11 9.55 11 9 11.45 8 12 8Z" />
+                          </svg>
+                        ) : (
+                          <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z" />
+                          </svg>
+                        )}
+                      </div>
+                      <h4 className={`text-xs font-medium text-center mb-1 ${badge.isAwarded ? 'text-yellow-800' : 'text-gray-500'}`}>{badge.name}</h4>
+                      <p className={`text-xs text-center ${badge.isAwarded ? 'text-yellow-600' : 'text-gray-400'}`}>{badge.expPoints} XP</p>
+                      {badge.isAwarded && badge.awardedAt && <p className="text-xs text-yellow-600 text-center mt-1">{new Date(badge.awardedAt).toLocaleDateString('id-ID')}</p>}
+                    </div>
+                  ))}
+                </div>
+              )
+            ) : (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
+                  </svg>
+                </div>
+                <p className="text-gray-500">Belum ada badge yang tersedia</p>
+              </div>
+            )}
+          </CardBody>
+        </Card>
 
         {/* Quiz Progress Table */}
         <Card className="shadow-sm">

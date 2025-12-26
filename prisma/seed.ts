@@ -1,6 +1,7 @@
 import { PrismaClient, QuizSatus } from '@prisma/client';
 import { hashPassword } from '../utils/encryption';
 import dataSoal, { SoalOption } from './soal';
+import badgesData from './badges';
 
 const prisma = new PrismaClient();
 
@@ -123,6 +124,10 @@ async function main() {
     });
     const totalForClass = Object.values(classLevelCounts[classNum]).reduce((sum, count) => sum + count, 0);
     console.log(`  Total for Class ${classNum}: ${totalForClass} quiz(s)`);
+  });
+
+  await prisma.badge.createMany({
+    data: badgesData,
   });
 
   console.log('\n=== STARTING QUIZ CREATION ===\n');
