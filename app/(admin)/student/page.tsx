@@ -127,11 +127,6 @@ export default function StudentPage() {
     fetchStudents();
   }, [pagination.page, search, selectedClass, selectedLevel]);
 
-  const handleSearch = () => {
-    setPagination((prev) => ({ ...prev, page: 1 }));
-    fetchStudents();
-  };
-
   const handleReset = () => {
     setSearch('');
     setSelectedClass('');
@@ -181,7 +176,14 @@ export default function StudentPage() {
           <CardBody className="p-4">
             <div className="flex flex-col md:flex-row gap-4 items-end">
               <div className="flex-1">
-                <Input placeholder="Masukkan nama siswa..." value={search} onChange={(e) => setSearch(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSearch()} />
+                <Input
+                  placeholder="Masukkan nama siswa..."
+                  value={search}
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                    setPagination((prev) => ({ ...prev, page: 1 }));
+                  }}
+                />
               </div>
               <div className="w-full md:w-48">
                 <Select placeholder="Semua Kelas" selectedKeys={selectedClass ? [selectedClass] : []} onChange={(e) => setSelectedClass(e.target.value)}>
@@ -198,9 +200,6 @@ export default function StudentPage() {
                 </Select>
               </div>
               <div className="flex gap-2">
-                <Button color="primary" onPress={handleSearch}>
-                  Filter
-                </Button>
                 <Button variant="bordered" onPress={handleReset}>
                   Reset
                 </Button>

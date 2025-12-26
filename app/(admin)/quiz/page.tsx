@@ -113,6 +113,7 @@ export default function QuizPage() {
   const [selectedClass, setSelectedClass] = useState<string>('');
   const [selectedLevel, setSelectedLevel] = useState<string>('');
   const [selectedStatus, setSelectedStatus] = useState<string>('');
+  const [selectedDuration, setSelectedDuration] = useState<string>('');
   const [deleteQuizId, setDeleteQuizId] = useState<number | null>(null);
 
   // Redirect if not authenticated
@@ -154,6 +155,7 @@ export default function QuizPage() {
       if (searchTerm) params.append('search', searchTerm);
       if (selectedClass) params.append('classId', selectedClass);
       if (selectedLevel) params.append('levelId', selectedLevel);
+      if (selectedDuration) params.append('duration', selectedDuration);
 
       const response = await fetch(`/api/admin/quiz?${params.toString()}`);
       const result = await response.json();
@@ -175,12 +177,7 @@ export default function QuizPage() {
   // Fetch quizzes when filters or pagination change
   useEffect(() => {
     fetchQuizzes();
-  }, [pagination.page, selectedClass, selectedLevel, searchTerm]);
-
-  // Handle search
-  const handleSearch = () => {
-    setPagination((prev) => ({ ...prev, page: 1 }));
-  };
+  }, [pagination.page, selectedClass, selectedLevel, selectedDuration, searchTerm]);
 
   // Handle page change
   const handlePageChange = (page: number) => {
@@ -296,9 +293,11 @@ export default function QuizPage() {
                 <Input
                   placeholder="Cari quiz..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setPagination((prev) => ({ ...prev, page: 1 }));
+                  }}
                   startContent={<MagnifyingGlassIcon className="w-4 h-4 text-gray-400" />}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                 />
               </div>
               <div className="w-full md:w-48">
@@ -331,16 +330,31 @@ export default function QuizPage() {
                   ))}
                 </Select>
               </div>
+              <div className="w-full md:w-48">
+                <Select
+                  placeholder="Semua Durasi"
+                  selectedKeys={selectedDuration ? [selectedDuration] : []}
+                  onSelectionChange={(keys) => {
+                    const key = Array.from(keys)[0] as string;
+                    setSelectedDuration(key || '');
+                    setPagination((prev) => ({ ...prev, page: 1 }));
+                  }}
+                >
+                  <SelectItem key="15">15 menit</SelectItem>
+                  <SelectItem key="30">30 menit</SelectItem>
+                  <SelectItem key="45">45 menit</SelectItem>
+                  <SelectItem key="60">60 menit</SelectItem>
+                  <SelectItem key="90">90 menit</SelectItem>
+                </Select>
+              </div>
               <div className="flex gap-2">
-                <Button color="primary" onPress={handleSearch}>
-                  Filter
-                </Button>
                 <Button
                   variant="bordered"
                   onPress={() => {
                     setSearchTerm('');
                     setSelectedClass('');
                     setSelectedLevel('');
+                    setSelectedDuration('');
                     setPagination((prev) => ({ ...prev, page: 1 }));
                   }}
                 >

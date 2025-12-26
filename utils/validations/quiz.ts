@@ -170,6 +170,12 @@ export const quizQuerySchema = z.object({
     .pipe(z.number().positive())
     .optional(),
   search: z.string().optional(),
+  duration: z
+    .number()
+    .refine((val) => [15, 30, 45, 60, 90].includes(val), {
+      message: 'Duration must be one of: 15, 30, 45, 60, or 90 minutes',
+    })
+    .optional(),
 });
 
 // Type exports for TypeScript

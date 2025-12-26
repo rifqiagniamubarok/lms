@@ -8,6 +8,7 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 interface StudentDetail {
   name: string;
+  username: string;
   email: string;
   class: {
     classId: number;
@@ -139,7 +140,7 @@ export default function StudentDetailPage() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">{student.name}</h2>
-                  <p className="text-gray-600 mb-4">{student.email}</p>
+                  <p className="text-gray-600 mb-4">@{student.username}</p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>

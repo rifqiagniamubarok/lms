@@ -12,15 +12,22 @@ export async function GET(request: Request) {
     await handleAuthAdmin(request);
 
     const { searchParams } = new URL(request.url);
-    const queryParams = Object.fromEntries(searchParams);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const queryParams: Record<string, any> = Object.fromEntries(searchParams);
 
-    const { page, limit, levelId, classId, search } = quizQuerySchema.parse(queryParams);
+    // Convert only the numeric filter parameters (not pagination parameters)
+    if (queryParams.levelId) queryParams.levelId = parseInt(queryParams.levelId);
+    if (queryParams.classId) queryParams.classId = parseInt(queryParams.classId);
+    if (queryParams.duration) queryParams.duration = parseInt(queryParams.duration);
+
+    const { page, limit, levelId, classId, search, duration } = quizQuerySchema.parse(queryParams);
 
     // Build where clause for filtering
     const where: import('@prisma/client').Prisma.QuizWhereInput = {};
 
     if (levelId) where.levelId = levelId;
     if (classId) where.classId = classId;
+    if (duration) where.duration = duration;
     if (search) {
       where.OR = [{ title: { contains: search, mode: 'insensitive' } }, { description: { contains: search, mode: 'insensitive' } }];
     }

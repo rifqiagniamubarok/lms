@@ -29,8 +29,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
     const quizzes = await prisma.quiz.findMany({
       where: {
-        levelId: user.levelId,
-        classId: user.classId,
         status: 'PUBLISHED',
       },
       include: {
@@ -39,8 +37,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
             userId: studentId,
           },
         },
+        class: true,
+        level: true,
       },
       orderBy: {
+        classId: 'asc',
         level: {
           order: 'asc',
         },
@@ -52,9 +53,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       return {
         id: quiz.id,
         title: quiz.title,
-
         classId: quiz.classId,
+        class: quiz.class,
         levelId: quiz.levelId,
+        level: quiz.level,
         status: quiz.status,
         bestScore: userQuiz ? userQuiz.bestScore : null,
         currentScore: userQuiz ? userQuiz.currentScore : null,
@@ -62,20 +64,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       };
     });
 
-    const response = {
-      name: user.name,
-      email: user.email,
-      username: user.username,
-      class: user.class,
-      level: { ...user.level, expTotalInPoints: user.level ? user.level.kkm * cleanQuizzes.length : 0 },
-      expLevel: user.expLevel,
-      expPoints: user.expPoints,
-      quizzes: cleanQuizzes,
-    };
-
     return NextResponse.json({
       success: true,
-      data: response,
+      data: cleanQuizzes,
     });
   } catch (error) {
     return handleError(error);

@@ -1,6 +1,7 @@
 import { handleAuth, handleAuthAdmin } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';
+import { NextResponse } from 'next/server';
 import z from 'zod';
 
 const queryParamsSchema = z.object({
@@ -137,8 +138,8 @@ export async function GET(request: Request) {
       },
     });
 
-    return new Response(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         success: true,
         data: students,
         pagination: {
@@ -159,8 +160,10 @@ export async function GET(request: Request) {
           levelId,
           classId,
         },
-      }),
-      { status: 200, headers: { 'Content-Type': 'application/json' } }
+      },
+      {
+        status: 200,
+      }
     );
   } catch (error) {
     return handleError(error);
