@@ -190,12 +190,12 @@ export default function DashboardPage() {
           </Card>
         </div>
         {/* Top 5 Most Completed Quizzes Chart */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
           {/* Chart Main View (2/3 width) */}
-          <Card className="col-span-1 lg:col-span-2 shadow-lg flex-1 lg:basis-2/3">
+          <Card className="col-span-1 lg:col-span-1 shadow-lg flex-1 lg:basis-2/3">
             <CardBody className="p-4 md:p-6">
               <div className="flex items-center mb-4">
-                <h3 className="text-xl md:text-2xl font-bold text-blue-900">Matriks Penyelesaian Kuis (Level x Kelas)</h3>
+                <h3 className="text-lg md:text-2xl font-bold text-blue-900">Matriks Penyelesaian Kuis (Level x Kelas)</h3>
                 <Popover placement="right">
                   <PopoverTrigger>
                     <Button isIconOnly variant="light" size="sm" className="ml-2 text-gray-500 hover:text-gray-700">
