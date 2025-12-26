@@ -4,6 +4,7 @@ import { prisma } from '@/utils/prisma';
 import ResponseError from '@/utils/ResponseError';
 import { createQuizSchema, updateQuizSchema, quizQuerySchema } from '@/utils/validations/quiz';
 import { NextResponse } from 'next/server';
+import { NotificationType } from '@prisma/client';
 
 // GET /api/admin/quiz - Get all quizzes with filtering
 export async function GET(request: Request) {
@@ -188,6 +189,25 @@ export async function POST(request: Request) {
             option: option.option,
             isCorrect: option.isCorrect,
           })),
+        });
+      }
+
+      if (validatedData.status === 'PUBLISHED') {
+        const allIdUsers = await tx.user.findMany({
+          select: { id: true },
+        });
+
+        const getIdusers = allIdUsers.map((user) => user.id);
+
+        const notificationsData = getIdusers.map((userId) => ({
+          userId,
+          title: 'Quiz Baru Tersedia',
+          message: `Quiz "${newQuiz.title}" untuk Kelas ${classEntity.name} Level ${level.name} sekarang sudah tersedia. Ayo kerjakan sekarang!`,
+          type: NotificationType.INFO,
+        }));
+
+        await tx.notification.createMany({
+          data: notificationsData,
         });
       }
 
