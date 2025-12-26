@@ -45,6 +45,7 @@ model User {
   class     Class    @relation(fields: [classId], references: [classId])
   notifications Notification[]
   userBadges UserBadge[]
+  activities  Activity[]
 
   userQuizes  UserQuiz[]
 
@@ -231,4 +232,18 @@ model UserBadge {
 enum NotificationType {
   INFO
   NEWS
+}
+
+model Activity {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  title     String
+  point     Int
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("histories")
 }
