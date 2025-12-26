@@ -195,7 +195,7 @@ export default function DashboardPage() {
           <Card className="col-span-1 lg:col-span-1 shadow-lg flex-1 lg:basis-2/3">
             <CardBody className="p-4 md:p-6">
               <div className="flex items-center mb-4">
-                <h3 className="text-lg md:text-2xl font-bold text-blue-900">Matriks Penyelesaian Kuis (Level x Kelas)</h3>
+                <h3 className="text-lg md:text-xl font-semibold ">Matriks Penyelesaian Kuis</h3>
                 <Popover placement="right">
                   <PopoverTrigger>
                     <Button isIconOnly variant="light" size="sm" className="ml-2 text-gray-500 hover:text-gray-700">
