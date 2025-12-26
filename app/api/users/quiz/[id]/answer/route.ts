@@ -157,6 +157,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         },
       });
 
+      await tx.activity.create({
+        data: {
+          userId: decode.id,
+          title: `Menyelesaikan kuis ${userQuiz.quiz.title} `,
+          point: expChanges,
+        },
+      });
+
       // Update user experience points
       await tx.user.update({
         where: { id: decode.id },
