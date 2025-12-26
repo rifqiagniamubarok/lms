@@ -1,175 +1,275 @@
 [
   {
-    "title": "Mengenal Satuan Panjang (cm & m)",
-    "description": "Pengenalan satuan panjang centimeter dan meter",
+    "title": "Perkalian Bilangan Kecil",
+    "description": "Perkalian dasar bilangan 1 sampai 5",
     "level": 2,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "Satuan panjang penggaris adalah ...",
+        "question": "2 x 3 = ?",
         "options": [
-          { "option": "Kg", "isCorrect": false },
-          { "option": "Cm", "isCorrect": true },
-          { "option": "Jam", "isCorrect": false },
-          { "option": "Liter", "isCorrect": false }
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
         ]
       },
       {
-        "question": "Satuan meter disingkat ...",
+        "question": "4 x 2 = ?",
         "options": [
-          { "option": "cm", "isCorrect": false },
-          { "option": "m", "isCorrect": true },
-          { "option": "mm", "isCorrect": false },
-          { "option": "km", "isCorrect": false }
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
         ]
       },
       {
-        "question": "100 cm sama dengan ...",
+        "question": "5 x 1 = ?",
         "options": [
-          { "option": "10 m", "isCorrect": false },
-          { "option": "1 m", "isCorrect": true },
-          { "option": "50 cm", "isCorrect": false },
-          { "option": "2 m", "isCorrect": false }
+          { "option": "1", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
         ]
       },
       {
-        "question": "Panjang meja biasanya diukur dengan ...",
+        "question": "3 x 3 = ?",
         "options": [
-          { "option": "cm", "isCorrect": false },
-          { "option": "m", "isCorrect": true },
-          { "option": "kg", "isCorrect": false },
-          { "option": "jam", "isCorrect": false }
+          { "option": "6", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "15", "isCorrect": false }
         ]
       },
       {
-        "question": "Satuan panjang yang lebih kecil dari cm adalah ...",
+        "question": "5 x 2 = ?",
         "options": [
-          { "option": "m", "isCorrect": false },
-          { "option": "mm", "isCorrect": true },
-          { "option": "km", "isCorrect": false },
-          { "option": "kg", "isCorrect": false }
+          { "option": "7", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "15", "isCorrect": false }
         ]
       },
       {
-        "question": "Alat untuk mengukur panjang adalah ...",
+        "question": "1 x 4 = ?",
         "options": [
-          { "option": "Jam", "isCorrect": false },
-          { "option": "Penggaris", "isCorrect": true },
-          { "option": "Timbangan", "isCorrect": false },
-          { "option": "Gelas ukur", "isCorrect": false }
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
         ]
       },
       {
-        "question": "1 meter sama dengan ... cm",
+        "question": "2 x 5 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "15", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3 x 2 = ?",
+        "options": [
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "4 x 1 = ?",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5 x 3 = ?",
         "options": [
           { "option": "10", "isCorrect": false },
-          { "option": "50", "isCorrect": false },
-          { "option": "100", "isCorrect": true },
-          { "option": "1000", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Panjang pensil biasanya sekitar ...",
-        "options": [
-          { "option": "10 cm", "isCorrect": true },
-          { "option": "10 m", "isCorrect": false },
-          { "option": "1 km", "isCorrect": false },
-          { "option": "1 mm", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Panjang papan tulis lebih tepat diukur dengan ...",
-        "options": [
-          { "option": "cm", "isCorrect": false },
-          { "option": "m", "isCorrect": true },
-          { "option": "mm", "isCorrect": false },
-          { "option": "kg", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Satuan panjang digunakan untuk mengukur ...",
-        "options": [
-          { "option": "Berat", "isCorrect": false },
-          { "option": "Panjang", "isCorrect": true },
-          { "option": "Waktu", "isCorrect": false },
-          { "option": "Isi", "isCorrect": false }
+          { "option": "15", "isCorrect": true },
+          { "option": "20", "isCorrect": false },
+          { "option": "25", "isCorrect": false }
         ]
       }
     ]
   },
   {
-    "title": "Mengukur Panjang Benda Sehari-hari",
-    "description": "Menggunakan cm dan m pada benda nyata",
+    "title": "Pembagian Dasar",
+    "description": "Pembagian sebagai pengelompokan sama banyak",
     "level": 2,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "Panjang buku tulis biasanya diukur dengan ...",
+        "question": "6 ÷ 2 = ?",
         "options": [
-          { "option": "cm", "isCorrect": true },
-          { "option": "m", "isCorrect": false },
-          { "option": "km", "isCorrect": false },
-          { "option": "kg", "isCorrect": false }
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
         ]
       },
       {
-        "question": "Panjang lapangan sekolah biasanya diukur dengan ...",
+        "question": "10 ÷ 5 = ?",
         "options": [
-          { "option": "cm", "isCorrect": false },
-          { "option": "m", "isCorrect": true },
-          { "option": "mm", "isCorrect": false },
-          { "option": "jam", "isCorrect": false }
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika panjang meja 120 cm, maka sama dengan ...",
+        "question": "8 ÷ 4 = ?",
         "options": [
-          { "option": "1,2 m", "isCorrect": true },
-          { "option": "12 m", "isCorrect": false },
-          { "option": "120 m", "isCorrect": false },
-          { "option": "0,12 m", "isCorrect": false }
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
         ]
       },
       {
-        "question": "Penggaris 30 cm berarti panjangnya ...",
+        "question": "4 ÷ 2 = ?",
         "options": [
-          { "option": "3 m", "isCorrect": false },
-          { "option": "30 cm", "isCorrect": true },
-          { "option": "300 cm", "isCorrect": false },
-          { "option": "0,3 cm", "isCorrect": false }
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
         ]
       },
       {
-        "question": "Panjang tali 2 m sama dengan ... cm",
+        "question": "9 ÷ 3 = ?",
         "options": [
-          { "option": "20", "isCorrect": false },
-          { "option": "200", "isCorrect": true },
-          { "option": "2000", "isCorrect": false },
-          { "option": "2", "isCorrect": false }
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+
+      {
+        "question": "12 ÷ 3 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
         ]
       },
       {
-        "question": "Benda yang panjangnya sekitar 1 meter adalah ...",
+        "question": "6 ÷ 3 = ?",
         "options": [
-          { "option": "Pensil", "isCorrect": false },
-          { "option": "Sapu", "isCorrect": true },
-          { "option": "Penghapus", "isCorrect": false },
-          { "option": "Koin", "isCorrect": false }
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika dua buku masing-masing 20 cm, total panjangnya ...",
+        "question": "15 ÷ 5 = ?",
         "options": [
-          { "option": "30 cm", "isCorrect": false },
-          { "option": "40 cm", "isCorrect": true },
-          { "option": "50 cm", "isCorrect": false },
-          { "option": "60 cm", "isCorrect": false }
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "5", "isCorrect": false },
+          { "option": "15", "isCorrect": false }
         ]
       },
       {
-        "question": "Satuan yang tepat untuk mengukur tinggi badan adalah ...",
+        "question": "10 ÷ 2 = ?",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "8 ÷ 2 = ?",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Keliling Bangun Datar Sederhana",
+    "description": "Menghitung keliling persegi dan persegi panjang",
+    "level": 2,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Keliling persegi dengan sisi 4 cm adalah?",
+        "options": [
+          { "option": "8 cm", "isCorrect": false },
+          { "option": "12 cm", "isCorrect": false },
+          { "option": "16 cm", "isCorrect": true },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi memiliki sisi sebanyak?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling berarti?",
+        "options": [
+          { "option": "Luas bangun", "isCorrect": false },
+          { "option": "Jumlah semua sisi", "isCorrect": true },
+          { "option": "Panjang satu sisi", "isCorrect": false },
+          { "option": "Isi bangun", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang memiliki sisi panjang 6 cm dan lebar 4 cm. Kelilingnya?",
+        "options": [
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": true },
+          { "option": "24 cm", "isCorrect": false },
+          { "option": "40 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rumus keliling persegi adalah?",
+        "options": [
+          { "option": "s + s", "isCorrect": false },
+          { "option": "4 × sisi", "isCorrect": true },
+          { "option": "p × l", "isCorrect": false },
+          { "option": "2 × p", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika sisi persegi 5 cm, kelilingnya?",
+        "options": [
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": true },
+          { "option": "25 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang memiliki berapa sisi?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling bangun datar diukur dengan satuan?",
         "options": [
           { "option": "kg", "isCorrect": false },
           { "option": "cm", "isCorrect": true },
@@ -178,318 +278,219 @@
         ]
       },
       {
-        "question": "1 m + 50 cm = ...",
+        "question": "Bangun yang semua sisinya sama panjang adalah?",
         "options": [
-          { "option": "120 cm", "isCorrect": false },
-          { "option": "150 cm", "isCorrect": true },
-          { "option": "200 cm", "isCorrect": false },
-          { "option": "50 cm", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false }
         ]
       },
       {
-        "question": "Panjang pintu rumah biasanya sekitar ...",
+        "question": "Keliling persegi sisi 3 cm adalah?",
         "options": [
-          { "option": "2 m", "isCorrect": true },
-          { "option": "20 cm", "isCorrect": false },
-          { "option": "20 m", "isCorrect": false },
-          { "option": "200 km", "isCorrect": false }
+          { "option": "9 cm", "isCorrect": false },
+          { "option": "12 cm", "isCorrect": true },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "18 cm", "isCorrect": false }
         ]
       }
     ]
   },
   {
-    "title": "Mengenal Satuan Waktu",
-    "description": "Pengenalan jam, menit, dan hari",
+    "title": "Membandingkan Panjang dan Berat",
+    "description": "Menentukan lebih panjang, pendek, berat, atau ringan",
     "level": 2,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "Alat untuk mengukur waktu adalah ...",
+        "question": "Mana yang lebih panjang?",
         "options": [
-          { "option": "Penggaris", "isCorrect": false },
-          { "option": "Jam", "isCorrect": true },
-          { "option": "Timbangan", "isCorrect": false },
-          { "option": "Meteran", "isCorrect": false }
+          { "option": "Pensil", "isCorrect": false },
+          { "option": "Penggaris 30 cm", "isCorrect": true },
+          { "option": "Penghapus", "isCorrect": false },
+          { "option": "Koin", "isCorrect": false }
         ]
       },
       {
-        "question": "1 jam sama dengan ... menit",
+        "question": "Mana yang lebih berat?",
         "options": [
-          { "option": "30", "isCorrect": false },
-          { "option": "60", "isCorrect": true },
-          { "option": "90", "isCorrect": false },
-          { "option": "100", "isCorrect": false }
+          { "option": "Bulu", "isCorrect": false },
+          { "option": "Batu", "isCorrect": true },
+          { "option": "Kertas", "isCorrect": false },
+          { "option": "Kapas", "isCorrect": false }
         ]
       },
       {
-        "question": "1 hari sama dengan ... jam",
+        "question": "Satuan panjang adalah?",
         "options": [
-          { "option": "12", "isCorrect": false },
-          { "option": "24", "isCorrect": true },
-          { "option": "48", "isCorrect": false },
-          { "option": "60", "isCorrect": false }
+          { "option": "Kilogram", "isCorrect": false },
+          { "option": "Centimeter", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Detik", "isCorrect": false }
         ]
       },
       {
-        "question": "Satuan waktu yang lebih kecil dari jam adalah ...",
+        "question": "Satuan berat adalah?",
         "options": [
-          { "option": "Hari", "isCorrect": false },
-          { "option": "Menit", "isCorrect": true },
-          { "option": "Minggu", "isCorrect": false },
-          { "option": "Bulan", "isCorrect": false }
+          { "option": "Meter", "isCorrect": false },
+          { "option": "Kilogram", "isCorrect": true },
+          { "option": "Centimeter", "isCorrect": false },
+          { "option": "Jam", "isCorrect": false }
         ]
       },
       {
-        "question": "7 hari sama dengan ... minggu",
+        "question": "Mana yang lebih ringan?",
         "options": [
-          { "option": "1", "isCorrect": true },
-          { "option": "2", "isCorrect": false },
-          { "option": "5", "isCorrect": false },
-          { "option": "7", "isCorrect": false }
+          { "option": "Meja", "isCorrect": false },
+          { "option": "Buku", "isCorrect": true },
+          { "option": "Lemari", "isCorrect": false },
+          { "option": "Motor", "isCorrect": false }
         ]
       },
       {
-        "question": "Satuan waktu digunakan untuk mengukur ...",
+        "question": "Penggaris digunakan untuk mengukur?",
         "options": [
-          { "option": "Panjang", "isCorrect": false },
-          { "option": "Waktu", "isCorrect": true },
           { "option": "Berat", "isCorrect": false },
+          { "option": "Panjang", "isCorrect": true },
+          { "option": "Waktu", "isCorrect": false },
           { "option": "Isi", "isCorrect": false }
         ]
       },
       {
-        "question": "Setengah jam sama dengan ... menit",
+        "question": "Timbangan digunakan untuk mengukur?",
         "options": [
-          { "option": "15", "isCorrect": false },
-          { "option": "30", "isCorrect": true },
-          { "option": "45", "isCorrect": false },
-          { "option": "60", "isCorrect": false }
+          { "option": "Panjang", "isCorrect": false },
+          { "option": "Berat", "isCorrect": true },
+          { "option": "Waktu", "isCorrect": false },
+          { "option": "Luas", "isCorrect": false }
         ]
       },
       {
-        "question": "1 minggu terdiri dari ... hari",
+        "question": "1 kg lebih berat dari?",
         "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "10", "isCorrect": false }
+          { "option": "500 g", "isCorrect": true },
+          { "option": "2 kg", "isCorrect": false },
+          { "option": "3 kg", "isCorrect": false },
+          { "option": "5 kg", "isCorrect": false }
         ]
       },
       {
-        "question": "Jam digunakan untuk mengetahui ...",
+        "question": "Benda paling pendek adalah?",
         "options": [
+          { "option": "Pensil", "isCorrect": false },
+          { "option": "Penghapus", "isCorrect": true },
+          { "option": "Penggaris", "isCorrect": false },
+          { "option": "Meja", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Berat badan biasanya diukur dengan?",
+        "options": [
+          { "option": "Centimeter", "isCorrect": false },
+          { "option": "Kilogram", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Meter", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pecahan Sederhana",
+    "description": "Mengenal nilai pecahan 1/2, 1/4, dan 3/4",
+    "level": 2,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Pecahan setengah ditulis?",
+        "options": [
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "2/1", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika satu benda dibagi 4 sama besar, satu bagian adalah?",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "2/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3/4 artinya?",
+        "options": [
+          { "option": "Tiga bagian dari empat", "isCorrect": true },
+          { "option": "Empat bagian dari tiga", "isCorrect": false },
+          { "option": "Setengah", "isCorrect": false },
+          { "option": "Satu bagian", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Mana yang lebih besar?",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "Sama", "isCorrect": false },
+          { "option": "Tidak tahu", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan menunjukkan?",
+        "options": [
+          { "option": "Jumlah benda", "isCorrect": false },
+          { "option": "Bagian dari keseluruhan", "isCorrect": true },
           { "option": "Berat benda", "isCorrect": false },
-          { "option": "Pukul berapa", "isCorrect": true },
-          { "option": "Panjang benda", "isCorrect": false },
-          { "option": "Jumlah benda", "isCorrect": false }
+          { "option": "Waktu", "isCorrect": false }
         ]
       },
       {
-        "question": "Contoh kegiatan yang berlangsung 1 jam adalah ...",
+        "question": "2/4 sama dengan?",
         "options": [
-          { "option": "Tidur seminggu", "isCorrect": false },
-          { "option": "Pelajaran di sekolah", "isCorrect": true },
-          { "option": "Libur sebulan", "isCorrect": false },
-          { "option": "Makan 1 menit", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Membaca Jam Tepat",
-    "description": "Membaca jam tanpa menit pecahan",
-    "level": 2,
-    "class": 3,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "Jam 07.00 dibaca ...",
-        "options": [
-          { "option": "Jam tujuh pagi", "isCorrect": true },
-          { "option": "Jam tujuh malam", "isCorrect": false },
-          { "option": "Jam lima pagi", "isCorrect": false },
-          { "option": "Jam dua belas", "isCorrect": false }
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/4", "isCorrect": false }
         ]
       },
       {
-        "question": "Jam 12.00 menunjukkan waktu ...",
+        "question": "1 buah kue utuh ditulis?",
         "options": [
-          { "option": "Pagi", "isCorrect": false },
-          { "option": "Siang", "isCorrect": true },
-          { "option": "Sore", "isCorrect": false },
-          { "option": "Malam", "isCorrect": false }
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1", "isCorrect": true },
+          { "option": "1/4", "isCorrect": false },
+          { "option": "2/2", "isCorrect": false }
         ]
       },
       {
-        "question": "Jam 18.00 adalah waktu ...",
+        "question": "Pecahan 1/4 dibaca?",
         "options": [
-          { "option": "Pagi", "isCorrect": false },
-          { "option": "Siang", "isCorrect": false },
-          { "option": "Sore", "isCorrect": true },
-          { "option": "Dini hari", "isCorrect": false }
+          { "option": "Satu per empat", "isCorrect": true },
+          { "option": "Empat per satu", "isCorrect": false },
+          { "option": "Setengah", "isCorrect": false },
+          { "option": "Tiga per empat", "isCorrect": false }
         ]
       },
       {
-        "question": "Jam 20.00 biasanya disebut ...",
+        "question": "Jika lingkaran dibagi 2 sama besar, tiap bagian adalah?",
         "options": [
-          { "option": "Pagi", "isCorrect": false },
-          { "option": "Siang", "isCorrect": false },
-          { "option": "Malam", "isCorrect": true },
-          { "option": "Sore", "isCorrect": false }
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
         ]
       },
       {
-        "question": "Anak sekolah biasanya berangkat jam ...",
+        "question": "Pecahan yang nilainya paling besar adalah?",
         "options": [
-          { "option": "02.00", "isCorrect": false },
-          { "option": "07.00", "isCorrect": true },
-          { "option": "12.00", "isCorrect": false },
-          { "option": "22.00", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam 05.00 menunjukkan waktu ...",
-        "options": [
-          { "option": "Malam", "isCorrect": false },
-          { "option": "Pagi", "isCorrect": true },
-          { "option": "Siang", "isCorrect": false },
-          { "option": "Sore", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam 15.00 dibaca ...",
-        "options": [
-          { "option": "Jam tiga pagi", "isCorrect": false },
-          { "option": "Jam tiga sore", "isCorrect": true },
-          { "option": "Jam lima sore", "isCorrect": false },
-          { "option": "Jam dua siang", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam 09.00 adalah waktu ...",
-        "options": [
-          { "option": "Pagi", "isCorrect": true },
-          { "option": "Siang", "isCorrect": false },
-          { "option": "Sore", "isCorrect": false },
-          { "option": "Malam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam 21.00 biasanya digunakan untuk ...",
-        "options": [
-          { "option": "Berangkat sekolah", "isCorrect": false },
-          { "option": "Tidur malam", "isCorrect": true },
-          { "option": "Sarapan", "isCorrect": false },
-          { "option": "Upacara", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam tepat berarti menit menunjukkan angka ...",
-        "options": [
-          { "option": "15", "isCorrect": false },
-          { "option": "30", "isCorrect": false },
-          { "option": "00", "isCorrect": true },
-          { "option": "45", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Menghitung Lama Waktu Sederhana",
-    "description": "Menghitung selisih waktu jam ke jam",
-    "level": 2,
-    "class": 3,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "Dari jam 07.00 ke 09.00 lama waktunya ...",
-        "options": [
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": true },
-          { "option": "3 jam", "isCorrect": false },
-          { "option": "4 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Belajar dari jam 08.00 sampai 10.00 berlangsung selama ...",
-        "options": [
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": true },
-          { "option": "3 jam", "isCorrect": false },
-          { "option": "4 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Dari jam 12.00 ke 13.00 adalah ...",
-        "options": [
-          { "option": "30 menit", "isCorrect": false },
-          { "option": "1 jam", "isCorrect": true },
-          { "option": "2 jam", "isCorrect": false },
-          { "option": "3 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Menonton TV dari jam 18.00 sampai 19.00 berlangsung ...",
-        "options": [
-          { "option": "30 menit", "isCorrect": false },
-          { "option": "1 jam", "isCorrect": true },
-          { "option": "2 jam", "isCorrect": false },
-          { "option": "3 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Dari jam 06.00 ke 08.00 adalah ...",
-        "options": [
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": true },
-          { "option": "3 jam", "isCorrect": false },
-          { "option": "4 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Pelajaran berlangsung dari jam 09.00 sampai 11.00 selama ...",
-        "options": [
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": true },
-          { "option": "3 jam", "isCorrect": false },
-          { "option": "4 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Istirahat dari jam 10.00 ke 10.30 berlangsung ...",
-        "options": [
-          { "option": "15 menit", "isCorrect": false },
-          { "option": "30 menit", "isCorrect": true },
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Tidur siang dari jam 13.00 sampai 15.00 adalah ...",
-        "options": [
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": true },
-          { "option": "3 jam", "isCorrect": false },
-          { "option": "4 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Dari jam 19.00 ke 20.00 lama waktunya ...",
-        "options": [
-          { "option": "30 menit", "isCorrect": false },
-          { "option": "1 jam", "isCorrect": true },
-          { "option": "2 jam", "isCorrect": false },
-          { "option": "3 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Kegiatan dari jam 14.00 ke 16.00 berlangsung selama ...",
-        "options": [
-          { "option": "1 jam", "isCorrect": false },
-          { "option": "2 jam", "isCorrect": true },
-          { "option": "3 jam", "isCorrect": false },
-          { "option": "4 jam", "isCorrect": false }
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": false },
+          { "option": "3/4", "isCorrect": true },
+          { "option": "0", "isCorrect": false }
         ]
       }
     ]

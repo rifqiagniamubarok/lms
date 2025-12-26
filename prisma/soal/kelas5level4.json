@@ -1,199 +1,495 @@
 [
   {
-    "title": "Mengenal Bilangan Desimal",
-    "description": "Membaca dan memahami desimal sederhana",
+    "title": "Luas dan Keliling Jajar Genjang",
+    "description": "Memahami hubungan alas dan tinggi pada jajar genjang.",
     "level": 4,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "Bilangan desimal dari satu per sepuluh adalah ...",
+        "question": "Sebuah jajar genjang memiliki alas 12 cm dan tinggi 8 cm. Luasnya adalah...",
         "options": [
-          { "option": "0,01", "isCorrect": false },
-          { "option": "0,1", "isCorrect": true },
-          { "option": "1,0", "isCorrect": false },
-          { "option": "0,10", "isCorrect": false }
+          { "option": "96 cm²", "isCorrect": true },
+          { "option": "48 cm²", "isCorrect": false },
+          { "option": "40 cm²", "isCorrect": false },
+          { "option": "20 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Nilai tempat angka 5 pada bilangan 2,5 adalah ...",
+        "question": "Jajar genjang dengan sisi miring 10 cm dan alas 15 cm memiliki keliling...",
         "options": [
-          { "option": "Satuan", "isCorrect": false },
-          { "option": "Puluhan", "isCorrect": false },
-          { "option": "Persepuluhan", "isCorrect": true },
-          { "option": "Perseratusan", "isCorrect": false }
+          { "option": "25 cm", "isCorrect": false },
+          { "option": "50 cm", "isCorrect": true },
+          { "option": "150 cm", "isCorrect": false },
+          { "option": "60 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan yang lebih besar adalah ...",
+        "question": "Jika luas jajar genjang 100 cm² dan alasnya 20 cm, maka tingginya adalah...",
         "options": [
-          { "option": "0,4", "isCorrect": false },
-          { "option": "0,6", "isCorrect": true },
-          { "option": "0,3", "isCorrect": false },
-          { "option": "0,2", "isCorrect": false }
+          { "option": "5 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "80 cm", "isCorrect": false },
+          { "option": "2.000 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan 1,25 dibaca ...",
+        "question": "Rumus luas jajar genjang yang benar adalah...",
         "options": [
-          { "option": "Satu dua lima", "isCorrect": false },
-          { "option": "Satu koma dua lima", "isCorrect": true },
-          { "option": "Satu koma dua", "isCorrect": false },
-          { "option": "Satu dua koma lima", "isCorrect": false }
+          { "option": "Alas x Tinggi", "isCorrect": true },
+          { "option": "1/2 x Alas x Tinggi", "isCorrect": false },
+          { "option": "2 x (Alas + Tinggi)", "isCorrect": false },
+          { "option": "Sisi x Sisi", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan desimal dari 3/10 adalah ...",
+        "question": "Alas jajar genjang 10 cm, sisi miring 7 cm. Berapa kelilingnya?",
         "options": [
-          { "option": "0,03", "isCorrect": false },
-          { "option": "0,3", "isCorrect": true },
-          { "option": "3,0", "isCorrect": false },
-          { "option": "0,30", "isCorrect": false }
+          { "option": "17 cm", "isCorrect": false },
+          { "option": "34 cm", "isCorrect": true },
+          { "option": "70 cm", "isCorrect": false },
+          { "option": "24 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan yang paling kecil adalah ...",
+        "question": "Luas jajar genjang 72 cm², jika tinggi 6 cm, berapa alasnya?",
         "options": [
-          { "option": "0,9", "isCorrect": false },
-          { "option": "0,5", "isCorrect": false },
-          { "option": "0,2", "isCorrect": true },
-          { "option": "0,7", "isCorrect": false }
+          { "option": "12 cm", "isCorrect": true },
+          { "option": "66 cm", "isCorrect": false },
+          { "option": "8 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan 4,0 sama dengan ...",
+        "question": "Sebuah jajar genjang memiliki alas 9 cm dan tinggi 7 cm. Luasnya...",
         "options": [
-          { "option": "0,4", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "40", "isCorrect": false },
-          { "option": "0,04", "isCorrect": false }
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "32 cm²", "isCorrect": false },
+          { "option": "63 cm²", "isCorrect": true },
+          { "option": "45 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Urutan dari terkecil ke terbesar: 0,8; 0,3; 0,5 adalah ...",
+        "question": "Keliling jajar genjang 40 cm. Jika alas 12 cm, sisi miringnya...",
         "options": [
-          { "option": "0,8; 0,5; 0,3", "isCorrect": false },
-          { "option": "0,3; 0,5; 0,8", "isCorrect": true },
-          { "option": "0,5; 0,3; 0,8", "isCorrect": false },
-          { "option": "0,3; 0,8; 0,5", "isCorrect": false }
+          { "option": "8 cm", "isCorrect": true },
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "28 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan desimal yang setara dengan 1/2 adalah ...",
+        "question": "Tinggi jajar genjang selalu membentuk sudut ... dengan alasnya.",
         "options": [
-          { "option": "0,2", "isCorrect": false },
-          { "option": "0,25", "isCorrect": false },
-          { "option": "0,5", "isCorrect": true },
-          { "option": "0,05", "isCorrect": false }
+          { "option": "Lancip", "isCorrect": false },
+          { "option": "Tumpul", "isCorrect": false },
+          { "option": "Siku-siku (90°)", "isCorrect": true },
+          { "option": "Lurus", "isCorrect": false }
         ]
       },
       {
-        "question": "Angka 7 pada bilangan 3,78 bernilai ...",
+        "question": "Mana yang benar tentang jajar genjang?",
         "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "0,7", "isCorrect": true },
-          { "option": "0,07", "isCorrect": false },
-          { "option": "70", "isCorrect": false }
+          { "option": "Memiliki 4 sisi sama panjang", "isCorrect": false },
+          { "option": "Sisi yang berhadapan sejajar", "isCorrect": true },
+          { "option": "Memiliki diagonal tegak lurus", "isCorrect": false },
+          { "option": "Semua sudutnya 90°", "isCorrect": false }
         ]
       }
     ]
   },
-
   {
-    "title": "Pengukuran Panjang",
-    "description": "Konversi satuan panjang",
+    "title": "Luas Trapesium dan Layang-Layang",
+    "description": "Menghitung luas menggunakan jumlah sisi sejajar dan diagonal.",
     "level": 4,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "1 meter sama dengan ... cm",
+        "question": "Trapesium dengan sisi sejajar 10 cm dan 14 cm, tinggi 5 cm. Luasnya adalah...",
         "options": [
-          { "option": "10", "isCorrect": false },
-          { "option": "100", "isCorrect": true },
-          { "option": "1.000", "isCorrect": false },
-          { "option": "1", "isCorrect": false }
+          { "option": "120 cm²", "isCorrect": false },
+          { "option": "60 cm²", "isCorrect": true },
+          { "option": "70 cm²", "isCorrect": false },
+          { "option": "29 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "250 cm sama dengan ... m",
+        "question": "Layang-layang memiliki diagonal 10 cm dan 16 cm. Luasnya adalah...",
         "options": [
-          { "option": "2,5", "isCorrect": true },
-          { "option": "25", "isCorrect": false },
-          { "option": "0,25", "isCorrect": false },
-          { "option": "250", "isCorrect": false }
+          { "option": "160 cm²", "isCorrect": false },
+          { "option": "80 cm²", "isCorrect": true },
+          { "option": "26 cm²", "isCorrect": false },
+          { "option": "40 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "3 m 50 cm sama dengan ... cm",
+        "question": "Luas belah ketupat dengan diagonal 12 cm dan 12 cm adalah...",
         "options": [
-          { "option": "350", "isCorrect": true },
-          { "option": "305", "isCorrect": false },
-          { "option": "3.050", "isCorrect": false },
-          { "option": "300", "isCorrect": false }
+          { "option": "144 cm²", "isCorrect": false },
+          { "option": "72 cm²", "isCorrect": true },
+          { "option": "48 cm²", "isCorrect": false },
+          { "option": "24 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "500 cm sama dengan ... m",
+        "question": "Rumus luas trapesium adalah...",
         "options": [
-          { "option": "50", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "0,5", "isCorrect": false },
-          { "option": "500", "isCorrect": false }
+          { "option": "1/2 x (a+b) x t", "isCorrect": true },
+          { "option": "a x t", "isCorrect": false },
+          { "option": "1/2 x d1 x d2", "isCorrect": false },
+          { "option": "p x l", "isCorrect": false }
         ]
       },
       {
-        "question": "1 km sama dengan ... m",
+        "question": "Trapesium sama kaki memiliki sisi sejajar 6 cm dan 10 cm. Jika tinggi 4 cm, luasnya...",
         "options": [
+          { "option": "32 cm²", "isCorrect": true },
+          { "option": "64 cm²", "isCorrect": false },
+          { "option": "20 cm²", "isCorrect": false },
+          { "option": "16 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Diagonal belah ketupat adalah 8 cm dan 10 cm. Luasnya...",
+        "options": [
+          { "option": "80 cm²", "isCorrect": false },
+          { "option": "40 cm²", "isCorrect": true },
+          { "option": "18 cm²", "isCorrect": false },
+          { "option": "20 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika luas layang-layang 50 cm² dan d1 = 10 cm, maka d2 adalah...",
+        "options": [
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Trapesium siku-siku alas 15 cm, atas 10 cm, tinggi 8 cm. Luasnya...",
+        "options": [
+          { "option": "100 cm²", "isCorrect": true },
+          { "option": "200 cm²", "isCorrect": false },
+          { "option": "150 cm²", "isCorrect": false },
+          { "option": "25 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Belah ketupat memiliki sisi 5 cm. Kelilingnya adalah...",
+        "options": [
+          { "option": "25 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah sudut dalam pada semua bangun datar segiempat adalah...",
+        "options": [
+          { "option": "180°", "isCorrect": false },
+          { "option": "360°", "isCorrect": true },
+          { "option": "90°", "isCorrect": false },
+          { "option": "270°", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Luas Gabungan Bangun Datar",
+    "description": "Menghitung total luas dari dua bangun yang disatukan.",
+    "level": 4,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Persegi sisi 10 cm digabung dengan segitiga alas 10 cm tinggi 6 cm. Luas totalnya...",
+        "options": [
+          { "option": "160 cm²", "isCorrect": false },
+          { "option": "130 cm²", "isCorrect": true },
+          { "option": "100 cm²", "isCorrect": false },
+          { "option": "116 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dua buah jajar genjang identik (alas 8 cm, tinggi 5 cm) digabung. Luas totalnya...",
+        "options": [
+          { "option": "40 cm²", "isCorrect": false },
+          { "option": "80 cm²", "isCorrect": true },
+          { "option": "20 cm²", "isCorrect": false },
+          { "option": "160 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang 10x5 cm di atasnya ada trapesium (sisi sejajar 10 dan 6, tinggi 4). Luas total...",
+        "options": [
+          { "option": "82 cm²", "isCorrect": true },
+          { "option": "50 cm²", "isCorrect": false },
+          { "option": "32 cm²", "isCorrect": false },
+          { "option": "90 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Langkah pertama menghitung luas gabungan adalah...",
+        "options": [
+          { "option": "Mengalikan semua angka", "isCorrect": false },
+          { "option": "Membagi bangun menjadi beberapa bagian dasar", "isCorrect": true },
+          { "option": "Mengurangi luas bangun terbesar", "isCorrect": false },
+          { "option": "Menjumlahkan semua keliling", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi sisi 4 cm di dalam persegi panjang 10x6 cm. Luas daerah sisa adalah...",
+        "options": [
+          { "option": "60 cm²", "isCorrect": false },
+          { "option": "44 cm²", "isCorrect": true },
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "76 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dua segitiga sama kaki alas 10 cm tinggi 12 cm digabung alasnya menjadi layang-layang. Luasnya...",
+        "options": [
+          { "option": "120 cm²", "isCorrect": true },
+          { "option": "60 cm²", "isCorrect": false },
+          { "option": "240 cm²", "isCorrect": false },
+          { "option": "100 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah jajar genjang (a=10, t=8) dipotong sebagian oleh persegi (s=3). Luas sisa...",
+        "options": [
+          { "option": "80 cm²", "isCorrect": false },
+          { "option": "71 cm²", "isCorrect": true },
+          { "option": "89 cm²", "isCorrect": false },
+          { "option": "77 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika dua persegi panjang 5x2 cm disusun memanjang, keliling barunya adalah...",
+        "options": [
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "24 cm", "isCorrect": true },
+          { "option": "28 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas gabungan dari dua segitiga siku-siku yang sama (a=6, t=8) adalah...",
+        "options": [
+          { "option": "24 cm²", "isCorrect": false },
+          { "option": "48 cm²", "isCorrect": true },
+          { "option": "14 cm²", "isCorrect": false },
+          { "option": "96 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang terdiri dari persegi panjang dan dua setengah lingkaran di ujungnya disebut...",
+        "options": [
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Stadion/Oval", "isCorrect": true },
+          { "option": "Trapesium", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Masalah Cerita Bangun Datar II",
+    "description": "Aplikasi luas jajar genjang, trapesium, dan layang-layang di kehidupan nyata.",
+    "level": 4,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Kebun berbentuk trapesium (sisi sejajar 20m dan 30m, tinggi 10m). Luasnya...",
+        "options": [
+          { "option": "250 m²", "isCorrect": true },
+          { "option": "500 m²", "isCorrect": false },
+          { "option": "100 m²", "isCorrect": false },
+          { "option": "60 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah kerangka layang-layang membutuhkan bambu diagonal 30 cm dan 40 cm. Berapa luas kertas penutupnya?",
+        "options": [
+          { "option": "1200 cm²", "isCorrect": false },
+          { "option": "600 cm²", "isCorrect": true },
+          { "option": "70 cm²", "isCorrect": false },
+          { "option": "300 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Atap samping gedung berbentuk jajar genjang alas 5m tinggi 3m. Luas atap tersebut adalah...",
+        "options": [
+          { "option": "15 m²", "isCorrect": true },
+          { "option": "8 m²", "isCorrect": false },
+          { "option": "7,5 m²", "isCorrect": false },
+          { "option": "16 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Taman berbentuk belah ketupat (d1=10m, d2=12m). Jika harga rumput Rp 10.000/m², biaya totalnya...",
+        "options": [
+          { "option": "Rp 600.000", "isCorrect": true },
+          { "option": "Rp 1.200.000", "isCorrect": false },
+          { "option": "Rp 120.000", "isCorrect": false },
+          { "option": "Rp 60.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah dinding trapesium akan dicat. Sisi sejajar 4m dan 6m, tinggi 3m. Berapa luas yang dicat?",
+        "options": [
+          { "option": "15 m²", "isCorrect": true },
+          { "option": "30 m²", "isCorrect": false },
+          { "option": "24 m²", "isCorrect": false },
+          { "option": "13 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling taman jajar genjang adalah 100m. Sisi alas 30m. Sisi lainnya adalah...",
+        "options": [
+          { "option": "20 m", "isCorrect": true },
+          { "option": "40 m", "isCorrect": false },
+          { "option": "70 m", "isCorrect": false },
+          { "option": "50 m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Berapa m² luas tanah berbentuk jajar genjang alas 15m tinggi 10m?",
+        "options": [
+          { "option": "150 m²", "isCorrect": true },
+          { "option": "75 m²", "isCorrect": false },
+          { "option": "25 m²", "isCorrect": false },
+          { "option": "50 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dua layang-layang kertas masing-masing luas 200 cm². Berapa total kertas yang dibutuhkan?",
+        "options": [
+          { "option": "200 cm²", "isCorrect": false },
+          { "option": "400 cm²", "isCorrect": true },
+          { "option": "100 cm²", "isCorrect": false },
+          { "option": "800 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Trapesium dengan luas 40 cm², jumlah sisi sejajar 20 cm. Berapa tingginya?",
+        "options": [
+          { "option": "2 cm", "isCorrect": false },
+          { "option": "4 cm", "isCorrect": true },
+          { "option": "8 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah bendera berbentuk segitiga digabung jajar genjang. Ini adalah contoh...",
+        "options": [
+          { "option": "Bangun dasar", "isCorrect": false },
+          { "option": "Bangun gabungan", "isCorrect": true },
+          { "option": "Bangun ruang", "isCorrect": false },
+          { "option": "Bangun tidak beraturan", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Evaluasi Geometri Level 4",
+    "description": "Latihan campuran meliputi jajar genjang, trapesium, dan layang-layang.",
+    "level": 4,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Luas jajar genjang alas 25 cm tinggi 4 cm adalah...",
+        "options": [
+          { "option": "100 cm²", "isCorrect": true },
+          { "option": "50 cm²", "isCorrect": false },
+          { "option": "29 cm²", "isCorrect": false },
+          { "option": "200 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas trapesium (sisi sejajar 8 dan 12, t=10) adalah...",
+        "options": [
+          { "option": "100 cm²", "isCorrect": true },
+          { "option": "200 cm²", "isCorrect": false },
+          { "option": "96 cm²", "isCorrect": false },
+          { "option": "110 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Layang-layang d1=14, d2=20. Luasnya...",
+        "options": [
+          { "option": "280 cm²", "isCorrect": false },
+          { "option": "140 cm²", "isCorrect": true },
+          { "option": "100 cm²", "isCorrect": false },
+          { "option": "34 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling belah ketupat sisi 12 cm adalah...",
+        "options": [
+          { "option": "24 cm", "isCorrect": false },
+          { "option": "48 cm", "isCorrect": true },
+          { "option": "36 cm", "isCorrect": false },
+          { "option": "144 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika luas jajar genjang 50 cm² dan tinggi 5 cm, berapa alasnya?",
+        "options": [
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "25 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Diagonal belah ketupat d1=6, d2=8. Luasnya...",
+        "options": [
+          { "option": "24 cm²", "isCorrect": true },
+          { "option": "48 cm²", "isCorrect": false },
+          { "option": "14 cm²", "isCorrect": false },
+          { "option": "12 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas trapesium 30 cm², jumlah sisi sejajar 10 cm. Berapa tingginya?",
+        "options": [
+          { "option": "3 cm", "isCorrect": false },
+          { "option": "6 cm", "isCorrect": true },
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi 5x5 cm di tempel di atas persegi panjang 10x5 cm. Luas gabungan...",
+        "options": [
+          { "option": "50 cm²", "isCorrect": false },
+          { "option": "75 cm²", "isCorrect": true },
+          { "option": "100 cm²", "isCorrect": false },
+          { "option": "25 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Mana yang merupakan rumus diagonal?",
+        "options": [
+          { "option": "Jajar genjang", "isCorrect": false },
+          { "option": "Trapesium", "isCorrect": false },
+          { "option": "Layang-layang", "isCorrect": true },
+          { "option": "Persegi Panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling jajar genjang p=10, q=10 (belah ketupat) adalah...",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "40", "isCorrect": true },
           { "option": "100", "isCorrect": false },
-          { "option": "1.000", "isCorrect": true },
-          { "option": "10.000", "isCorrect": false },
-          { "option": "1", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "2,5 m sama dengan ... cm",
-        "options": [
-          { "option": "25", "isCorrect": false },
-          { "option": "250", "isCorrect": true },
-          { "option": "2.500", "isCorrect": false },
-          { "option": "205", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "750 cm sama dengan ... m",
-        "options": [
-          { "option": "7,5", "isCorrect": true },
-          { "option": "75", "isCorrect": false },
-          { "option": "0,75", "isCorrect": false },
-          { "option": "750", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "4 m sama dengan ... cm",
-        "options": [
-          { "option": "40", "isCorrect": false },
-          { "option": "400", "isCorrect": true },
-          { "option": "4.000", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1.200 cm sama dengan ... m",
-        "options": [
-          { "option": "12", "isCorrect": true },
-          { "option": "120", "isCorrect": false },
-          { "option": "1,2", "isCorrect": false },
-          { "option": "0,12", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "0,5 m sama dengan ... cm",
-        "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "50", "isCorrect": true },
-          { "option": "500", "isCorrect": false },
-          { "option": "0,5", "isCorrect": false }
+          { "option": "10", "isCorrect": false }
         ]
       }
     ]

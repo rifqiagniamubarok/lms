@@ -1,299 +1,499 @@
 [
   {
-    "title": "Perkalian Dua Angka",
-    "description": "Perkalian dua digit dengan satu digit",
+    "title": "Bangun Datar dan Sifatnya",
+    "description": "Mengenal sifat bangun datar lebih detail",
     "level": 2,
     "class": 4,
     "duration": 30,
     "questions": [
       {
-        "question": "24 x 3 = ?",
+        "question": "Persegi memiliki jumlah sisi sebanyak ...",
         "options": [
-          { "option": "62", "isCorrect": false },
-          { "option": "72", "isCorrect": true },
-          { "option": "84", "isCorrect": false },
-          { "option": "96", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "15 x 4 = ?",
-        "options": [
-          { "option": "40", "isCorrect": false },
-          { "option": "50", "isCorrect": false },
-          { "option": "60", "isCorrect": true },
-          { "option": "70", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "32 x 2 = ?",
-        "options": [
-          { "option": "64", "isCorrect": true },
-          { "option": "62", "isCorrect": false },
-          { "option": "66", "isCorrect": false },
-          { "option": "68", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "18 x 5 = ?",
-        "options": [
-          { "option": "80", "isCorrect": false },
-          { "option": "85", "isCorrect": false },
-          { "option": "90", "isCorrect": true },
-          { "option": "95", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "21 x 4 = ?",
-        "options": [
-          { "option": "80", "isCorrect": false },
-          { "option": "84", "isCorrect": true },
-          { "option": "88", "isCorrect": false },
-          { "option": "96", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "35 x 2 = ?",
-        "options": [
-          { "option": "60", "isCorrect": false },
-          { "option": "70", "isCorrect": true },
-          { "option": "80", "isCorrect": false },
-          { "option": "90", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "14 x 6 = ?",
-        "options": [
-          { "option": "72", "isCorrect": false },
-          { "option": "84", "isCorrect": true },
-          { "option": "96", "isCorrect": false },
-          { "option": "108", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "27 x 3 = ?",
-        "options": [
-          { "option": "72", "isCorrect": false },
-          { "option": "81", "isCorrect": true },
-          { "option": "84", "isCorrect": false },
-          { "option": "90", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "40 x 2 = ?",
-        "options": [
-          { "option": "60", "isCorrect": false },
-          { "option": "70", "isCorrect": false },
-          { "option": "80", "isCorrect": true },
-          { "option": "90", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "12 x 8 = ?",
-        "options": [
-          { "option": "84", "isCorrect": false },
-          { "option": "92", "isCorrect": false },
-          { "option": "96", "isCorrect": true },
-          { "option": "108", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-
-  {
-    "title": "Pembagian dengan Sisa",
-    "description": "Pembagian bilangan dengan hasil bersisa",
-    "level": 2,
-    "class": 4,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "17 ÷ 5 = ?",
-        "options": [
-          { "option": "3 sisa 2", "isCorrect": true },
-          { "option": "4 sisa 1", "isCorrect": false },
-          { "option": "3 sisa 1", "isCorrect": false },
-          { "option": "2 sisa 3", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "29 ÷ 4 = ?",
-        "options": [
-          { "option": "6 sisa 5", "isCorrect": false },
-          { "option": "7 sisa 1", "isCorrect": true },
-          { "option": "6 sisa 1", "isCorrect": false },
-          { "option": "8 sisa 1", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "23 ÷ 3 = ?",
-        "options": [
-          { "option": "7 sisa 2", "isCorrect": true },
-          { "option": "6 sisa 5", "isCorrect": false },
-          { "option": "8 sisa 1", "isCorrect": false },
-          { "option": "7 sisa 1", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "18 ÷ 4 = ?",
-        "options": [
-          { "option": "4 sisa 2", "isCorrect": true },
-          { "option": "5 sisa 1", "isCorrect": false },
-          { "option": "3 sisa 6", "isCorrect": false },
-          { "option": "4 sisa 1", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "35 ÷ 6 = ?",
-        "options": [
-          { "option": "5 sisa 5", "isCorrect": true },
-          { "option": "6 sisa 1", "isCorrect": false },
-          { "option": "5 sisa 1", "isCorrect": false },
-          { "option": "4 sisa 3", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "22 ÷ 5 = ?",
-        "options": [
-          { "option": "4 sisa 2", "isCorrect": true },
-          { "option": "5 sisa 2", "isCorrect": false },
-          { "option": "4 sisa 1", "isCorrect": false },
-          { "option": "3 sisa 5", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "19 ÷ 4 = ?",
-        "options": [
-          { "option": "4 sisa 3", "isCorrect": true },
-          { "option": "5 sisa 1", "isCorrect": false },
-          { "option": "3 sisa 7", "isCorrect": false },
-          { "option": "4 sisa 1", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "28 ÷ 5 = ?",
-        "options": [
-          { "option": "5 sisa 3", "isCorrect": true },
-          { "option": "6 sisa 2", "isCorrect": false },
-          { "option": "4 sisa 4", "isCorrect": false },
-          { "option": "5 sisa 2", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "31 ÷ 7 = ?",
-        "options": [
-          { "option": "4 sisa 3", "isCorrect": true },
-          { "option": "5 sisa 1", "isCorrect": false },
-          { "option": "3 sisa 10", "isCorrect": false },
-          { "option": "4 sisa 2", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "26 ÷ 4 = ?",
-        "options": [
-          { "option": "6 sisa 2", "isCorrect": true },
-          { "option": "5 sisa 6", "isCorrect": false },
-          { "option": "7 sisa 1", "isCorrect": false },
-          { "option": "6 sisa 1", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-
-  {
-    "title": "Faktor Suatu Bilangan",
-    "description": "Menentukan faktor dari bilangan kecil",
-    "level": 2,
-    "class": 4,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "Faktor dari 12 adalah ...",
-        "options": [
-          { "option": "3", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "7", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Manakah faktor dari 20?",
-        "options": [
+          { "option": "3", "isCorrect": false },
           { "option": "4", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
+          { "option": "5", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
         ]
       },
       {
-        "question": "Faktor dari 18 adalah ...",
+        "question": "Persegi panjang memiliki sisi yang berhadapan ...",
         "options": [
-          { "option": "6", "isCorrect": true },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
+          { "option": "tidak sama", "isCorrect": false },
+          { "option": "sama panjang", "isCorrect": true },
+          { "option": "lebih pendek", "isCorrect": false },
+          { "option": "lebih panjang", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang merupakan faktor dari 15?",
+        "question": "Segitiga memiliki jumlah sudut sebanyak ...",
         "options": [
+          { "option": "2", "isCorrect": false },
           { "option": "3", "isCorrect": true },
           { "option": "4", "isCorrect": false },
-          { "option": "6", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
+          { "option": "5", "isCorrect": false }
         ]
       },
       {
-        "question": "Faktor dari 16 adalah ...",
+        "question": "Bangun datar yang tidak memiliki sudut adalah ...",
         "options": [
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi dan persegi panjang sama-sama memiliki ... sisi",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
           { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Segitiga sama sisi memiliki ... sisi sama panjang",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun datar yang memiliki sisi sejajar adalah ...",
+        "options": [
+          { "option": "Persegi panjang", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Layangan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah sudut pada persegi adalah ...",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi memiliki sudut yang semuanya ...",
+        "options": [
+          { "option": "tumpul", "isCorrect": false },
+          { "option": "lancip", "isCorrect": false },
+          { "option": "siku-siku", "isCorrect": true },
+          { "option": "berbeda", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun datar digunakan untuk menghitung ...",
+        "options": [
+          { "option": "berat", "isCorrect": false },
+          { "option": "luas", "isCorrect": true },
+          { "option": "volume", "isCorrect": false },
+          { "option": "waktu", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Bilangan Cacah sampai 10.000",
+    "description": "Operasi dan perbandingan bilangan",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "2.345 dibaca ...",
+        "options": [
+          { "option": "Dua ribu tiga ratus empat puluh lima", "isCorrect": true },
+          { "option": "Dua tiga empat lima", "isCorrect": false },
+          { "option": "Dua ribu empat lima", "isCorrect": false },
+          { "option": "Dua ribu tiga lima", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai tempat angka 6 pada 6.432 adalah ...",
+        "options": [
+          { "option": "satuan", "isCorrect": false },
+          { "option": "puluhan", "isCorrect": false },
+          { "option": "ratusan", "isCorrect": false },
+          { "option": "ribuan", "isCorrect": true }
+        ]
+      },
+      {
+        "question": "Bilangan terbesar adalah ...",
+        "options": [
+          { "option": "7.890", "isCorrect": true },
+          { "option": "7.809", "isCorrect": false },
+          { "option": "7.098", "isCorrect": false },
+          { "option": "7.098", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5.000 + 2.000 = ?",
+        "options": [
+          { "option": "6.000", "isCorrect": false },
+          { "option": "7.000", "isCorrect": true },
+          { "option": "8.000", "isCorrect": false },
+          { "option": "9.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "9.000 - 4.000 = ?",
+        "options": [
+          { "option": "3.000", "isCorrect": false },
+          { "option": "4.000", "isCorrect": false },
+          { "option": "5.000", "isCorrect": true },
+          { "option": "6.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan dari terbesar ke terkecil: 3.450, 3.405, 3.540 adalah ...",
+        "options": [
+          { "option": "3.405, 3.450, 3.540", "isCorrect": false },
+          { "option": "3.540, 3.450, 3.405", "isCorrect": true },
+          { "option": "3.450, 3.540, 3.405", "isCorrect": false },
+          { "option": "3.540, 3.405, 3.450", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka puluhan pada 7.382 adalah ...",
+        "options": [
+          { "option": "3", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
           { "option": "7", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah faktor dari 21?",
+        "question": "4.500 + 500 = ?",
         "options": [
-          { "option": "7", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
+          { "option": "4.000", "isCorrect": false },
+          { "option": "5.000", "isCorrect": true },
+          { "option": "5.500", "isCorrect": false },
+          { "option": "6.000", "isCorrect": false }
         ]
       },
       {
-        "question": "Faktor dari 10 adalah ...",
+        "question": "Bilangan sebelum 10.000 adalah ...",
         "options": [
-          { "option": "5", "isCorrect": true },
+          { "option": "9.999", "isCorrect": true },
+          { "option": "9.900", "isCorrect": false },
+          { "option": "9.000", "isCorrect": false },
+          { "option": "10.001", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "8.000 lebih ... dari 7.999",
+        "options": [
+          { "option": "kecil", "isCorrect": false },
+          { "option": "besar", "isCorrect": true },
+          { "option": "sama", "isCorrect": false },
+          { "option": "tidak tentu", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Perbandingan Pecahan",
+    "description": "Membandingkan pecahan sederhana",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Manakah pecahan yang lebih besar?",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "1/8", "isCorrect": false },
+          { "option": "1/10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "2/4 sama dengan ...",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang paling kecil adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/5", "isCorrect": true },
+          { "option": "1/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3/4 lebih ... dari 2/4",
+        "options": [
+          { "option": "kecil", "isCorrect": false },
+          { "option": "besar", "isCorrect": true },
+          { "option": "sama", "isCorrect": false },
+          { "option": "kurang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1/1 artinya ...",
+        "options": [
+          { "option": "setengah", "isCorrect": false },
+          { "option": "satu utuh", "isCorrect": true },
+          { "option": "dua bagian", "isCorrect": false },
+          { "option": "seperempat", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang sama dengan 3/6 adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": true },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "2/3", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika kue dibagi 4 dan dimakan 1 bagian, maka sisanya ...",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "2/4", "isCorrect": false },
+          { "option": "3/4", "isCorrect": true },
+          { "option": "4/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan terbesar adalah ...",
+        "options": [
+          { "option": "2/3", "isCorrect": true },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/6", "isCorrect": false },
+          { "option": "1/9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1/2 + 1/2 = ?",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1", "isCorrect": true },
+          { "option": "2", "isCorrect": false },
+          { "option": "1/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bagian yang lebih dari setengah adalah ...",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": false },
+          { "option": "3/4", "isCorrect": true },
+          { "option": "1/8", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Menghitung Luas Persegi dan Persegi Panjang",
+    "description": "Menggunakan rumus luas sederhana",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Rumus luas persegi adalah ...",
+        "options": [
+          { "option": "s + s", "isCorrect": false },
+          { "option": "s × s", "isCorrect": true },
+          { "option": "p × l", "isCorrect": false },
+          { "option": "2 × s", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi dengan sisi 5 cm memiliki luas ...",
+        "options": [
+          { "option": "10 cm²", "isCorrect": false },
+          { "option": "25 cm²", "isCorrect": true },
+          { "option": "20 cm²", "isCorrect": false },
+          { "option": "15 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rumus luas persegi panjang adalah ...",
+        "options": [
+          { "option": "p + l", "isCorrect": false },
+          { "option": "p × l", "isCorrect": true },
+          { "option": "2 × p", "isCorrect": false },
+          { "option": "l × l", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang dengan panjang 8 cm dan lebar 5 cm memiliki luas ...",
+        "options": [
+          { "option": "13 cm²", "isCorrect": false },
+          { "option": "40 cm²", "isCorrect": true },
+          { "option": "26 cm²", "isCorrect": false },
+          { "option": "30 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika sisi persegi bertambah, maka luasnya ...",
+        "options": [
+          { "option": "tetap", "isCorrect": false },
+          { "option": "berkurang", "isCorrect": false },
+          { "option": "bertambah", "isCorrect": true },
+          { "option": "hilang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas selalu menggunakan satuan ...",
+        "options": [
+          { "option": "panjang", "isCorrect": false },
+          { "option": "persegi", "isCorrect": true },
+          { "option": "berat", "isCorrect": false },
+          { "option": "volume", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas persegi dengan sisi 10 cm adalah ...",
+        "options": [
+          { "option": "20 cm²", "isCorrect": false },
+          { "option": "100 cm²", "isCorrect": true },
+          { "option": "50 cm²", "isCorrect": false },
+          { "option": "10 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang memiliki luas 24 cm². Jika panjang 6 cm, lebarnya ...",
+        "options": [
+          { "option": "3 cm", "isCorrect": false },
+          { "option": "4 cm", "isCorrect": true },
+          { "option": "6 cm", "isCorrect": false },
+          { "option": "8 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas digunakan untuk menghitung ...",
+        "options": [
+          { "option": "panjang garis", "isCorrect": false },
+          { "option": "besar permukaan", "isCorrect": true },
+          { "option": "jumlah sudut", "isCorrect": false },
+          { "option": "tinggi benda", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan cm² dibaca ...",
+        "options": [
+          { "option": "cm dua", "isCorrect": false },
+          { "option": "sentimeter persegi", "isCorrect": true },
+          { "option": "sentimeter", "isCorrect": false },
+          { "option": "meter persegi", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pola Bilangan Lanjutan",
+    "description": "Menentukan pola naik dan turun",
+    "level": 2,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "2, 5, 8, 11, ...",
+        "options": [
+          { "option": "13", "isCorrect": false },
+          { "option": "14", "isCorrect": true },
+          { "option": "15", "isCorrect": false },
+          { "option": "16", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "20, 18, 16, ...",
+        "options": [
+          { "option": "15", "isCorrect": false },
+          { "option": "14", "isCorrect": true },
+          { "option": "12", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola 3, 6, 12, ... adalah dikali ...",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
           { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
+          { "option": "4", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah faktor dari 14?",
+        "question": "5, 10, 20, ...",
         "options": [
-          { "option": "7", "isCorrect": true },
+          { "option": "25", "isCorrect": false },
+          { "option": "30", "isCorrect": false },
+          { "option": "40", "isCorrect": true },
+          { "option": "50", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola bilangan digunakan untuk ...",
+        "options": [
+          { "option": "menghitung berat", "isCorrect": false },
+          { "option": "menebak angka berikutnya", "isCorrect": true },
+          { "option": "menggambar", "isCorrect": false },
+          { "option": "mengukur panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1, 4, 9, ...",
+        "options": [
+          { "option": "12", "isCorrect": false },
+          { "option": "16", "isCorrect": true },
+          { "option": "18", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "30, 25, 20, ...",
+        "options": [
+          { "option": "18", "isCorrect": false },
+          { "option": "15", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "4, 8, 12, ...",
+        "options": [
+          { "option": "14", "isCorrect": false },
+          { "option": "16", "isCorrect": true },
+          { "option": "18", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola 100, 90, 80, ... turun sebanyak ...",
+        "options": [
           { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
+          { "option": "10", "isCorrect": true },
+          { "option": "20", "isCorrect": false },
+          { "option": "25", "isCorrect": false }
         ]
       },
       {
-        "question": "Faktor dari 9 adalah ...",
+        "question": "6, 12, 18, ...",
         "options": [
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Manakah faktor dari 24?",
-        "options": [
-          { "option": "6", "isCorrect": true },
-          { "option": "7", "isCorrect": false },
-          { "option": "9", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
+          { "option": "20", "isCorrect": false },
+          { "option": "24", "isCorrect": true },
+          { "option": "30", "isCorrect": false },
+          { "option": "36", "isCorrect": false }
         ]
       }
     ]

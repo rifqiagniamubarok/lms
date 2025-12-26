@@ -1,299 +1,452 @@
 [
   {
-    "title": "Mengenal Pecahan Sederhana",
-    "description": "Pengenalan pecahan 1/2, 1/3, 1/4",
+    "title": "Luas Bangun Datar dalam Soal Cerita",
+    "description": "Menghitung luas persegi dan persegi panjang dari soal cerita",
     "level": 3,
     "class": 4,
     "duration": 30,
     "questions": [
       {
-        "question": "Pecahan yang menunjukkan satu bagian dari dua bagian sama adalah ...",
+        "question": "Sebuah persegi memiliki sisi 7 cm. Luasnya adalah ...",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "2/1", "isCorrect": false },
-          { "option": "2/2", "isCorrect": false }
+          { "option": "14 cm²", "isCorrect": false },
+          { "option": "49 cm²", "isCorrect": true },
+          { "option": "21 cm²", "isCorrect": false },
+          { "option": "28 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang dibaca satu per empat adalah ...",
+        "question": "Persegi panjang panjangnya 10 cm dan lebarnya 6 cm. Luasnya ...",
         "options": [
-          { "option": "1/4", "isCorrect": true },
-          { "option": "4/1", "isCorrect": false },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/4", "isCorrect": false }
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "60 cm²", "isCorrect": true },
+          { "option": "30 cm²", "isCorrect": false },
+          { "option": "120 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika sebuah kue dibagi menjadi 3 bagian sama, satu bagian ditulis ...",
+        "question": "Jika luas persegi 64 cm², maka panjang sisinya ...",
         "options": [
-          { "option": "1/3", "isCorrect": true },
-          { "option": "3/1", "isCorrect": false },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/3", "isCorrect": false }
+          { "option": "6 cm", "isCorrect": false },
+          { "option": "8 cm", "isCorrect": true },
+          { "option": "16 cm", "isCorrect": false },
+          { "option": "32 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pembilang pada pecahan 2/5 adalah ...",
+        "question": "Persegi panjang memiliki luas 45 cm². Jika lebarnya 5 cm, panjangnya ...",
         "options": [
-          { "option": "2", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "7", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
+          { "option": "7 cm", "isCorrect": false },
+          { "option": "9 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Penyebut pada pecahan 3/4 adalah ...",
+        "question": "Luas digunakan untuk mengetahui ...",
         "options": [
-          { "option": "4", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "7", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
+          { "option": "panjang sisi", "isCorrect": false },
+          { "option": "besar permukaan", "isCorrect": true },
+          { "option": "jumlah sudut", "isCorrect": false },
+          { "option": "volume benda", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang menunjukkan dua dari empat bagian adalah ...",
+        "question": "Sisi persegi menjadi dua kali lipat. Luasnya menjadi ...",
         "options": [
-          { "option": "2/4", "isCorrect": true },
-          { "option": "1/4", "isCorrect": false },
-          { "option": "4/2", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false }
+          { "option": "sama", "isCorrect": false },
+          { "option": "dua kali", "isCorrect": false },
+          { "option": "empat kali", "isCorrect": true },
+          { "option": "setengah", "isCorrect": false }
         ]
       },
       {
-        "question": "1/2 berarti ...",
+        "question": "Persegi panjang 12 cm × 4 cm memiliki luas ...",
         "options": [
-          { "option": "Satu dari dua bagian sama", "isCorrect": true },
-          { "option": "Dua dari satu bagian", "isCorrect": false },
-          { "option": "Setengah bagian lebih", "isCorrect": false },
-          { "option": "Dua bagian sama", "isCorrect": false }
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "48 cm²", "isCorrect": true },
+          { "option": "24 cm²", "isCorrect": false },
+          { "option": "96 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan mana yang lebih kecil?",
+        "question": "Satuan yang tepat untuk luas adalah ...",
         "options": [
-          { "option": "1/4", "isCorrect": true },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false }
+          { "option": "cm", "isCorrect": false },
+          { "option": "cm²", "isCorrect": true },
+          { "option": "kg", "isCorrect": false },
+          { "option": "ml", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan dari gambar yang dibagi 2 sama besar adalah ...",
+        "question": "Jika sisi persegi 9 cm, luasnya ...",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "2/1", "isCorrect": false },
-          { "option": "3/2", "isCorrect": false }
+          { "option": "18 cm²", "isCorrect": false },
+          { "option": "81 cm²", "isCorrect": true },
+          { "option": "36 cm²", "isCorrect": false },
+          { "option": "27 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang merupakan pecahan?",
+        "question": "Persegi panjang luasnya 72 cm² dan panjangnya 12 cm. Lebarnya ...",
         "options": [
-          { "option": "3/5", "isCorrect": true },
-          { "option": "3 + 5", "isCorrect": false },
-          { "option": "35", "isCorrect": false },
-          { "option": "5 - 3", "isCorrect": false }
+          { "option": "4 cm", "isCorrect": false },
+          { "option": "6 cm", "isCorrect": true },
+          { "option": "8 cm", "isCorrect": false },
+          { "option": "9 cm", "isCorrect": false }
         ]
       }
     ]
   },
 
   {
-    "title": "Pecahan Senilai",
-    "description": "Mengenal pecahan yang nilainya sama",
+    "title": "Operasi Campuran Bilangan Cacah",
+    "description": "Penjumlahan, pengurangan, perkalian, dan pembagian",
     "level": 3,
     "class": 4,
     "duration": 30,
     "questions": [
       {
-        "question": "Pecahan yang senilai dengan 1/2 adalah ...",
+        "question": "250 + 150 = ?",
         "options": [
-          { "option": "2/4", "isCorrect": true },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false },
-          { "option": "2/3", "isCorrect": false }
+          { "option": "300", "isCorrect": false },
+          { "option": "400", "isCorrect": true },
+          { "option": "500", "isCorrect": false },
+          { "option": "600", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan senilai dengan 2/4 adalah ...",
+        "question": "600 - 275 = ?",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/4", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false },
-          { "option": "4/2", "isCorrect": false }
+          { "option": "325", "isCorrect": true },
+          { "option": "375", "isCorrect": false },
+          { "option": "425", "isCorrect": false },
+          { "option": "525", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang senilai dengan 1/3?",
+        "question": "12 × 6 = ?",
         "options": [
-          { "option": "2/6", "isCorrect": true },
-          { "option": "3/6", "isCorrect": false },
-          { "option": "1/6", "isCorrect": false },
-          { "option": "3/9", "isCorrect": false }
+          { "option": "60", "isCorrect": false },
+          { "option": "72", "isCorrect": true },
+          { "option": "84", "isCorrect": false },
+          { "option": "96", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan senilai dengan 3/6 adalah ...",
+        "question": "144 ÷ 12 = ?",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false }
+          { "option": "10", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "14", "isCorrect": false },
+          { "option": "16", "isCorrect": false }
         ]
       },
       {
-        "question": "2/8 senilai dengan ...",
+        "question": "300 + 200 × 2 = ?",
         "options": [
-          { "option": "1/4", "isCorrect": true },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/4", "isCorrect": false },
-          { "option": "3/8", "isCorrect": false }
+          { "option": "1000", "isCorrect": false },
+          { "option": "700", "isCorrect": true },
+          { "option": "1000", "isCorrect": false },
+          { "option": "900", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan mana yang sama nilainya?",
+        "question": "800 - 400 ÷ 4 = ?",
         "options": [
-          { "option": "4/8 dan 1/2", "isCorrect": true },
-          { "option": "1/4 dan 1/2", "isCorrect": false },
-          { "option": "2/3 dan 3/4", "isCorrect": false },
-          { "option": "1/3 dan 2/5", "isCorrect": false }
+          { "option": "700", "isCorrect": true },
+          { "option": "600", "isCorrect": false },
+          { "option": "500", "isCorrect": false },
+          { "option": "400", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika pembilang dan penyebut dibagi 2, nilai pecahan akan ...",
+        "question": "75 × 4 = ?",
         "options": [
-          { "option": "Tetap sama", "isCorrect": true },
-          { "option": "Lebih besar", "isCorrect": false },
-          { "option": "Lebih kecil", "isCorrect": false },
-          { "option": "Hilang", "isCorrect": false }
+          { "option": "250", "isCorrect": false },
+          { "option": "300", "isCorrect": true },
+          { "option": "325", "isCorrect": false },
+          { "option": "400", "isCorrect": false }
         ]
       },
       {
-        "question": "6/8 senilai dengan ...",
+        "question": "360 ÷ 6 = ?",
         "options": [
-          { "option": "3/4", "isCorrect": true },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "4/6", "isCorrect": false }
+          { "option": "50", "isCorrect": false },
+          { "option": "60", "isCorrect": true },
+          { "option": "70", "isCorrect": false },
+          { "option": "80", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah pecahan senilai?",
+        "question": "450 + 550 = ?",
         "options": [
-          { "option": "5/10 dan 1/2", "isCorrect": true },
-          { "option": "5/10 dan 1/3", "isCorrect": false },
-          { "option": "2/5 dan 1/2", "isCorrect": false },
-          { "option": "3/10 dan 1/2", "isCorrect": false }
+          { "option": "900", "isCorrect": false },
+          { "option": "1000", "isCorrect": true },
+          { "option": "1100", "isCorrect": false },
+          { "option": "1200", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan 4/4 sama dengan ...",
+        "question": "900 - 300 = ?",
         "options": [
-          { "option": "1", "isCorrect": true },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2", "isCorrect": false },
-          { "option": "0", "isCorrect": false }
+          { "option": "500", "isCorrect": false },
+          { "option": "600", "isCorrect": true },
+          { "option": "700", "isCorrect": false },
+          { "option": "800", "isCorrect": false }
         ]
       }
     ]
   },
 
   {
-    "title": "Mengenal Pecahan Desimal",
-    "description": "Pengenalan desimal persepuluhan",
+    "title": "Membandingkan Pecahan",
+    "description": "Menentukan pecahan lebih besar atau lebih kecil",
     "level": 3,
     "class": 4,
     "duration": 30,
     "questions": [
       {
-        "question": "0,5 dibaca ...",
+        "question": "Manakah yang lebih besar?",
         "options": [
-          { "option": "Nol koma lima", "isCorrect": true },
-          { "option": "Lima nol", "isCorrect": false },
-          { "option": "Lima per nol", "isCorrect": false },
-          { "option": "Setengah nol", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "0,5 sama dengan pecahan ...",
-        "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/5", "isCorrect": false },
-          { "option": "5/1", "isCorrect": false },
-          { "option": "2/5", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "0,25 sama dengan ...",
-        "options": [
-          { "option": "1/4", "isCorrect": true },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/5", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Manakah bilangan desimal?",
-        "options": [
-          { "option": "0,7", "isCorrect": true },
-          { "option": "7/0", "isCorrect": false },
-          { "option": "7 + 0", "isCorrect": false },
-          { "option": "70", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "0,1 berarti ...",
-        "options": [
-          { "option": "Satu per sepuluh", "isCorrect": true },
-          { "option": "Satu per satu", "isCorrect": false },
-          { "option": "Sepuluh", "isCorrect": false },
-          { "option": "Satu", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "0,3 sama dengan ...",
-        "options": [
-          { "option": "3/10", "isCorrect": true },
+          { "option": "2/3", "isCorrect": true },
           { "option": "1/3", "isCorrect": false },
-          { "option": "3/1", "isCorrect": false },
-          { "option": "10/3", "isCorrect": false }
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/6", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan desimal lebih kecil dari 1 adalah ...",
+        "question": "3/4 dibandingkan 2/4 adalah ...",
         "options": [
-          { "option": "0,8", "isCorrect": true },
-          { "option": "1,2", "isCorrect": false },
-          { "option": "2,1", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
+          { "option": "lebih kecil", "isCorrect": false },
+          { "option": "lebih besar", "isCorrect": true },
+          { "option": "sama", "isCorrect": false },
+          { "option": "tidak bisa dibandingkan", "isCorrect": false }
         ]
       },
       {
-        "question": "0,75 sama dengan ...",
+        "question": "Pecahan terbesar adalah ...",
         "options": [
-          { "option": "3/4", "isCorrect": true },
+          { "option": "5/8", "isCorrect": true },
           { "option": "1/2", "isCorrect": false },
-          { "option": "2/3", "isCorrect": false },
+          { "option": "3/8", "isCorrect": false },
           { "option": "1/4", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang sama dengan 0,2 adalah ...",
+        "question": "1/2 sama dengan ...",
         "options": [
-          { "option": "1/5", "isCorrect": true },
-          { "option": "1/2", "isCorrect": false },
-          { "option": "2/5", "isCorrect": false },
-          { "option": "5/1", "isCorrect": false }
+          { "option": "2/3", "isCorrect": false },
+          { "option": "2/4", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/5", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan desimal ditulis menggunakan ...",
+        "question": "Jika sebuah kue dimakan 3/5 bagian, sisanya ...",
         "options": [
-          { "option": "Tanda koma", "isCorrect": true },
-          { "option": "Tanda garis", "isCorrect": false },
-          { "option": "Tanda titik dua", "isCorrect": false },
-          { "option": "Tanda tambah", "isCorrect": false }
+          { "option": "1/5", "isCorrect": false },
+          { "option": "2/5", "isCorrect": true },
+          { "option": "3/5", "isCorrect": false },
+          { "option": "4/5", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Volume Kubus dan Balok",
+    "description": "Menghitung volume bangun ruang sederhana",
+    "level": 3,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Rumus volume kubus adalah ...",
+        "options": [
+          { "option": "s + s + s", "isCorrect": false },
+          { "option": "s × s × s", "isCorrect": true },
+          { "option": "p × l", "isCorrect": false },
+          { "option": "p + l + t", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kubus dengan sisi 4 cm memiliki volume ...",
+        "options": [
+          { "option": "16 cm³", "isCorrect": false },
+          { "option": "64 cm³", "isCorrect": true },
+          { "option": "48 cm³", "isCorrect": false },
+          { "option": "32 cm³", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rumus volume balok adalah ...",
+        "options": [
+          { "option": "p + l + t", "isCorrect": false },
+          { "option": "p × l × t", "isCorrect": true },
+          { "option": "2 × (p + l)", "isCorrect": false },
+          { "option": "p × l", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Balok dengan p=5 cm, l=4 cm, t=3 cm volumenya ...",
+        "options": [
+          { "option": "20 cm³", "isCorrect": false },
+          { "option": "60 cm³", "isCorrect": true },
+          { "option": "40 cm³", "isCorrect": false },
+          { "option": "12 cm³", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan volume adalah ...",
+        "options": [
+          { "option": "cm²", "isCorrect": false },
+          { "option": "cm³", "isCorrect": true },
+          { "option": "cm", "isCorrect": false },
+          { "option": "kg", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kubus memiliki semua rusuk ...",
+        "options": [
+          { "option": "berbeda", "isCorrect": false },
+          { "option": "sama panjang", "isCorrect": true },
+          { "option": "lebih pendek", "isCorrect": false },
+          { "option": "lebih panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Balok memiliki ... pasang sisi yang sama",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika sisi kubus menjadi 2 kali, volumenya menjadi ...",
+        "options": [
+          { "option": "2 kali", "isCorrect": false },
+          { "option": "4 kali", "isCorrect": false },
+          { "option": "8 kali", "isCorrect": true },
+          { "option": "16 kali", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Balok dengan volume 120 cm³ dan p×l = 24 cm², tingginya ...",
+        "options": [
+          { "option": "4 cm", "isCorrect": false },
+          { "option": "5 cm", "isCorrect": true },
+          { "option": "6 cm", "isCorrect": false },
+          { "option": "8 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Volume digunakan untuk mengukur ...",
+        "options": [
+          { "option": "panjang", "isCorrect": false },
+          { "option": "luas", "isCorrect": false },
+          { "option": "isi/ruang", "isCorrect": true },
+          { "option": "berat", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Membaca Diagram Batang",
+    "description": "Menjawab pertanyaan berdasarkan diagram batang",
+    "level": 3,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Diagram batang digunakan untuk menyajikan ...",
+        "options": [
+          { "option": "cerita", "isCorrect": false },
+          { "option": "data", "isCorrect": true },
+          { "option": "gambar bebas", "isCorrect": false },
+          { "option": "rumus", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika tinggi batang apel 20 dan jeruk 15, buah terbanyak adalah ...",
+        "options": [
+          { "option": "Jeruk", "isCorrect": false },
+          { "option": "Apel", "isCorrect": true },
+          { "option": "Sama", "isCorrect": false },
+          { "option": "Tidak diketahui", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah siswa kelas A 18 dan kelas B 22. Selisihnya ...",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika data buku: Senin 10, Selasa 15, Rabu 20. Hari terbanyak ...",
+        "options": [
+          { "option": "Senin", "isCorrect": false },
+          { "option": "Selasa", "isCorrect": false },
+          { "option": "Rabu", "isCorrect": true },
+          { "option": "Kamis", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Total data 12, 8, dan 10 adalah ...",
+        "options": [
+          { "option": "28", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "32", "isCorrect": false },
+          { "option": "34", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Batang paling pendek menunjukkan data ...",
+        "options": [
+          { "option": "terbesar", "isCorrect": false },
+          { "option": "terkecil", "isCorrect": true },
+          { "option": "rata-rata", "isCorrect": false },
+          { "option": "tetap", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika Sabtu 25 dan Minggu 25, maka datanya ...",
+        "options": [
+          { "option": "berbeda", "isCorrect": false },
+          { "option": "sama", "isCorrect": true },
+          { "option": "lebih besar Sabtu", "isCorrect": false },
+          { "option": "lebih besar Minggu", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Diagram batang cocok untuk membandingkan ...",
+        "options": [
+          { "option": "waktu", "isCorrect": false },
+          { "option": "jumlah", "isCorrect": true },
+          { "option": "rumus", "isCorrect": false },
+          { "option": "panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika total 50 dan salah satu batang 20, sisanya ...",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "40", "isCorrect": false },
+          { "option": "50", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Judul diagram berfungsi untuk ...",
+        "options": [
+          { "option": "hiasan", "isCorrect": false },
+          { "option": "menjelaskan isi data", "isCorrect": true },
+          { "option": "menghitung angka", "isCorrect": false },
+          { "option": "menambah warna", "isCorrect": false }
         ]
       }
     ]

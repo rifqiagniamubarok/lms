@@ -1,199 +1,499 @@
 [
   {
-    "title": "Bilangan Cacah sampai 10.000",
-    "description": "Membaca dan memahami bilangan sampai 10.000",
+    "title": "Mengenal Bangun Datar Dasar",
+    "description": "Mengenal jenis dan ciri bangun datar",
     "level": 1,
     "class": 4,
     "duration": 30,
     "questions": [
       {
-        "question": "Bilangan 4.375 dibaca ...",
+        "question": "Bangun datar yang memiliki 4 sisi sama panjang adalah ...",
         "options": [
-          { "option": "Empat ribu tiga ratus tujuh puluh lima", "isCorrect": true },
-          { "option": "Empat ribu tiga tujuh lima", "isCorrect": false },
-          { "option": "Empat tiga tujuh lima", "isCorrect": false },
-          { "option": "Empat ribu tujuh puluh lima", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Jajar genjang", "isCorrect": false }
         ]
       },
       {
-        "question": "Nilai tempat angka 6 pada bilangan 6.248 adalah ...",
+        "question": "Bangun datar yang memiliki 3 sisi disebut ...",
         "options": [
-          { "option": "Ribuan", "isCorrect": true },
-          { "option": "Ratusan", "isCorrect": false },
-          { "option": "Puluhan", "isCorrect": false },
-          { "option": "Satuan", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": true },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan terbesar adalah ...",
+        "question": "Lingkaran memiliki ... sisi",
         "options": [
-          { "option": "4.320", "isCorrect": false },
-          { "option": "4.302", "isCorrect": false },
-          { "option": "4.230", "isCorrect": false },
-          { "option": "4.321", "isCorrect": true }
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "Tidak ada", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
         ]
       },
       {
-        "question": "Angka 5 pada bilangan 7.548 bernilai ...",
+        "question": "Persegi panjang memiliki ... sisi",
         "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "50", "isCorrect": false },
-          { "option": "500", "isCorrect": false },
-          { "option": "5.000", "isCorrect": true }
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan sebelum 2.000 adalah ...",
+        "question": "Bangun datar yang semua sisinya sama panjang adalah ...",
         "options": [
-          { "option": "1.998", "isCorrect": false },
-          { "option": "1.999", "isCorrect": true },
-          { "option": "2.001", "isCorrect": false },
-          { "option": "2.000", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan sesudah 6.499 adalah ...",
+        "question": "Segitiga memiliki ... sudut",
         "options": [
-          { "option": "6.498", "isCorrect": false },
-          { "option": "6.499", "isCorrect": false },
-          { "option": "6.500", "isCorrect": true },
-          { "option": "6.599", "isCorrect": false }
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
         ]
       },
       {
-        "question": "4.000 + 300 + 20 + 7 = ...",
+        "question": "Persegi panjang memiliki sisi yang ...",
         "options": [
-          { "option": "4.327", "isCorrect": true },
-          { "option": "4.237", "isCorrect": false },
-          { "option": "4.320", "isCorrect": false },
-          { "option": "4.300", "isCorrect": false }
+          { "option": "Semua sama", "isCorrect": false },
+          { "option": "Berpasangan sama panjang", "isCorrect": true },
+          { "option": "Tidak sama", "isCorrect": false },
+          { "option": "Lengkung", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan dengan nilai tempat ribuan 8 adalah ...",
+        "question": "Bangun datar adalah bangun yang ...",
         "options": [
-          { "option": "1.823", "isCorrect": false },
-          { "option": "8.124", "isCorrect": true },
-          { "option": "3.812", "isCorrect": false },
-          { "option": "2.481", "isCorrect": false }
+          { "option": "Memiliki volume", "isCorrect": false },
+          { "option": "Memiliki sisi dan bidang", "isCorrect": true },
+          { "option": "Memiliki tinggi", "isCorrect": false },
+          { "option": "Memiliki ruang", "isCorrect": false }
         ]
       },
       {
-        "question": "Urutan bilangan dari kecil ke besar yang benar adalah ...",
+        "question": "Lingkaran memiliki ... sudut",
         "options": [
-          { "option": "2.345, 2.354, 2.435", "isCorrect": true },
-          { "option": "2.354, 2.345, 2.435", "isCorrect": false },
-          { "option": "2.435, 2.354, 2.345", "isCorrect": false },
-          { "option": "2.345, 2.435, 2.354", "isCorrect": false }
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "Tidak ada", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan 9.000 terdiri dari ... ribuan",
+        "question": "Bangun datar yang berbentuk roda adalah ...",
         "options": [
-          { "option": "9", "isCorrect": true },
-          { "option": "90", "isCorrect": false },
-          { "option": "900", "isCorrect": false },
-          { "option": "9.000", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": false }
         ]
       }
     ]
   },
 
   {
-    "title": "Perbandingan Bilangan",
-    "description": "Membandingkan dan mengurutkan bilangan cacah",
+    "title": "Bilangan Cacah sampai 1.000",
+    "description": "Mengenal dan mengurutkan bilangan",
     "level": 1,
     "class": 4,
     "duration": 30,
     "questions": [
       {
-        "question": "3.456 ... 3.465",
+        "question": "Bilangan 375 dibaca ...",
         "options": [
-          { "option": "<", "isCorrect": true },
-          { "option": ">", "isCorrect": false },
-          { "option": "=", "isCorrect": false },
-          { "option": "≤", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "5.120 ... 5.102",
-        "options": [
-          { "option": "=", "isCorrect": false },
-          { "option": "<", "isCorrect": false },
-          { "option": ">", "isCorrect": true },
-          { "option": "≤", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Bilangan terkecil adalah ...",
-        "options": [
-          { "option": "6.210", "isCorrect": false },
-          { "option": "6.201", "isCorrect": true },
-          { "option": "6.120", "isCorrect": false },
-          { "option": "6.102", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Urutan yang benar dari terbesar ke terkecil adalah ...",
-        "options": [
-          { "option": "4.321, 4.312, 4.231", "isCorrect": true },
-          { "option": "4.231, 4.312, 4.321", "isCorrect": false },
-          { "option": "4.312, 4.231, 4.321", "isCorrect": false },
-          { "option": "4.321, 4.231, 4.312", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "7.005 ... 7.050",
-        "options": [
-          { "option": "<", "isCorrect": true },
-          { "option": ">", "isCorrect": false },
-          { "option": "=", "isCorrect": false },
-          { "option": "≥", "isCorrect": false }
+          { "option": "Tiga ratus tujuh puluh lima", "isCorrect": true },
+          { "option": "Tiga tujuh lima", "isCorrect": false },
+          { "option": "Tiga ratus lima tujuh", "isCorrect": false },
+          { "option": "Tiga ribu tujuh puluh lima", "isCorrect": false }
         ]
       },
       {
         "question": "Bilangan terbesar adalah ...",
         "options": [
-          { "option": "8.901", "isCorrect": true },
-          { "option": "8.910", "isCorrect": false },
-          { "option": "8.190", "isCorrect": false },
-          { "option": "8.109", "isCorrect": false }
+          { "option": "456", "isCorrect": false },
+          { "option": "654", "isCorrect": true },
+          { "option": "345", "isCorrect": false },
+          { "option": "543", "isCorrect": false }
         ]
       },
       {
-        "question": "3.999 ... 4.000",
+        "question": "Urutan bilangan dari kecil ke besar: 210, 201, 120 adalah ...",
         "options": [
-          { "option": "<", "isCorrect": true },
-          { "option": ">", "isCorrect": false },
-          { "option": "=", "isCorrect": false },
-          { "option": "≤", "isCorrect": false }
+          { "option": "210, 201, 120", "isCorrect": false },
+          { "option": "120, 201, 210", "isCorrect": true },
+          { "option": "201, 210, 120", "isCorrect": false },
+          { "option": "201, 120, 210", "isCorrect": false }
         ]
       },
       {
-        "question": "Bilangan yang tepat di antara 2.499 dan 2.501 adalah ...",
+        "question": "Nilai angka 7 pada bilangan 572 adalah ...",
         "options": [
-          { "option": "2.498", "isCorrect": false },
-          { "option": "2.500", "isCorrect": true },
-          { "option": "2.502", "isCorrect": false },
-          { "option": "2.490", "isCorrect": false }
+          { "option": "7", "isCorrect": false },
+          { "option": "70", "isCorrect": true },
+          { "option": "700", "isCorrect": false },
+          { "option": "57", "isCorrect": false }
         ]
       },
       {
-        "question": "Urutan naik yang benar adalah ...",
+        "question": "Bilangan sebelum 400 adalah ...",
         "options": [
-          { "option": "1.234, 1.243, 1.324", "isCorrect": true },
-          { "option": "1.324, 1.243, 1.234", "isCorrect": false },
-          { "option": "1.243, 1.234, 1.324", "isCorrect": false },
-          { "option": "1.234, 1.324, 1.243", "isCorrect": false }
+          { "option": "399", "isCorrect": true },
+          { "option": "401", "isCorrect": false },
+          { "option": "410", "isCorrect": false },
+          { "option": "390", "isCorrect": false }
         ]
       },
       {
-        "question": "9.100 ... 9.010",
+        "question": "Bilangan sesudah 999 adalah ...",
         "options": [
-          { "option": ">", "isCorrect": true },
-          { "option": "<", "isCorrect": false },
-          { "option": "=", "isCorrect": false },
-          { "option": "≤", "isCorrect": false }
+          { "option": "998", "isCorrect": false },
+          { "option": "1000", "isCorrect": true },
+          { "option": "990", "isCorrect": false },
+          { "option": "900", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka ratusan pada bilangan 846 adalah ...",
+        "options": [
+          { "option": "4", "isCorrect": false },
+          { "option": "8", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "46", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan terkecil adalah ...",
+        "options": [
+          { "option": "321", "isCorrect": true },
+          { "option": "412", "isCorrect": false },
+          { "option": "532", "isCorrect": false },
+          { "option": "623", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "400 + 200 = ?",
+        "options": [
+          { "option": "500", "isCorrect": false },
+          { "option": "600", "isCorrect": true },
+          { "option": "700", "isCorrect": false },
+          { "option": "800", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "900 - 300 = ?",
+        "options": [
+          { "option": "500", "isCorrect": false },
+          { "option": "600", "isCorrect": true },
+          { "option": "700", "isCorrect": false },
+          { "option": "400", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pengenalan Pecahan",
+    "description": "Mengenal pecahan sebagai bagian dari keseluruhan",
+    "level": 1,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "½ dibaca ...",
+        "options": [
+          { "option": "Satu per dua", "isCorrect": true },
+          { "option": "Dua per satu", "isCorrect": false },
+          { "option": "Setengah dua", "isCorrect": false },
+          { "option": "Satu dua", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "¼ artinya ...",
+        "options": [
+          { "option": "1 bagian dari 2", "isCorrect": false },
+          { "option": "1 bagian dari 4", "isCorrect": true },
+          { "option": "2 bagian dari 4", "isCorrect": false },
+          { "option": "4 bagian dari 1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan menunjukkan ...",
+        "options": [
+          { "option": "jumlah total", "isCorrect": false },
+          { "option": "bagian dari keseluruhan", "isCorrect": true },
+          { "option": "perkalian", "isCorrect": false },
+          { "option": "pengurangan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan terbesar adalah ...",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": false },
+          { "option": "3/4", "isCorrect": true },
+          { "option": "1/8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "¾ berarti ... bagian diambil",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "½ sama dengan ...",
+        "options": [
+          { "option": "2/4", "isCorrect": true },
+          { "option": "1/4", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bagian terkecil adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan 1/2 berarti dibagi menjadi ... bagian",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan 3/4 lebih ... dari 1/2",
+        "options": [
+          { "option": "kecil", "isCorrect": false },
+          { "option": "besar", "isCorrect": true },
+          { "option": "sama", "isCorrect": false },
+          { "option": "tidak tentu", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1 kue dibagi 4 sama besar, tiap bagian adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "1", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pengenalan Luas",
+    "description": "Memahami konsep luas bangun datar",
+    "level": 1,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Luas adalah ...",
+        "options": [
+          { "option": "jumlah sisi", "isCorrect": false },
+          { "option": "daerah yang ditempati", "isCorrect": true },
+          { "option": "panjang bangun", "isCorrect": false },
+          { "option": "keliling", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan luas adalah ...",
+        "options": [
+          { "option": "cm", "isCorrect": false },
+          { "option": "cm²", "isCorrect": true },
+          { "option": "kg", "isCorrect": false },
+          { "option": "m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang memiliki luas adalah ...",
+        "options": [
+          { "option": "bangun datar", "isCorrect": true },
+          { "option": "angka", "isCorrect": false },
+          { "option": "huruf", "isCorrect": false },
+          { "option": "warna", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas biasanya dihitung menggunakan ...",
+        "options": [
+          { "option": "penggaris", "isCorrect": false },
+          { "option": "satuan persegi", "isCorrect": true },
+          { "option": "timbangan", "isCorrect": false },
+          { "option": "jam", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas berbeda dengan ...",
+        "options": [
+          { "option": "keliling", "isCorrect": true },
+          { "option": "bidang", "isCorrect": false },
+          { "option": "bangun", "isCorrect": false },
+          { "option": "sisi", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun yang diarsir penuh menunjukkan ...",
+        "options": [
+          { "option": "keliling", "isCorrect": false },
+          { "option": "luas", "isCorrect": true },
+          { "option": "panjang", "isCorrect": false },
+          { "option": "tinggi", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas digunakan untuk mengetahui ...",
+        "options": [
+          { "option": "berat benda", "isCorrect": false },
+          { "option": "besar permukaan", "isCorrect": true },
+          { "option": "jumlah sisi", "isCorrect": false },
+          { "option": "warna benda", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan luas meter persegi ditulis ...",
+        "options": [
+          { "option": "m", "isCorrect": false },
+          { "option": "m²", "isCorrect": true },
+          { "option": "cm", "isCorrect": false },
+          { "option": "kg", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Menghitung luas berarti menghitung ...",
+        "options": [
+          { "option": "jumlah sudut", "isCorrect": false },
+          { "option": "banyak kotak satuan", "isCorrect": true },
+          { "option": "panjang sisi", "isCorrect": false },
+          { "option": "jumlah garis", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas tidak dipengaruhi oleh ...",
+        "options": [
+          { "option": "bentuk", "isCorrect": false },
+          { "option": "warna", "isCorrect": true },
+          { "option": "ukuran", "isCorrect": false },
+          { "option": "satuan", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pola Gambar Dasar",
+    "description": "Mengenal dan melanjutkan pola sederhana",
+    "level": 1,
+    "class": 4,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "🔺🔴🔺🔴 selanjutnya adalah ...",
+        "options": [
+          { "option": "🔴", "isCorrect": true },
+          { "option": "🔺", "isCorrect": false },
+          { "option": "⬜", "isCorrect": false },
+          { "option": "⭐", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "🟦🟦🟥🟦🟦🟥 selanjutnya ...",
+        "options": [
+          { "option": "🟦", "isCorrect": true },
+          { "option": "🟥", "isCorrect": false },
+          { "option": "⬛", "isCorrect": false },
+          { "option": "⬜", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "2, 4, 6, 8, ...",
+        "options": [
+          { "option": "9", "isCorrect": false },
+          { "option": "10", "isCorrect": true },
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5, 10, 15, ...",
+        "options": [
+          { "option": "18", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "25", "isCorrect": false },
+          { "option": "30", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola adalah susunan yang ...",
+        "options": [
+          { "option": "acak", "isCorrect": false },
+          { "option": "berulang", "isCorrect": true },
+          { "option": "berbeda", "isCorrect": false },
+          { "option": "tidak tetap", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "1, 3, 5, 7, ...",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "11", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "🔵⚪🔵⚪ selanjutnya ...",
+        "options": [
+          { "option": "⚪", "isCorrect": true },
+          { "option": "🔵", "isCorrect": false },
+          { "option": "🔴", "isCorrect": false },
+          { "option": "🟡", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "10, 20, 30, ...",
+        "options": [
+          { "option": "35", "isCorrect": false },
+          { "option": "40", "isCorrect": true },
+          { "option": "50", "isCorrect": false },
+          { "option": "25", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pola bilangan adalah pola yang menggunakan ...",
+        "options": [
+          { "option": "gambar", "isCorrect": false },
+          { "option": "angka", "isCorrect": true },
+          { "option": "warna", "isCorrect": false },
+          { "option": "huruf", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3, 6, 9, ...",
+        "options": [
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": true },
+          { "option": "15", "isCorrect": false },
+          { "option": "18", "isCorrect": false }
         ]
       }
     ]

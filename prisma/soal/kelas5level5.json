@@ -1,199 +1,495 @@
 [
   {
-    "title": "Keliling dan Luas Bangun Datar",
-    "description": "Persegi dan persegi panjang",
+    "title": "Aplikasi Kompleks KPK dan FPB",
+    "description": "Menyelesaikan masalah jadwal bersamaan dan pembagian barang secara merata.",
     "level": 5,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "Keliling persegi dengan sisi 8 cm adalah ...",
+        "question": "Lampu A menyala setiap 8 menit, lampu B setiap 12 menit. Jika menyala bersama pukul 08.00, mereka menyala bersama lagi pukul...",
         "options": [
-          { "option": "24 cm", "isCorrect": false },
-          { "option": "32 cm", "isCorrect": true },
-          { "option": "64 cm", "isCorrect": false },
-          { "option": "16 cm", "isCorrect": false }
+          { "option": "08.20", "isCorrect": false },
+          { "option": "08.24", "isCorrect": true },
+          { "option": "08.36", "isCorrect": false },
+          { "option": "09.00", "isCorrect": false }
         ]
       },
       {
-        "question": "Rumus keliling persegi panjang adalah ...",
+        "question": "Tersedia 24 buku dan 36 pensil. Barang tersebut akan dibagikan ke anak-anak dengan jumlah sama banyak. Berapa anak maksimal yang menerima?",
         "options": [
-          { "option": "p × l", "isCorrect": false },
-          { "option": "2 × (p + l)", "isCorrect": true },
-          { "option": "4 × s", "isCorrect": false },
-          { "option": "p + l", "isCorrect": false }
+          { "option": "6 anak", "isCorrect": false },
+          { "option": "12 anak", "isCorrect": true },
+          { "option": "18 anak", "isCorrect": false },
+          { "option": "24 anak", "isCorrect": false }
         ]
       },
       {
-        "question": "Luas persegi dengan sisi 6 cm adalah ...",
+        "question": "Pada soal nomor 2, berapa jumlah pensil yang diterima setiap anak?",
         "options": [
-          { "option": "12 cm²", "isCorrect": false },
-          { "option": "24 cm²", "isCorrect": false },
-          { "option": "36 cm²", "isCorrect": true },
-          { "option": "18 cm²", "isCorrect": false }
+          { "option": "2 pensil", "isCorrect": false },
+          { "option": "3 pensil", "isCorrect": true },
+          { "option": "4 pensil", "isCorrect": false },
+          { "option": "6 pensil", "isCorrect": false }
         ]
       },
       {
-        "question": "Persegi panjang memiliki panjang 10 cm dan lebar 4 cm. Luasnya adalah ...",
+        "question": "Bus X berangkat setiap 15 menit, Bus Y setiap 20 menit. Jika berangkat bersama pukul 07.15, kapan mereka bersama lagi?",
         "options": [
-          { "option": "14 cm²", "isCorrect": false },
-          { "option": "20 cm²", "isCorrect": false },
-          { "option": "40 cm²", "isCorrect": true },
-          { "option": "80 cm²", "isCorrect": false }
+          { "option": "07.45", "isCorrect": false },
+          { "option": "08.15", "isCorrect": true },
+          { "option": "08.30", "isCorrect": false },
+          { "option": "08.45", "isCorrect": false }
         ]
       },
       {
-        "question": "Keliling persegi panjang dengan p = 7 cm dan l = 5 cm adalah ...",
+        "question": "Andi les Matematika 3 hari sekali, Budi 4 hari sekali. Jika mereka les bersama pada Senin, pada hari apa mereka les bersama lagi?",
         "options": [
-          { "option": "12 cm", "isCorrect": false },
-          { "option": "24 cm", "isCorrect": true },
-          { "option": "35 cm", "isCorrect": false },
-          { "option": "70 cm", "isCorrect": false }
+          { "option": "Jumat", "isCorrect": false },
+          { "option": "Sabtu", "isCorrect": true },
+          { "option": "Minggu", "isCorrect": true },
+          { "option": "Senin depan", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika luas persegi adalah 49 cm², panjang sisinya adalah ...",
+        "question": "Seorang petani memanen 40 jeruk dan 60 apel. Ia ingin memasukkannya ke dalam keranjang dengan jumlah tiap buah sama. Berapa keranjang yang dibutuhkan?",
         "options": [
-          { "option": "6 cm", "isCorrect": false },
-          { "option": "7 cm", "isCorrect": true },
-          { "option": "14 cm", "isCorrect": false },
-          { "option": "21 cm", "isCorrect": false }
+          { "option": "10", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "40", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
         ]
       },
       {
-        "question": "Bangun yang semua sisinya sama panjang adalah ...",
+        "question": "KPK dari 12, 18, dan 24 adalah...",
         "options": [
-          { "option": "Persegi panjang", "isCorrect": false },
-          { "option": "Segitiga", "isCorrect": false },
-          { "option": "Persegi", "isCorrect": true },
-          { "option": "Trapesium", "isCorrect": false }
+          { "option": "36", "isCorrect": false },
+          { "option": "48", "isCorrect": false },
+          { "option": "72", "isCorrect": true },
+          { "option": "144", "isCorrect": false }
         ]
       },
       {
-        "question": "Satuan luas yang benar adalah ...",
+        "question": "FPB dari 45, 60, dan 75 adalah...",
         "options": [
-          { "option": "cm", "isCorrect": false },
-          { "option": "m", "isCorrect": false },
-          { "option": "cm²", "isCorrect": true },
-          { "option": "kg", "isCorrect": false }
+          { "option": "5", "isCorrect": false },
+          { "option": "15", "isCorrect": true },
+          { "option": "25", "isCorrect": false },
+          { "option": "30", "isCorrect": false }
         ]
       },
       {
-        "question": "Persegi dengan sisi 5 cm memiliki keliling ...",
+        "question": "Tiga buah pita panjangnya 18 cm, 24 cm, dan 30 cm dipotong menjadi ukuran terpanjang yang sama. Panjang tiap potongan adalah...",
         "options": [
-          { "option": "10 cm", "isCorrect": false },
-          { "option": "15 cm", "isCorrect": false },
-          { "option": "20 cm", "isCorrect": true },
-          { "option": "25 cm", "isCorrect": false }
+          { "option": "3 cm", "isCorrect": false },
+          { "option": "6 cm", "isCorrect": true },
+          { "option": "8 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Luas persegi panjang 8 cm × 3 cm adalah ...",
+        "question": "Jika KPK dari 10 dan n adalah 20, dan FPB-nya adalah 10. Maka nilai n adalah...",
         "options": [
-          { "option": "11 cm²", "isCorrect": false },
-          { "option": "24 cm²", "isCorrect": true },
-          { "option": "48 cm²", "isCorrect": false },
-          { "option": "16 cm²", "isCorrect": false }
+          { "option": "5", "isCorrect": false },
+          { "option": "10", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "40", "isCorrect": false }
         ]
       }
     ]
   },
-
   {
-    "title": "Data dan Diagram",
-    "description": "Membaca tabel dan diagram sederhana",
+    "title": "Masalah Geometri Tingkat Lanjut",
+    "description": "Mencari variabel yang hilang dan analisis biaya/kebutuhan bahan.",
     "level": 5,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "Data yang disajikan dalam bentuk batang disebut ...",
+        "question": "Luas sebuah segitiga adalah 48 cm². Jika tingginya 12 cm, maka alasnya adalah...",
         "options": [
-          { "option": "Diagram garis", "isCorrect": false },
-          { "option": "Diagram batang", "isCorrect": true },
-          { "option": "Piktogram", "isCorrect": false },
-          { "option": "Tabel", "isCorrect": false }
+          { "option": "4 cm", "isCorrect": false },
+          { "option": "8 cm", "isCorrect": true },
+          { "option": "12 cm", "isCorrect": false },
+          { "option": "16 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Kegunaan tabel adalah untuk ...",
+        "question": "Keliling sebuah jajar genjang 60 cm. Jika panjang alasnya 20 cm, maka panjang sisi miringnya adalah...",
         "options": [
-          { "option": "Menghitung luas", "isCorrect": false },
-          { "option": "Menyajikan data", "isCorrect": true },
-          { "option": "Mengukur panjang", "isCorrect": false },
-          { "option": "Menggambar bangun", "isCorrect": false }
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "40 cm", "isCorrect": false },
+          { "option": "5 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Diagram yang menggunakan gambar disebut ...",
+        "question": "Sebuah taman trapesium (sejajar 12m dan 18m, t=10m) akan ditanami rumput dengan harga Rp 20.000/m². Total biayanya adalah...",
         "options": [
-          { "option": "Diagram batang", "isCorrect": false },
-          { "option": "Diagram garis", "isCorrect": false },
-          { "option": "Piktogram", "isCorrect": true },
-          { "option": "Tabel", "isCorrect": false }
+          { "option": "Rp 3.000.000", "isCorrect": true },
+          { "option": "Rp 6.000.000", "isCorrect": false },
+          { "option": "Rp 1.500.000", "isCorrect": false },
+          { "option": "Rp 300.000", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika satu gambar mewakili 2 siswa, maka 3 gambar mewakili ... siswa",
+        "question": "Luas layang-layang 100 cm². Jika diagonal 1 adalah 10 cm, maka diagonal 2 adalah...",
         "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": true },
+          { "option": "25 cm", "isCorrect": false },
+          { "option": "50 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Data nilai siswa paling mudah dibaca menggunakan ...",
+        "question": "Lapangan persegi panjang luasnya 200 m². Jika lebar lapangan 10 m, maka kelilingnya adalah...",
         "options": [
-          { "option": "Peta", "isCorrect": false },
-          { "option": "Diagram", "isCorrect": true },
-          { "option": "Bangun datar", "isCorrect": false },
-          { "option": "Rumus", "isCorrect": false }
+          { "option": "20 m", "isCorrect": false },
+          { "option": "30 m", "isCorrect": false },
+          { "option": "60 m", "isCorrect": true },
+          { "option": "100 m", "isCorrect": false }
         ]
       },
       {
-        "question": "Diagram batang cocok digunakan untuk ...",
+        "question": "Lantai seluas 20 m² akan dipasang ubin ukuran 20 cm x 20 cm. Berapa ubin yang diperlukan?",
         "options": [
-          { "option": "Menunjukkan perbandingan", "isCorrect": true },
-          { "option": "Menghitung volume", "isCorrect": false },
-          { "option": "Mengukur berat", "isCorrect": false },
-          { "option": "Menggambar bangun", "isCorrect": false }
+          { "option": "50 ubin", "isCorrect": false },
+          { "option": "500 ubin", "isCorrect": true },
+          { "option": "5.000 ubin", "isCorrect": false },
+          { "option": "100 ubin", "isCorrect": false }
         ]
       },
       {
-        "question": "Data yang disusun ke dalam baris dan kolom disebut ...",
+        "question": "Sebuah jajar genjang memiliki luas 120 cm². Jika alasnya 15 cm, tingginya adalah...",
         "options": [
-          { "option": "Diagram", "isCorrect": false },
-          { "option": "Piktogram", "isCorrect": false },
-          { "option": "Tabel", "isCorrect": true },
-          { "option": "Grafik", "isCorrect": false }
+          { "option": "8 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "12 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Diagram garis biasanya digunakan untuk menunjukkan ...",
+        "question": "Trapesium dengan luas 75 cm² dan tinggi 5 cm. Jumlah sisi sejajarnya (a+b) adalah...",
         "options": [
-          { "option": "Bentuk bangun", "isCorrect": false },
-          { "option": "Perubahan data", "isCorrect": true },
-          { "option": "Jumlah sisi", "isCorrect": false },
-          { "option": "Luas daerah", "isCorrect": false }
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "30 cm", "isCorrect": true },
+          { "option": "25 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika data paling tinggi adalah 20 dan terendah 5, selisihnya adalah ...",
+        "question": "Sebuah kolam berbentuk persegi panjang kelilingnya 40 m. Jika panjangnya 12 m, luas kolam itu adalah...",
         "options": [
-          { "option": "10", "isCorrect": false },
-          { "option": "15", "isCorrect": true },
+          { "option": "96 m²", "isCorrect": true },
+          { "option": "80 m²", "isCorrect": false },
+          { "option": "120 m²", "isCorrect": false },
+          { "option": "48 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Setengah dari luas sebuah persegi adalah 50 cm². Panjang sisi persegi tersebut adalah...",
+        "options": [
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "25 cm", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Operasi Kompleks Pecahan & Desimal",
+    "description": "Menyelesaikan operasi hitung campuran pada berbagai bentuk pecahan dalam soal cerita.",
+    "level": 5,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Ibu membeli 2,5 kg gula. Digunakan untuk membuat kue sebanyak 3/4 kg. Kemudian Ibu membeli lagi 1 1/2 kg. Berat gula Ibu sekarang adalah...",
+        "options": [
+          { "option": "3,25 kg", "isCorrect": true },
+          { "option": "3,5 kg", "isCorrect": false },
+          { "option": "2,75 kg", "isCorrect": false },
+          { "option": "4,25 kg", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil dari 3/4 x 1,2 : 0,5 adalah...",
+        "options": [
+          { "option": "1,8", "isCorrect": true },
+          { "option": "0,9", "isCorrect": false },
+          { "option": "2,4", "isCorrect": false },
+          { "option": "1,5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Seutas tali panjangnya 12 meter dipotong-potong menjadi bagian yang panjangnya 0,25 meter. Banyak potongan tali adalah...",
+        "options": [
+          { "option": "48", "isCorrect": true },
+          { "option": "24", "isCorrect": false },
+          { "option": "36", "isCorrect": false },
+          { "option": "60", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Uang saku Andi Rp 20.000. Sebanyak 2/5 bagian digunakan untuk jajan dan 1/4 bagian ditabung. Sisa uang Andi adalah...",
+        "options": [
+          { "option": "Rp 7.000", "isCorrect": true },
+          { "option": "Rp 8.000", "isCorrect": false },
+          { "option": "Rp 5.000", "isCorrect": false },
+          { "option": "Rp 13.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil dari 2 1/2 + 0,75 - 125% adalah...",
+        "options": [
+          { "option": "2", "isCorrect": true },
+          { "option": "1,5", "isCorrect": false },
+          { "option": "2,25", "isCorrect": false },
+          { "option": "1,75", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas sebuah taman adalah 400 m². Sebanyak 0,25 bagian ditanami mawar dan 45% ditanami melati. Luas sisa taman adalah...",
+        "options": [
+          { "option": "120 m²", "isCorrect": true },
+          { "option": "100 m²", "isCorrect": false },
+          { "option": "180 m²", "isCorrect": false },
+          { "option": "280 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Seorang pedagang memiliki 5,5 kuintal beras. Hari ini laku 2 3/4 kuintal. Sisa beras pedagang adalah...",
+        "options": [
+          { "option": "2,75 kuintal", "isCorrect": true },
+          { "option": "2,25 kuintal", "isCorrect": false },
+          { "option": "3,25 kuintal", "isCorrect": false },
+          { "option": "2,5 kuintal", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil dari 5/8 : 0,25 x 1/2 adalah...",
+        "options": [
+          { "option": "1,25", "isCorrect": true },
+          { "option": "0,75", "isCorrect": false },
+          { "option": "1,5", "isCorrect": false },
+          { "option": "2,5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Botol minum berisi 0,75 liter air. Dino meminumnya hingga tersisa 1/5 bagian. Air yang diminum Dino adalah...",
+        "options": [
+          { "option": "0,6 liter", "isCorrect": true },
+          { "option": "0,15 liter", "isCorrect": false },
+          { "option": "0,5 liter", "isCorrect": false },
+          { "option": "0,45 liter", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Paman mengisi bensin 3,5 liter setiap hari. Dalam satu minggu, total bensin yang dibeli Paman adalah...",
+        "options": [
+          { "option": "24,5 liter", "isCorrect": true },
+          { "option": "21 liter", "isCorrect": false },
+          { "option": "25,5 liter", "isCorrect": false },
+          { "option": "28 liter", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Perbandingan, Kecepatan, & Debit",
+    "description": "Menganalisis hubungan antar satuan waktu, jarak, dan volume zat cair.",
+    "level": 5,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Sebuah mobil menempuh jarak 120 km dalam waktu 2 jam. Kecepatan rata-rata mobil tersebut adalah...",
+        "options": [
+          { "option": "60 km/jam", "isCorrect": true },
+          { "option": "70 km/jam", "isCorrect": false },
+          { "option": "80 km/jam", "isCorrect": false },
+          { "option": "50 km/jam", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Debit air sebuah keran adalah 12 liter/menit. Untuk mengisi bak bervolume 240 liter, waktu yang dibutuhkan adalah...",
+        "options": [
+          { "option": "20 menit", "isCorrect": true },
+          { "option": "15 menit", "isCorrect": false },
+          { "option": "24 menit", "isCorrect": false },
+          { "option": "30 menit", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jarak kota A ke B pada peta adalah 5 cm. Jika skala peta 1:200.000, jarak sebenarnya adalah...",
+        "options": [
+          { "option": "10 km", "isCorrect": true },
+          { "option": "1 km", "isCorrect": false },
+          { "option": "100 km", "isCorrect": false },
+          { "option": "20 km", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Andi bersepeda dengan kecepatan 15 km/jam selama 1,5 jam. Jarak yang ditempuh Andi adalah...",
+        "options": [
+          { "option": "22,5 km", "isCorrect": true },
+          { "option": "20 km", "isCorrect": false },
+          { "option": "25 km", "isCorrect": false },
+          { "option": "18,5 km", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Volume sebuah kolam 3.000 liter. Jika diisi dengan pipa berdebit 50 liter/menit, kolam akan penuh dalam...",
+        "options": [
+          { "option": "1 jam", "isCorrect": true },
+          { "option": "50 menit", "isCorrect": false },
+          { "option": "1,5 jam", "isCorrect": false },
+          { "option": "2 jam", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah selang mengalirkan air 600 liter dalam waktu 1 jam. Debit selang tersebut dalam liter/menit adalah...",
+        "options": [
+          { "option": "10 liter/menit", "isCorrect": true },
+          { "option": "6 liter/menit", "isCorrect": false },
+          { "option": "60 liter/menit", "isCorrect": false },
+          { "option": "100 liter/menit", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Perbandingan uang Rina dan Sani adalah 3:4. Jika uang Sani Rp 20.000, maka uang Rina adalah...",
+        "options": [
+          { "option": "Rp 15.000", "isCorrect": true },
+          { "option": "Rp 12.000", "isCorrect": false },
+          { "option": "Rp 18.000", "isCorrect": false },
+          { "option": "Rp 25.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah bus berangkat pukul 08.00 dan sampai pukul 10.30. Jika kecepatan bus 60 km/jam, jarak yang ditempuh adalah...",
+        "options": [
+          { "option": "150 km", "isCorrect": true },
+          { "option": "120 km", "isCorrect": false },
+          { "option": "180 km", "isCorrect": false },
+          { "option": "160 km", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Konversi dari 72 km/jam menjadi meter/detik adalah...",
+        "options": [
+          { "option": "20 m/detik", "isCorrect": true },
+          { "option": "15 m/detik", "isCorrect": false },
+          { "option": "10 m/detik", "isCorrect": false },
+          { "option": "25 m/detik", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah pipa dapat mengisi tangki 1,5 m³ dalam waktu 30 menit. Debit pipa tersebut adalah...",
+        "options": [
+          { "option": "50 liter/menit", "isCorrect": true },
+          { "option": "30 liter/menit", "isCorrect": false },
+          { "option": "45 liter/menit", "isCorrect": false },
+          { "option": "60 liter/menit", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Analisis Data & Statistika Dasar",
+    "description": "Membaca data dari tabel/diagram dan menghitung nilai rata-rata (mean).",
+    "level": 5,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Nilai ulangan Matematika Budi: 7, 8, 6, 9, 10. Rata-rata nilai ulangan Budi adalah...",
+        "options": [
+          { "option": "8", "isCorrect": true },
+          { "option": "7", "isCorrect": false },
+          { "option": "7,5", "isCorrect": false },
+          { "option": "8,5", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data berat badan 5 siswa (kg): 35, 37, 34, 36, 38. Rata-rata berat badan mereka adalah...",
+        "options": [
+          { "option": "36 kg", "isCorrect": true },
+          { "option": "35 kg", "isCorrect": false },
+          { "option": "37 kg", "isCorrect": false },
+          { "option": "36,5 kg", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rata-rata dari data: 10, 15, 20, 25, 30 adalah...",
+        "options": [
+          { "option": "20", "isCorrect": true },
+          { "option": "22", "isCorrect": false },
+          { "option": "25", "isCorrect": false },
+          { "option": "18", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dalam sebuah diagram lingkaran, hobi basket mewakili 25%. Jika total siswa 40 orang, banyak siswa yang hobi basket adalah...",
+        "options": [
+          { "option": "10 orang", "isCorrect": true },
+          { "option": "15 orang", "isCorrect": false },
+          { "option": "5 orang", "isCorrect": false },
+          { "option": "20 orang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rata-rata tinggi badan 4 siswa adalah 150 cm. Jika ditambah satu siswa dengan tinggi 160 cm, rata-rata barunya adalah...",
+        "options": [
+          { "option": "152 cm", "isCorrect": true },
+          { "option": "151 cm", "isCorrect": false },
+          { "option": "155 cm", "isCorrect": false },
+          { "option": "154 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data penjualan buku selama 4 hari: 12, 18, 20, 10. Rata-rata penjualan per hari adalah...",
+        "options": [
+          { "option": "15 buku", "isCorrect": true },
+          { "option": "14 buku", "isCorrect": false },
+          { "option": "16 buku", "isCorrect": false },
+          { "option": "13 buku", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai rata-rata 3 kali ulangan adalah 80. Total nilai yang diperoleh adalah...",
+        "options": [
+          { "option": "240", "isCorrect": true },
+          { "option": "160", "isCorrect": false },
+          { "option": "320", "isCorrect": false },
+          { "option": "210", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data pengunjung perpustakaan: Senin (20), Selasa (25), Rabu (15), Kamis (30), Jumat (10). Hari dengan pengunjung di bawah rata-rata adalah...",
+        "options": [
+          { "option": "Rabu dan Jumat", "isCorrect": true },
+          { "option": "Senin dan Jumat", "isCorrect": false },
+          { "option": "Selasa dan Kamis", "isCorrect": false },
+          { "option": "Hanya Jumat", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika rata-rata dari 4, 6, 8, x adalah 7, maka nilai x adalah...",
+        "options": [
+          { "option": "10", "isCorrect": true },
+          { "option": "9", "isCorrect": false },
+          { "option": "11", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Selisih nilai tertinggi dan terendah dari data: 95, 80, 75, 100, 85 adalah...",
+        "options": [
+          { "option": "25", "isCorrect": true },
           { "option": "20", "isCorrect": false },
-          { "option": "25", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Tujuan penyajian data adalah agar ...",
-        "options": [
-          { "option": "Sulit dibaca", "isCorrect": false },
-          { "option": "Mudah dipahami", "isCorrect": true },
-          { "option": "Lebih rumit", "isCorrect": false },
-          { "option": "Lebih panjang", "isCorrect": false }
+          { "option": "30", "isCorrect": false },
+          { "option": "15", "isCorrect": false }
         ]
       }
     ]

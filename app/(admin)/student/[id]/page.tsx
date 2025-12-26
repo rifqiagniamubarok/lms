@@ -380,28 +380,50 @@ export default function StudentDetailPage() {
             {student.badges && student.badges.length > 0 ? (
               !showAllBadges ? (
                 // Compact view - show only earned badges in a single row
-                <div className="flex flex-wrap gap-2">
-                  {student.badges
-                    .filter((badge) => badge.isAwarded)
-                    .map((badge) => (
-                      <div key={badge.id} className="flex items-center gap-2 px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <div className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
-                          <svg className="w-4 h-4 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7V9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9V7H3V9C3 11.76 5.24 14 8 14V16H7C6.45 16 6 16.45 6 17V18H18V17C18 16.45 17.55 16 17 16H16V14C18.76 14 21 11.76 21 9ZM12 8C12.55 8 13 8.45 13 9S12.55 10 12 10 11 9.55 11 9 11.45 8 12 8Z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-yellow-800">{badge.name}</p>
-                          <p className="text-xs text-yellow-600">{badge.expPoints} XP</p>
-                        </div>
-                      </div>
-                    ))}
-                  {student.badges.filter((badge) => badge.isAwarded).length === 0 && (
-                    <div className="text-center py-4 w-full">
-                      <p className="text-gray-500 text-sm">Belum ada badge yang diraih</p>
-                    </div>
-                  )}
-                </div>
+                // <div className="flex flex-wrap gap-2">
+                //   {student.badges
+                //     .filter((badge) => badge.isAwarded)
+                //     .map((badge) => (
+                //       <div key={badge.id} className="flex items-center gap-2 px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg">
+                //         <div className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                //           <svg className="w-4 h-4 text-yellow-600" fill="currentColor" viewBox="0 0 504 504">
+                //             <g>
+                //               <path
+                //                 style={{ fill: '#E9B526' }}
+                //                 d="M327.2,463.2c-34-1.2-62-29.6-63.2-63.6l-0.4-104H232V400c0,34-28,61.6-62.4,62.8l-1.6,6v26.4h164v-26.4L327.2,463.2z"
+                //               />
+                //               <path
+                //                 style={{ fill: '#E9B526' }}
+                //                 d="M5.6,29.6c0,100.8,60.8,192.4,152,230.8c-6.8-9.2-13.2-19.2-19.2-30C72.8,192,29.6,120,25.6,42.8c0-0.4,0-1.2,0.4-1.6s0.8-0.8,1.6-0.8h62c-0.4-8-0.8-12-0.8-20H15.6C10,20,5.6,24.4,5.6,29.6z"
+                //               />
+                //               <path
+                //                 style={{ fill: '#E9B526' }}
+                //                 d="M476,40c0.4,0,1.2,0.4,1.6,0.8s0.4,1.2,0.4,1.6c-4,77.6-47.6,150-113.6,188.4c-0.4,0-0.8,0.4-0.8,0.4l0,0c-6.4,11.6-13.6,22-20.8,31.2c93.2-38,155.6-130.8,155.6-233.2c0-5.2-4-9.2-10-9.2h-73.2c0,8-0.4,12-0.8,20L476,40L476,40z"
+                //               />
+                //               <path
+                //                 style={{ fill: '#E9B526' }}
+                //                 d="M94.4,28h314.8c0.8-4,1.2-2.8,1.6-2.4c0.4-6.8,0.4-13.6,0.4-21.6H92.4c0,8,0,14.8,0.4,21.6C93.2,25.2,93.6,24,94.4,28z"
+                //               />
+                //             </g>
+                //             <path
+                //               style={{ fill: '#FFC52F' }}
+                //               d="M409.2,24L92.8,25.6c-0.4,4,0.4,1.6,0,1.2c0,0.4,0,1.2,0,1.6c0.4,11.2,1.2,22.8,2.4,34c6,60.4,20.8,114.8,42,156.8c1.2,2.8,2.8,5.2,4,8c0.8,0.4,0.8,1.2,0.8,2c6.8,12.8,14.4,24,22.4,34.4c0.4,0,0.4,0.4,0.8,0.4c0.4,0.4,0.4,1.6,0.8,2c1.2,0.4,1.6,0,1.2,1.2c0,0.4,0.8,0.4,0.4,0.8c19.6,23.2,42,38,66.4,42.8c0.8,0,1.6,0.8,1.6,2l0,0h28l0,0c0-0.8,0.4-1.6,1.6-2c26.4-4.8,51.6-22.4,73.6-50.4c10.8-13.6,20.4-29.6,29.6-48c0,0,0,0,0-0.4c20.4-42,33.6-93.2,39.6-148.4c1.2-11.2,2-22.8,2.4-34.4c0-0.4,0-1.6,0-2C410.4,27.2,410,28,409.2,24z M308,150.4L288,170l4.8,27.6c0.8,5.6-0.4,10-3.2,12.4c-3.2,2.4-7.6,2-12.8-0.4L252,196.8L227.2,210c-2.8,1.6-5.2,2-7.6,2c-2,0-3.6-0.4-5.2-1.6c-3.2-2.4-4.4-6.8-3.6-12.4l4.8-27.6l-20-19.2l0,0c0,0,0,0-0.4-0.4l-0.4-0.4c0,0,0,0,0-0.4c-3.6-3.6-4.8-7.6-3.6-11.2s5.2-6.4,10.8-7.2l27.6-4l12.4-24.4c2.4-5.2,6-7.2,10-7.2l0,0c4,0,7.6,2,10,7.2c0.4,0.8,0,1.6-0.8,2l11.2,22.4c0.4,0,0.8-0.4,1.2-0.4l28.8,4c5.6,0.8,9.6,3.2,10.8,7.2C313.6,142,312,146.4,308,150.4z"
+                //             />
+                //           </svg>
+                //         </div>
+                //         <div>
+                //           <p className="text-sm font-medium text-yellow-800">{badge.name}</p>
+                //           <p className="text-xs text-yellow-600">{badge.expPoints} XP</p>
+                //         </div>
+                //       </div>
+                //     ))}
+                //   {student.badges.filter((badge) => badge.isAwarded).length === 0 && (
+                //     <div className="text-center py-4 w-full">
+                //       <p className="text-gray-500 text-sm">Belum ada badge yang diraih</p>
+                //     </div>
+                //   )}
+                // </div>
+                <></>
               ) : (
                 // Full view - show all badges in grid
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -414,8 +436,29 @@ export default function StudentDetailPage() {
                     >
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 ${badge.isAwarded ? 'bg-yellow-100' : 'bg-gray-200'}`}>
                         {badge.isAwarded ? (
-                          <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7V9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9V7H3V9C3 11.76 5.24 14 8 14V16H7C6.45 16 6 16.45 6 17V18H18V17C18 16.45 17.55 16 17 16H16V14C18.76 14 21 11.76 21 9ZM12 8C12.55 8 13 8.45 13 9S12.55 10 12 10 11 9.55 11 9 11.45 8 12 8Z" />
+                          <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 504 504">
+                            <g>
+                              <path
+                                style={{ fill: '#E9B526' }}
+                                d="M327.2,463.2c-34-1.2-62-29.6-63.2-63.6l-0.4-104H232V400c0,34-28,61.6-62.4,62.8l-1.6,6v26.4h164v-26.4L327.2,463.2z"
+                              />
+                              <path
+                                style={{ fill: '#E9B526' }}
+                                d="M5.6,29.6c0,100.8,60.8,192.4,152,230.8c-6.8-9.2-13.2-19.2-19.2-30C72.8,192,29.6,120,25.6,42.8c0-0.4,0-1.2,0.4-1.6s0.8-0.8,1.6-0.8h62c-0.4-8-0.8-12-0.8-20H15.6C10,20,5.6,24.4,5.6,29.6z"
+                              />
+                              <path
+                                style={{ fill: '#E9B526' }}
+                                d="M476,40c0.4,0,1.2,0.4,1.6,0.8s0.4,1.2,0.4,1.6c-4,77.6-47.6,150-113.6,188.4c-0.4,0-0.8,0.4-0.8,0.4l0,0c-6.4,11.6-13.6,22-20.8,31.2c93.2-38,155.6-130.8,155.6-233.2c0-5.2-4-9.2-10-9.2h-73.2c0,8-0.4,12-0.8,20L476,40L476,40z"
+                              />
+                              <path
+                                style={{ fill: '#E9B526' }}
+                                d="M94.4,28h314.8c0.8-4,1.2-2.8,1.6-2.4c0.4-6.8,0.4-13.6,0.4-21.6H92.4c0,8,0,14.8,0.4,21.6C93.2,25.2,93.6,24,94.4,28z"
+                              />
+                            </g>
+                            <path
+                              style={{ fill: '#FFC52F' }}
+                              d="M409.2,24L92.8,25.6c-0.4,4,0.4,1.6,0,1.2c0,0.4,0,1.2,0,1.6c0.4,11.2,1.2,22.8,2.4,34c6,60.4,20.8,114.8,42,156.8c1.2,2.8,2.8,5.2,4,8c0.8,0.4,0.8,1.2,0.8,2c6.8,12.8,14.4,24,22.4,34.4c0.4,0,0.4,0.4,0.8,0.4c0.4,0.4,0.4,1.6,0.8,2c1.2,0.4,1.6,0,1.2,1.2c0,0.4,0.8,0.4,0.4,0.8c19.6,23.2,42,38,66.4,42.8c0.8,0,1.6,0.8,1.6,2l0,0h28l0,0c0-0.8,0.4-1.6,1.6-2c26.4-4.8,51.6-22.4,73.6-50.4c10.8-13.6,20.4-29.6,29.6-48c0,0,0,0,0-0.4c20.4-42,33.6-93.2,39.6-148.4c1.2-11.2,2-22.8,2.4-34.4c0-0.4,0-1.6,0-2C410.4,27.2,410,28,409.2,24z M308,150.4L288,170l4.8,27.6c0.8,5.6-0.4,10-3.2,12.4c-3.2,2.4-7.6,2-12.8-0.4L252,196.8L227.2,210c-2.8,1.6-5.2,2-7.6,2c-2,0-3.6-0.4-5.2-1.6c-3.2-2.4-4.4-6.8-3.6-12.4l4.8-27.6l-20-19.2l0,0c0,0,0,0-0.4-0.4l-0.4-0.4c0,0,0,0,0-0.4c-3.6-3.6-4.8-7.6-3.6-11.2s5.2-6.4,10.8-7.2l27.6-4l12.4-24.4c2.4-5.2,6-7.2,10-7.2l0,0c4,0,7.6,2,10,7.2c0.4,0.8,0,1.6-0.8,2l11.2,22.4c0.4,0,0.8-0.4,1.2-0.4l28.8,4c5.6,0.8,9.6,3.2,10.8,7.2C313.6,142,312,146.4,308,150.4z"
+                            />
                           </svg>
                         ) : (
                           <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">

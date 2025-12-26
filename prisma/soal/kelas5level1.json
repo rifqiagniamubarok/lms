@@ -1,199 +1,495 @@
 [
   {
-    "title": "Membaca dan Menulis Bilangan Besar",
-    "description": "Bilangan hingga ratusan ribu",
+    "title": "Mengenal Nilai Tempat Puluh Ribuan",
+    "description": "Membaca, menulis, dan menentukan nilai tempat bilangan hingga 100.000",
     "level": 1,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "Bilangan 125.430 dibaca ...",
+        "question": "Lambang bilangan dari 'tujuh puluh lima ribu delapan puluh' adalah...",
         "options": [
-          { "option": "Seratus dua puluh lima ribu empat puluh tiga", "isCorrect": false },
-          { "option": "Seratus dua puluh lima ribu empat ratus tiga puluh", "isCorrect": true },
-          { "option": "Seratus dua puluh lima ribu empat ribu tiga puluh", "isCorrect": false },
-          { "option": "Seratus dua puluh lima ratus empat puluh tiga", "isCorrect": false }
+          { "option": "75.800", "isCorrect": false },
+          { "option": "75.080", "isCorrect": true },
+          { "option": "75.008", "isCorrect": false },
+          { "option": "70.580", "isCorrect": false }
         ]
       },
       {
-        "question": "Angka 7 pada bilangan 78.945 menempati nilai tempat ...",
+        "question": "Angka 4 pada bilangan 42.105 menempati nilai tempat...",
         "options": [
           { "option": "Ribuan", "isCorrect": false },
-          { "option": "Puluhan ribu", "isCorrect": true },
+          { "option": "Puluh Ribuan", "isCorrect": true },
           { "option": "Ratusan", "isCorrect": false },
           { "option": "Puluhan", "isCorrect": false }
         ]
       },
       {
-        "question": "Nilai angka 6 pada bilangan 46.210 adalah ...",
+        "question": "Bilangan 80.000 + 6.000 + 400 + 20 + 9 sama dengan...",
         "options": [
+          { "option": "86.429", "isCorrect": true },
+          { "option": "80.642", "isCorrect": false },
+          { "option": "86.249", "isCorrect": false },
+          { "option": "86.492", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nilai angka 7 pada bilangan 97.230 adalah...",
+        "options": [
+          { "option": "70", "isCorrect": false },
+          { "option": "700", "isCorrect": false },
+          { "option": "7.000", "isCorrect": true },
+          { "option": "70.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Nama bilangan dari 60.012 adalah...",
+        "options": [
+          { "option": "Enam puluh ribu dua belas", "isCorrect": true },
+          { "option": "Enam puluh ribu seratus dua", "isCorrect": false },
+          { "option": "Enam puluh ribu dua puluh", "isCorrect": false },
+          { "option": "Enam ribu dua belas", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil dari 34.000 + 12.000 adalah...",
+        "options": [
+          { "option": "45.000", "isCorrect": false },
+          { "option": "46.000", "isCorrect": true },
+          { "option": "56.000", "isCorrect": false },
+          { "option": "46.500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bentuk panjang dari 51.304 adalah...",
+        "options": [
+          { "option": "50.000 + 1.000 + 300 + 4", "isCorrect": true },
+          { "option": "50.000 + 100 + 30 + 4", "isCorrect": false },
+          { "option": "5.000 + 1.000 + 300 + 4", "isCorrect": false },
+          { "option": "50.000 + 1.000 + 30 + 4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Mana yang merupakan bilangan terkecil?",
+        "options": [
+          { "option": "12.345", "isCorrect": false },
+          { "option": "10.999", "isCorrect": true },
+          { "option": "11.000", "isCorrect": false },
+          { "option": "10.099", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Lambang bilangan delapan puluh sembilan ribu empat ratus adalah...",
+        "options": [
+          { "option": "89.400", "isCorrect": true },
+          { "option": "89.004", "isCorrect": false },
+          { "option": "80.940", "isCorrect": false },
+          { "option": "98.400", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka yang menempati ratusan pada bilangan 56.789 adalah...",
+        "options": [
+          { "option": "5", "isCorrect": false },
           { "option": "6", "isCorrect": false },
-          { "option": "60", "isCorrect": false },
-          { "option": "600", "isCorrect": false },
-          { "option": "6.000", "isCorrect": true }
-        ]
-      },
-      {
-        "question": "Bilangan terbesar adalah ...",
-        "options": [
-          { "option": "45.210", "isCorrect": false },
-          { "option": "45.120", "isCorrect": false },
-          { "option": "45.201", "isCorrect": false },
-          { "option": "45.210", "isCorrect": true }
-        ]
-      },
-      {
-        "question": "Urutan bilangan dari terkecil ke terbesar: 12.340, 12.304, 12.430 adalah ...",
-        "options": [
-          { "option": "12.430, 12.340, 12.304", "isCorrect": false },
-          { "option": "12.304, 12.340, 12.430", "isCorrect": true },
-          { "option": "12.340, 12.430, 12.304", "isCorrect": false },
-          { "option": "12.304, 12.430, 12.340", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Bilangan 90.000 + 5.000 sama dengan ...",
-        "options": [
-          { "option": "95.000", "isCorrect": true },
-          { "option": "9.500", "isCorrect": false },
-          { "option": "905.000", "isCorrect": false },
-          { "option": "85.000", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Bilangan setelah 99.999 adalah ...",
-        "options": [
-          { "option": "100.000", "isCorrect": true },
-          { "option": "99.990", "isCorrect": false },
-          { "option": "100.001", "isCorrect": false },
-          { "option": "90.000", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Bilangan sebelum 50.000 adalah ...",
-        "options": [
-          { "option": "49.999", "isCorrect": true },
-          { "option": "49.990", "isCorrect": false },
-          { "option": "50.001", "isCorrect": false },
-          { "option": "48.999", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Bilangan yang memiliki 6 angka adalah ...",
-        "options": [
-          { "option": "9.999", "isCorrect": false },
-          { "option": "99.999", "isCorrect": false },
-          { "option": "100.000", "isCorrect": true },
-          { "option": "9.999.999", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Angka nol pada bilangan 40.506 bernilai ...",
-        "options": [
-          { "option": "Tidak bernilai", "isCorrect": true },
-          { "option": "Puluhan", "isCorrect": false },
-          { "option": "Ribuan", "isCorrect": false },
-          { "option": "Ratusan", "isCorrect": false }
+          { "option": "7", "isCorrect": true },
+          { "option": "8", "isCorrect": false }
         ]
       }
     ]
   },
-
   {
-    "title": "Penjumlahan Bilangan Besar",
-    "description": "Penjumlahan tanpa dan dengan menyimpan",
+    "title": "Membandingkan dan Mengurutkan Bilangan Besar",
+    "description": "Menggunakan tanda perbandingan dan mengurutkan data angka.",
     "level": 1,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "23.450 + 12.350 = ...",
+        "question": "45.670 ... 45.760. Tanda yang benar adalah...",
         "options": [
-          { "option": "35.700", "isCorrect": false },
-          { "option": "35.800", "isCorrect": true },
-          { "option": "34.800", "isCorrect": false },
-          { "option": "36.800", "isCorrect": false }
+          { "option": ">", "isCorrect": false },
+          { "option": "<", "isCorrect": true },
+          { "option": "=", "isCorrect": false },
+          { "option": "≠", "isCorrect": false }
         ]
       },
       {
-        "question": "45.000 + 15.000 = ...",
+        "question": "Urutkan dari yang terbesar: 23.400, 23.100, 23.500",
         "options": [
-          { "option": "50.000", "isCorrect": false },
-          { "option": "55.000", "isCorrect": false },
-          { "option": "60.000", "isCorrect": true },
-          { "option": "65.000", "isCorrect": false }
+          { "option": "23.500, 23.400, 23.100", "isCorrect": true },
+          { "option": "23.100, 23.400, 23.500", "isCorrect": false },
+          { "option": "23.400, 23.500, 23.100", "isCorrect": false },
+          { "option": "23.500, 23.100, 23.400", "isCorrect": false }
         ]
       },
       {
-        "question": "18.765 + 1.235 = ...",
+        "question": "Bilangan yang nilainya lebih besar dari 88.888 adalah...",
         "options": [
-          { "option": "19.900", "isCorrect": false },
-          { "option": "20.000", "isCorrect": true },
-          { "option": "21.000", "isCorrect": false },
-          { "option": "19.000", "isCorrect": false }
+          { "option": "88.880", "isCorrect": false },
+          { "option": "88.809", "isCorrect": false },
+          { "option": "88.900", "isCorrect": true },
+          { "option": "87.999", "isCorrect": false }
         ]
       },
       {
-        "question": "Jumlah dari 32.400 dan 7.600 adalah ...",
+        "question": "67.010 ... 67.001. Tanda yang benar adalah...",
         "options": [
-          { "option": "40.000", "isCorrect": true },
-          { "option": "39.000", "isCorrect": false },
-          { "option": "41.000", "isCorrect": false },
-          { "option": "42.000", "isCorrect": false }
+          { "option": ">", "isCorrect": true },
+          { "option": "<", "isCorrect": false },
+          { "option": "=", "isCorrect": false },
+          { "option": "≤", "isCorrect": false }
         ]
       },
       {
-        "question": "25.500 + 4.500 = ...",
+        "question": "Urutkan dari yang terkecil: 12.000, 10.200, 11.200",
         "options": [
-          { "option": "29.000", "isCorrect": false },
-          { "option": "30.000", "isCorrect": true },
-          { "option": "31.000", "isCorrect": false },
-          { "option": "32.000", "isCorrect": false }
+          { "option": "10.200, 11.200, 12.000", "isCorrect": true },
+          { "option": "12.000, 11.200, 10.200", "isCorrect": false },
+          { "option": "11.200, 10.200, 12.000", "isCorrect": false },
+          { "option": "10.200, 12.000, 11.200", "isCorrect": false }
         ]
       },
       {
-        "question": "67.200 + 2.800 = ...",
+        "question": "Manakah pernyataan yang benar?",
         "options": [
-          { "option": "69.000", "isCorrect": false },
-          { "option": "70.000", "isCorrect": true },
-          { "option": "71.000", "isCorrect": false },
-          { "option": "72.000", "isCorrect": false }
+          { "option": "40.005 < 40.050", "isCorrect": true },
+          { "option": "32.100 > 32.200", "isCorrect": false },
+          { "option": "15.000 = 1.500", "isCorrect": false },
+          { "option": "10.000 < 9.999", "isCorrect": false }
         ]
       },
       {
-        "question": "19.999 + 1 = ...",
+        "question": "Lengkapi: 54.300, 54.400, ..., 54.600",
+        "options": [
+          { "option": "54.450", "isCorrect": false },
+          { "option": "54.500", "isCorrect": true },
+          { "option": "55.500", "isCorrect": false },
+          { "option": "54.550", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Data penduduk Desa A 12.450 dan Desa B 12.540. Desa mana yang lebih banyak?",
+        "options": [
+          { "option": "Desa A", "isCorrect": false },
+          { "option": "Desa B", "isCorrect": true },
+          { "option": "Keduanya sama", "isCorrect": false },
+          { "option": "Tidak ada", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan di antara 75.120 dan 75.122 adalah...",
+        "options": [
+          { "option": "75.119", "isCorrect": false },
+          { "option": "75.121", "isCorrect": true },
+          { "option": "75.123", "isCorrect": false },
+          { "option": "75.210", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutan terkecil: 99.000, 90.900, 90.090",
+        "options": [
+          { "option": "90.090, 90.900, 99.000", "isCorrect": true },
+          { "option": "99.000, 90.900, 90.090", "isCorrect": false },
+          { "option": "90.900, 90.090, 99.000", "isCorrect": false },
+          { "option": "90.090, 99.000, 90.900", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pembulatan Bilangan ke Ribuan Terdekat",
+    "description": "Logika menaksir hasil dengan pembulatan ke atas atau ke bawah.",
+    "level": 1,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Bilangan 12.450 jika dibulatkan ke ribuan terdekat menjadi...",
+        "options": [
+          { "option": "12.000", "isCorrect": true },
+          { "option": "13.000", "isCorrect": false },
+          { "option": "12.500", "isCorrect": false },
+          { "option": "10.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil pembulatan 56.700 ke ribuan terdekat adalah...",
+        "options": [
+          { "option": "56.000", "isCorrect": false },
+          { "option": "57.000", "isCorrect": true },
+          { "option": "60.000", "isCorrect": false },
+          { "option": "56.500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika sebuah harga Rp 15.800, dibulatkan ke ribuan terdekat menjadi...",
+        "options": [
+          { "option": "Rp 15.000", "isCorrect": false },
+          { "option": "Rp 16.000", "isCorrect": true },
+          { "option": "Rp 15.500", "isCorrect": false },
+          { "option": "Rp 20.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Manakah bilangan yang akan menjadi 30.000 jika dibulatkan ke ribuan terdekat?",
+        "options": [
+          { "option": "29.400", "isCorrect": false },
+          { "option": "30.600", "isCorrect": false },
+          { "option": "29.800", "isCorrect": true },
+          { "option": "31.200", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Taksiran hasil dari 12.100 + 13.900 ke ribuan terdekat adalah...",
+        "options": [
+          { "option": "25.000", "isCorrect": false },
+          { "option": "26.000", "isCorrect": true },
+          { "option": "24.000", "isCorrect": false },
+          { "option": "25.500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 8.500 dibulatkan ke ribuan terdekat menjadi...",
+        "options": [
+          { "option": "8.000", "isCorrect": false },
+          { "option": "9.000", "isCorrect": true },
+          { "option": "8.500", "isCorrect": false },
+          { "option": "10.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pembulatan 99.200 ke ribuan terdekat adalah...",
+        "options": [
+          { "option": "99.000", "isCorrect": true },
+          { "option": "100.000", "isCorrect": false },
+          { "option": "90.000", "isCorrect": false },
+          { "option": "99.500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 45.499 dibulatkan ke ribuan terdekat menjadi...",
+        "options": [
+          { "option": "46.000", "isCorrect": false },
+          { "option": "45.000", "isCorrect": true },
+          { "option": "45.500", "isCorrect": false },
+          { "option": "40.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil taksiran 7.800 - 2.100 ke ribuan terdekat adalah...",
+        "options": [
+          { "option": "5.000", "isCorrect": false },
+          { "option": "6.000", "isCorrect": true },
+          { "option": "5.700", "isCorrect": false },
+          { "option": "8.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dibulatkan ke ribuan terdekat, 24.501 menjadi...",
+        "options": [
+          { "option": "24.000", "isCorrect": false },
+          { "option": "25.000", "isCorrect": true },
+          { "option": "24.500", "isCorrect": false },
+          { "option": "26.000", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Operasi Hitung Penjumlahan dan Pengurangan",
+    "description": "Menyelesaikan operasi hitung bilangan besar dengan teknik menyimpan dan meminjam.",
+    "level": 1,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "45.200 + 23.900 = ...",
+        "options": [
+          { "option": "69.100", "isCorrect": true },
+          { "option": "68.100", "isCorrect": false },
+          { "option": "69.200", "isCorrect": false },
+          { "option": "70.100", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "89.000 - 45.000 = ...",
+        "options": [
+          { "option": "34.000", "isCorrect": false },
+          { "option": "44.000", "isCorrect": true },
+          { "option": "45.000", "isCorrect": false },
+          { "option": "54.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil dari 15.650 + 4.350 adalah...",
         "options": [
           { "option": "19.000", "isCorrect": false },
           { "option": "20.000", "isCorrect": true },
           { "option": "21.000", "isCorrect": false },
-          { "option": "19.998", "isCorrect": false }
+          { "option": "20.100", "isCorrect": false }
         ]
       },
       {
-        "question": "Jumlah 40.250 dan 9.750 adalah ...",
+        "question": "30.000 - 12.500 = ...",
         "options": [
-          { "option": "49.000", "isCorrect": false },
-          { "option": "50.000", "isCorrect": true },
-          { "option": "51.000", "isCorrect": false },
-          { "option": "52.000", "isCorrect": false }
+          { "option": "17.500", "isCorrect": true },
+          { "option": "18.500", "isCorrect": false },
+          { "option": "16.500", "isCorrect": false },
+          { "option": "17.000", "isCorrect": false }
         ]
       },
       {
-        "question": "54.600 + 5.400 = ...",
+        "question": "Sebuah toko punya 25.000 stok beras, terjual 13.000. Sisa stok adalah...",
         "options": [
-          { "option": "59.000", "isCorrect": false },
-          { "option": "60.000", "isCorrect": true },
-          { "option": "61.000", "isCorrect": false },
-          { "option": "62.000", "isCorrect": false }
+          { "option": "11.000", "isCorrect": false },
+          { "option": "12.000", "isCorrect": true },
+          { "option": "13.000", "isCorrect": false },
+          { "option": "12.500", "isCorrect": false }
         ]
       },
       {
-        "question": "27.350 + 2.650 = ...",
+        "question": "Jika n + 10.000 = 25.000, maka n adalah...",
         "options": [
-          { "option": "29.000", "isCorrect": false },
+          { "option": "15.000", "isCorrect": true },
+          { "option": "35.000", "isCorrect": false },
+          { "option": "10.000", "isCorrect": false },
+          { "option": "20.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "72.400 + 1.600 = ...",
+        "options": [
+          { "option": "73.000", "isCorrect": false },
+          { "option": "74.000", "isCorrect": true },
+          { "option": "75.000", "isCorrect": false },
+          { "option": "84.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "90.000 - 1 = ...",
+        "options": [
+          { "option": "89.999", "isCorrect": true },
+          { "option": "89.990", "isCorrect": false },
+          { "option": "89.000", "isCorrect": false },
+          { "option": "90.001", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil dari (10.000 + 20.000) - 5.000 adalah...",
+        "options": [
+          { "option": "35.000", "isCorrect": false },
+          { "option": "25.000", "isCorrect": true },
+          { "option": "20.000", "isCorrect": false },
+          { "option": "15.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "55.555 + 44.444 = ...",
+        "options": [
+          { "option": "99.999", "isCorrect": true },
+          { "option": "100.000", "isCorrect": false },
+          { "option": "99.900", "isCorrect": false },
+          { "option": "88.888", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Evaluasi Bilangan Cacah Level 1",
+    "description": "Latihan campuran meliputi nilai tempat, pembulatan, dan operasi hitung.",
+    "level": 1,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Manakah angka yang menempati puluh ribuan pada 98.765?",
+        "options": [
+          { "option": "9", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "7", "isCorrect": false },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sepuluh ribu delapan ratus ditulis...",
+        "options": [
+          { "option": "10.080", "isCorrect": false },
+          { "option": "10.800", "isCorrect": true },
+          { "option": "18.000", "isCorrect": false },
+          { "option": "10.008", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Urutkan dari terkecil: 55.000, 50.500, 5.500",
+        "options": [
+          { "option": "5.500, 50.500, 55.000", "isCorrect": true },
+          { "option": "55.000, 50.500, 5.500", "isCorrect": false },
+          { "option": "50.500, 5.500, 55.000", "isCorrect": false },
+          { "option": "5.500, 55.000, 50.500", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bilangan 67.890 dibulatkan ke ribuan terdekat menjadi...",
+        "options": [
+          { "option": "67.000", "isCorrect": false },
+          { "option": "68.000", "isCorrect": true },
+          { "option": "70.000", "isCorrect": false },
+          { "option": "67.900", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "25.000 + 15.000 - 10.000 = ...",
+        "options": [
+          { "option": "40.000", "isCorrect": false },
           { "option": "30.000", "isCorrect": true },
-          { "option": "31.000", "isCorrect": false },
-          { "option": "32.000", "isCorrect": false }
+          { "option": "20.000", "isCorrect": false },
+          { "option": "50.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Angka 2 pada bilangan 12.345 bernilai...",
+        "options": [
+          { "option": "2.000", "isCorrect": true },
+          { "option": "20.000", "isCorrect": false },
+          { "option": "200", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "75.000 ... 74.999. Tanda yang tepat adalah...",
+        "options": [
+          { "option": ">", "isCorrect": true },
+          { "option": "<", "isCorrect": false },
+          { "option": "=", "isCorrect": false },
+          { "option": "≠", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Setengah dari 100.000 adalah...",
+        "options": [
+          { "option": "5.000", "isCorrect": false },
+          { "option": "50.000", "isCorrect": true },
+          { "option": "25.000", "isCorrect": false },
+          { "option": "75.000", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Hasil pembulatan 1.499 ke ribuan terdekat adalah...",
+        "options": [
+          { "option": "1.000", "isCorrect": true },
+          { "option": "2.000", "isCorrect": false },
+          { "option": "1.500", "isCorrect": false },
+          { "option": "0", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika kamu punya 80.000 dan membeli tas seharga 65.000, sisanya adalah...",
+        "options": [
+          { "option": "25.000", "isCorrect": false },
+          { "option": "15.000", "isCorrect": true },
+          { "option": "5.000", "isCorrect": false },
+          { "option": "20.000", "isCorrect": false }
         ]
       }
     ]

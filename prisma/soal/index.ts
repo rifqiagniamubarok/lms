@@ -16,7 +16,7 @@ import kelas5level5 from './kelas5level5.json';
 
 export interface SoalOption {
   title: string;
-  description: string;
+  description?: string;
   level: number;
   class: number;
   duration: number;

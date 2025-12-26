@@ -1,199 +1,495 @@
 [
   {
-    "title": "Mengenal Pecahan",
-    "description": "Membaca dan memahami pecahan",
+    "title": "Perhitungan Keliling Bangun Datar",
+    "description": "Menghitung total panjang sisi pada persegi, persegi panjang, dan segitiga.",
     "level": 3,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "Pecahan dari gambar yang dibagi 4 sama besar dan diarsir 1 bagian adalah ...",
+        "question": "Sebuah persegi memiliki panjang sisi 12 cm. Keliling persegi tersebut adalah...",
         "options": [
-          { "option": "1/2", "isCorrect": false },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "1/4", "isCorrect": true },
-          { "option": "4/1", "isCorrect": false }
+          { "option": "24 cm", "isCorrect": false },
+          { "option": "36 cm", "isCorrect": false },
+          { "option": "48 cm", "isCorrect": true },
+          { "option": "144 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang menunjukkan tiga bagian dari lima bagian sama adalah ...",
+        "question": "Persegi panjang dengan panjang 15 cm dan lebar 10 cm. Berapa kelilingnya?",
         "options": [
-          { "option": "5/3", "isCorrect": false },
-          { "option": "3/5", "isCorrect": true },
-          { "option": "1/5", "isCorrect": false },
-          { "option": "5/1", "isCorrect": false }
+          { "option": "25 cm", "isCorrect": false },
+          { "option": "50 cm", "isCorrect": true },
+          { "option": "150 cm", "isCorrect": false },
+          { "option": "60 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pembilang dari pecahan 4/7 adalah ...",
+        "question": "Segitiga sama sisi memiliki panjang sisi 9 cm. Keliling segitiga tersebut adalah...",
         "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "11", "isCorrect": false },
-          { "option": "3", "isCorrect": false }
+          { "option": "18 cm", "isCorrect": false },
+          { "option": "27 cm", "isCorrect": true },
+          { "option": "36 cm", "isCorrect": false },
+          { "option": "81 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Penyebut dari pecahan 6/9 adalah ...",
+        "question": "Keliling persegi panjang adalah 40 cm. Jika panjangnya 12 cm, maka lebarnya adalah...",
         "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "3", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "15", "isCorrect": false }
+          { "option": "8 cm", "isCorrect": true },
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "28 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang nilainya paling kecil adalah ...",
+        "question": "Sebuah segitiga memiliki sisi 5 cm, 7 cm, dan 10 cm. Kelilingnya adalah...",
         "options": [
-          { "option": "1/2", "isCorrect": false },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "1/4", "isCorrect": true },
-          { "option": "1/5", "isCorrect": false }
+          { "option": "22 cm", "isCorrect": true },
+          { "option": "35 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "25 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan 2/6 sama dengan ...",
+        "question": "Jika keliling sebuah persegi adalah 20 cm, berapa panjang sisinya?",
         "options": [
-          { "option": "1/2", "isCorrect": false },
-          { "option": "1/3", "isCorrect": true },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "3/6", "isCorrect": false }
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "4 cm", "isCorrect": false },
+          { "option": "5 cm", "isCorrect": true },
+          { "option": "400 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang senilai dengan 3/9 adalah ...",
+        "question": "Andi lari mengelilingi lapangan persegi panjang 20m x 10m sebanyak 1 kali. Jarak tempuhnya adalah...",
         "options": [
-          { "option": "1/3", "isCorrect": true },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "3/6", "isCorrect": false },
-          { "option": "9/3", "isCorrect": false }
+          { "option": "30 m", "isCorrect": false },
+          { "option": "60 m", "isCorrect": true },
+          { "option": "200 m", "isCorrect": false },
+          { "option": "40 m", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang lebih besar adalah ...",
+        "question": "Keliling segitiga sama kaki dengan alas 6 cm dan sisi miring 8 cm adalah...",
         "options": [
-          { "option": "1/4", "isCorrect": false },
-          { "option": "1/5", "isCorrect": false },
-          { "option": "1/3", "isCorrect": true },
-          { "option": "1/6", "isCorrect": false }
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "22 cm", "isCorrect": true },
+          { "option": "28 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika sebuah kue dibagi 8 bagian dan dimakan 2 bagian, pecahannya adalah ...",
+        "question": "Persegi A sisinya 5 cm. Persegi B sisinya 10 cm. Selisih keliling keduanya adalah...",
         "options": [
-          { "option": "2/8", "isCorrect": true },
-          { "option": "1/8", "isCorrect": false },
-          { "option": "8/2", "isCorrect": false },
-          { "option": "6/8", "isCorrect": false }
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": true },
+          { "option": "25 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang senilai dengan 4/8 adalah ...",
+        "question": "Pagar sekeliling taman persegi panjang 12m x 8m akan dipasang. Berapa panjang pagar?",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "2/4", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false },
-          { "option": "4/2", "isCorrect": false }
+          { "option": "20 m", "isCorrect": false },
+          { "option": "40 m", "isCorrect": true },
+          { "option": "96 m", "isCorrect": false },
+          { "option": "44 m", "isCorrect": false }
         ]
       }
     ]
   },
-
   {
-    "title": "Membandingkan Pecahan",
-    "description": "Menentukan pecahan lebih besar atau kecil",
+    "title": "Konsep Dasar Luas Bangun Datar",
+    "description": "Menghitung luas permukaan pada persegi, persegi panjang, dan segitiga.",
     "level": 3,
     "class": 5,
     "duration": 30,
     "questions": [
       {
-        "question": "Manakah yang lebih besar?",
+        "question": "Luas sebuah persegi dengan sisi 8 cm adalah...",
         "options": [
-          { "option": "2/5", "isCorrect": false },
-          { "option": "3/5", "isCorrect": true },
-          { "option": "1/5", "isCorrect": false },
-          { "option": "4/10", "isCorrect": false }
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "32 cm²", "isCorrect": false },
+          { "option": "64 cm²", "isCorrect": true },
+          { "option": "80 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang lebih kecil?",
+        "question": "Luas persegi panjang yang memiliki panjang 12 cm dan lebar 5 cm adalah...",
         "options": [
-          { "option": "1/2", "isCorrect": false },
-          { "option": "1/3", "isCorrect": true },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false }
+          { "option": "17 cm²", "isCorrect": false },
+          { "option": "34 cm²", "isCorrect": false },
+          { "option": "60 cm²", "isCorrect": true },
+          { "option": "120 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan yang nilainya sama dengan 5/10 adalah ...",
+        "question": "Sebuah segitiga memiliki alas 10 cm dan tinggi 6 cm. Luasnya adalah...",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "2/3", "isCorrect": false },
-          { "option": "3/5", "isCorrect": false },
-          { "option": "10/5", "isCorrect": false }
+          { "option": "60 cm²", "isCorrect": false },
+          { "option": "30 cm²", "isCorrect": true },
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "20 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Urutan dari terkecil ke terbesar: 1/2, 1/4, 3/4 adalah ...",
+        "question": "Jika luas persegi adalah 100 cm², maka panjang sisinya adalah...",
         "options": [
-          { "option": "1/2, 1/4, 3/4", "isCorrect": false },
-          { "option": "1/4, 1/2, 3/4", "isCorrect": true },
-          { "option": "3/4, 1/2, 1/4", "isCorrect": false },
-          { "option": "1/2, 3/4, 1/4", "isCorrect": false }
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "50 cm", "isCorrect": false },
+          { "option": "25 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang paling besar?",
+        "question": "Luas taman berbentuk persegi panjang 15m x 4m adalah...",
         "options": [
-          { "option": "2/6", "isCorrect": false },
-          { "option": "3/6", "isCorrect": false },
-          { "option": "4/6", "isCorrect": true },
-          { "option": "1/6", "isCorrect": false }
+          { "option": "19 m²", "isCorrect": false },
+          { "option": "38 m²", "isCorrect": false },
+          { "option": "60 m²", "isCorrect": true },
+          { "option": "120 m²", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan 6/8 jika disederhanakan menjadi ...",
+        "question": "Satuan luas yang benar di bawah ini adalah...",
         "options": [
-          { "option": "1/2", "isCorrect": false },
-          { "option": "3/4", "isCorrect": true },
-          { "option": "2/4", "isCorrect": false },
-          { "option": "4/6", "isCorrect": false }
+          { "option": "cm", "isCorrect": false },
+          { "option": "cm²", "isCorrect": true },
+          { "option": "cm³", "isCorrect": false },
+          { "option": "kg", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang lebih kecil dari 1/2?",
+        "question": "Segitiga siku-siku dengan alas 4 cm dan tinggi 3 cm memiliki luas...",
         "options": [
-          { "option": "3/4", "isCorrect": false },
-          { "option": "2/4", "isCorrect": false },
-          { "option": "1/3", "isCorrect": true },
-          { "option": "4/6", "isCorrect": false }
+          { "option": "12 cm²", "isCorrect": false },
+          { "option": "6 cm²", "isCorrect": true },
+          { "option": "7 cm²", "isCorrect": false },
+          { "option": "24 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Pecahan senilai dengan 2/4 adalah ...",
+        "question": "Luas persegi yang memiliki keliling 24 cm adalah...",
         "options": [
-          { "option": "1/2", "isCorrect": true },
-          { "option": "2/2", "isCorrect": false },
-          { "option": "3/4", "isCorrect": false },
-          { "option": "4/2", "isCorrect": false }
+          { "option": "36 cm²", "isCorrect": true },
+          { "option": "24 cm²", "isCorrect": false },
+          { "option": "48 cm²", "isCorrect": false },
+          { "option": "144 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Manakah yang lebih besar dari 1/3?",
+        "question": "Panjang persegi panjang 10 cm. Jika luasnya 50 cm², lebarnya adalah...",
         "options": [
-          { "option": "1/4", "isCorrect": false },
-          { "option": "2/6", "isCorrect": false },
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/6", "isCorrect": false }
+          { "option": "5 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "40 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Urutan yang benar adalah ...",
+        "question": "Segitiga dengan luas 20 cm² dan alas 5 cm memiliki tinggi...",
         "options": [
-          { "option": "1/5 < 1/4 < 1/3", "isCorrect": true },
-          { "option": "1/3 < 1/4 < 1/5", "isCorrect": false },
-          { "option": "1/4 < 1/5 < 1/3", "isCorrect": false },
-          { "option": "1/3 < 1/5 < 1/4", "isCorrect": false }
+          { "option": "4 cm", "isCorrect": false },
+          { "option": "8 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Hubungan Keliling dan Luas",
+    "description": "Menganalisis perbandingan nilai keliling dan luas pada bangun datar.",
+    "level": 3,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Persegi panjang 8x4 cm. Luasnya (L) dan Kelilingnya (K) adalah...",
+        "options": [
+          { "option": "L=32, K=24", "isCorrect": true },
+          { "option": "L=24, K=32", "isCorrect": false },
+          { "option": "L=32, K=12", "isCorrect": false },
+          { "option": "L=12, K=24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Mana yang lebih luas: Persegi sisi 6 cm atau Persegi Panjang 9x4 cm?",
+        "options": [
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Persegi Panjang", "isCorrect": false },
+          { "option": "Keduanya sama (36 cm²)", "isCorrect": true },
+          { "option": "Tidak bisa dihitung", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah ubin 30x30 cm. Jika ada 2 ubin berjajar, luas totalnya...",
+        "options": [
+          { "option": "900 cm²", "isCorrect": false },
+          { "option": "1.800 cm²", "isCorrect": true },
+          { "option": "3.600 cm²", "isCorrect": false },
+          { "option": "60 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi dengan luas 16 cm² memiliki keliling...",
+        "options": [
+          { "option": "8 cm", "isCorrect": false },
+          { "option": "16 cm", "isCorrect": true },
+          { "option": "32 cm", "isCorrect": false },
+          { "option": "64 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling persegi panjang adalah 30 cm. Jika lebarnya 5 cm, berapa luasnya?",
+        "options": [
+          { "option": "50 cm²", "isCorrect": true },
+          { "option": "150 cm²", "isCorrect": false },
+          { "option": "25 cm²", "isCorrect": false },
+          { "option": "100 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah segitiga siku-siku alas 6 cm, tinggi 8 cm, sisi miring 10 cm. Kelilingnya adalah...",
+        "options": [
+          { "option": "24 cm", "isCorrect": true },
+          { "option": "48 cm", "isCorrect": false },
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "18 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Dua buah persegi masing-masing sisi 4 cm digabung menjadi satu persegi panjang. Berapa luasnya?",
+        "options": [
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "32 cm²", "isCorrect": true },
+          { "option": "64 cm²", "isCorrect": false },
+          { "option": "8 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pada soal nomor 7, berapakah keliling bangun baru tersebut?",
+        "options": [
+          { "option": "16 cm", "isCorrect": false },
+          { "option": "32 cm", "isCorrect": false },
+          { "option": "24 cm", "isCorrect": true },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika panjang persegi panjang diperbesar 2 kali, maka luasnya menjadi...",
+        "options": [
+          { "option": "Tetap", "isCorrect": false },
+          { "option": "2 kali lebih besar", "isCorrect": true },
+          { "option": "4 kali lebih besar", "isCorrect": false },
+          { "option": "Setengahnya", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Segitiga sama sisi kelilingnya 15 cm. Panjang satu sisinya adalah...",
+        "options": [
+          { "option": "3 cm", "isCorrect": false },
+          { "option": "5 cm", "isCorrect": true },
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "7,5 cm", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Aplikasi Masalah Bangun Datar I",
+    "description": "Menyelesaikan soal cerita tentang lahan, kertas, dan benda sehari-hari.",
+    "level": 3,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Lantai kamar 3m x 3m akan dipasang ubin 30cm x 30cm. Berapa ubin yang dibutuhkan?",
+        "options": [
+          { "option": "10 ubin", "isCorrect": false },
+          { "option": "100 ubin", "isCorrect": true },
+          { "option": "9 ubin", "isCorrect": false },
+          { "option": "1.000 ubin", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kertas origami berbentuk persegi sisi 20 cm. Luas kertas tersebut adalah...",
+        "options": [
+          { "option": "40 cm²", "isCorrect": false },
+          { "option": "80 cm²", "isCorrect": false },
+          { "option": "400 cm²", "isCorrect": true },
+          { "option": "200 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Kebun Pak Budi 25m x 10m. Sekelilingnya akan diberi kawat berduri 2 lapis. Panjang kawat adalah...",
+        "options": [
+          { "option": "70 m", "isCorrect": false },
+          { "option": "140 m", "isCorrect": true },
+          { "option": "250 m", "isCorrect": false },
+          { "option": "500 m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sapu tangan persegi kelilingnya 80 cm. Luas sapu tangan itu adalah...",
+        "options": [
+          { "option": "400 cm²", "isCorrect": true },
+          { "option": "1600 cm²", "isCorrect": false },
+          { "option": "6400 cm²", "isCorrect": false },
+          { "option": "20 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Atap rumah berbentuk segitiga alas 8m, tinggi 3m. Berapa luas atap tersebut?",
+        "options": [
+          { "option": "24 m²", "isCorrect": false },
+          { "option": "12 m²", "isCorrect": true },
+          { "option": "11 m²", "isCorrect": false },
+          { "option": "16 m²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bingkai foto 20x30 cm. Keliling bingkai tersebut adalah...",
+        "options": [
+          { "option": "100 cm", "isCorrect": true },
+          { "option": "600 cm", "isCorrect": false },
+          { "option": "50 cm", "isCorrect": false },
+          { "option": "120 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sebuah halaman persegi panjang luasnya 200 m². Jika panjangnya 20 m, lebarnya adalah...",
+        "options": [
+          { "option": "10 m", "isCorrect": true },
+          { "option": "20 m", "isCorrect": false },
+          { "option": "40 m", "isCorrect": false },
+          { "option": "5 m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Potongan pizza berbentuk segitiga sama kaki. Luasnya 40 cm², alas 8 cm. Tingginya adalah...",
+        "options": [
+          { "option": "5 cm", "isCorrect": false },
+          { "option": "10 cm", "isCorrect": true },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Taplak meja persegi sisi 1 meter. Berapa cm kelilingnya?",
+        "options": [
+          { "option": "4 cm", "isCorrect": false },
+          { "option": "100 cm", "isCorrect": false },
+          { "option": "400 cm", "isCorrect": true },
+          { "option": "40 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Papan tulis 2m x 1m. Berapa cm² luasnya?",
+        "options": [
+          { "option": "200 cm²", "isCorrect": false },
+          { "option": "2.000 cm²", "isCorrect": false },
+          { "option": "20.000 cm²", "isCorrect": true },
+          { "option": "200.000 cm²", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Evaluasi Geometri Dasar Level 3",
+    "description": "Latihan komprehensif keliling dan luas persegi, persegi panjang, dan segitiga.",
+    "level": 3,
+    "class": 5,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Sisi persegi 15 cm. Luasnya adalah...",
+        "options": [
+          { "option": "60 cm²", "isCorrect": false },
+          { "option": "150 cm²", "isCorrect": false },
+          { "option": "225 cm²", "isCorrect": true },
+          { "option": "300 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang p=25, l=4. Kelilingnya adalah...",
+        "options": [
+          { "option": "29", "isCorrect": false },
+          { "option": "58", "isCorrect": true },
+          { "option": "100", "isCorrect": false },
+          { "option": "50", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Segitiga alas 12 cm, tinggi 5 cm. Luasnya adalah...",
+        "options": [
+          { "option": "60 cm²", "isCorrect": false },
+          { "option": "30 cm²", "isCorrect": true },
+          { "option": "17 cm²", "isCorrect": false },
+          { "option": "25 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling persegi 36 cm. Berapa luasnya?",
+        "options": [
+          { "option": "81 cm²", "isCorrect": true },
+          { "option": "36 cm²", "isCorrect": false },
+          { "option": "144 cm²", "isCorrect": false },
+          { "option": "72 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika luas persegi panjang 48 cm² dan lebar 6 cm. Kelilingnya adalah...",
+        "options": [
+          { "option": "14 cm", "isCorrect": false },
+          { "option": "28 cm", "isCorrect": true },
+          { "option": "24 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Sisi segitiga sama sisi adalah 11 cm. Kelilingnya adalah...",
+        "options": [
+          { "option": "22 cm", "isCorrect": false },
+          { "option": "33 cm", "isCorrect": true },
+          { "option": "44 cm", "isCorrect": false },
+          { "option": "121 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bentuk panjang 10 cm, lebar 8 cm. Luasnya adalah...",
+        "options": [
+          { "option": "18 cm²", "isCorrect": false },
+          { "option": "36 cm²", "isCorrect": false },
+          { "option": "80 cm²", "isCorrect": true },
+          { "option": "40 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas segitiga siku-siku alas 8 cm dan tinggi 15 cm adalah...",
+        "options": [
+          { "option": "120 cm²", "isCorrect": false },
+          { "option": "60 cm²", "isCorrect": true },
+          { "option": "23 cm²", "isCorrect": false },
+          { "option": "30 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling persegi 100 cm. Panjang sisinya adalah...",
+        "options": [
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "25 cm", "isCorrect": true },
+          { "option": "50 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "L=1/2 x a x t adalah rumus luas untuk...",
+        "options": [
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Persegi Panjang", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": true },
+          { "option": "Lingkaran", "isCorrect": false }
         ]
       }
     ]

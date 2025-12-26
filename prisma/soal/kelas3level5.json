@@ -1,499 +1,499 @@
 [
   {
-    "title": "Pembagian Soal Cerita Tingkat Lanjut",
-    "description": "Soal cerita pembagian dengan angka lebih besar",
+    "title": "Keliling Bangun Datar (Soal Cerita)",
+    "description": "Menghitung keliling melalui cerita sederhana",
     "level": 5,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "Ibu memiliki 48 kue dan membagikannya sama rata ke 6 piring. Setiap piring berisi ... kue.",
+        "question": "Sebuah taman berbentuk persegi dengan sisi 12 m. Keliling taman adalah ...",
         "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": true },
-          { "option": "9", "isCorrect": false }
+          { "option": "36 m", "isCorrect": false },
+          { "option": "48 m", "isCorrect": true },
+          { "option": "24 m", "isCorrect": false },
+          { "option": "60 m", "isCorrect": false }
         ]
       },
       {
-        "question": "Ada 72 permen dibagi rata ke 8 anak. Setiap anak mendapat ... permen.",
+        "question": "Pita mengelilingi meja persegi panjang panjang 10 cm dan lebar 5 cm. Panjang pita adalah ...",
         "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false }
+          { "option": "30 cm", "isCorrect": true },
+          { "option": "50 cm", "isCorrect": false },
+          { "option": "15 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "Pak Andi memanen 60 jeruk dan memasukkannya ke 5 keranjang. Setiap keranjang berisi ... jeruk.",
+        "question": "Lapangan berbentuk persegi sisi 20 m. Kelilingnya ...",
         "options": [
-          { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false },
-          { "option": "12", "isCorrect": true },
-          { "option": "15", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "36 buku dibagi rata ke 9 rak. Setiap rak berisi ... buku.",
-        "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "50 pensil dibagikan ke 10 siswa sama banyak. Setiap siswa mendapat ... pensil.",
-        "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "45 apel dimasukkan ke 5 kantong sama rata. Setiap kantong berisi ... apel.",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "64 kelereng dibagi ke 8 anak. Setiap anak mendapat ... kelereng.",
-        "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": true },
-          { "option": "9", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "81 buku dibagi rata ke 9 rak. Setiap rak berisi ... buku.",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "70 mangga dimasukkan ke 7 keranjang. Setiap keranjang berisi ... mangga.",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": true },
-          { "option": "11", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "90 permen dibagi ke 10 anak sama rata. Setiap anak mendapat ... permen.",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-
-  {
-    "title": "Pengukuran Panjang Campuran",
-    "description": "Menggunakan satuan cm dan m dalam kehidupan sehari-hari",
-    "level": 5,
-    "class": 3,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "Panjang meja 150 cm sama dengan ... meter.",
-        "options": [
-          { "option": "1,2", "isCorrect": false },
-          { "option": "1,5", "isCorrect": true },
-          { "option": "15", "isCorrect": false },
-          { "option": "150", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Panjang papan 2 meter sama dengan ... cm.",
-        "options": [
-          { "option": "20", "isCorrect": false },
-          { "option": "200", "isCorrect": true },
-          { "option": "2000", "isCorrect": false },
-          { "option": "2", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Penggaris panjangnya 30 cm. Ini sama dengan ... meter.",
-        "options": [
-          { "option": "0,3", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "30", "isCorrect": false },
-          { "option": "0,03", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Tinggi pintu sekitar ...",
-        "options": [
-          { "option": "2 cm", "isCorrect": false },
-          { "option": "20 cm", "isCorrect": false },
-          { "option": "2 m", "isCorrect": true },
-          { "option": "20 m", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Panjang pensil biasanya diukur dengan satuan ...",
-        "options": [
-          { "option": "Meter", "isCorrect": false },
-          { "option": "Kilometer", "isCorrect": false },
-          { "option": "Centimeter", "isCorrect": true },
-          { "option": "Jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jarak rumah ke sekolah biasanya diukur dengan ...",
-        "options": [
-          { "option": "cm", "isCorrect": false },
-          { "option": "m", "isCorrect": true },
-          { "option": "menit", "isCorrect": false },
-          { "option": "kg", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "100 cm sama dengan ... meter.",
-        "options": [
-          { "option": "10", "isCorrect": false },
-          { "option": "1", "isCorrect": true },
-          { "option": "0,1", "isCorrect": false },
-          { "option": "100", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Tinggi anak biasanya sekitar ...",
-        "options": [
-          { "option": "1 m", "isCorrect": true },
-          { "option": "10 m", "isCorrect": false },
-          { "option": "10 cm", "isCorrect": false },
+          { "option": "60 m", "isCorrect": false },
+          { "option": "80 m", "isCorrect": true },
+          { "option": "40 m", "isCorrect": false },
           { "option": "100 m", "isCorrect": false }
         ]
       },
       {
-        "question": "Lebar buku tulis biasanya diukur dengan ...",
+        "question": "Keliling persegi panjang dengan panjang 14 cm dan lebar 6 cm adalah ...",
         "options": [
-          { "option": "Meter", "isCorrect": false },
-          { "option": "Centimeter", "isCorrect": true },
-          { "option": "Kilogram", "isCorrect": false },
-          { "option": "Jam", "isCorrect": false }
+          { "option": "40 cm", "isCorrect": true },
+          { "option": "84 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "28 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "2 meter sama dengan ... cm.",
+        "question": "Sisi persegi 15 cm. Kelilingnya ...",
         "options": [
-          { "option": "20", "isCorrect": false },
-          { "option": "200", "isCorrect": true },
-          { "option": "2000", "isCorrect": false },
-          { "option": "2", "isCorrect": false }
+          { "option": "45 cm", "isCorrect": false },
+          { "option": "60 cm", "isCorrect": true },
+          { "option": "30 cm", "isCorrect": false },
+          { "option": "75 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling bangun datar dihitung dengan ...",
+        "options": [
+          { "option": "mengalikan sisi", "isCorrect": false },
+          { "option": "menjumlahkan semua sisi", "isCorrect": true },
+          { "option": "mengurangkan sisi", "isCorrect": false },
+          { "option": "membagi sisi", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Meja persegi sisi 9 cm. Kelilingnya ...",
+        "options": [
+          { "option": "27 cm", "isCorrect": false },
+          { "option": "36 cm", "isCorrect": true },
+          { "option": "18 cm", "isCorrect": false },
+          { "option": "45 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang 12 cm dan 8 cm. Kelilingnya ...",
+        "options": [
+          { "option": "40 cm", "isCorrect": true },
+          { "option": "96 cm", "isCorrect": false },
+          { "option": "20 cm", "isCorrect": false },
+          { "option": "32 cm", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika sisi persegi bertambah, maka kelilingnya ...",
+        "options": [
+          { "option": "tetap", "isCorrect": false },
+          { "option": "berkurang", "isCorrect": false },
+          { "option": "bertambah", "isCorrect": true },
+          { "option": "hilang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Keliling persegi sisi 25 cm adalah ...",
+        "options": [
+          { "option": "75 cm", "isCorrect": false },
+          { "option": "100 cm", "isCorrect": true },
+          { "option": "50 cm", "isCorrect": false },
+          { "option": "125 cm", "isCorrect": false }
         ]
       }
     ]
   },
 
   {
-    "title": "Pengukuran Waktu Campuran",
-    "description": "Menghitung dan membaca waktu sederhana",
+    "title": "Luas Bangun Datar (Soal Cerita)",
+    "description": "Menghitung luas melalui cerita",
     "level": 5,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "1 jam sama dengan ... menit.",
+        "question": "Sebuah karpet berbentuk persegi dengan sisi 8 m. Luasnya ...",
         "options": [
-          { "option": "30", "isCorrect": false },
-          { "option": "60", "isCorrect": true },
-          { "option": "90", "isCorrect": false },
-          { "option": "100", "isCorrect": false }
+          { "option": "16 m²", "isCorrect": false },
+          { "option": "64 m²", "isCorrect": true },
+          { "option": "32 m²", "isCorrect": false },
+          { "option": "24 m²", "isCorrect": false }
         ]
       },
       {
-        "question": "Setengah jam sama dengan ... menit.",
+        "question": "Papan berbentuk persegi panjang 10 cm × 6 cm. Luasnya ...",
         "options": [
-          { "option": "15", "isCorrect": false },
-          { "option": "30", "isCorrect": true },
-          { "option": "45", "isCorrect": false },
-          { "option": "60", "isCorrect": false }
+          { "option": "60 cm²", "isCorrect": true },
+          { "option": "30 cm²", "isCorrect": false },
+          { "option": "16 cm²", "isCorrect": false },
+          { "option": "40 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika sekarang pukul 07.00, satu jam kemudian pukul ...",
+        "question": "Persegi sisi 12 cm. Luasnya ...",
         "options": [
-          { "option": "07.30", "isCorrect": false },
-          { "option": "08.00", "isCorrect": true },
-          { "option": "08.30", "isCorrect": false },
-          { "option": "09.00", "isCorrect": false }
+          { "option": "24 cm²", "isCorrect": false },
+          { "option": "144 cm²", "isCorrect": true },
+          { "option": "48 cm²", "isCorrect": false },
+          { "option": "36 cm²", "isCorrect": false }
         ]
       },
       {
-        "question": "Pelajaran berlangsung selama 30 menit. Ini sama dengan ... jam.",
+        "question": "Luas menunjukkan ...",
         "options": [
-          { "option": "1", "isCorrect": false },
+          { "option": "jumlah sisi", "isCorrect": false },
+          { "option": "daerah yang ditempati", "isCorrect": true },
+          { "option": "panjang bangun", "isCorrect": false },
+          { "option": "keliling", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Panjang 9 cm dan lebar 4 cm. Luasnya ...",
+        "options": [
+          { "option": "36 cm²", "isCorrect": true },
+          { "option": "26 cm²", "isCorrect": false },
+          { "option": "13 cm²", "isCorrect": false },
+          { "option": "18 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi sisi 15 cm, luasnya ...",
+        "options": [
+          { "option": "60 cm²", "isCorrect": false },
+          { "option": "225 cm²", "isCorrect": true },
+          { "option": "30 cm²", "isCorrect": false },
+          { "option": "75 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan luas adalah ...",
+        "options": [
+          { "option": "cm", "isCorrect": false },
+          { "option": "cm²", "isCorrect": true },
+          { "option": "kg", "isCorrect": false },
+          { "option": "m", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Panjang 7 cm, lebar 5 cm. Luasnya ...",
+        "options": [
+          { "option": "35 cm²", "isCorrect": true },
+          { "option": "12 cm²", "isCorrect": false },
+          { "option": "24 cm²", "isCorrect": false },
+          { "option": "42 cm²", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jika panjang bertambah, luas akan ...",
+        "options": [
+          { "option": "tetap", "isCorrect": false },
+          { "option": "berkurang", "isCorrect": false },
+          { "option": "bertambah", "isCorrect": true },
+          { "option": "hilang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Luas persegi sisi 20 cm adalah ...",
+        "options": [
+          { "option": "200 cm²", "isCorrect": false },
+          { "option": "400 cm²", "isCorrect": true },
+          { "option": "40 cm²", "isCorrect": false },
+          { "option": "80 cm²", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Pecahan dalam Kehidupan Sehari-hari",
+    "description": "Penerapan pecahan sederhana",
+    "level": 5,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Ani memakan 1/2 kue. Sisa kue adalah ...",
+        "options": [
+          { "option": "1/4", "isCorrect": false },
           { "option": "1/2", "isCorrect": true },
-          { "option": "2", "isCorrect": false },
-          { "option": "1/4", "isCorrect": false }
+          { "option": "3/4", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika sekarang pukul 10.00, dua jam kemudian pukul ...",
+        "question": "Bagian terbesar adalah ...",
         "options": [
-          { "option": "11.00", "isCorrect": false },
-          { "option": "12.00", "isCorrect": true },
-          { "option": "13.00", "isCorrect": false },
-          { "option": "14.00", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam pendek menunjukkan ...",
-        "options": [
-          { "option": "Menit", "isCorrect": false },
-          { "option": "Jam", "isCorrect": true },
-          { "option": "Detik", "isCorrect": false },
-          { "option": "Hari", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jam panjang menunjukkan ...",
-        "options": [
-          { "option": "Jam", "isCorrect": false },
-          { "option": "Menit", "isCorrect": true },
-          { "option": "Detik", "isCorrect": false },
-          { "option": "Hari", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "15 menit sama dengan ... jam.",
-        "options": [
+          { "option": "1/4", "isCorrect": false },
           { "option": "1/2", "isCorrect": false },
-          { "option": "1/4", "isCorrect": true },
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jika belajar dari pukul 08.00 sampai 09.00, lama belajar adalah ...",
-        "options": [
-          { "option": "30 menit", "isCorrect": false },
-          { "option": "45 menit", "isCorrect": false },
-          { "option": "1 jam", "isCorrect": true },
-          { "option": "2 jam", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Satu hari terdiri dari ... jam.",
-        "options": [
-          { "option": "12", "isCorrect": false },
-          { "option": "24", "isCorrect": true },
-          { "option": "30", "isCorrect": false },
-          { "option": "60", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-
-  {
-    "title": "Pecahan dari Bilangan",
-    "description": "Menentukan nilai pecahan dari sebuah bilangan",
-    "level": 5,
-    "class": 3,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "1/2 dari 10 adalah ...",
-        "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/4 dari 20 adalah ...",
-        "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "20", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/2 dari 8 adalah ...",
-        "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/3 dari 12 adalah ...",
-        "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/4 dari 16 adalah ...",
-        "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Setengah dari 14 adalah ...",
-        "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "14", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Sepertiga dari 9 adalah ...",
-        "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/2 dari 20 adalah ...",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "10", "isCorrect": true },
-          { "option": "12", "isCorrect": false },
-          { "option": "20", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/4 dari 12 adalah ...",
-        "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Jika sebuah kue berjumlah 8 potong, maka 1/2 bagian adalah ... potong.",
-        "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
-        ]
-      }
-    ]
-  },
-
-  {
-    "title": "Evaluasi Campuran Level 3–4",
-    "description": "Evaluasi pembagian dan pecahan sederhana",
-    "level": 5,
-    "class": 3,
-    "duration": 30,
-    "questions": [
-      {
-        "question": "24 ÷ 6 = ?",
-        "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "1/2 dari 10 adalah ...",
-        "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "36 ÷ 9 = ?",
-        "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Pecahan yang lebih besar dari 1/4 adalah ...",
-        "options": [
-          { "option": "1/5", "isCorrect": false },
-          { "option": "1/6", "isCorrect": false },
-          { "option": "1/3", "isCorrect": true },
+          { "option": "3/4", "isCorrect": true },
           { "option": "1/8", "isCorrect": false }
         ]
       },
       {
-        "question": "40 ÷ 8 = ?",
+        "question": "2/4 sama dengan ...",
         "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
+          { "option": "1/4", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false },
+          { "option": "4/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Rani minum 1/4 liter susu. Itu berarti ...",
+        "options": [
+          { "option": "1 dari 4 bagian", "isCorrect": true },
+          { "option": "4 dari 1 bagian", "isCorrect": false },
+          { "option": "2 dari 4 bagian", "isCorrect": false },
+          { "option": "3 dari 4 bagian", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan menunjukkan ...",
+        "options": [
+          { "option": "jumlah total", "isCorrect": false },
+          { "option": "bagian dari keseluruhan", "isCorrect": true },
+          { "option": "perkalian", "isCorrect": false },
+          { "option": "pengurangan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "½ lebih ... dari ¼",
+        "options": [
+          { "option": "kecil", "isCorrect": false },
+          { "option": "besar", "isCorrect": true },
+          { "option": "sama", "isCorrect": false },
+          { "option": "tidak tentu", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "¾ berarti ... bagian diambil",
+        "options": [
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan terkecil adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "3/4", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satu kue dibagi 4 sama besar, tiap bagian adalah ...",
+        "options": [
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "1", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Pecahan yang sama dengan 3/6 adalah ...",
+        "options": [
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "2/3", "isCorrect": false },
+          { "option": "3/4", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Perkalian & Pembagian (Soal Cerita)",
+    "description": "Masalah sehari-hari dengan operasi hitung",
+    "level": 5,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "Ada 6 kantong, tiap kantong berisi 8 permen. Jumlah permen adalah ...",
+        "options": [
+          { "option": "42", "isCorrect": false },
+          { "option": "48", "isCorrect": true },
+          { "option": "56", "isCorrect": false },
+          { "option": "36", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "72 buku dibagi rata ke 9 rak. Tiap rak berisi ...",
+        "options": [
           { "option": "6", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
+          { "option": "8", "isCorrect": true },
+          { "option": "9", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
         ]
       },
       {
-        "question": "1/4 dari 20 adalah ...",
+        "question": "5 kotak berisi masing-masing 9 pensil. Jumlah pensil ...",
         "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "20", "isCorrect": false }
+          { "option": "40", "isCorrect": false },
+          { "option": "45", "isCorrect": true },
+          { "option": "50", "isCorrect": false },
+          { "option": "35", "isCorrect": false }
         ]
       },
       {
-        "question": "Jika 6 x 5 = 30, maka 30 ÷ 5 = ?",
-        "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": true },
-          { "option": "10", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "Setengah dari 18 adalah ...",
+        "question": "63 kelereng dibagi 7 anak sama banyak. Tiap anak mendapat ...",
         "options": [
           { "option": "7", "isCorrect": false },
           { "option": "8", "isCorrect": false },
           { "option": "9", "isCorrect": true },
-          { "option": "18", "isCorrect": false }
+          { "option": "6", "isCorrect": false }
         ]
       },
       {
-        "question": "48 ÷ 6 = ?",
+        "question": "8 baris kursi, tiap baris ada 6 kursi. Jumlah kursi ...",
+        "options": [
+          { "option": "42", "isCorrect": false },
+          { "option": "48", "isCorrect": true },
+          { "option": "54", "isCorrect": false },
+          { "option": "36", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "81 apel dibagi ke 9 keranjang. Isi tiap keranjang ...",
+        "options": [
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "10", "isCorrect": false },
+          { "option": "7", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "7 × 9 = ?",
+        "options": [
+          { "option": "56", "isCorrect": false },
+          { "option": "63", "isCorrect": true },
+          { "option": "72", "isCorrect": false },
+          { "option": "49", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "54 ÷ 6 = ?",
+        "options": [
+          { "option": "7", "isCorrect": false },
+          { "option": "8", "isCorrect": false },
+          { "option": "9", "isCorrect": true },
+          { "option": "6", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "9 × 8 = ?",
+        "options": [
+          { "option": "64", "isCorrect": false },
+          { "option": "72", "isCorrect": true },
+          { "option": "81", "isCorrect": false },
+          { "option": "56", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "72 ÷ 9 = ?",
         "options": [
           { "option": "6", "isCorrect": false },
           { "option": "7", "isCorrect": false },
           { "option": "8", "isCorrect": true },
           { "option": "9", "isCorrect": false }
         ]
+      }
+    ]
+  },
+
+  {
+    "title": "Operasi Hitung Campuran",
+    "description": "Menggabungkan beberapa konsep hitung",
+    "level": 5,
+    "class": 3,
+    "duration": 30,
+    "questions": [
+      {
+        "question": "2 × (5 + 3) = ?",
+        "options": [
+          { "option": "11", "isCorrect": false },
+          { "option": "16", "isCorrect": true },
+          { "option": "13", "isCorrect": false },
+          { "option": "10", "isCorrect": false }
+        ]
       },
       {
-        "question": "Pecahan yang bernilai paling besar adalah ...",
+        "question": "(4 + 6) × 3 = ?",
         "options": [
-          { "option": "1/4", "isCorrect": false },
-          { "option": "1/3", "isCorrect": false },
-          { "option": "1/2", "isCorrect": true },
-          { "option": "1/5", "isCorrect": false }
+          { "option": "18", "isCorrect": false },
+          { "option": "30", "isCorrect": true },
+          { "option": "24", "isCorrect": false },
+          { "option": "20", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "20 ÷ 5 + 4 = ?",
+        "options": [
+          { "option": "8", "isCorrect": true },
+          { "option": "6", "isCorrect": false },
+          { "option": "10", "isCorrect": false },
+          { "option": "9", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "3 × 6 − 8 = ?",
+        "options": [
+          { "option": "10", "isCorrect": true },
+          { "option": "14", "isCorrect": false },
+          { "option": "18", "isCorrect": false },
+          { "option": "8", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "18 + 12 ÷ 4 = ?",
+        "options": [
+          { "option": "6", "isCorrect": false },
+          { "option": "21", "isCorrect": true },
+          { "option": "30", "isCorrect": false },
+          { "option": "24", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "(8 + 4) × 2 = ?",
+        "options": [
+          { "option": "20", "isCorrect": false },
+          { "option": "24", "isCorrect": true },
+          { "option": "16", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "30 − 6 × 4 = ?",
+        "options": [
+          { "option": "6", "isCorrect": true },
+          { "option": "24", "isCorrect": false },
+          { "option": "16", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "5 × (10 − 6) = ?",
+        "options": [
+          { "option": "30", "isCorrect": false },
+          { "option": "20", "isCorrect": true },
+          { "option": "25", "isCorrect": false },
+          { "option": "40", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "24 ÷ (3 + 1) = ?",
+        "options": [
+          { "option": "6", "isCorrect": true },
+          { "option": "8", "isCorrect": false },
+          { "option": "4", "isCorrect": false },
+          { "option": "12", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "(6 + 6) ÷ 3 = ?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false },
+          { "option": "4", "isCorrect": true },
+          { "option": "6", "isCorrect": false }
         ]
       }
     ]

@@ -1,229 +1,284 @@
 [
   {
-    "title": "Pembagian dengan 2",
-    "description": "Latihan pembagian dasar dengan angka 2",
+    "title": "Mengenal Bangun Datar",
+    "description": "Pengenalan bentuk bangun datar dasar",
     "level": 1,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "2 ÷ 2 = ?",
+        "question": "Bangun datar yang memiliki 4 sisi sama panjang adalah ...",
         "options": [
-          { "option": "1", "isCorrect": true },
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false }
         ]
       },
       {
-        "question": "4 ÷ 2 = ?",
+        "question": "Bangun datar yang memiliki 3 sisi adalah ...",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Segitiga", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": false }
         ]
       },
       {
-        "question": "6 ÷ 2 = ?",
+        "question": "Bangun datar yang tidak memiliki sisi adalah ...",
         "options": [
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi memiliki ... sisi",
+        "options": [
+          { "option": "4", "isCorrect": true },
+          { "option": "3", "isCorrect": false },
           { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
           { "option": "5", "isCorrect": false }
         ]
       },
       {
-        "question": "8 ÷ 2 = ?",
+        "question": "Segitiga memiliki ... sudut",
         "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "10 ÷ 2 = ?",
-        "options": [
+          { "option": "3", "isCorrect": true },
           { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
+          { "option": "2", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
         ]
       },
       {
-        "question": "12 ÷ 2 = ?",
+        "question": "Bangun datar yang memiliki sisi panjang dan lebar adalah ...",
         "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": true },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
+          { "option": "Persegi panjang", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false }
         ]
       },
       {
-        "question": "14 ÷ 2 = ?",
+        "question": "Lingkaran memiliki ... sudut",
         "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
+          { "option": "0", "isCorrect": true },
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false }
         ]
       },
       {
-        "question": "16 ÷ 2 = ?",
+        "question": "Bangun datar dengan 4 sisi tetapi tidak sama panjang adalah ...",
         "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": true },
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
+          { "option": "Persegi panjang", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false }
         ]
       },
       {
-        "question": "18 ÷ 2 = ?",
+        "question": "Bangun datar berikut yang paling bulat adalah ...",
         "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": false }
         ]
       },
       {
-        "question": "20 ÷ 2 = ?",
+        "question": "Bangun datar yang memiliki 4 sudut adalah ...",
         "options": [
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": true },
-          { "option": "11", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Setengah lingkaran", "isCorrect": false }
         ]
       }
     ]
   },
   {
-    "title": "Pembagian dengan 3",
-    "description": "Latihan pembagian dasar dengan angka 3",
+    "title": "Pengukuran Panjang",
+    "description": "Pengukuran panjang sederhana",
     "level": 1,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "3 ÷ 3 = ?",
+        "question": "Alat untuk mengukur panjang adalah ...",
         "options": [
-          { "option": "1", "isCorrect": true },
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Penggaris", "isCorrect": true },
+          { "option": "Timbangan", "isCorrect": false },
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Gelas ukur", "isCorrect": false }
         ]
       },
       {
-        "question": "6 ÷ 3 = ?",
+        "question": "Satuan panjang adalah ...",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Meter", "isCorrect": true },
+          { "option": "Kilogram", "isCorrect": false },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Jam", "isCorrect": false }
         ]
       },
       {
-        "question": "9 ÷ 3 = ?",
+        "question": "Meja lebih ... dari pensil",
         "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false }
+          { "option": "Panjang", "isCorrect": true },
+          { "option": "Pendek", "isCorrect": false },
+          { "option": "Ringan", "isCorrect": false },
+          { "option": "Berat", "isCorrect": false }
         ]
       },
       {
-        "question": "12 ÷ 3 = ?",
+        "question": "Benda yang lebih pendek adalah ...",
         "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
+          { "option": "Pensil", "isCorrect": true },
+          { "option": "Papan tulis", "isCorrect": false },
+          { "option": "Meja", "isCorrect": false },
+          { "option": "Lemari", "isCorrect": false }
         ]
       },
       {
-        "question": "15 ÷ 3 = ?",
+        "question": "1 meter sama dengan ... cm",
         "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "18 ÷ 3 = ?",
-        "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": true },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "21 ÷ 3 = ?",
-        "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "24 ÷ 3 = ?",
-        "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": true },
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "27 ÷ 3 = ?",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
+          { "option": "100", "isCorrect": true },
           { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
+          { "option": "1.000", "isCorrect": false },
+          { "option": "1", "isCorrect": false }
         ]
       },
       {
-        "question": "30 ÷ 3 = ?",
+        "question": "Penggaris biasanya digunakan untuk mengukur benda yang ...",
         "options": [
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": true },
-          { "option": "11", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
+          { "option": "Pendek", "isCorrect": true },
+          { "option": "Berat", "isCorrect": false },
+          { "option": "Panas", "isCorrect": false },
+          { "option": "Cair", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan cm digunakan untuk mengukur benda yang ...",
+        "options": [
+          { "option": "Kecil", "isCorrect": true },
+          { "option": "Berat", "isCorrect": false },
+          { "option": "Besar", "isCorrect": false },
+          { "option": "Cair", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Panjang buku diukur menggunakan ...",
+        "options": [
+          { "option": "Penggaris", "isCorrect": true },
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Timbangan", "isCorrect": false },
+          { "option": "Termometer", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Benda yang paling panjang adalah ...",
+        "options": [
+          { "option": "Jalan raya", "isCorrect": true },
+          { "option": "Pensil", "isCorrect": false },
+          { "option": "Penghapus", "isCorrect": false },
+          { "option": "Buku", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Satuan panjang yang benar adalah ...",
+        "options": [
+          { "option": "cm", "isCorrect": true },
+          { "option": "kg", "isCorrect": false },
+          { "option": "l", "isCorrect": false },
+          { "option": "jam", "isCorrect": false }
         ]
       }
     ]
   },
   {
-    "title": "Pembagian dengan 4",
-    "description": "Latihan pembagian dasar dengan angka 4",
+    "title": "Mengenal Bangun Datar Dasar",
+    "description": "Mengenal bentuk bangun datar sederhana",
     "level": 1,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "4 ÷ 4 = ?",
+        "question": "Bentuk persegi memiliki sisi sebanyak?",
         "options": [
-          { "option": "1", "isCorrect": true },
           { "option": "2", "isCorrect": false },
           { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "4", "isCorrect": true },
+          { "option": "5", "isCorrect": false }
         ]
       },
       {
-        "question": "8 ÷ 4 = ?",
+        "question": "Bangun yang memiliki 3 sisi disebut?",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false }
         ]
       },
       {
-        "question": "12 ÷ 4 = ?",
+        "question": "Bangun yang tidak memiliki sudut adalah?",
+        "options": [
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Persegi panjang memiliki sisi yang berhadapan?",
+        "options": [
+          { "option": "Berbeda semua", "isCorrect": false },
+          { "option": "Tidak sama", "isCorrect": false },
+          { "option": "Sama panjang", "isCorrect": true },
+          { "option": "Tidak beraturan", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Jumlah sudut pada segitiga adalah?",
+        "options": [
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": true },
+          { "option": "4", "isCorrect": false },
+          { "option": "5", "isCorrect": false }
+        ]
+      },
+
+      {
+        "question": "Bangun yang memiliki 4 sisi sama panjang adalah?",
+        "options": [
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Trapesium", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Lingkaran memiliki sisi sebanyak?",
+        "options": [
+          { "option": "0", "isCorrect": true },
+          { "option": "1", "isCorrect": false },
+          { "option": "2", "isCorrect": false },
+          { "option": "3", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Bangun datar yang mirip pintu adalah?",
+        "options": [
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false },
+          { "option": "Persegi panjang", "isCorrect": true },
+          { "option": "Jajar genjang", "isCorrect": false }
+        ]
+      },
+      {
+        "question": "Segitiga memiliki sisi sebanyak?",
         "options": [
           { "option": "2", "isCorrect": false },
           { "option": "3", "isCorrect": true },
@@ -232,264 +287,212 @@
         ]
       },
       {
-        "question": "16 ÷ 4 = ?",
+        "question": "Bangun yang semua sisinya sama panjang dan sudut siku-siku adalah?",
         "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "20 ÷ 4 = ?",
-        "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "24 ÷ 4 = ?",
-        "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": true },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "28 ÷ 4 = ?",
-        "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "32 ÷ 4 = ?",
-        "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": true },
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "36 ÷ 4 = ?",
-        "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "40 ÷ 4 = ?",
-        "options": [
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": true },
-          { "option": "11", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
+          { "option": "Persegi", "isCorrect": true },
+          { "option": "Persegi panjang", "isCorrect": false },
+          { "option": "Lingkaran", "isCorrect": false },
+          { "option": "Segitiga", "isCorrect": false }
         ]
       }
     ]
   },
   {
-    "title": "Pembagian dengan 5",
-    "description": "Latihan pembagian dasar dengan angka 5",
+    "title": "Pengukuran Panjang dan Berat Dasar",
+    "description": "Mengenal satuan panjang dan berat sederhana",
     "level": 1,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "5 ÷ 5 = ?",
+        "question": "Satuan panjang yang biasa digunakan adalah?",
         "options": [
-          { "option": "1", "isCorrect": true },
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Kilogram", "isCorrect": false },
+          { "option": "Meter", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Jam", "isCorrect": false }
         ]
       },
       {
-        "question": "10 ÷ 5 = ?",
+        "question": "Alat untuk mengukur panjang adalah?",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Timbangan", "isCorrect": false },
+          { "option": "Penggaris", "isCorrect": true },
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Gelas ukur", "isCorrect": false }
         ]
       },
       {
-        "question": "15 ÷ 5 = ?",
+        "question": "Berat buah biasanya diukur dengan?",
         "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false }
+          { "option": "Meter", "isCorrect": false },
+          { "option": "Kilogram", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Centimeter", "isCorrect": false }
         ]
       },
       {
-        "question": "20 ÷ 5 = ?",
+        "question": "1 meter sama dengan?",
         "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
+          { "option": "10 cm", "isCorrect": false },
+          { "option": "100 cm", "isCorrect": true },
+          { "option": "1000 cm", "isCorrect": false },
+          { "option": "1 cm", "isCorrect": false }
         ]
       },
       {
-        "question": "25 ÷ 5 = ?",
+        "question": "Alat untuk mengukur berat adalah?",
         "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false }
+          { "option": "Penggaris", "isCorrect": false },
+          { "option": "Timbangan", "isCorrect": true },
+          { "option": "Jam", "isCorrect": false },
+          { "option": "Meteran", "isCorrect": false }
+        ]
+      },
+
+      {
+        "question": "Satuan berat adalah?",
+        "options": [
+          { "option": "Meter", "isCorrect": false },
+          { "option": "Kilogram", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Detik", "isCorrect": false }
         ]
       },
       {
-        "question": "30 ÷ 5 = ?",
+        "question": "Benda yang lebih ringan adalah?",
         "options": [
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": true },
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": false }
+          { "option": "Batu besar", "isCorrect": false },
+          { "option": "Pensil", "isCorrect": true },
+          { "option": "Meja", "isCorrect": false },
+          { "option": "Lemari", "isCorrect": false }
         ]
       },
       {
-        "question": "35 ÷ 5 = ?",
+        "question": "Panjang buku biasanya diukur dengan?",
         "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
+          { "option": "Kilogram", "isCorrect": false },
+          { "option": "Centimeter", "isCorrect": true },
+          { "option": "Liter", "isCorrect": false },
+          { "option": "Jam", "isCorrect": false }
         ]
       },
       {
-        "question": "40 ÷ 5 = ?",
+        "question": "Berat beras biasanya diukur dengan?",
         "options": [
-          { "option": "7", "isCorrect": false },
-          { "option": "8", "isCorrect": true },
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": false }
+          { "option": "Meter", "isCorrect": false },
+          { "option": "Kilogram", "isCorrect": true },
+          { "option": "Centimeter", "isCorrect": false },
+          { "option": "Liter", "isCorrect": false }
         ]
       },
       {
-        "question": "45 ÷ 5 = ?",
+        "question": "Alat ukur panjang yang lentur adalah?",
         "options": [
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": true },
-          { "option": "10", "isCorrect": false },
-          { "option": "11", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "50 ÷ 5 = ?",
-        "options": [
-          { "option": "9", "isCorrect": false },
-          { "option": "10", "isCorrect": true },
-          { "option": "11", "isCorrect": false },
-          { "option": "12", "isCorrect": false }
+          { "option": "Penggaris", "isCorrect": false },
+          { "option": "Meteran", "isCorrect": true },
+          { "option": "Timbangan", "isCorrect": false },
+          { "option": "Jam", "isCorrect": false }
         ]
       }
     ]
   },
   {
-    "title": "Pembagian Bilangan ≤ 20",
-    "description": "Latihan pembagian dasar bilangan kecil",
+    "title": "Mengenal Pecahan Dasar",
+    "description": "Memahami pecahan sebagai bagian dari keseluruhan",
     "level": 1,
     "class": 3,
     "duration": 30,
     "questions": [
       {
-        "question": "8 ÷ 4 = ?",
+        "question": "Setengah ditulis sebagai?",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/2", "isCorrect": true },
+          { "option": "2/1", "isCorrect": false },
+          { "option": "2/3", "isCorrect": false }
         ]
       },
       {
-        "question": "6 ÷ 3 = ?",
+        "question": "Jika sebuah kue dibagi menjadi 2 bagian sama, satu bagian disebut?",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Sepertiga", "isCorrect": false },
+          { "option": "Setengah", "isCorrect": true },
+          { "option": "Seperempat", "isCorrect": false },
+          { "option": "Satu utuh", "isCorrect": false }
         ]
       },
       {
-        "question": "10 ÷ 2 = ?",
+        "question": "Pecahan dari satu buah apel yang dibagi menjadi 4 bagian adalah?",
         "options": [
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": true },
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": false }
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1/4", "isCorrect": true },
+          { "option": "2/4", "isCorrect": false },
+          { "option": "4/1", "isCorrect": false }
         ]
       },
       {
-        "question": "12 ÷ 6 = ?",
+        "question": "Jika satu pizza dibagi 4 sama besar, setiap bagian adalah?",
         "options": [
-          { "option": "1", "isCorrect": false },
-          { "option": "2", "isCorrect": true },
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": false }
+          { "option": "Seperempat", "isCorrect": true },
+          { "option": "Setengah", "isCorrect": false },
+          { "option": "Sepertiga", "isCorrect": false },
+          { "option": "Satu utuh", "isCorrect": false }
         ]
       },
       {
-        "question": "9 ÷ 3 = ?",
+        "question": "1/2 dibaca?",
         "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false }
+          { "option": "Satu per dua", "isCorrect": true },
+          { "option": "Dua per satu", "isCorrect": false },
+          { "option": "Satu per tiga", "isCorrect": false },
+          { "option": "Dua per tiga", "isCorrect": false }
+        ]
+      },
+
+      {
+        "question": "Pecahan menunjukkan?",
+        "options": [
+          { "option": "Jumlah benda", "isCorrect": false },
+          { "option": "Bagian dari keseluruhan", "isCorrect": true },
+          { "option": "Ukuran berat", "isCorrect": false },
+          { "option": "Waktu", "isCorrect": false }
         ]
       },
       {
-        "question": "14 ÷ 2 = ?",
+        "question": "Jika roti dibagi menjadi 2 bagian sama besar, maka satu bagian adalah?",
         "options": [
-          { "option": "6", "isCorrect": false },
-          { "option": "7", "isCorrect": true },
-          { "option": "8", "isCorrect": false },
-          { "option": "9", "isCorrect": false }
+          { "option": "1/2", "isCorrect": true },
+          { "option": "1/3", "isCorrect": false },
+          { "option": "1/4", "isCorrect": false },
+          { "option": "2/2", "isCorrect": false }
         ]
       },
       {
-        "question": "15 ÷ 5 = ?",
+        "question": "Pecahan yang menunjukkan satu bagian dari empat adalah?",
         "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false }
+          { "option": "1/4", "isCorrect": true },
+          { "option": "1/2", "isCorrect": false },
+          { "option": "2/4", "isCorrect": false },
+          { "option": "4/1", "isCorrect": false }
         ]
       },
       {
-        "question": "16 ÷ 4 = ?",
+        "question": "Gambar lingkaran dibagi dua sama besar menunjukkan?",
         "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
+          { "option": "Setengah", "isCorrect": true },
+          { "option": "Sepertiga", "isCorrect": false },
+          { "option": "Seperempat", "isCorrect": false },
+          { "option": "Satu utuh", "isCorrect": false }
         ]
       },
       {
-        "question": "18 ÷ 6 = ?",
+        "question": "1 buah kue utuh ditulis sebagai?",
         "options": [
-          { "option": "2", "isCorrect": false },
-          { "option": "3", "isCorrect": true },
-          { "option": "4", "isCorrect": false },
-          { "option": "5", "isCorrect": false }
-        ]
-      },
-      {
-        "question": "20 ÷ 5 = ?",
-        "options": [
-          { "option": "3", "isCorrect": false },
-          { "option": "4", "isCorrect": true },
-          { "option": "5", "isCorrect": false },
-          { "option": "6", "isCorrect": false }
+          { "option": "1/2", "isCorrect": false },
+          { "option": "1", "isCorrect": true },
+          { "option": "1/4", "isCorrect": false },
+          { "option": "2/1", "isCorrect": false }
         ]
       }
     ]
