@@ -1,3 +1,29 @@
+/**
+ * Quiz Validation Schemas
+ *
+ * Kumpulan Zod schemas untuk validasi data quiz, question, dan option.
+ * Menyediakan type-safe validation dengan error messages yang informatif.
+ *
+ * Schemas:
+ * - quizOptionSchema: Validasi untuk pilihan jawaban
+ * - quizQuestionSchema: Validasi untuk soal dengan multiple options
+ * - quizSchema: Validasi untuk quiz lengkap
+ * - createQuizSchema: Schema untuk create quiz (tanpa ID)
+ * - updateQuizSchema: Schema untuk update quiz
+ * - quizQuerySchema: Schema untuk query parameters
+ *
+ * Validation Rules:
+ * - Option: Max 500 chars, required text
+ * - Question: Max 1000 chars, 2-6 options, exactly 1 correct answer
+ * - Quiz: Max 200 chars title, 1-50 questions, duration 1-300 minutes
+ * - Unique options per question
+ * - Required fields validation
+ *
+ * Usage:
+ * const validatedData = createQuizSchema.parse(requestBody);
+ * const queryParams = quizQuerySchema.parse(searchParams);
+ */
+
 import { z } from 'zod';
 
 // Quiz Option Schema

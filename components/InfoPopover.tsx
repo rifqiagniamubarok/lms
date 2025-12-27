@@ -1,3 +1,31 @@
+/**
+ * Info Popover Component
+ *
+ * Komponen popover informatif yang menampilkan deskripsi atau bantuan
+ * dalam bentuk tooltip yang dapat diklik.
+ *
+ * Features:
+ * - Toggle visibility dengan click
+ * - Icon info yang menarik dengan styling custom
+ * - Popover positioning yang responsive
+ * - Close button di dalam popover
+ * - Smooth animation (fade-in)
+ * - Z-index tinggi untuk overlay
+ *
+ * Props:
+ * - description: string - Text yang ditampilkan dalam popover
+ *
+ * Styling:
+ * - Icon: Blue color dengan hover effects
+ * - Popover: White background dengan shadow dan border
+ * - Positioning: Centered below the icon
+ * - Animation: Fade-in effect
+ *
+ * Usage:
+ * Digunakan untuk memberikan informasi tambahan atau bantuan
+ * pada elemen UI, terutama untuk grafik atau data kompleks.
+ */
+
 import React from 'react';
 
 export function InfoPopover({ description }: { description: string }) {

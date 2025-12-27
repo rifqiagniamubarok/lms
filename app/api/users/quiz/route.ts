@@ -1,3 +1,23 @@
+/**
+ * API Quiz Users
+ *
+ * Endpoint ini digunakan untuk mengambil daftar quiz yang tersedia
+ * untuk user berdasarkan kelas dan level mereka.
+ *
+ * Method: GET
+ * Route: /api/users/quiz
+ * Authentication: Requires User Login
+ *
+ * Query Parameters:
+ * - page: number (default: 1) - Halaman untuk pagination
+ * - limit: number (default: 10) - Jumlah data per halaman
+ *
+ * Response:
+ * - quizzes: Array quiz yang sesuai dengan kelas dan level user
+ * - pagination: Info pagination
+ * - userStats: Statistik progress user
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

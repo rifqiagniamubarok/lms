@@ -1,3 +1,27 @@
+/**
+ * API Quiz Answer Key
+ *
+ * Endpoint ini digunakan untuk mengambil kunci jawaban quiz.
+ * Biasanya digunakan untuk review setelah quiz selesai dikerjakan.
+ *
+ * Method: GET
+ * Route: /api/users/quiz/[id]/key
+ * Authentication: Requires User Login
+ *
+ * Params:
+ * - id: string - ID quiz
+ *
+ * Response:
+ * - questions: Array soal dengan jawaban yang benar
+ *   - question: Teks soal
+ *   - options: Pilihan jawaban
+ *   - correctAnswer: Jawaban yang benar
+ *   - explanation: Penjelasan jawaban (jika ada)
+ *
+ * Note: Endpoint ini hanya mengembalikan kunci jawaban,
+ * tidak menampilkan jawaban user atau skor.
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

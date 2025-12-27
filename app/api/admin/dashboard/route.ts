@@ -1,3 +1,27 @@
+/**
+ * API Dashboard Admin
+ *
+ * Endpoint ini digunakan untuk mengambil data statistik dan analytics
+ * yang ditampilkan di dashboard admin.
+ *
+ * Method: GET
+ * Route: /api/admin/dashboard
+ * Authentication: Requires Admin
+ *
+ * Response Data:
+ * - totalStudents: Total jumlah siswa
+ * - totalQuizzes: Total quiz yang sudah published
+ * - totalClasses: Total kelas
+ * - totalLevels: Total level
+ * - classStats: Statistik per kelas
+ * - levelStats: Statistik per level
+ * - quizStats: Statistik quiz
+ * - recentStudents: Siswa terbaru
+ * - needAttentionStudents: Siswa yang perlu perhatian
+ * - completionStats: Statistik penyelesaian
+ * - quizCompletionHistory: Riwayat penyelesaian quiz
+ */
+
 import { handleAuthAdmin } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

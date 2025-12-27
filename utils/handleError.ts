@@ -1,3 +1,29 @@
+/**
+ * Error Handler Utility
+ *
+ * Central error handling function untuk semua API routes.
+ * Menangani berbagai tipe error dan mengembalikan response yang konsisten.
+ *
+ * Error Types Handled:
+ * - ResponseError: Custom error dengan status dan message
+ * - ZodError: Validation errors dari Zod schema
+ * - Unknown errors: Fallback untuk unexpected errors
+ *
+ * Response Format:
+ * - success: boolean (always false for errors)
+ * - message: string (user-friendly error message)
+ * - errors: array (detailed error information)
+ *
+ * Status Codes:
+ * - ResponseError: Uses custom status code
+ * - ZodError: 400 (Bad Request)
+ * - Unknown: 500 (Internal Server Error)
+ *
+ * Usage:
+ * Import dan gunakan di catch blocks pada semua API routes
+ * untuk consistent error handling dan response format.
+ */
+
 import ResponseError from './ResponseError';
 import { NextResponse } from 'next/server';
 import { ZodError } from 'zod';

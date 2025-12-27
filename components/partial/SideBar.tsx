@@ -1,3 +1,35 @@
+/**
+ * Admin Sidebar Navigation Component
+ *
+ * Komponen navigasi sidebar untuk admin dashboard dengan menu navigasi
+ * dan user profile management.
+ *
+ * Features:
+ * - Logo aplikasi (Mathzy) dengan branding
+ * - Menu navigasi dengan icons (Dashboard, Siswa, Bank Soal, Profil)
+ * - Active state highlighting berdasarkan current route
+ * - User profile dropdown dengan session data
+ * - Logout functionality dengan redirect ke login
+ * - Responsive design dengan fixed width
+ *
+ * Navigation Items:
+ * - Dashboard (/dashboard): Overview dan statistik
+ * - Siswa (/student): Student management
+ * - Bank Soal (/quiz): Quiz management
+ * - Profil (/Profile): Admin profile settings
+ *
+ * State Management:
+ * - pathname: Current route untuk active state
+ * - session: User session data dari NextAuth
+ * - router: Navigation control
+ *
+ * Styling:
+ * - Fixed width (w-64)
+ * - White background dengan border
+ * - Full height (h-screen)
+ * - Hover effects pada menu items
+ */
+
 'use client';
 
 import React from 'react';

@@ -1,3 +1,23 @@
+/**
+ * API Register User
+ *
+ * Endpoint ini digunakan untuk mendaftarkan user (siswa) baru ke dalam sistem.
+ *
+ * Method: POST
+ * Route: /api/users/auth/register
+ *
+ * Body:
+ * - name: string (minimal 3 karakter) - Nama lengkap siswa
+ * - username: string (minimal 3 karakter) - Username untuk login
+ * - classId: number - ID kelas yang akan diikuti
+ * - email: string (optional) - Email siswa
+ * - password: string (minimal 6 karakter) - Password untuk login
+ *
+ * Response:
+ * - Success: Data user baru yang telah terdaftar
+ * - Error: 400 jika data tidak valid, 409 jika username sudah digunakan
+ */
+
 import { hashPassword } from '@/utils/encryption';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

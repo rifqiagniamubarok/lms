@@ -1,3 +1,23 @@
+/**
+ * API Home Dashboard Users
+ *
+ * Endpoint ini digunakan untuk mengambil data yang ditampilkan
+ * di halaman home/dashboard user setelah login.
+ *
+ * Method: GET
+ * Route: /api/users/home
+ * Authentication: Requires User Login
+ *
+ * Response:
+ * - user: Data user dengan level dan statistik
+ * - availableQuizzes: Quiz yang tersedia untuk dikerjakan
+ * - completedQuizzes: Quiz yang sudah selesai dikerjakan
+ * - totalExp: Total experience points
+ * - badges: Badges yang sudah diraih
+ * - progress: Progress pembelajaran per level
+ * - recommendations: Rekomendasi quiz selanjutnya
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

@@ -1,3 +1,26 @@
+/**
+ * API Start Quiz
+ *
+ * Endpoint ini digunakan untuk memulai quiz. Sistem akan membuat sesi quiz baru
+ * dan mengacak urutan soal dan pilihan jawaban.
+ *
+ * Method: POST
+ * Route: /api/users/quiz/[id]/start
+ * Authentication: Requires User Login
+ *
+ * Params:
+ * - id: string - ID quiz yang akan dimulai
+ *
+ * Response:
+ * - quizSession: Data sesi quiz yang baru dibuat
+ * - questions: Soal-soal quiz yang sudah diacak
+ * - timeLimit: Batas waktu pengerjaan
+ * - startTime: Waktu mulai quiz
+ * - endTime: Waktu batas akhir pengerjaan
+ *
+ * Error: 404 jika quiz tidak ditemukan, 403 jika tidak memiliki akses
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

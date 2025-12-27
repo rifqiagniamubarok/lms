@@ -1,3 +1,22 @@
+/**
+ * API Login User
+ *
+ * Endpoint ini digunakan untuk melakukan autentikasi login user (siswa).
+ * User dapat login menggunakan username dan password, dengan opsi "remember me".
+ *
+ * Method: POST
+ * Route: /api/users/auth/login
+ *
+ * Body:
+ * - username: string (minimal 3 karakter)
+ * - password: string (minimal 6 karakter)
+ * - isRemember: boolean (optional) - untuk menyimpan sesi login lebih lama
+ *
+ * Response:
+ * - Success: User data dengan token JWT
+ * - Error: 404 jika user tidak ditemukan, 401 jika password salah
+ */
+
 import { comparePassword, generateToken, hashPassword } from '@/utils/encryption';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

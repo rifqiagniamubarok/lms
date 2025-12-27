@@ -1,3 +1,24 @@
+/**
+ * API Notification User
+ *
+ * Endpoint ini digunakan untuk mengambil daftar notifikasi user
+ * dengan fitur pagination dan mark as read.
+ *
+ * Method: GET - Mengambil daftar notifikasi
+ * Method: PUT - Menandai notifikasi sebagai sudah dibaca
+ * Route: /api/users/notification
+ * Authentication: Requires User Login
+ *
+ * Query Parameters (GET):
+ * - page: number (default: 1) - Halaman untuk pagination
+ * - limit: number (default: 10) - Jumlah notifikasi per halaman
+ *
+ * Response (GET):
+ * - notifications: Array notifikasi user
+ * - pagination: Info pagination
+ * - unreadCount: Jumlah notifikasi yang belum dibaca
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

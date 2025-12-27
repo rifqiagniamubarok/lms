@@ -1,3 +1,21 @@
+/**
+ * Encryption & Authentication Utilities
+ *
+ * Kumpulan fungsi utilitas untuk enkripsi password dan manajemen JWT token.
+ * Menggunakan bcrypt untuk hashing password dan jsonwebtoken untuk token generation.
+ *
+ * Features:
+ * - Password hashing dengan bcrypt (SALT_ROUNDS = 12)
+ * - Password comparison untuk login verification
+ * - JWT token generation dengan expiration
+ * - JWT token verification dan decoding
+ *
+ * Security:
+ * - Salt rounds tinggi (12) untuk security optimal
+ * - JWT secret dari environment variables
+ * - Error handling untuk token verification
+ */
+
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 

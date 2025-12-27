@@ -1,3 +1,42 @@
+/**
+ * Admin Student Management Page
+ *
+ * Halaman untuk melihat dan mengelola data siswa dengan fitur filtering
+ * dan navigasi ke detail siswa.
+ *
+ * Features:
+ * - Tabel siswa dengan pagination
+ * - Search siswa berdasarkan nama
+ * - Filter berdasarkan level dan kelas
+ * - Class statistics overview
+ * - Student performance indicators (EXP, Average Score, Status)
+ * - Navigation ke detail siswa
+ * - Color-coded performance status
+ *
+ * Data Structure:
+ * - Student interface dengan class, level, dan performance data
+ * - Pagination untuk navigasi data
+ * - ClassStat untuk statistik distribusi siswa
+ *
+ * Table Columns:
+ * - Name, Class, Level, EXP Progress, Average Score, Performance Status
+ *
+ * State Management:
+ * - students: Array data siswa dari API
+ * - classStats: Statistik distribusi kelas
+ * - pagination: Data pagination
+ * - filters: Search, level, dan class filters
+ * - loading: Loading state
+ *
+ * Performance Status:
+ * - Excellent: Average score >= 90
+ * - Good: Average score >= KKM
+ * - Need Attention: Average score < KKM
+ *
+ * API Integration:
+ * - GET /api/admin/student: Fetch siswa dengan pagination dan filter
+ */
+
 'use client';
 
 import DashboardLayout from '@/components/layout/DashboardLayout';

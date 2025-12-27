@@ -1,3 +1,35 @@
+/**
+ * NextAuth Configuration
+ *
+ * Konfigurasi autentikasi menggunakan NextAuth v5 dengan custom credentials provider.
+ * Menghandle login admin dengan email/password authentication.
+ *
+ * Features:
+ * - Custom credentials provider dengan database validation
+ * - Email dan password authentication
+ * - Session management dengan JWT
+ * - Type extensions untuk User dan Session
+ * - Password verification dengan bcrypt
+ *
+ * Providers:
+ * - Credentials: Email + password login untuk admin
+ *
+ * Database Integration:
+ * - Menggunakan Prisma untuk query admin data
+ * - Password comparison dengan bcrypt
+ * - User validation dan error handling
+ *
+ * Session Configuration:
+ * - JWT-based sessions
+ * - User ID included dalam session
+ * - Custom session dan user types
+ *
+ * Security:
+ * - Password tidak disimpan dalam session
+ * - Bcrypt password verification
+ * - Secure session management
+ */
+
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { prisma } from './utils/prisma';

@@ -1,3 +1,28 @@
+/**
+ * API Admin Student Detail Management
+ *
+ * Endpoint ini digunakan untuk melihat detail lengkap siswa tertentu
+ * beserta statistik dan riwayat pembelajaran mereka.
+ *
+ * Method: GET - Mengambil detail siswa
+ * Route: /api/admin/student/[id]
+ * Authentication: Requires Admin
+ *
+ * Params:
+ * - id: string - ID siswa
+ *
+ * Response:
+ * - student: Data lengkap siswa (profile, level, class)
+ * - statistics: Statistik pembelajaran siswa
+ *   - totalQuizzesCompleted: Total quiz yang sudah dikerjakan
+ *   - averageScore: Rata-rata skor
+ *   - totalExp: Total experience points
+ *   - badgesEarned: Jumlah badge yang diraih
+ * - recentActivities: Aktivitas terbaru siswa
+ * - quizHistory: Riwayat quiz yang pernah dikerjakan
+ * - progress: Progress pembelajaran per level
+ */
+
 import { handleAuthAdmin } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

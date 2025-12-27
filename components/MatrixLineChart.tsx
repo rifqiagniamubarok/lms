@@ -1,3 +1,33 @@
+/**
+ * Matrix Line Chart Component
+ *
+ * Komponen chart untuk memvisualisasikan data matriks dalam bentuk line chart
+ * menggunakan Chart.js dan react-chartjs-2.
+ *
+ * Features:
+ * - Multi-line chart dengan berbagai kelas sebagai series
+ * - Color palette yang konsisten dengan dashboard theme
+ * - Responsive design dengan hover effects
+ * - Smooth line curves dengan tension
+ * - Custom point styling
+ *
+ * Props:
+ * - matrix: Array data dengan struktur:
+ *   - levelId: ID level
+ *   - levelName: Nama level (untuk x-axis labels)
+ *   - data: Array data per kelas dengan count
+ *
+ * Chart Configuration:
+ * - X-axis: Level names
+ * - Y-axis: Count values
+ * - Multiple lines: Satu line per kelas
+ * - Colors: Blue, green, purple theme palette
+ *
+ * Usage:
+ * Digunakan di dashboard admin untuk menampilkan distribusi
+ * siswa atau quiz completion across levels dan classes.
+ */
+
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';

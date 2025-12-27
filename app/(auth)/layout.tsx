@@ -1,3 +1,28 @@
+/**
+ * Authentication Layout Component
+ *
+ * Layout khusus untuk halaman-halaman autentikasi (login, register).
+ *
+ * Fungsi:
+ * - Cek session aktif: jika user sudah login, redirect ke dashboard
+ * - Menyediakan background gradient yang menarik untuk halaman auth
+ * - Layout centered untuk form login/register
+ * - Responsive design dengan padding yang sesuai
+ *
+ * Props:
+ * - children: React.ReactNode - Halaman auth yang akan dirender (login/register)
+ *
+ * Flow:
+ * 1. Cek session dengan auth()
+ * 2. Jika sudah login -> redirect ke /dashboard
+ * 3. Jika belum login -> tampilkan halaman auth dengan styling khusus
+ *
+ * Styling:
+ * - Full height screen dengan gradient background
+ * - Centered content
+ * - Responsive padding
+ */
+
 import { auth } from '@/auth';
 import { redirect } from 'next/navigation';
 import React from 'react';

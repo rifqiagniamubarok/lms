@@ -1,3 +1,23 @@
+/**
+ * Authentication Handler Utilities
+ *
+ * Kumpulan fungsi untuk menangani autentikasi dan autorisasi
+ * dalam API routes dengan berbagai metode authentication.
+ *
+ * Functions:
+ * - handleAuth: Verifikasi JWT token dari header Authorization
+ * - handleAuthAdmin: Verifikasi session admin menggunakan NextAuth
+ * - handleDecode: Helper untuk decode token data
+ *
+ * Usage:
+ * - User APIs menggunakan handleAuth dengan Bearer token
+ * - Admin APIs menggunakan handleAuthAdmin dengan NextAuth session
+ *
+ * Error Handling:
+ * - Throw ResponseError dengan status 401 jika unauthorized
+ * - Automatic token verification dan validation
+ */
+
 import { auth } from '@/auth';
 import { verifyToken } from './encryption';
 import ResponseError from './ResponseError';

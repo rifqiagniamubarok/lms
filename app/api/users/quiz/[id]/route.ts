@@ -1,3 +1,25 @@
+/**
+ * API Quiz Detail by ID
+ *
+ * Endpoint ini digunakan untuk mengambil detail quiz tertentu beserta
+ * status pengerjaan user dan informasi quiz session yang sedang berjalan.
+ *
+ * Method: GET
+ * Route: /api/users/quiz/[id]
+ * Authentication: Requires User Login
+ *
+ * Params:
+ * - id: string - ID quiz yang ingin diambil detailnya
+ *
+ * Response:
+ * - quiz: Detail quiz (title, description, timeLimit, questions count)
+ * - userQuizStatus: Status pengerjaan user (NOT_STARTED, IN_PROGRESS, COMPLETED)
+ * - currentSession: Info sesi quiz yang sedang berjalan (jika ada)
+ * - remainingTime: Sisa waktu pengerjaan (jika sedang mengerjakan)
+ * - canStart: Boolean apakah user bisa memulai quiz
+ * - results: Hasil quiz jika sudah selesai
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

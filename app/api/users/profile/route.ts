@@ -1,3 +1,25 @@
+/**
+ * API Profile Users
+ *
+ * Endpoint ini digunakan untuk mengambil dan mengupdate data profile user.
+ *
+ * Method: GET - Mengambil data profile user
+ * Method: PUT - Mengupdate data profile user
+ * Route: /api/users/profile
+ * Authentication: Requires User Login
+ *
+ * GET Response:
+ * - user: Data user lengkap dengan level dan badges
+ * - quizStats: Statistik quiz user
+ * - achievements: Pencapaian dan badges user
+ *
+ * PUT Body:
+ * - name: string - Nama user
+ * - email: string - Email user
+ * - phone: string - Nomor telepon
+ * - bio: string - Bio/deskripsi user
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

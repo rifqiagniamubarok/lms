@@ -1,3 +1,27 @@
+/**
+ * API Reset/Refresh Authentication Token
+ *
+ * Endpoint ini digunakan untuk me-refresh atau reset token autentikasi user
+ * ketika token lama hampir expired atau perlu diperbarui.
+ *
+ * Method: POST
+ * Route: /api/users/auth/login/reset-token
+ * Authentication: Requires valid current token
+ *
+ * Body:
+ * - username: string (minimal 3 karakter) - Username user
+ * - currentToken: string (minimal 10 karakter) - Token yang sedang aktif
+ *
+ * Response:
+ * - Success: Token baru dengan expired time yang diperpanjang
+ * - Error: 401 jika token tidak valid, 404 jika user tidak ditemukan
+ *
+ * Use Case:
+ * - Memperpanjang sesi login tanpa perlu login ulang
+ * - Refresh token sebelum expired
+ * - Mempertahankan state "remember me"
+ */
+
 import { comparePassword, generateToken, hashPassword, verifyToken } from '@/utils/encryption';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

@@ -1,3 +1,31 @@
+/**
+ * API Submit Quiz Answer
+ *
+ * Endpoint ini digunakan untuk mengirim jawaban quiz dan menghitung skor.
+ * Sistem akan memvalidasi jawaban, menghitung skor, memberikan EXP, dan badge.
+ *
+ * Method: POST
+ * Route: /api/users/quiz/[id]/answer
+ * Authentication: Requires User Login
+ *
+ * Params:
+ * - id: string - ID quiz
+ *
+ * Body:
+ * - answer: Array jawaban dengan format:
+ *   - questionId: number - ID soal
+ *   - selectedOptionId: number - ID pilihan jawaban
+ *
+ * Response:
+ * - score: Skor yang diperoleh
+ * - totalQuestions: Total soal
+ * - correctAnswers: Jumlah jawaban benar
+ * - isPassed: Status lulus atau tidak (berdasarkan KKM)
+ * - expGained: EXP yang didapat
+ * - badgesEarned: Badge baru yang didapat
+ * - nextLevel: Info level selanjutnya jika naik level
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

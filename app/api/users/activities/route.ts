@@ -1,3 +1,26 @@
+/**
+ * API User Activities Log
+ *
+ * Endpoint ini digunakan untuk mengambil riwayat aktivitas user
+ * seperti quiz yang dikerjakan, level up, badge yang diraih, dll.
+ *
+ * Method: GET
+ * Route: /api/users/activities
+ * Authentication: Requires User Login
+ *
+ * Query Parameters:
+ * - page: number (default: 1) - Halaman untuk pagination
+ * - limit: number (default: 10) - Jumlah aktivitas per halaman
+ *
+ * Response:
+ * - activities: Array aktivitas user dengan timestamp
+ *   - type: Jenis aktivitas (QUIZ_COMPLETED, LEVEL_UP, BADGE_EARNED, dll)
+ *   - description: Deskripsi aktivitas
+ *   - createdAt: Waktu aktivitas
+ *   - metadata: Data tambahan terkait aktivitas
+ * - pagination: Info pagination
+ */
+
 import { handleAuth } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

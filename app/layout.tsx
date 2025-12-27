@@ -1,3 +1,25 @@
+/**
+ * Root Layout Component
+ *
+ * Layout utama aplikasi yang membungkus semua halaman dan menyediakan:
+ * - Konfigurasi font (Geist Sans & Geist Mono)
+ * - Global CSS styling
+ * - AuthProvider untuk manajemen autentikasi
+ * - MainLayout sebagai wrapper UI utama
+ * - Metadata aplikasi (title, description)
+ *
+ * Component ini akan dirender pada setiap halaman dalam aplikasi.
+ *
+ * Props:
+ * - children: React.ReactNode - Konten halaman yang akan dirender
+ *
+ * Features:
+ * - Font optimization dengan next/font/google
+ * - Session management melalui AuthProvider
+ * - Responsive layout melalui MainLayout
+ * - Anti-aliased text rendering
+ */
+
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 

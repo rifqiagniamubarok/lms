@@ -1,3 +1,26 @@
+/**
+ * API Admin Student Management
+ *
+ * Endpoint ini digunakan untuk manajemen data siswa oleh admin.
+ * Admin dapat melihat daftar siswa dengan berbagai filter dan pagination.
+ *
+ * Method: GET - Mengambil daftar siswa
+ * Route: /api/admin/student
+ * Authentication: Requires Admin
+ *
+ * Query Parameters:
+ * - page: number (default: 1) - Halaman untuk pagination
+ * - limit: number (default: 10, max: 100) - Jumlah siswa per halaman
+ * - search: string - Pencarian berdasarkan nama atau username
+ * - levelId: number - Filter berdasarkan level
+ * - classId: number - Filter berdasarkan kelas
+ *
+ * Response:
+ * - students: Array data siswa dengan info level, kelas, dan statistik
+ * - pagination: Info pagination (total, hasNext, hasPrev)
+ * - summary: Ringkasan statistik siswa
+ */
+
 import { handleAuth, handleAuthAdmin } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

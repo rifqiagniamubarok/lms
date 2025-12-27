@@ -1,3 +1,27 @@
+/**
+ * API Admin Profile Management
+ *
+ * Endpoint ini digunakan untuk mengambil dan mengupdate profile admin.
+ *
+ * Method: GET - Mengambil data profile admin
+ * Method: PUT - Mengupdate data profile admin
+ * Route: /api/admin/profile
+ * Authentication: Requires Admin
+ *
+ * GET Response:
+ * - admin: Data profile admin (name, email, phone, bio)
+ *
+ * PUT Body:
+ * - name: string - Nama admin
+ * - email: string - Email admin
+ * - phone: string - Nomor telepon admin
+ * - bio: string - Bio/deskripsi admin
+ *
+ * Response:
+ * - Success: Data admin yang telah diupdate
+ * - Error: 400 jika data tidak valid, 404 jika admin tidak ditemukan
+ */
+
 import { handleAuthAdmin } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

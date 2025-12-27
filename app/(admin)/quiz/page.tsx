@@ -1,3 +1,38 @@
+/**
+ * Admin Quiz Management Page
+ *
+ * Halaman untuk manajemen quiz oleh admin dengan fitur CRUD lengkap.
+ *
+ * Features:
+ * - Tabel quiz dengan pagination dan filtering
+ * - Search quiz berdasarkan title
+ * - Filter berdasarkan level, class, dan status
+ * - Actions: View, Edit, Delete quiz
+ * - Create new quiz dengan navigasi ke /quiz/new
+ * - Status management (Draft/Published)
+ * - Real-time data fetching dengan loading states
+ * - Modal konfirmasi untuk delete
+ *
+ * Data Structure:
+ * - Quiz interface dengan level, class, dan question count
+ * - Pagination data untuk navigasi
+ * - Filter states untuk pencarian
+ *
+ * Table Columns:
+ * - Title, Level, Class, Questions, Status, Created Date, Actions
+ *
+ * State Management:
+ * - quizzes: Array data quiz dari API
+ * - pagination: Data pagination
+ * - filters: Search dan filter states
+ * - loading: Loading states untuk berbagai operasi
+ * - selectedQuiz: Quiz yang dipilih untuk delete
+ *
+ * API Integration:
+ * - GET /api/admin/quiz: Fetch quiz dengan pagination dan filter
+ * - DELETE /api/admin/quiz/[id]: Delete quiz
+ */
+
 'use client';
 
 import React, { useState, useEffect } from 'react';

@@ -1,3 +1,34 @@
+/**
+ * Admin Dashboard Navbar Component
+ *
+ * Komponen navbar untuk halaman admin dashboard yang menampilkan
+ * title halaman dan informasi tambahan.
+ *
+ * Features:
+ * - Dynamic title berdasarkan prop
+ * - Optional description/breadcrumb
+ * - Current date display dengan format Indonesia
+ * - Clean dan minimal design
+ * - Responsive layout dengan flexbox
+ *
+ * Props:
+ * - title: string - Judul halaman yang ditampilkan
+ * - description?: string - Deskripsi atau breadcrumb (optional)
+ *
+ * Layout Structure:
+ * - Left: Title dan description
+ * - Right: Date chip dan future notification area
+ *
+ * Styling:
+ * - White background dengan bottom border
+ * - Fixed height (h-16)
+ * - Full width dengan padding
+ *
+ * Note:
+ * - Notification area tersedia tapi di-comment untuk implementasi future
+ * - Menggunakan HeroUI Navbar component sebagai base
+ */
+
 'use client';
 
 import React from 'react';

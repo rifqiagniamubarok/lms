@@ -1,3 +1,34 @@
+/**
+ * Admin Profile Page
+ *
+ * Halaman profil admin untuk melihat dan mengedit data personal admin.
+ *
+ * Features:
+ * - Tampilan profil lengkap (name, email, phone)
+ * - Modal edit profil dengan validation
+ * - Modal ubah password dengan konfirmasi
+ * - Real-time success/error feedback
+ * - Loading states untuk semua operasi
+ * - Session management dan redirect jika unauthorized
+ *
+ * State Management:
+ * - profileData: Data profil admin dari API
+ * - profileForm: Form state untuk edit profil
+ * - passwordForm: Form state untuk ubah password
+ * - loading states untuk setiap operasi
+ * - messages untuk feedback success/error
+ *
+ * Modals:
+ * - Edit Profile Modal: Update name, email, phone
+ * - Change Password Modal: Update password dengan validasi
+ *
+ * Flow:
+ * 1. Fetch data profil dari /api/admin/profile
+ * 2. Tampilkan data dalam cards
+ * 3. Edit profil -> submit ke API -> update UI
+ * 4. Ubah password -> validasi -> submit -> feedback
+ */
+
 'use client';
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import React, { useEffect, useState } from 'react';

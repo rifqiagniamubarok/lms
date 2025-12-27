@@ -1,3 +1,29 @@
+/**
+ * API Student Learning Journey
+ *
+ * Endpoint ini digunakan untuk melihat perjalanan pembelajaran (learning journey)
+ * siswa secara detail dan kronologis.
+ *
+ * Method: GET
+ * Route: /api/admin/student/[id]/journey
+ * Authentication: Requires Admin
+ *
+ * Params:
+ * - id: string - ID siswa
+ *
+ * Response:
+ * - journey: Timeline perjalanan pembelajaran siswa
+ *   - quizCompletions: Riwayat penyelesaian quiz dengan timestamp
+ *   - levelProgression: Riwayat naik level
+ *   - badgeAchievements: Riwayat pencapaian badge
+ *   - skillDevelopment: Perkembangan kemampuan per topik
+ * - statistics: Statistik pembelajaran
+ *   - learningVelocity: Kecepatan pembelajaran
+ *   - consistencyScore: Skor konsistensi belajar
+ *   - improvementTrend: Tren peningkatan
+ * - milestones: Milestone penting dalam pembelajaran
+ */
+
 import { handleAuthAdmin } from '@/utils/handleAuth';
 import handleError from '@/utils/handleError';
 import { prisma } from '@/utils/prisma';

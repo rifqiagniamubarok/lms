@@ -1,3 +1,31 @@
+/**
+ * API Admin Quiz Detail Management
+ *
+ * Endpoint ini digunakan untuk manajemen quiz spesifik oleh admin.
+ * Admin dapat melihat, mengupdate, dan menghapus quiz tertentu.
+ *
+ * Method: GET - Mengambil detail quiz lengkap
+ * Method: PUT - Mengupdate quiz
+ * Method: DELETE - Menghapus quiz
+ * Route: /api/admin/quiz/[id]
+ * Authentication: Requires Admin
+ *
+ * Params:
+ * - id: string - ID quiz
+ *
+ * GET Response:
+ * - quiz: Detail lengkap quiz dengan questions dan statistics
+ * - submissions: Jumlah siswa yang sudah mengerjakan
+ * - averageScore: Rata-rata skor
+ * - completionRate: Tingkat penyelesaian
+ *
+ * PUT Body:
+ * - title, description: Info quiz
+ * - questions: Update soal-soal
+ * - timeLimit: Update batas waktu
+ * - status: Update status publish
+ */
+
 import handleError from '@/utils/handleError';
 import { handleAuthAdmin } from '@/utils/handleAuth';
 import { prisma } from '@/utils/prisma';

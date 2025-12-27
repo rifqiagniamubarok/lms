@@ -1,3 +1,29 @@
+/**
+ * API Admin Quiz Management
+ *
+ * Endpoint ini digunakan untuk manajemen quiz oleh admin.
+ * Admin dapat melihat, membuat, dan mengupdate quiz.
+ *
+ * Method: GET - Mengambil daftar quiz dengan filtering
+ * Method: POST - Membuat quiz baru
+ * Method: PUT - Mengupdate quiz existing
+ * Route: /api/admin/quiz
+ * Authentication: Requires Admin
+ *
+ * Query Parameters (GET):
+ * - page, limit: Pagination
+ * - levelId, classId: Filter berdasarkan level/kelas
+ * - status: Filter berdasarkan status (DRAFT/PUBLISHED)
+ * - search: Pencarian berdasarkan title
+ *
+ * Body (POST):
+ * - title, description: Info quiz
+ * - levelId, classId: Target level dan kelas
+ * - questions: Array soal dengan options
+ * - timeLimit: Batas waktu pengerjaan
+ * - status: Status publish
+ */
+
 import handleError from '@/utils/handleError';
 import { handleAuthAdmin } from '@/utils/handleAuth';
 import { prisma } from '@/utils/prisma';

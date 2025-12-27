@@ -1,3 +1,32 @@
+/**
+ * Admin Dashboard Page
+ *
+ * Halaman dashboard utama admin yang menampilkan overview dan statistik
+ * komprehensif tentang sistem LMS.
+ *
+ * Features:
+ * - Overview cards: total students, quizzes, classes, levels
+ * - Class & level distribution statistics
+ * - Recent students list
+ * - Students yang membutuhkan perhatian (low scores)
+ * - Weekly activity chart dengan MatrixLineChart
+ * - Real-time data fetching dan loading states
+ *
+ * Data Structure:
+ * - overview: Statistik umum sistem
+ * - classStats: Distribusi siswa per kelas
+ * - levelStats: Distribusi siswa per level
+ * - quizDistribution: Distribusi quiz
+ * - recentStudents: Siswa terbaru
+ * - needsAttention: Siswa dengan performa rendah
+ * - weeklyActivity: Data aktivitas mingguan untuk chart
+ *
+ * Components:
+ * - DashboardLayout: Wrapper layout dengan header
+ * - MatrixLineChart: Dynamic import untuk chart
+ * - Cards: Menampilkan statistik dengan styling HeroUI
+ */
+
 'use client';
 
 import DashboardLayout from '@/components/layout/DashboardLayout';
