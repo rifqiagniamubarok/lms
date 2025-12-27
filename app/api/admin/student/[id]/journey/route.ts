@@ -48,7 +48,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
           classId: 'asc',
         },
         {
-          levelId: 'asc',
+          level: {
+            order: 'asc',
+          },
         },
       ],
     });
