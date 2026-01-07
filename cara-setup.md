@@ -21,21 +21,6 @@ Sebelum mulai, mari pahami beberapa istilah yang akan sering muncul:
 
 ## 📋 BAGIAN 1: Download & Install Software
 
-### ⚠️ **PENTING: Tentang npm**
-
-**npm TIDAK PERLU didownload terpisah!**
-
-npm (Node Package Manager) **SUDAH OTOMATIS TERINSTALL** ketika Anda install Node.js.
-
-Jadi yang perlu didownload hanya:
-
-1. ✅ **Node.js** → npm ikut terinstall otomatis
-2. ❌ **npm** → TIDAK perlu download terpisah
-
-**Kesimpulan:** Install Node.js = sudah dapat npm secara gratis dan otomatis!
-
----
-
 ### 1. **Node.js** (Wajib) - Sudah Termasuk npm!
 
 **Apa itu Node.js?**  
