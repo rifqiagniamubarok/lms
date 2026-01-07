@@ -1,8 +1,4 @@
-# Panduan Setup Project LMS di Windows (Untuk Pemula)
-
-Panduan lengkap **STEP-BY-STEP** untuk menginstall dan menjalankan project Learning Management System ini di device Windows baru. Panduan ini dibuat untuk orang awam yang belum pernah coding sekalipun.
-
----
+# Panduan Setup
 
 ## ❓ Penjelasan Istilah Penting
 
@@ -2031,25 +2027,3 @@ Project LMS Anda sekarang sudah:
 - ✅ Siap untuk dikembangkan lebih lanjut!
 
 **Repository GitHub baru Anda sekarang seolah-olah adalah project yang Anda buat sendiri dari awal!** Semua history dan commit akan tercatat atas nama akun GitHub baru.
-
-### Kalau Ada Pertanyaan:
-
-1. **Baca ulang panduan ini** (Ctrl+F untuk search keyword)
-2. **Cek section Troubleshooting** untuk error umum
-3. **Lihat documentation** teknologi yang digunakan (link di atas)
-4. **Buat Issue di GitHub repository** untuk bug atau pertanyaan
-5. **Search di Google/Stack Overflow** dengan error message yang muncul
-
-### Support Project:
-
-Jika tutorial ini membantu:
-
-- ⭐ Star repository di GitHub
-- 🍴 Fork dan customize sesuai kebutuhan
-- 📢 Share ke teman-teman yang butuh
-
----
-
-**Happy Coding!** 💻🚀
-
-_Last updated: {{ current_date }}_
