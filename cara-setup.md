@@ -129,115 +129,320 @@ GitHub adalah tempat penyimpanan code secara online, seperti Google Drive tapi k
 
 ---
 
-## 🗄️ BAGIAN 3: Buat Database di Vercel
+## 🗄️ BAGIAN 3: Buat Database di Supabase
 
 **Apa itu Database?**  
-Database adalah tempat penyimpanan data aplikasi, seperti data user, soal quiz, nilai, dll. Kita akan pakai Postgres (jenis database) yang disediakan gratis oleh Vercel.
+Database adalah tempat penyimpanan data aplikasi, seperti data user, soal quiz, nilai, dll. Kita akan pakai PostgreSQL yang disediakan **GRATIS** oleh Supabase.
 
-### Langkah 1: Buat Postgres Database
+**Mengapa Supabase?**
 
-1. **Buka Vercel Dashboard:**
+- ✅ 100% gratis untuk project kecil-menengah
+- ✅ Database PostgreSQL full-featured
+- ✅ 500MB storage gratis
+- ✅ Tidak perlu kartu kredit untuk sign up
+- ✅ Dashboard yang mudah digunakan
+
+### Langkah 1: Buat Akun Supabase
+
+1. **Buka Website Supabase:**
 
    - Buka browser
-   - Ketik: `https://vercel.com/dashboard`
+   - Ketik: `https://supabase.com`
    - Tekan Enter
-   - Login jika diminta
 
-2. **Buka Menu Storage:**
+2. **Sign Up:**
 
-   - Di bagian atas halaman, ada menu:
-     - Overview
-     - **Storage** ← Klik ini!
-     - Domains
-     - Settings
-   - Klik **"Storage"**
+   - Klik tombol **"Start your project"** atau **"Sign Up"**
+   - **Pilihan Sign Up:**
+     - **Continue with GitHub** ← PILIH INI! (Recommended, langsung terintegrasi)
+     - Continue with Google
+     - Continue with Email
+   - Jika pilih GitHub, klik **"Continue with GitHub"**
+   - Authorize Supabase untuk akses GitHub
+   - Anda akan login otomatis
 
-3. **Create Database:**
+3. **Selamat! Akun Supabase Sudah Jadi!**
+   - Anda akan diarahkan ke Dashboard Supabase
 
-   - Akan muncul halaman Storage yang masih kosong
-   - Klik tombol biru **"Create Database"** di tengah halaman
-   - Atau klik tombol **"Create"** di pojok kanan atas
+### Langkah 2: Buat Project Database Baru
 
-4. **Pilih Jenis Database:**
+1. **Create New Project:**
 
-   - Akan muncul beberapa pilihan database:
-     - **Postgres** ← PILIH INI!
-     - KV
-     - Blob
-     - Edge Config
-   - Klik kotak **"Postgres"**
+   - Di Dashboard Supabase, klik tombol **"New Project"**
+   - Atau klik **"+ New project"** di sidebar kiri
 
-5. **Isi Detail Database:**
+2. **Pilih Organization:**
 
-   - **Database Name:** Ketik nama database, misalnya: `lms-database`
-   - **Region:** Pilih region terdekat
-     - Untuk Indonesia: Pilih **"Singapore (sin1)"**
-     - Untuk yang lain sesuaikan dengan lokasi Anda
-   - Klik tombol **"Create"**
+   - Jika ini pertama kali, Supabase akan minta buat organization dulu
+   - Klik **"Create a new organization"**
+   - **Organization name:** Ketik nama (misal: nama Anda atau perusahaan)
+   - **Plan:** Pilih **"Free"** (sudah terpilih)
+   - Klik **"Create organization"**
 
-6. **Tunggu Proses:**
-   - Vercel akan membuat database (biasanya 10-30 detik)
-   - Akan muncul halaman dashboard database
-   - Jika sudah muncul halaman dengan tab-tab (Quickstart, Data, Settings, dll), berarti **BERHASIL!**
+3. **Isi Detail Project:**
 
-### Langkah 2: Dapatkan Connection String (Kode Koneksi Database)
+   **a. Name:**
+
+   - Ketik nama project: `lms-database` atau `learning-management-system`
+   - Nama ini hanya untuk identifikasi di dashboard
+
+   **b. Database Password:**
+
+   - Generate password yang kuat
+   - Klik icon generate (🔄) untuk auto-generate
+   - Atau ketik password sendiri (minimal 12 karakter)
+   - **PENTING: SIMPAN PASSWORD INI!** Copy ke Notepad
+
+   **c. Region:**
+
+   - Pilih region terdekat dengan lokasi Anda:
+     - **Southeast Asia (Singapore)** ← Untuk Indonesia
+     - Northeast Asia (Tokyo)
+     - South Asia (Mumbai)
+     - dll
+
+   **d. Pricing Plan:**
+
+   - Pastikan **"Free"** terpilih (limit 500MB database)
+
+4. **Create Project:**
+   - Klik tombol **"Create new project"**
+   - **Tunggu 1-3 menit** (Supabase sedang setup database)
+   - Progress bar akan muncul
+   - Setelah selesai, dashboard project akan terbuka
+
+### Langkah 3: Dapatkan Connection String (Kode Koneksi Database)
 
 **Apa itu Connection String?**  
 Connection String adalah kode rahasia yang digunakan aplikasi untuk connect ke database. Seperti password WiFi tapi untuk database.
 
-1. **Buka Tab .env.local:**
+1. **Buka Project Settings:**
 
-   - Di halaman database yang baru dibuat, ada beberapa tab di bagian atas:
-     - Quickstart
-     - Data
-     - Settings
-     - **Quickstart** ← Anda sudah di sini
-   - Di bagian bawah ada tab lagi:
-     - **.env.local** ← KLIK INI!
-     - .env.production
-     - prisma
-     - node.js
-     - python
+   - Di dashboard project, klik icon **⚙️ Settings** di sidebar kiri bawah
+   - Atau klik **"Project Settings"** di menu
 
-2. **Copy Connection String:**
-   - Akan muncul kotak dengan code seperti ini:
+2. **Buka Database Settings:**
+
+   - Di sidebar Settings, klik **"Database"**
+   - Scroll ke bagian **"Connection string"**
+
+3. **Pilih Connection String untuk Prisma:**
+
+   - Akan ada beberapa tab:
+     - URI
+     - Nodejs
+     - JDBC
+     - Golang
+     - Python
+   - Klik tab **"URI"**
+
+4. **Copy Connection String:**
+
+   - Akan ada 2 jenis URI:
+     - **Connection pooling** (Session mode)
+     - **Direct connection** (Transaction mode)
+
+   **Kita butuh KEDUA-DUANYA untuk Prisma:**
+
+   **a. Connection Pooling (untuk DATABASE_URL):**
+
+   - Mode: **Session**
+   - Klik untuk reveal/show string
+   - Format:
      ```
-     POSTGRES_URL="postgres://default:xxx@xxx.postgres.vercel-storage.com:5432/verceldb"
-     POSTGRES_PRISMA_URL="postgres://default:xxx@xxx.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15"
-     POSTGRES_URL_NO_SSL="postgres://default:xxx@xxx.postgres.vercel-storage.com:5432/verceldb"
-     POSTGRES_URL_NON_POOLING="postgres://default:xxx@xxx.postgres.vercel-storage.com:5432/verceldb"
-     POSTGRES_USER="default"
-     POSTGRES_HOST="xxx-xxx.postgres.vercel-storage.com"
-     POSTGRES_PASSWORD="xxxxx"
-     POSTGRES_DATABASE="verceldb"
+     postgresql://postgres.xxxxxxxxxxxxx:[YOUR-PASSWORD]@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true
      ```
+   - Klik icon copy (📋) untuk copy
+   - Paste di Notepad, beri label: **DATABASE_URL**
+
+   **b. Direct Connection (untuk DATABASE_DIRECT_URL):**
+
+   - Mode: **Transaction**
+   - Klik untuk reveal/show string
+   - Format:
+     ```
+     postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
+     ```
+   - Klik icon copy
+   - Paste di Notepad, beri label: **DATABASE_DIRECT_URL**
+
+5. **Replace [YOUR-PASSWORD]:**
+
+   - Di kedua connection string, ada placeholder `[YOUR-PASSWORD]`
+   - Ganti dengan password database yang Anda buat tadi
+   - Jangan pakai tanda kurung `[]`
+
+   **Contoh:**
+
+   - Before: `postgres.xxx:[YOUR-PASSWORD]@aws`
+   - After: `postgres.xxx:MyStr0ngP@ssw0rd@aws`
+
+6. **Simpan ke Notepad:**
+
+   - Save file dengan nama: `supabase-credentials.txt`
+   - Simpan di lokasi aman
+   - **JANGAN SHARE FILE INI!** Berisi password database
+
+   **Contoh isi file:**
+
+   ```
+   DATABASE_URL=postgresql://postgres.abcdefghijk:MyStr0ngP@ssw0rd@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true
+
+   DATABASE_DIRECT_URL=postgresql://postgres:MyStr0ngP@ssw0rd@db.abcdefghijk.supabase.co:5432/postgres
+   ```
 
 ---
 
 ## 🚀 BAGIAN 4: Download & Setup Project
 
-### Langkah 1: Import Repository (Seolah-olah Project Baru Buatan Anda)
+### Langkah 1: Clone & Reset Git History (Project Seolah-olah Buatan Anda 100%)
 
-**Apa itu Import Repository?**  
-Import adalah proses menyalin project dari repository lain ke repository baru milik Anda, sehingga seolah-olah Anda yang membuat project dari awal.
+**Tujuan:**  
+Meng-clone project dan **menghapus semua history commit** dari repository asli, sehingga project benar-benar terlihat seperti dibuat dari awal oleh Anda.
 
-**Mengapa Pakai Import, Bukan Fork?**
+**Perbedaan Metode:**
 
-- **Fork:** History commit tetap menunjukkan repository asli
-- **Import:** History commit akan seolah-olah dibuat oleh akun Anda
+- **Fork:** History commit tetap terlihat dari repo asli
+- **Import GitHub:** History masih ada tapi owner berubah
+- **Clone + Reset History (METODE INI):** History commit hilang total, seolah-olah project baru 100%
 
-**Langkah-Langkah Import:**
+**Langkah-Langkah:**
+
+#### A. Clone Repository Asli ke Komputer
+
+1. **Buat Folder untuk Project:**
+
+   - Buka **File Explorer** (Windows + E)
+   - Pergi ke **Documents** atau lokasi lain yang diinginkan
+   - Klik kanan → **"New"** → **"Folder"**
+   - Nama: `Projects` atau `Coding`
+   - Buka folder tersebut
+
+2. **Buka Git Bash:**
+
+   - Klik kanan di dalam folder
+   - Pilih **"Git Bash Here"**
+
+3. **Clone Repository:**
+
+   - Ketik perintah:
+     ```bash
+     git clone https://github.com/rifqiagniamubarok/lms.git
+     ```
+   - Tekan **Enter**
+   - Tunggu download selesai (30-60 detik)
+
+4. **Masuk ke Folder Project:**
+   ```bash
+   cd lms
+   ```
+
+#### B. Reset Git History (Hapus Semua Commit Lama)
+
+**PENTING:** Langkah ini akan **menghapus semua history commit** dari repo asli!
+
+1. **Hapus Folder .git (History Lama):**
+
+   ```bash
+   rm -rf .git
+   ```
+
+   - Perintah ini menghapus semua git history
+   - Sekarang folder `lms` jadi folder biasa (bukan git repo)
+
+2. **Inisialisasi Git Baru:**
+
+   ```bash
+   git init
+   ```
+
+   - Membuat git repository baru dari nol
+   - Output: `Initialized empty Git repository`
+
+3. **Add Semua File:**
+
+   ```bash
+   git add .
+   ```
+
+   - Menambahkan semua file ke staging
+
+4. **Commit Pertama (Sebagai Pembuat Project):**
+   ```bash
+   git commit -m "Initial commit: LMS Project"
+   ```
+   - Ini akan jadi commit PERTAMA dan SATU-SATUNYA
+   - Seolah-olah Anda yang buat project dari awal
+
+#### C. Buat Repository Baru di GitHub
+
+1. **Buka GitHub:**
+
+   - Login ke akun GitHub baru Anda
+   - Klik tombol **"+"** di pojok kanan atas
+   - Pilih **"New repository"**
+
+2. **Isi Detail Repository:**
+
+   - **Repository name:** `lms` (atau nama lain sesuai keinginan)
+   - **Description:** (opsional) "Learning Management System"
+   - **Public** atau **Private** (pilih sesuai kebutuhan)
+   - **JANGAN centang:**
+     - ❌ Add a README file
+     - ❌ Add .gitignore
+     - ❌ Choose a license
+   - (Kita sudah punya semua file dari clone)
+
+3. **Create Repository:**
+   - Klik **"Create repository"**
+   - Akan muncul halaman dengan instruksi
+
+#### D. Push ke Repository Baru Anda
+
+1. **Connect ke Remote Repository:**
+
+   - Copy URL repository baru (format: `https://github.com/username-anda/lms.git`)
+   - Di Git Bash, ketik:
+     ```bash
+     git remote add origin https://github.com/username-anda/lms.git
+     ```
+   - Ganti `username-anda` dengan username GitHub Anda
+
+2. **Rename Branch ke Main:**
+
+   ```bash
+   git branch -M main
+   ```
+
+3. **Push ke GitHub:**
+
+   ```bash
+   git push -u origin main
+   ```
+
+   - Mungkin akan minta login GitHub
+   - Tunggu upload selesai (1-2 menit)
+
+4. **Verifikasi:**
+   - Buka repository di GitHub (`github.com/username-anda/lms`)
+   - Cek tab **"Insights"** → **"Contributors"**
+   - Hanya akan ada **1 contributor: ANDA**
+   - Cek commit history: Hanya ada **1 commit: "Initial commit: LMS Project"**
+   - **BERHASIL!** Project sekarang 100% milik Anda!
+
+---
+
+### Alternatif: Import Repository (Jika Tidak Masalah Ada History)
+
+**Jika Anda tidak masalah history commit masih terlihat**, bisa pakai metode Import yang lebih cepat:
 
 1. **Buka Halaman Import GitHub:**
 
-   - Pastikan sudah login ke akun GitHub baru Anda
-   - Buka tab baru di browser
-   - Ketik: `https://github.com/new/import`
-   - Tekan Enter
+   - Login ke GitHub
+   - Buka: `https://github.com/new/import`
 
-2. **Isi Form Import:**
-   **a. Your old repository's clone URL:**
-   - Ketik URL repository asli:
+2. **Isi Form:**
+   - **Old repository URL:**
      **Apa itu Clone?**  
      Clone adalah proses download project dari GitHub ke komputer Anda, sehingga bisa diedit dan dijalankan di local.
 
@@ -278,28 +483,44 @@ Import adalah proses menyalin project dari repository lain ke repository baru mi
 **Apa itu Environment Variables?**  
 Environment Variables adalah file yang berisi pengaturan rahasia seperti password database, API keys, dll. File ini **TIDAK boleh di-upload ke GitHub** karena berisi data sensitif.
 
-**Apa itu File `.env.local`?**
+**Apa itu File `.env`?**
 
 - File konfigurasi untuk development (di komputer local)
 - Dimulai dengan titik `.` (hidden file di Linux/Mac, tapi terlihat di Windows)
 - Format: `NAMA_VARIABLE="nilai"`
+- **CATATAN:** Project ini menggunakan `.env` (bukan `.env.local` atau `.env.production`)
 
 **Langkah-Langkah:**
 
-1. **Buat File `.env.local`:**
+1. **Buat File `.env`:**
 
    **Cara 1 - Via VS Code (Termudah):**
 
    - Di VS Code, di sidebar kiri (Explorer), klik kanan di area kosong
    - Pilih **"New File"**
-   - Ketik nama file: `.env.local` (pastikan ada titik di depan!)
+   - Ketik nama file: `.env` (pastikan ada titik di depan!)
    - Tekan **Enter**
    - File baru akan terbuka
 
-   **Cara 2 - Via Terminal:**
+   **Cara 2 - Copy dari .env.example:**
+
+   - Di VS Code, buka file `.env.example`
+   - Klik kanan pada file → **"Copy"**
+   - Klik kanan di area kosong → **"Paste"**
+   - Rename file hasil copy menjadi `.env`
+
+   **Cara 3 - Via Terminal:**
 
    - Buka terminal di VS Code (Ctrl + `)
-   - Ketik:6: Setup Database Schema
+   - Ketik:
+     ```bash
+     cp .env.example .env
+     ```
+   - Atau:
+     ````bash
+     touch .env
+     ```6: Setup Database Schema
+     ````
 
 **Apa itu Prisma?**  
 Prisma adalah ORM (Object-Relational Mapping) - tools yang memudahkan interaksi dengan database. File `prisma/schema.prisma` berisi struktur database (tabel, kolom, relasi).
@@ -505,38 +726,55 @@ Server local yang menjalankan aplikasi di komputer Anda untuk testing. Bisa diak
   DATABASE_DIRECT_URL="postgres://default:abc123xyz@ep-example-123.us-east-1.postgres.vercel-storage.com:5432/verceldb"
   ```
 
-4. **Generate AUTH_SECRET:**
+4. **Generate AUTH_SECRET dan JWT_SECRET:**
 
-   **Apa itu AUTH_SECRET?**  
-   String random untuk encrypt session authentication. Harus unique dan rahasia.
+   **Apa itu AUTH_SECRET & JWT_SECRET?**  
+   String random untuk encrypt session authentication dan JWT token. Harus unique dan rahasia.
 
    **Cara Generate:**
 
    - Buka terminal di VS Code (Ctrl + `)
-   - Copy-paste perintah ini lalu Enter:
+   - Generate AUTH_SECRET, ketik perintah ini lalu Enter:
      ```bash
-     node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+     node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
      ```
-   - Akan muncul output string random panjang, seperti:
+   - Akan muncul output string random, seperti:
      ```
-     a1b2c3d4e5f67890abcdef1234567890a1b2c3d4e5f67890abcdef12345678
+     qen1/zf88sNgTfqlVE4syNFHQUgBUlI2/3soDo1xn64=
      ```
    - **Copy string tersebut** (select dengan mouse lalu Ctrl+C)
-   - Paste di `.env.local` menggantikan `generate-ini-nanti`
+   - Paste di `.env` setelah `AUTH_SECRET=`
 
-5. **Hasil Akhir File `.env.local`:**
+   - Generate JWT_SECRET, ketik perintah ini lagi lalu Enter:
+     ```bash
+     node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+     ```
+   - Akan muncul output string random yang berbeda, seperti:
+     ```
+     bbrIrq7x0/h4k9OynnpRMIciZWEOperFjapYANkPR0M=
+     ```
+   - **Copy string tersebut**
+   - Paste di `.env` setelah `JWT_SECRET=`
+
+5. **Hasil Akhir File `.env`:**
 
    File Anda sekarang harus terlihat seperti ini (dengan nilai sesungguhnya):
 
    ```env
-   # Database Configuration
-   DATABASE_URL="postgres://default:AbC123xyz@ep-example.us-east-1.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15"
-   DATABASE_DIRECT_URL="postgres://default:AbC123xyz@ep-example.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+   # Database Configuration - Supabase
+   DATABASE_URL="postgresql://postgres.abcdefghijk:MyStr0ngP@ssw0rd@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
+   DATABASE_DIRECT_URL="postgresql://postgres:MyStr0ngP@ssw0rd@db.abcdefghijk.supabase.co:5432/postgres"
 
-   # NextAuth Configuration
-   AUTH_SECRET="a1b2c3d4e5f67890abcdef1234567890a1b2c3d4e5f67890abcdef12345678"
-   NEXTAUTH_URL="http://localhost:3000"
+   # Authentication Secrets
+   AUTH_SECRET="qen1/zf88sNgTfqlVE4syNFHQUgBUlI2/3soDo1xn64="
+   JWT_SECRET="bbrIrq7x0/h4k9OynnpRMIciZWEOperFjapYANkPR0M="
    ```
+
+   **PENTING:**
+
+   - Tidak ada tanda kutip (") di sekitar nilai
+   - Langsung tulis nilai setelah tanda `=`
+   - Tidak ada spasi sebelum atau sesudah `=`
 
 6. **Save File:**
 
@@ -544,20 +782,21 @@ Server local yang menjalankan aplikasi di komputer Anda untuk testing. Bisa diak
    - Pastikan tidak ada dot putih di tab file (tanda unsaved)
 
 7. **PENTING - Jangan Upload ke GitHub:**
-   - File `.env.local` sudah otomatis di-ignore oleh Git (tercantum di `.gitignore`)
+   - File `.env` sudah otomatis di-ignore oleh Git (tercantum di `.gitignore`)
    - Cek file `.gitignore` di root project, pastikan ada baris:
      ```
-     .env*.local
+     .env
      ```
    - Jika ada, berarti aman! File tidak akan ter-upload ke GitHub
+   - File `.env.example` **BOLEH** di-upload (template tanpa nilai sensitif)
 
 **Troubleshooting:**
 
-- **File `.env.local` tidak bisa dibuat:**
+- **File `.env` tidak bisa dibuat:**
 
   - Windows mungkin block pembuatan file yang dimulai dengan titik
-  - Gunakan cara via terminal: `touch .env.local`
-  - Atau buat dengan nama sementara `env.local` lalu rename
+  - Gunakan cara via terminal: `cp .env.example .env`
+  - Atau buat dengan nama sementara `env` lalu rename di terminal: `ren env .env`
 
 - **String DATABASE_URL terlalu panjang:**
   - Itu normal, connection string memang panjang
@@ -1014,26 +1253,40 @@ PATH adalah daftar lokasi folder di Windows yang berisi program-program. Dengan 
 
 ### Langkah 4: Setup Environment Variables
 
-1. Buat file baru di root project dengan nama `.env.local`
-2. Isi file tersebut dengan:
+1. Copy file `.env.example` menjadi `.env`:
 
-   ```env
-   # Database - Copy dari Vercel Storage
-   DATABASE_URL="postgresql://..."
-   DATABASE_DIRECT_URL="postgresql://..."
-
-   # NextAuth Configuration
-   AUTH_SECRET="generate-random-string-here"
-   NEXTAUTH_URL="http://localhost:3000"
+   ```bash
+   cp .env.example .env
    ```
 
-3. **Cara generate AUTH_SECRET:**
+2. Buka file `.env` dan isi dengan nilai yang benar:
+
+   ```env
+   # Database - Copy dari Supabase
+   DATABASE_URL=postgresql://...
+   DATABASE_DIRECT_URL=postgresql://...
+
+   # Authentication Secrets
+   AUTH_SECRET=
+   JWT_SECRET=
+   ```
+
+3. **Cara generate AUTH_SECRET dan JWT_SECRET:**
+
    - Buka terminal
-   - Jalankan:
+   - Jalankan untuk AUTH_SECRET:
      ```bash
-     node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+     node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
      ```
-   - Copy hasilnya dan paste ke `AUTH_SECRET`
+   - Copy hasilnya dan paste ke `AUTH_SECRET=`
+
+   - Jalankan lagi untuk JWT_SECRET:
+     ```bash
+     node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+     ```
+   - Copy hasilnya dan paste ke `JWT_SECRET=`
+
+**PENTING:** Jangan pakai tanda kutip di file `.env`, langsung tulis nilai setelah `=`
 
 ### Langkah 5: Setup Database Schema
 
@@ -1086,9 +1339,9 @@ PATH adalah daftar lokasi folder di Windows yang berisi program-program. Dengan 
 1. Klik **"Environment Variables"**
 2. Tambahkan variable berikut satu per satu:
 
-   - `DATABASE_URL` = (copy dari Vercel Postgres)
-   - `DATABASE_DIRECT_URL` = (copy dari Vercel Postgres)
-   - `AUTH_SECRET` = (sama dengan yang di .env.local)
+   - `DATABASE_URL` = (copy dari Supabase - Connection Pooling)
+   - `DATABASE_DIRECT_URL` = (copy dari Supabase - Direct Connection)
+   - `DATABASE_URL` = (copy dari Supabase - Connection Pooling)\n - `DATABASE_DIRECT_URL` = (copy dari Supabase - Direct Connection)\n - `AUTH_SECRET` = (sama dengan yang di .env)\n - `JWT_SECRET` = (sama dengan yang di .env)
    - `NEXTAUTH_URL` = (akan diisi setelah deploy, untuk sementara kosongkan)
 
 3. Klik **"Deploy"**
